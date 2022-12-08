@@ -8,12 +8,12 @@ import {
   PAUSE,
   PERSIST,
   PURGE,
-  REGISTER
+  REGISTER,
 } from 'redux-persist';
 
 const persistConfig = {
   key: 'root',
-  storage
+  storage,
 };
 
 const rootReduser = combineReducers({
@@ -25,12 +25,11 @@ const persistedReducer = persistReducer(persistConfig, rootReduser);
 function setupStore() {
   return configureStore({
     reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
-        }
-      })
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
   });
 }
 

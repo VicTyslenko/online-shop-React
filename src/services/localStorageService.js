@@ -14,6 +14,6 @@ class LocalStorage {
   clear() {
     this.localStorage.clear();
   }
-};
+}
 
 export default LocalStorage;

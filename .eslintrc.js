@@ -1,12 +1,12 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'standard'
+    'airbnb',
   ],
   overrides: [
     {
@@ -14,22 +14,21 @@ module.exports = {
         '**/*.spec.js',
         '**/*.spec.jsx',
         '**/*.test.js',
-        '**/*.test.jsx'
+        '**/*.test.jsx',
       ],
       env: {
-        jest: true
-      }
-    }
+        jest: true,
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
-    'react'
+    'react',
   ],
   rules: {
-    semi: ['error', 'always'],
-    'space-before-function-paren': ['error', 'never']
-  }
+    'react/jsx-filename-extension': 0,
+  },
 };
