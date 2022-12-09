@@ -5,17 +5,13 @@ module.exports = {
   },
   extends: [
     'airbnb',
+    'prettier',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
   ],
   overrides: [
     {
-      files: [
-        '**/*.spec.js',
-        '**/*.spec.jsx',
-        '**/*.test.js',
-        '**/*.test.jsx',
-      ],
+      files: ['**/*.spec.js', '**/*.spec.jsx', '**/*.test.js', '**/*.test.jsx'],
       env: {
         jest: true,
       },
@@ -25,9 +21,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react', 'prettier'],
   rules: {
     'react/jsx-filename-extension': 0,
   },
