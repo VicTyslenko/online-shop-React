@@ -9,9 +9,17 @@ indent_size = 4
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{package.json,.travis.yml}]
-indent_style = space
-indent_size = 2
+[*.{json,yml}]
+indent_style = tab
+indent_size = 4
 
 [*.{diff,md}]
 trim_trailing_whitespace = false
+
+[*.{css,scss,js,jsx}]
+indent_style = tab
+indent_size = 4
+
+[*.html]
+indent_style = tab
+indent_size = 4
