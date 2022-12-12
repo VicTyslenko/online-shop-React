@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardsData } from '../../../Data/Data'
+import { CardsData } from '../../helpers/Data/Data'
 import Card from '../Card/Card'
 import './Cards.scss'
 const Cards = () => {

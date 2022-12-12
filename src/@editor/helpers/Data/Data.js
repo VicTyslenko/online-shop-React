@@ -13,9 +13,9 @@ import {
   import { keyboard } from "@testing-library/user-event/dist/keyboard";
   
   // Recent Card Imports
-  import img1 from "../img/img1.png";
-  import img2 from "../img/img2.png";
-  import img3 from "../img/img3.png";
+  import img1 from "../../img/img1.png";
+  import img2 from "../../img/img2.png";
+  import img3 from "../../img/img3.png";
   // import img2 from "../imgs/img2.png";
   // import img3 from "../imgs/img3.png";
   

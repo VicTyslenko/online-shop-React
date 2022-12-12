@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Form, Formik } from 'formik';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import Input from '../../components/Input/Input';
+import Button from '../../components/Button/Button';
 // import { BsFillPersonFill, BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
 import { AiTwotoneLock } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';

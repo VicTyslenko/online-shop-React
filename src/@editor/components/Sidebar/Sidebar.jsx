@@ -1,9 +1,9 @@
 import React from 'react'
-import './Sidebar.scss'
 import { useState } from 'react'
-import { AiTwotoneHome } from 'react-icons/ai'
-import { SidebarData } from '../../Data/Data'
+// import { AiTwotoneHome } from 'react-icons/ai'
+import { SidebarData } from '../../helpers/Data/Data'
 import { UilSignOutAlt } from '@iconscout/react-unicons'
+import './Sidebar.scss'
 // import * as Unicons from '@iconscout/react-unicons';
 // import Logo from '../img/logo_sidebar';
 

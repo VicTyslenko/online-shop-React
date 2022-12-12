@@ -1,6 +1,6 @@
 import React from 'react'
-import Sidebar from './Sidebar/Sidebar'
-import MainDash from './MainDash/MainDash'
+import Sidebar from '../../components/Sidebar/Sidebar'
+import MainDash from '../../components/MainDash/MainDash'
 import './DashboardPage.scss'
 export const DashboardPage = () => {
     return (

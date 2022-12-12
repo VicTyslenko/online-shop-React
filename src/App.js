@@ -1,6 +1,6 @@
 import './App.css';
-import LoginPage from './Components/AdminDashboard/LoginPage/LoginPage';
-import DashboardPage from './Components/AdminDashboard/DashboardPage/DashboardPage';
+import LoginPage from './@editor/containers/LoginPage/LoginPage';
+import DashboardPage from './@editor/containers/DashboardPage/DashboardPage';
 import { Route, Routes } from 'react-router-dom';
 function App() {
 	return <div>
