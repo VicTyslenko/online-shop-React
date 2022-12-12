@@ -4,7 +4,7 @@ import './DashboardPage.scss'
 export const DashboardPage = () => {
     return (
         <div className='dashboard-wrapp'>
-            <div className="container">
+            <div className="sidebar-wrapp">
 
                 <Sidebar />
             </div>
