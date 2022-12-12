@@ -1,16 +1,21 @@
 .dashboard-wrapp {
     height: 100vh;
     display: flex;
-    background: linear-gradient(106.37deg,
-            #ffe1bc 29.63%,
-            #ffcfd1 51.55%,
-            #f3c6f1 90.85%);
+    // background: linear-gradient(106.37deg,
+    //         #ffe1bc 29.63%,
+    //         #ffcfd1 51.55%,
+    //         #f3c6f1 90.85%);
+    background-color: black;
     align-items: center;
     justify-content: center;
 }
 
+.sidebar {
+    padding-left: 15px;
+}
+
 .sidebar-wrapp {
-    padding: 0.5rem;
+    // padding: 1rem;
     display: grid;
     height: 97%;
     width: 97%;
@@ -18,5 +23,33 @@
     gap: 16px;
     grid-template-columns: 1fr 3fr 1fr;
     overflow: hidden;
-    background-color: rgb(228, 167, 167);
+    background-color: #14af88;
+}
+
+.menu-item {
+    // color: white;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    position: relative;
+    font-size: 14px;
+    border-radius: 0.7rem;
+    transition: all 300ms ease;
+}
+
+.menu .menu-item:last-child {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(22, 88, 141);
+    margin-left: 0;
 }
