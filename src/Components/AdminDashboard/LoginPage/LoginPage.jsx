@@ -28,7 +28,7 @@ const LoginPage = () => {
 
                 <Form>
                     <div className='img-wrapp'>
-                        <img className='image' src="../img/admin.png/" alt="" />
+                        <img className='image' src="/img/admin.png/" alt="" />
                     </div>
                     <div className='form-wrapper'>
                         <div className='input-wrapper'>
