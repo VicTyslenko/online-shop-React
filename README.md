@@ -1,5 +1,39 @@
 # Finale Project FE02
 
+
+## Sructure of the project
+
+```
+├── src
+│   ├── @main - это дериктория для страниц которые видет пользователь (HomePage, ProductPage ...)
+│   │  ├── components - дериктория компонентов для категории страниц
+│   │  ├── containers - дериктория готовых страниц {HomeLandingPage ...}
+│   │  ├── helpers
+│   │  ├── router
+│   │  └── app.js
+│   ├── @editer - это дериктория для стриниц админки магазина
+│   │  ├── components - дериктория компонентов для категории страниц
+│   │  ├── containers - дериктория готовых страниц 
+│   │  ├── helpers
+│   │  ├── router
+│   │  └── app.js
+│   ├── @profile - это дериктория для стриниц профиля пользователя
+│   │  ├── components - дериктория компонентов для категории страниц
+│   │  ├── containers - дериктория готовых страниц
+│   │  ├── helpers
+│   │  ├── router
+│   │  └── app.js
+│   ├── helpers
+│   ├── store
+│   ├── selectors
+│   ├── reducers
+│   ├── constants
+│   ├── actions
+│   ├── config
+│   ├── api
+│   └── components - директория для глобальных компонентов
+```
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
