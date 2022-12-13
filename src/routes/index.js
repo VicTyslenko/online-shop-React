@@ -30,7 +30,7 @@ function AppRoutes() {
 				/>
 			</Route>
 			<Route
-				path="/editor"
+				path="/editor/*"
 				element={
 					<React.Suspense fallback={<>...</>}>
 						<Editor />
