@@ -7,18 +7,18 @@ import {
     UilChart,
     UilSignOutAlt,
   } from "@iconscout/react-unicons";
-  
+
   // Analytics Cards imports
   import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
   import { keyboard } from "@testing-library/user-event/dist/keyboard";
-  
+
   // Recent Card Imports
   import img1 from "../../img/img1.png";
   import img2 from "../../img/img2.png";
   import img3 from "../../img/img3.png";
   // import img2 from "../imgs/img2.png";
   // import img3 from "../imgs/img3.png";
-  
+
   // Sidebar Data
   export const SidebarData = [
     {
@@ -42,7 +42,7 @@ import {
       heading: 'Analytics'
     },
   ];
-  
+
   // Analytics Cards Data
   export const CardsData = [
     {
@@ -95,7 +95,7 @@ import {
       ],
     },
   ];
-  
+
   // Recent Update Card Data
   export const UpdatesData = [
     {

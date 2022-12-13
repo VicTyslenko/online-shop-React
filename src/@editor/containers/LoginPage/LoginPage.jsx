@@ -28,7 +28,7 @@ const LoginPage = () => {
 
                 <Form>
                     <div className='img-wrapp'>
-                        <img className='image' src="/img/admin.png/" alt="" />
+						<img className='image' src="../../img/admin.jpg" alt=""/>
                     </div>
                     <div className='form-wrapper'>
                         <div className='input-wrapper'>
@@ -42,8 +42,6 @@ const LoginPage = () => {
                             {/* <BsFillEyeFill className="eye-icon" /> */}
                             <Input type='password' name='password' placeholder='Password' className='pass-input' />
                         </div>
-
-
 
                         <Button type='submit' className='confirm-button'>Log in</Button>
 
