@@ -2,8 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import LoginPage from "./containers/LoginPage/LoginPage";
 import DashboardPage from "./containers/DashboardPage/DashboardPage";
 
-
-function App() {
+function Editor() {
 	return <div>
 		<Routes>
 			<Route path='/admin' element={<LoginPage />} />
@@ -13,4 +12,5 @@ function App() {
 	</div>;
 }
 
-export default App;
+export default Editor;
+
