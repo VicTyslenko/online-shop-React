@@ -8,7 +8,9 @@ import {
     UilSignOutAlt,
   } from "@iconscout/react-unicons";
 
-  // Analytics Cards imports
+import {MdOutlineManageAccounts} from "react-icons/md"
+
+  // Management Cards imports
   import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
   import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
@@ -38,12 +40,12 @@ import {
       heading: 'Products'
     },
     {
-      icon: UilChart,
-      heading: 'Analytics'
+      icon: MdOutlineManageAccounts,
+      heading: 'Management'
     },
   ];
 
-  // Analytics Cards Data
+  // Management Cards Data
   export const CardsData = [
     {
       title: "Sales",

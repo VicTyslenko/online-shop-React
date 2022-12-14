@@ -55,7 +55,7 @@ const Sidebar = () => {
                                 setSelected(index)
                             }}
                         >
-                            <item.icon />
+                            <item.icon fontSize={24}/>
                             <span>{item.heading}</span>
                         </SidebarItem>
                     )

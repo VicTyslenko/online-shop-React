@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from '../Cards/Cards'
 import {Route, Routes} from "react-router-dom";
 import './MainDash.scss'
-import Analytics from "../Sidebar/components/Analytics";
+import Management from "../Sidebar/components/Management";
 import Customers from "../Sidebar/components/Customers";
 import Dashboard from "../Sidebar/components/Dashboard";
 import Orders from "../Sidebar/components/Orders";
@@ -14,7 +14,7 @@ const MainDash = () => {
         <div className='main-dash'>
 			<Routes>
 				<Route path="/Dashboard" element={<Dashboard/>} />
-				<Route path="/Analytics" element={<Analytics/>} />
+				<Route path="/Management" element={<Management/>} />
 				<Route path="/Customers" element={<Customers/>} />
 				<Route path="/Orders" element={<Orders/>} />
 				<Route path="/Products" element={<Products/>} />
