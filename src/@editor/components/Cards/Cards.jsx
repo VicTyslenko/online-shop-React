@@ -1,13 +1,14 @@
 import React from 'react'
 import { CardsData } from '../../helpers/Data/Data'
 import Card from '../Card/Card'
-import './Cards.scss'
+import { CardsWrapper, ParentContainer } from './StyledCards'
 const Cards = () => {
     return (
-        <div className='cards'>
+        <CardsWrapper>
+            {/* <div className='cards'> */}
             {CardsData.map((card, id) => {
                 return (
-                    <div className="parent-container">
+                    <ParentContainer>
                         <Card
                             title={card.title}
                             color={card.color}
@@ -16,10 +17,10 @@ const Cards = () => {
                             png={card.png}
                             series={card.series}
                         />
-                    </div>
+                    </ParentContainer>
                 )
             })}
-        </div>
+        </CardsWrapper>
     )
 }
 
