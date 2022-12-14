@@ -7,11 +7,16 @@ import Customers from "../Sidebar/components/Customers";
 import Dashboard from "../Sidebar/components/Dashboard";
 import Orders from "../Sidebar/components/Orders";
 import Products from "../Sidebar/components/Products";
+import { Container} from '@mui/material';
+import styled from 'styled-components';
 
+const ContainerWrap = styled(Container)`
+	margin-top: 40px;
+`
 
 const MainDash = () => {
     return (
-        <div className='main-dash'>
+        <ContainerWrap >
 			<Routes>
 				<Route path="/Dashboard" element={<Dashboard/>} />
 				<Route path="/Management" element={<Management/>} />
@@ -20,7 +25,7 @@ const MainDash = () => {
 				<Route path="/Products" element={<Products/>} />
 			</Routes>
             <Cards />
-        </div>
+        </ContainerWrap>
     )
 }
 
