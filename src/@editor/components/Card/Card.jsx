@@ -1,11 +1,23 @@
 import React from 'react'
+import { AnimateSharedLayout } from 'framer-motion'
+import CompactCard from '../CompactCard/CompactCard'
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { useState } from 'react'
 const Card = (props) => {
     const [expanded, setExpanded] = useState(false)
     return (
-        <div className="card">
+        <AnimateSharedLayout>
+            {expanded ? (
+                // <ExpandedCard />
+                'Expanded'
 
-        </div>
+            ) : <CompactCard param={props} />
+            }
+        </AnimateSharedLayout>
+
+
+
     )
 }
 

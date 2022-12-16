@@ -10,6 +10,7 @@ const Cards = () => {
                 return (
                     <ParentContainer>
                         <Card
+                            key={id}
                             title={card.title}
                             color={card.color}
                             barValue={card.barValue}

@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
 import { Route, Routes } from "react-router-dom";
-import './MainDash.scss'
+// import './MainDash.scss'
 import Analytics from "../Sidebar/components/Analytics";
 import Customers from "../Sidebar/components/Customers";
 import Dashboard from "../Sidebar/components/Dashboard";
