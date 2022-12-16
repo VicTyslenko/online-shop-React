@@ -3,13 +3,13 @@
     position: relative;
 }
 
-.container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f3f0f0;
-}
+// .container {
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: #f3f0f0;
+// }
 
 .pass-input,
 .login-input {
@@ -32,11 +32,11 @@
     padding-left: 15px;
 }
 
-// .eye-icon {
-//     position: absolute;
-//     top: 10px;
-//     left: 150px;
-// }
+.eye-icon {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+}
 
 .login-icon {
     position: absolute;
@@ -44,35 +44,17 @@
     left: 1px;
 }
 
-.form-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 600px;
-}
+// .form-wrapper {
+//     // display: grid;
+//     // grid-template-columns: 1fr 1fr;
+//     // gap: 10px;
+//     // width: 600px;
+// }
 
-.confirm-button {
-    padding: 8px;
-    grid-column: span 2;
+// .confirm-button {
+//     padding: 8px;
+//     grid-column: span 2;
 
-}
-.image{
-     width: 20%;
-    //width: 13%;
-
-    height: 20%;
-    // clip-path: circle(20px);
-    // clip-path: circle(41px at 45px 48px);
-    //clip-path: circle(30px at 32px 35px);
-    // border-radius: 50%;
-    // background-position: center;
+// }
 
 
-}
-
-.img-wrapp {
-    display: flex;
-    // align-items: center;
-    justify-content: center;
-
-}
