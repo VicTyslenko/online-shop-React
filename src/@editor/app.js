@@ -4,15 +4,15 @@ import DashboardPage from "./containers/DashboardPage/DashboardPage";
 
 
 function Editor() {
-	return (
-		<div>
-			<Routes>
-				<Route path='/admin' element={<LoginPage />} />
-				<Route path='/dashboard/*' element={<DashboardPage />} />
-			</Routes>
+    return (
+        <div>
+            <Routes>
+                <Route path='/admin/' element={<LoginPage />} />
+                <Route path='/dashboard/*' element={<DashboardPage />} />
+            </Routes>
 
-		</div>
-	);
+        </div>
+    );
 }
 
 export default Editor;

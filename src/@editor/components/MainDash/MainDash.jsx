@@ -1,18 +1,15 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
-import {Route, Routes} from "react-router-dom";
-import './MainDash.scss'
+
 import Management from "../Sidebar/components/Management";
+import { Route, Routes } from "react-router-dom";
 import Customers from "../Sidebar/components/Customers";
 import Dashboard from "../Sidebar/components/Dashboard";
 import Orders from "../Sidebar/components/Orders";
 import Products from "../Sidebar/components/Products";
-import { Container} from '@mui/material';
-import styled from 'styled-components';
 
-const ContainerWrap = styled(Container)`
-	margin-top: 40px;
-`
+import { ContainerWrap } from './StyledMainDash';
+
 
 const MainDash = () => {
     return (

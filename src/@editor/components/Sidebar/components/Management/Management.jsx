@@ -1,27 +1,6 @@
 import React from 'react';
-import {Box, Grid, Button} from '@mui/material';
-import styled from 'styled-components';
-
-const GridItem = styled(Grid)`
-	&&&{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-`
-
-const ButtonItem = styled(Button)`
-	&&&{
-		//font-size: 14px;
-	}
-`
-
-const Title = styled.h1`
-	text-align: center;
-	margin-top: 26px;
-	margin-bottom: 50px;
-	font-size: 28px;
-`
+import {Box, Grid} from '@mui/material';
+import {GridItem, ButtonItem, Title} from "./StyledManagement"
 
 
 const Management = () => {
