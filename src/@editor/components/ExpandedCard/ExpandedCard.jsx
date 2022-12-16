@@ -1,12 +1,48 @@
 import React from 'react'
 import { ExpandedCardWrapper } from './StyledExpandedCard'
-const ExpandedCard = () => {
-    // return (
-    //     // <ExpandedCardWrapper backGround={}>
+import { Chart } from 'apexcharts'
+import { UilTimes } from '@iconscout/react-unicons'
+const ExpandedCard = ({ param, setExpanded }) => {
+    //from documentation:
+    // const data = {
+    //     options: {
+    //         chart: {
+    //             type: 'area',
+    //             height: 'auto'
 
-    //     // </ExpandedCardWrapper>
+    //         },
+    //         dropShadow: {
+    //             enabled: false,
+    //             enabledOnSeries: undefined,
+    //             top: 0,
+    //             left: 0,
+    //             blur: 3,
+    //             color: '#000',
+    //             opacity: 0.35
+    //         },
+    //         fill: {
+    //             colors: ['#fff'],
+    //             type: 'gradient'
+    //         }
+    //     }
+    // }
+    return (
+        <ExpandedCardWrapper backGround={param.color.backGround}>
+            <UilTimes onClick={setExpanded} className='close-icon' />
+            <span>{param.title}</span>
+            <div className="chart-container">
+                {/* <Chart series={param.series} type='area'
+                    options={data.options}
+                    
+                /> */}
+                Chart
+            </div>
+            <span>Last 24 hours</span>
 
-    // )
+
+        </ExpandedCardWrapper>
+
+    )
 }
 
 export default ExpandedCard
