@@ -1,18 +1,22 @@
 import React from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { CardWrapper, RadialBar, Detail } from './StyledCompactCard'
-const CompactCard = ({ param }) => {
-    const Png = param.png
+import './CircularBar.scss'
+const CompactCard = ({ param, setExpanded }) => {
+    const Png = param.png;
+
     return (
         <CardWrapper
             backGround={param.color.backGround}
             boxShadow={param.color.boxShadow}
+            onClick={setExpanded}
         >
             <RadialBar>
-                <CircularProgressbar
+                <CircularProgressbar className='circular'
                     value={param.barValue}
                     text={`${param.barValue}%`}
                 />
+                <span>{param.title}</span>
             </RadialBar>
             <Detail>
                 <Png />
