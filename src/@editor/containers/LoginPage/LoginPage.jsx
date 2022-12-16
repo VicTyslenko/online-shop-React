@@ -2,6 +2,7 @@
 import { Form, Formik } from 'formik';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
+import { LoginPageWrapp, FormWrapper } from './StyledLoginPage';
 // import { BsFillPersonFill, BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
 import { AiTwotoneLock } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';
@@ -15,8 +16,7 @@ const LoginPage = () => {
     }
 
     return (
-        <div className='container'>
-
+        <LoginPageWrapp>
 
             <Formik
                 initialValues={{
@@ -28,9 +28,9 @@ const LoginPage = () => {
 
                 <Form>
                     <div className='img-wrapp'>
-						<img className='image' src="../../img/admin.jpg" alt=""/>
+                        <img className='image' src="../../img/admin.jpg" alt="" />
                     </div>
-                    <div className='form-wrapper'>
+                    <FormWrapper>
                         <div className='input-wrapper'>
                             {/* <BsFillPersonFill className="login-icon" /> */}
                             <FcBusinessman className='login-icon' />
@@ -46,12 +46,12 @@ const LoginPage = () => {
                         <Button type='submit' className='confirm-button'>Log in</Button>
 
 
-                    </div>
+                    </FormWrapper>
                 </Form>
 
             </Formik>
 
-        </div>
+        </LoginPageWrapp>
 
     )
 
