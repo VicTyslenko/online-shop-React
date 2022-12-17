@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Form, Formik } from 'formik';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -16,8 +16,9 @@ const LoginPage = () => {
     }
 
     return (
-        <LoginPageWrapp>
 
+        <LoginPageWrapp>
+            hello
             <Formik
                 initialValues={{
                     login: '',

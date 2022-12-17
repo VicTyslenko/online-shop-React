@@ -6,7 +6,8 @@ import {GridItem, ButtonItem, Title} from "./StyledManagement"
 const Management = () => {
 	return (
 		<>
-			<Box>
+		
+			 <Box>
 				<Title>Theme Settings</Title>
 				<Grid container spacing={1} rowSpacing={8}>
 					<GridItem item xs={12} md={4}>
@@ -39,7 +40,7 @@ const Management = () => {
 						<ButtonItem variant="outlined" color="inherit">Keywords</ButtonItem>
 					</GridItem>
 				</Grid>
-			</Box>
+			</Box> 
 		</>
 	);
 };
