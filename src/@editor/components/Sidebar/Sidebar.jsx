@@ -3,10 +3,7 @@ import { useState } from 'react'
 // import { AiTwotoneHome } from 'react-icons/ai'
 import { SidebarData } from '../../helpers/Data/Data'
 import { UilSignOutAlt } from '@iconscout/react-unicons'
-import { SidebarItem } from './StyledSideBar';
-import { SidebarWrapp } from './StyledSideBar';
-import { Logo, MenuItem } from './StyledSideBar';
-import { Menu } from './StyledSideBar';
+import { Menu, SidebarItem, SidebarWrapp, Logo, MenuItem } from './StyledSideBar';
 // import * as Unicons from '@iconscout/react-unicons';
 // import Logo from '../img/logo_sidebar';
 
@@ -32,7 +29,7 @@ const Sidebar = () => {
                                 setSelected(index)
                             }}
                         >
-                            <item.icon />
+                            <item.icon fontSize={24}/>
                             <span>{item.heading}</span>
                         </SidebarItem>
                     )

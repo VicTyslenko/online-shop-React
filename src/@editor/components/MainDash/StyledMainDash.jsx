@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { Container} from '@mui/material';
 
-export const MainDashWrapp = styled.div`
-   display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+export const ContainerWrap = styled(Container)`
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
 `

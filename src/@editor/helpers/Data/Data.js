@@ -8,9 +8,11 @@ import {
   UilSignOutAlt,
 } from "@iconscout/react-unicons";
 
-// Analytics Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
+import {MdOutlineManageAccounts} from "react-icons/md"
+
+  // Management Cards imports
+  import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
+  import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 // Recent Card Imports
 import img1 from "../../img/img1.png";
@@ -19,45 +21,37 @@ import img3 from "../../img/img3.png";
 // import img2 from "../imgs/img2.png";
 // import img3 from "../imgs/img3.png";
 
-// Sidebar Data
-export const SidebarData = [
-  {
-    icon: UilEstate,
-    heading: "Dashboard",
-  },
-  {
-    icon: UilClipboardAlt,
-    heading: "Orders",
-  },
-  {
-    icon: UilUsersAlt,
-    heading: "Customers",
-  },
-  {
-    icon: UilPackage,
-    heading: 'Products'
-  },
-  {
-    icon: UilChart,
-    heading: 'Analytics'
-  },
-];
-
-// Analytics Cards Data
-export const CardsData = [
-  {
-    title: "Sales",
-    color: {
-      backGround: "linear-gradient(180deg, #fd0000 0%, #000000 100%)",
-      boxShadow: "0px 10px 20px 0px #e0c6f5",
+  // Sidebar Data
+  export const SidebarData = [
+    {
+      icon: UilEstate,
+      heading: "Dashboard",
     },
-    barValue: 70,
-    value: "25,970",
-    png: UilUsdSquare,
-    series: [
-      {
-        name: "Sales",
-        data: [31, 40, 28, 51, 42, 109, 100],
+    {
+      icon: UilClipboardAlt,
+      heading: "Orders",
+    },
+    {
+      icon: UilUsersAlt,
+      heading: "Customers",
+    },
+    {
+      icon: UilPackage,
+      heading: 'Products'
+    },
+    {
+      icon: MdOutlineManageAccounts,
+      heading: 'Management'
+    },
+  ];
+
+  // Management Cards Data
+  export const CardsData = [
+    {
+      title: "Sales",
+      color: {
+        backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
+        boxShadow: "0px 10px 20px 0px #e0c6f5",
       },
     ],
   },
