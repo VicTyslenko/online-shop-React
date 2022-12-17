@@ -5,8 +5,7 @@ import { CardsWrapper, ParentContainer } from './StyledCards'
 const Cards = () => {
     return (
         <CardsWrapper>
-            {/* <div className='cards'> */}
-            {CardsData.map((card, id) => {
+            {CardsData.map((card,id) => {
                 return (
                     <ParentContainer>
                         <Card
