@@ -1,6 +1,7 @@
 import React from 'react'
 import { ExpandedCardWrapper } from './StyledExpandedCard'
 import { Chart } from 'apexcharts'
+// import { motion } from 'framer-motion'
 import { UilTimes } from '@iconscout/react-unicons'
 const ExpandedCard = ({ param, setExpanded }) => {
     //from documentation:
@@ -35,13 +36,12 @@ const ExpandedCard = ({ param, setExpanded }) => {
                     options={data.options}
                     
                 /> */}
-                Chart
+                Here will be Charts and Graphics
             </div>
             <span>Last 24 hours</span>
 
 
         </ExpandedCardWrapper>
-
     )
 }
 

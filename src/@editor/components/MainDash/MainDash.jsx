@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
 import { Route, Routes } from "react-router-dom";
-// import './MainDash.scss'
+import Table from '../Table/Table';
 import Analytics from "../Sidebar/components/Analytics";
 import Customers from "../Sidebar/components/Customers";
 import Dashboard from "../Sidebar/components/Dashboard";
@@ -21,6 +21,7 @@ const MainDash = () => {
 				<Route path="/Products" element={<Products />} />
 			</Routes>
 			<Cards />
+			<Table />
 		</MainDashWrapp>
 	)
 }

@@ -10,6 +10,7 @@ const CompactCard = ({ param, setExpanded }) => {
             backGround={param.color.backGround}
             boxShadow={param.color.boxShadow}
             onClick={setExpanded}
+            layoutId="expandableCard"
         >
             <RadialBar>
                 <CircularProgressbar className='circular'
