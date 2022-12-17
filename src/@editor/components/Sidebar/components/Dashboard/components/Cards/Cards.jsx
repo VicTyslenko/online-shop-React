@@ -1,6 +1,6 @@
 import React from 'react'
-import { CardsData } from '../../helpers/Data/Data'
-import Card from '../Card/Card'
+import { CardsData } from '../../../../../../helpers/Data'
+import Card from './Card'
 import { CardsWrapper, ParentContainer } from './StyledCards'
 const Cards = () => {
     return (

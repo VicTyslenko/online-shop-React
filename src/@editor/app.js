@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import LoginPage from "./containers/LoginPage/LoginPage";
-import DashboardPage from "./containers/DashboardPage/DashboardPage";
+import LoginPage from "./containers/LoginPage";
+import DashboardPage from "./containers/DashboardPage";
 
 
 function Editor() {
