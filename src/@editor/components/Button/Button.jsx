@@ -1,10 +1,12 @@
-const Button = ({ type, children, className }) => {
 
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import '../../containers/LoginPage/LoginPage.scss'
+export default function LoginButton() {
     return (
-
-        <>
-            <button type={type} className={className}>{children}</button>
-        </>
-    )
+     
+        <Button className='confirm-button' variant="contained" disableElevation>
+            Log in
+        </Button>
+    );
 }
-export default Button

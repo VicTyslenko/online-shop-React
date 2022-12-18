@@ -1,7 +1,8 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
 import Input from '../../components/Input';
-import Button from '../../components/Button';
+// import Button from '../../components/Button';
+import LoginButton from '../../components/Button/Button';
 import { LoginPageWrapp, FormWrapper } from './StyledLoginPage';
 // import { BsFillPersonFill, BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
 import { AiTwotoneLock } from 'react-icons/ai';
@@ -44,7 +45,7 @@ const LoginPage = () => {
                             <Input type='password' name='password' placeholder='Password' className='pass-input' />
                         </div>
 
-                        <Button type='submit' className='confirm-button'>Log in</Button>
+                        <LoginButton type='submit'>Log in</LoginButton>
 
 
                     </FormWrapper>
