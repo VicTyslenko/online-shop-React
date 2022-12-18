@@ -9,7 +9,6 @@ import {
 } from "@iconscout/react-unicons";
 
 import { MdOutlineManageAccounts } from "react-icons/md"
-import Select from "../../components/Sidebar/components/Select";
 
 // Management Cards imports
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
@@ -41,7 +40,7 @@ export const SidebarData = [
     heading: 'Products'
   },
 
-  
+
   // {
   //   icon: MdOutlineManageAccounts,
   //   heading: 'Management'

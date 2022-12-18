@@ -7,6 +7,9 @@ import Products from "../Sidebar/components/Products";
 import Dashboard from "../Sidebar/components/Dashboard";
 
 import { ContainerWrap } from './StyledMainDash';
+import Editing from "../Sidebar/components/Management/components/Editing";
+import Roles from "../Sidebar/components/Management/components/Roles";
+import Users from "../Sidebar/components/Management/components/Users";
 
 
 const MainDash = () => {
@@ -14,10 +17,13 @@ const MainDash = () => {
 		<ContainerWrap >
 			<Routes>
 				<Route index element={<Dashboard />} />
-				<Route path="/Management" element={<Management />} />
+				{/*<Route path="/Management" element={<Management />} />*/}
 				<Route path="/Customers" element={<Customers />} />
 				<Route path="/Orders" element={<Orders />} />
 				<Route path="/Products" element={<Products />} />
+				<Route path="/editing" element={<Editing />} />
+				<Route path="/roles" element={<Roles />} />
+				<Route path="/users" element={<Users />} />
 			</Routes>
 		</ContainerWrap>
 	)

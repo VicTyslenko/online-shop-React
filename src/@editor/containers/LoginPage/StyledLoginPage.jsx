@@ -1,33 +1,34 @@
 import styled from "styled-components";
 
 export const LoginPageWrapp = styled.div`
- height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f3f0f0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f3f0f0;
 
-& .img-wrapp{
-    display: flex;
-    /* // align-items: center; */
-    justify-content: center;
-}
+	 .img-wrapp {
+		display: flex;
+		/* // align-items: center; */
+		justify-content: center;
+	}
 
-& .image{
-    width: 20%;
-    /* //width: 13%; */
+	 .image {
+		width: 20%;
+		/* //width: 13%; */
 
-    height: 20%;
-    /* // clip-path: circle(20px);
-    // clip-path: circle(41px at 45px 48px);
-    //clip-path: circle(30px at 32px 35px);
-    // border-radius: 50%;
-    // background-position: center; */
-}
-& .confirm-button{
-    padding: 8px;
-    grid-column: span 2;
-}
+		height: 20%;
+		/* // clip-path: circle(20px);
+		// clip-path: circle(41px at 45px 48px);
+		//clip-path: circle(30px at 32px 35px);
+		// border-radius: 50%;
+		// background-position: center; */
+	}
+
+	 .confirm-button {
+		padding: 8px;
+		grid-column: span 2;
+	}
 
 `
 // export const InputWrapper = styled.div`
@@ -39,17 +40,17 @@ export const LoginPageWrapp = styled.div`
 
 // `
 export const FormWrapper = styled.div`
-   display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 600px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	width: 600px;
 `
 // export const FormWrapper = styled.div`
 //     display: grid;
 //     grid-template-columns: 1fr 1fr;
 //     gap: 10px;
 //     width: 600px;
-    
+
 //   & .input-wrapper,
 //      .pass-wrapp{
 //        position:relative ;
@@ -61,11 +62,11 @@ export const FormWrapper = styled.div`
 //          & .login-input::placeholder{
 //             padding-left: 15px;
 
-//          } 
+//          }
 //          & .pass-input::placeholder{
 //             padding-left: 15px;
 
-//          } 
+//          }
 //   }
 // & .input-wrapper{
 //     & .login-icon{
@@ -78,8 +79,8 @@ export const FormWrapper = styled.div`
 //         position: absolute;
 //         top: 10px;
 //      }
-   
-//    } 
+
+//    }
 // }
 // `
 

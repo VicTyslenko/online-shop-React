@@ -1,48 +1,57 @@
-import React from 'react';
-import {Box, Grid} from '@mui/material';
-import {GridItem, ButtonItem, Title} from "./StyledManagement"
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import {Link} from 'react-router-dom';
+import {MdOutlineManageAccounts} from "react-icons/md"
+import styled from "styled-components"
+
+import {List, ListItemButton, ListItemText, Collapse, ListItemIcon} from '@mui/material';
+// import {ExpandLess, ExpandMore} from '@mui/icons-material';
 
 
-const Management = () => {
+
+const LinkItem = styled(Link)`
+	text-decoration: none;
+	color: #000;
+	padding: 8px 16px 8px 80px;
+	display: inline-block;
+`
+
+
+export default function Management() {
+	const [open, setOpen] = React.useState(false);
+
+	const handleClick = () => {
+		setOpen(!open);
+	};
+
+
 	return (
-		<>
-		
-			 <Box>
-				<Title>Theme Settings</Title>
-				<Grid container spacing={1} rowSpacing={8}>
-					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Upload Logotype</ButtonItem>
-					</GridItem>
-					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Favicon</ButtonItem>
-					</GridItem>
-					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Choose Main Colour</ButtonItem>
-					</GridItem>
-					<GridItem item xs={12} md={6}>
-						<ButtonItem variant="outlined" color="inherit">Heading Font</ButtonItem>
-					</GridItem>
-					<GridItem item xs={12} md={6}>
-						<ButtonItem variant="outlined" color="inherit">Body Font</ButtonItem>
-					</GridItem>
-				</Grid>
-			</Box>
-			<Box>
-				<Title>SEO</Title>
-				<Grid container spacing={1} rowSpacing={8}>
-					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Title</ButtonItem>
-					</GridItem>
-					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Description</ButtonItem>
-					</GridItem>
-					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Keywords</ButtonItem>
-					</GridItem>
-				</Grid>
-			</Box> 
-		</>
-	);
-};
+		<Box>
+			<List
+				sx={{width: '100%', maxWidth: 360}}
+				component="nav"
+				aria-labelledby="nested-list-subheader"
+			>
+				<ListItemButton onClick={handleClick}>
+					<ListItemIcon><MdOutlineManageAccounts fontSize={26} color={"#000"}/></ListItemIcon>
+					<ListItemText primary="Management"/>
+					{/*{open ? <ExpandLess /> : <ExpandMore />}*/}
+				</ListItemButton>
+				<Collapse in={open} timeout="auto" unmountOnExit>
+					<List component="div" disablePadding>
+						<LinkItem to="editing">
+							<ListItemText primary="Editing"/>
+						</LinkItem>
+						<LinkItem to="roles">
+							<ListItemText primary="Roles"/>
+						</LinkItem>
+						<LinkItem to="users">
+							<ListItemText primary="Users"/>
+						</LinkItem>
+					</List>
+				</Collapse>
+			</List>
 
-export default Management;
+		</Box>
+	);
+}
