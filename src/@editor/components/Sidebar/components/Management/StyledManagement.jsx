@@ -1,23 +1,33 @@
 import styled from "styled-components";
-import {Button, Grid} from "@mui/material";
+import {ListItemText, ListItemIcon} from "@mui/material";
+import {Link} from "react-router-dom";
 
-export const GridItem = styled(Grid)`
-	&&&{
-		display: flex;
-		justify-content: center;
-		align-items: center;
+
+export const LinkItem = styled(Link)`
+	text-decoration: none;
+	color: #000;
+	padding: 10px 16px 10px 90px;
+	border-radius: 0.7rem;
+	transition: all 300ms ease;
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+
+	&:hover {
+		background-color: rgb(22,88,141);
+	}
+
+	&&& {
+		font-size: 15px;
 	}
 `
 
-export const ButtonItem = styled(Button)`
-	&&&{
-		font-size: 14px;
-	}
+export const ButtonItem = styled(ListItemText)`
+	font-size: 12px;
+	padding-left: 0;
 `
 
-export const Title = styled.h1`
-	text-align: center;
-	margin-top: 26px;
-	margin-bottom: 50px;
-	font-size: 28px;
+export const ListIcon = styled(ListItemIcon)`
+	position: relative;
+	left: 16px;
 `

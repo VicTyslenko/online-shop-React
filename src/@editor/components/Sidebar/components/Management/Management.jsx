@@ -1,20 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import {Link} from 'react-router-dom';
 import {MdOutlineManageAccounts} from "react-icons/md"
-import styled from "styled-components"
 
-import {List, ListItemButton, ListItemText, Collapse, ListItemIcon} from '@mui/material';
-// import {ExpandLess, ExpandMore} from '@mui/icons-material';
+import {LinkItem, ButtonItem, ListIcon} from "./StyledManagement"
+import {List, ListItemButton, Collapse, ListItemIcon} from '@mui/material';
+import {MdExpandLess, MdExpandMore} from 'react-icons/md';
 
-
-
-const LinkItem = styled(Link)`
-	text-decoration: none;
-	color: #000;
-	padding: 8px 16px 8px 80px;
-	display: inline-block;
-`
 
 
 export default function Management() {
@@ -26,32 +16,29 @@ export default function Management() {
 
 
 	return (
-		<Box>
-			<List
-				sx={{width: '100%', maxWidth: 360}}
-				component="nav"
-				aria-labelledby="nested-list-subheader"
-			>
-				<ListItemButton onClick={handleClick}>
-					<ListItemIcon><MdOutlineManageAccounts fontSize={26} color={"#000"}/></ListItemIcon>
-					<ListItemText primary="Management"/>
-					{/*{open ? <ExpandLess /> : <ExpandMore />}*/}
-				</ListItemButton>
-				<Collapse in={open} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-						<LinkItem to="editing">
-							<ListItemText primary="Editing"/>
-						</LinkItem>
-						<LinkItem to="roles">
-							<ListItemText primary="Roles"/>
-						</LinkItem>
-						<LinkItem to="users">
-							<ListItemText primary="Users"/>
-						</LinkItem>
-					</List>
-				</Collapse>
-			</List>
-
-		</Box>
+		<List
+			sx={{width: '100%'}}
+			component="nav"
+			aria-labelledby="nested-list-subheader"
+		>
+			<ListItemButton onClick={handleClick}>
+				<ListIcon><MdOutlineManageAccounts fontSize={26} color={"#000"}/></ListIcon>
+				<ButtonItem primary="Management"/>
+				{open ? <MdExpandLess /> : <MdExpandMore />}
+			</ListItemButton>
+			<Collapse in={open} timeout="auto" unmountOnExit>
+				<List component="div" disablePadding>
+					<LinkItem to="editing">
+						<span>Editing</span>
+					</LinkItem>
+					<LinkItem to="roles">
+						<span>Roles</span>
+					</LinkItem>
+					<LinkItem to="users">
+						<span>Users</span>
+					</LinkItem>
+				</List>
+			</Collapse>
+		</List>
 	);
 }

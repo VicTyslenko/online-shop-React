@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 
-import {Box, Button, Grid} from '@mui/material';
-import {GridItem, ButtonItem, Title} from "../StyledManagement"
+import {Box, Grid} from '@mui/material';
+import {GridItem, ButtonItem, Title} from "./StyledEditing"
 
 
 const Editing = () => {
