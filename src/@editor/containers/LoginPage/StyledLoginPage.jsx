@@ -5,29 +5,25 @@ export const LoginPageWrapp = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f3f0f0;
+    background-color: black;
 
-& .img-wrapp{
-    display: flex;
-    /* // align-items: center; */
-    justify-content: center;
-}
 
-& .image{
+
+/* & image{
     width: 20%;
     /* //width: 13%; */
 
-    height: 20%;
+    /* height: 20%; */
     /* // clip-path: circle(20px);
     // clip-path: circle(41px at 45px 48px);
     //clip-path: circle(30px at 32px 35px);
     // border-radius: 50%;
     // background-position: center; */
-}
-& .confirm-button{
+
+/* & .confirm-button{
     padding: 8px;
     grid-column: span 2;
-}
+} */
 
 `
 // export const InputWrapper = styled.div`

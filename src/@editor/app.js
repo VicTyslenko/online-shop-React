@@ -8,7 +8,7 @@ function Editor() {
         <div>
 
             <Routes>
-                <Route path='/admin/' element={<LoginPage />} />
+                <Route path='/admin/*' element={<LoginPage />} />
                 <Route path='/dashboard/*' element={<DashboardPage />} />
             </Routes>
 

@@ -6,8 +6,6 @@ import { UilSignOutAlt } from '@iconscout/react-unicons'
 import { Menu, SidebarItem, SidebarWrapp, Logo, MenuItem } from './StyledSideBar';
 // import * as Unicons from '@iconscout/react-unicons';
 // import Logo from '../img/logo_sidebar';
-import Select from './components/Select';
-
 
 const Sidebar = () => {
 
@@ -35,7 +33,6 @@ const Sidebar = () => {
                 <MenuItem>
                     <UilSignOutAlt />
                 </MenuItem>
-                <Select />
             </Menu>
         </SidebarWrapp>
     )
