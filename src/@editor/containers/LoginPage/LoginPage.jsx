@@ -44,8 +44,7 @@ const LoginPage = () => {
                             {/* <BsFillEyeFill className="eye-icon" /> */}
                             <Input type='password' name='password' placeholder='Password' className='pass-input' />
                         </div>
-
-                        <LoginButton type='submit'>Log in</LoginButton>
+                        <LoginButton />
 
 
                     </FormWrapper>

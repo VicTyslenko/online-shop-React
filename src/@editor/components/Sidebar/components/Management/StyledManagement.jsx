@@ -11,7 +11,7 @@ export const GridItem = styled(Grid)`
 
 export const ButtonItem = styled(Button)`
 	&&&{
-		//font-size: 14px;
+		font-size: 14px;
 	}
 `
 
