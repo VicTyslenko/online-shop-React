@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const LoginPageWrapp = styled.div`
+<<<<<<< HEAD
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -29,6 +30,31 @@ export const LoginPageWrapp = styled.div`
 		padding: 8px;
 		grid-column: span 2;
 	}
+=======
+ height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+
+
+/* & image{
+    width: 20%;
+    /* //width: 13%; */
+
+    /* height: 20%; */
+    /* // clip-path: circle(20px);
+    // clip-path: circle(41px at 45px 48px);
+    //clip-path: circle(30px at 32px 35px);
+    // border-radius: 50%;
+    // background-position: center; */
+
+/* & .confirm-button{
+    padding: 8px;
+    grid-column: span 2;
+} */
+>>>>>>> 0732fc9facb3125dfcc059785280e6e3486205b4
 
 `
 // export const InputWrapper = styled.div`

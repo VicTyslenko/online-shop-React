@@ -18,7 +18,7 @@ const LoginPage = () => {
     return (
 
         <LoginPageWrapp>
-            hello
+            
             <Formik
                 initialValues={{
                     login: '',

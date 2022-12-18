@@ -1,17 +1,18 @@
 import React from 'react'
 import Sidebar from '../../components/Sidebar'
 import MainDash from '../../components/MainDash'
-import { Wrapp } from './StyledDashboardPage'
+import { Wrapp, SideBarWrapp } from './StyledDashboardPage'
 import './DashboardPage.scss'
 
 
 export const DashboardPage = () => {
     return (
         <Wrapp>
-            <div className="sidebar-wrapp">
+            <SideBarWrapp>
                 <Sidebar />
                 <MainDash />
-            </div>
+            {/* </div> */}
+            </SideBarWrapp>
         </Wrapp>
     )
 }
