@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {MdOutlineManageAccounts} from "react-icons/md"
 
-import {LinkItem, ButtonItem, ListIcon} from "./StyledManagement"
-import {List, ListItemButton, Collapse, ListItemIcon} from '@mui/material';
+import {LinkItem, ButtonItem, ListIcon, ManagementWrap, ListWrapManagement} from "./StyledManagement"
+import {Collapse, List} from '@mui/material';
 import {MdExpandLess, MdExpandMore} from 'react-icons/md';
 
 
@@ -16,16 +16,16 @@ export default function Management() {
 
 
 	return (
-		<List
+		<ListWrapManagement
 			sx={{width: '100%'}}
 			component="nav"
 			aria-labelledby="nested-list-subheader"
 		>
-			<ListItemButton onClick={handleClick}>
+			<ManagementWrap onClick={handleClick}>
 				<ListIcon><MdOutlineManageAccounts fontSize={26} color={"#000"}/></ListIcon>
 				<ButtonItem primary="Management"/>
 				{open ? <MdExpandLess /> : <MdExpandMore />}
-			</ListItemButton>
+			</ManagementWrap>
 			<Collapse in={open} timeout="auto" unmountOnExit>
 				<List component="div" disablePadding>
 					<LinkItem to="editing">
@@ -39,6 +39,6 @@ export default function Management() {
 					</LinkItem>
 				</List>
 			</Collapse>
-		</List>
+		</ListWrapManagement>
 	);
 }

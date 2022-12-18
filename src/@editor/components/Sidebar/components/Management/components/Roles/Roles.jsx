@@ -1,5 +1,4 @@
 import React,{useEffect} from 'react';
-import styled from "styled-components";
 import {Container, Button} from '@mui/material';
 import {ButtonAddRole, TableCellTitle, TableCellName} from "./StyledRoles"
 
@@ -15,8 +14,8 @@ const Roles = () => {
 	return (
 		<Container>
 			<h1>Roles</h1>
-			<TableContainer component={Paper}>
-				<Table sx={{ width: "100%" }} aria-label="customized table">
+			<TableContainer component={Paper} sx={{mt: "40px"}}>
+				<Table sx={{ width: "100%"}} aria-label="customized table">
 					<TableHead>
 						<TableRow>
 							<TableCellTitle align="left" colSpan={6}>

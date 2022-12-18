@@ -14,7 +14,7 @@ export const ButtonAddRole = styled(Button)`
 
 export const TableCellTitle = styled(TableCell)`
 	&&& {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 600;
 		color: #544d4d;
 	}
@@ -22,7 +22,7 @@ export const TableCellTitle = styled(TableCell)`
 
 export const TableCellName = styled(TableCell)`
 	&&& {
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 600;
 		color: #2d2d2d;
 	}

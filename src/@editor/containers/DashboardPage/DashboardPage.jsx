@@ -11,7 +11,6 @@ export const DashboardPage = () => {
             <SideBarWrapp>
                 <Sidebar />
                 <MainDash />
-            {/* </div> */}
             </SideBarWrapp>
         </Wrapp>
     )
