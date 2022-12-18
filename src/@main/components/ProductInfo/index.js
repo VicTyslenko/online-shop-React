@@ -4,12 +4,11 @@ import {
 	IconButton,
 	Typography,
 	ListItemText,
-	// ListItem
 } from "@mui/material";
 import PropTypes from 'prop-types';
 
 import FavoriteIcon from "./FavoriteIcon";
-import { ActionsWrapper, ProductInfoHeader, ProductHeader, ListStyled, ListItemButtonStyled } from "./ProductInfo.styles";
+import { ActionsWrapper, ProductInfoHeader, ProductHeader, ListStyled, ListItemButtonStyled, ColorIcon, ListItemIconColor } from "./ProductInfo.styles";
 
 function ProductInfo ({ title, articul, price, colors, sizes, productDetails, productDelivery }) {
 	return (
@@ -21,18 +20,20 @@ function ProductInfo ({ title, articul, price, colors, sizes, productDetails, pr
 				</ProductHeader>
 				<Typography variant='overline'>REF: {articul}</Typography>
 			</ProductInfoHeader>
-			<Box mb={5}>
+			<Box mb={1}>
 				<Typography variant='subtitle2'>Color</Typography>
-				{/* <ListStyled>
-					{colors.map(item => (
-						<ListItem key={}>
-							<ListItemText primary={item} />
-						</ListItem>
+				<ListStyled>
+					{colors.map(({id, color, colorHash}) => (
+						<ListItemButtonStyled key={id}>
+							<ListItemIconColor>
+								<ColorIcon mb={1} backgroundColor={colorHash}/>
+							</ListItemIconColor>
+							<ListItemText primary={color} />
+						</ListItemButtonStyled>
 					))}
-				</ListStyled> */}
-				<p>{colors}</p>
+				</ListStyled>
 			</Box>
-			<Box mb={15}>
+			<Box mb={6}>
 				<Typography variant='subtitle2'>Size</Typography>
 				<ListStyled >
 					{sizes.map(item => (
@@ -68,7 +69,13 @@ ProductInfo.propTypes = {
 	title: PropTypes.string.isRequired,
 	articul: PropTypes.number.isRequired,
 	price: PropTypes.number.isRequired,
-	colors: PropTypes.string.isRequired,
+	colors: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.number.isRequired,
+			color: PropTypes.string.isRequired,
+			colorHash: PropTypes.string.isRequired,
+		})
+	).isRequired,
 	sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
 	productDetails: PropTypes.string.isRequired,
 	productDelivery: PropTypes.string.isRequired,

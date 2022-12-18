@@ -54,7 +54,7 @@ const theme = createTheme({
 				},
 				sizeMedium: {
 					// width: '263px',
-					height: '55px',
+					height: '45px',
 					padding: '16px 20px',
 					fontWeight: 400,
 					fontSize: '18px',
@@ -68,8 +68,8 @@ const theme = createTheme({
 					borderRadius: 0,
 				},
 				sizeMedium: {
-					width: '55px',
-					height: '55px',
+					width: '50px',
+					height: '45px',
 					padding: '16px',
 					background: '#000',
 					color: '#fff',
