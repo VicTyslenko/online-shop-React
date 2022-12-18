@@ -18,7 +18,7 @@ const LoginPage = () => {
     return (
 
         <LoginPageWrapp>
-            
+
             <Formik
                 initialValues={{
                     login: '',
@@ -29,7 +29,7 @@ const LoginPage = () => {
 
                 <Form>
                     <div className='img-wrapp'>
-                        <img className='image' src="../../img/admin.jpg" alt="" />
+                        <img className='image' src="../../../img/admin.jpg" alt="" />
                     </div>
                     <FormWrapper>
                         <div className='input-wrapper'>
