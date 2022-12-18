@@ -12,7 +12,7 @@ export const SideBarWrapp = styled.div`
     width: 97%;
     border-radius: 2rem;
     gap: 16px;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr auto;
     overflow: hidden;
     background-color: #14af88;
 `

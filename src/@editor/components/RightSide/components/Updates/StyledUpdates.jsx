@@ -14,12 +14,18 @@ export const Update = styled.div`
 display: flex;
 gap:0.5rem;
 
+& .user-name{
+    margin-right:0.5rem ;
+}
 & .user-info{
     margin-bottom:0.5rem ;
 }
 & img{
     width:3.2rem ;
     height:3.2rem ;
+}
+& .noti div span:nth-of-type(1){
+    font-weight:bold ;
 }
 
 `

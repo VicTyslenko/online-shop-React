@@ -11,10 +11,10 @@ const UpDates = () => {
                         <img src={update.img} alt="" />
                         <div className="noti">
                             <div className='user-info'>
-                                <span>{update.name}</span>
-                                <span>{update.noti}</span>
+                                <span className='user-name'> {update.name}</span>
+                                <span> {update.noti}</span>
                             </div>
-                            <span>{update.time}</span>
+                            <span> {update.time}</span>
                         </div>
                     </Update>
 
