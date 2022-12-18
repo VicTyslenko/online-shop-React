@@ -7,6 +7,10 @@ import { Menu, SidebarItem, SidebarWrapp, Logo, MenuItem } from './StyledSideBar
 // import * as Unicons from '@iconscout/react-unicons';
 // import Logo from '../img/logo_sidebar';
 
+import Management from "./components/Management";
+
+
+
 const Sidebar = () => {
 
     const [selected, setSelected] = useState(0);
@@ -30,6 +34,7 @@ const Sidebar = () => {
                         </SidebarItem>
                     )
                 })}
+				<Management/>
                 <MenuItem>
                     <UilSignOutAlt />
                 </MenuItem>
