@@ -27,3 +27,13 @@ export const TableCellName = styled(TableCell)`
 		color: #2d2d2d;
 	}
 `
+
+export const InputTitle = styled.div`
+	letter-spacing: 0.5px;
+	word-spacing: 1px;
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 10px;
+`
+
+

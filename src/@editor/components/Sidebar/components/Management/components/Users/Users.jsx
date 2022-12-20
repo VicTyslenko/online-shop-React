@@ -1,7 +1,19 @@
 import React,{useEffect, useState} from 'react';
-import {Container, TextField } from '@mui/material';
-import {ButtonAddRole, TableCellTitle, TableCellName} from "./StyledUsers"
+import {
+	Container,
+	TextField,
+	Box, FormControl,
+	InputLabel,
+	OutlinedInput,
+	InputAdornment,
+	IconButton,
+	FormGroup,
+	Checkbox,
+	FormControlLabel} from '@mui/material';
 
+import {ButtonAddRole, TableCellTitle, TableCellName, InputTitle} from "./StyledUsers"
+
+import {MdVisibilityOff, MdVisibility} from 'react-icons/md'
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper} from '@mui/material';
 import Modal from "../../../../../Modal";
 
@@ -13,6 +25,14 @@ const Users = () => {
 	useEffect(() => {
 		window.scrollTo(0,0)
 	}, [])
+
+	const [showPassword, setShowPassword] = React.useState(false);
+
+	const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+	const handleMouseDownPassword = (event) => {
+		event.preventDefault();
+	};
 
 	return (
 		<Container>
@@ -52,9 +72,48 @@ const Users = () => {
 					title="Add User"
 					closeModal={() => setModalOpen(false)}
 				>
-					<TextField sx={{mb: "24px"}} fullWidth size="small" id="demo-helper-text-misaligned-no-helper" label="Name" />
-					<TextField sx={{mb: "24px"}} fullWidth size="small" id="demo-helper-text-misaligned-no-helper" label="Email" />
-					<TextField sx={{mb: "24px"}} fullWidth size="small" id="demo-helper-text-misaligned-no-helper" label="Phone Number" />
+					<Box
+						component="form"
+					>
+						<InputTitle>Name</InputTitle>
+						<TextField sx={{mb: "22px"}} fullWidth size="small" id="demo-helper-text-misaligned-no-helper" label="Name" />
+
+						<InputTitle>Email</InputTitle>
+						<TextField sx={{mb: "22px"}} fullWidth size="small" id="demo-helper-text-misaligned-no-helper" label="Email" />
+
+						<InputTitle>Phone Number</InputTitle>
+						<TextField sx={{mb: "22px"}} fullWidth size="small" id="demo-helper-text-misaligned-no-helper" label="Phone Number" />
+
+						<InputTitle>Password</InputTitle>
+						<FormControl sx={{ mb: "22px" }}  size="small" variant="outlined" fullWidth>
+							<InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+							<OutlinedInput
+								id="outlined-adornment-password"
+								type={showPassword ? 'text' : 'password'}
+								endAdornment={
+									<InputAdornment position="end">
+										<IconButton
+											aria-label="toggle password visibility"
+											onClick={handleClickShowPassword}
+											onMouseDown={handleMouseDownPassword}
+											edge="end"
+										>
+											{showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+										</IconButton>
+									</InputAdornment>
+								}
+								label="Password"
+							/>
+						</FormControl>
+						<InputTitle>Assing Permissions</InputTitle>
+						<FormGroup>
+							<FormControlLabel control={<Checkbox color="default"/>} label="create users" />
+							<FormControlLabel control={<Checkbox color="default"/>} label="edit user" />
+							<FormControlLabel control={<Checkbox color="default"/>} label="view user" />
+							<FormControlLabel control={<Checkbox color="default"/>} label="modify role" />
+							<FormControlLabel control={<Checkbox color="default"/>} label="modify permission" />
+						</FormGroup>
+					</Box>
 				</Modal>
 			}
 		</Container>
