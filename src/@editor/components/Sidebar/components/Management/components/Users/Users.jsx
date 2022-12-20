@@ -98,7 +98,7 @@ const Users = () => {
 											onMouseDown={handleMouseDownPassword}
 											edge="end"
 										>
-											{showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+											{showPassword ? <MdVisibility /> : <MdVisibilityOff />}
 										</IconButton>
 									</InputAdornment>
 								}
