@@ -1,15 +1,48 @@
+/* eslint-disable import/no-unresolved */
+import useMediaQuery from '@mui/material/useMediaQuery';
 import PropTypes from 'prop-types';
 
-import { StyledBigImage, StyledSmallImage, StyledGallery } from './ProductGallery.styles';
+import { Pagination } from "swiper";
 
-function ProductGallery ({images}) {
-	return (
+import {
+	StyledBigImage,
+	StyledSmallImage,
+	StyledGallery,
+	StyledMobileImage,
+	StyledSwiperSlide,
+	StyledSwiper
+} from './ProductGallery.styles';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+function ProductGallery ({ images }) {
+	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('md'));
+
+	return isMobile ? (
+		<StyledSwiper
+			spaceBetween={30}
+			pagination={{
+				clickable: true,
+			}}
+			modules={[Pagination]}
+		>
+			{images.map(({ id, url, alt }) => (
+				<StyledSwiperSlide key={id}>
+					<StyledMobileImage src={url} alt={alt} />
+				</StyledSwiperSlide>
+			))}
+		</StyledSwiper>
+	) : (
 		<StyledGallery>
 			{images.map(({ id, url, alt }, index) => (
-				index < 2 ? <StyledBigImage key={id} src={url} alt={alt}/> : <StyledSmallImage key={id} src={url} alt={alt}/>
+				index < 2 ? (
+						<StyledBigImage key={id} src={url} alt={alt} />
+					) : (
+						<StyledSmallImage key={id} src={url} alt={alt}/>
+					)
 			))}
 		</StyledGallery>
-	)
+	);
 }
 
 ProductGallery.propTypes = {

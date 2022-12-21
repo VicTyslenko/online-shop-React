@@ -1,12 +1,18 @@
 import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
+const themeWithBreakpoints = createTheme({})
+
+const theme = createTheme(themeWithBreakpoints, {
 	typography: {
 		h3: {
 			fontWeight: 700,
 			fontSize: '24px',
 			lineHeight: '33px',
 			textTransform: 'uppercase',
+			[themeWithBreakpoints.breakpoints.down('md')]: {
+				fontSize: '24px',
+				lineHeight: '30px',
+			},
 		},
 		overline: {
 			fontWeight: 400,
@@ -14,6 +20,10 @@ const theme = createTheme({
 			lineHeight: '19px',
 			color: '#847A7A',
 			textTransform: 'uppercase',
+			[themeWithBreakpoints.breakpoints.down('sm')]: {
+				fontSize: '12px',
+				lineHeight: '16px',
+			},
 		},
 		subtitle2: {
 			fontWeight: 700,
@@ -32,6 +42,10 @@ const theme = createTheme({
 			fontSize: '14px',
 			lineHeight: '19px',
 			color: '#595959',
+			[themeWithBreakpoints.breakpoints.down('md')]: {
+				fontSize: '12px',
+				lineHeight: '16px',
+			},
 		},
 	},
 	components: {
@@ -53,12 +67,12 @@ const theme = createTheme({
 					}
 				},
 				sizeMedium: {
-					// width: '263px',
-					height: '45px',
+					width: '263px',
+					height: '50px',
 					padding: '16px 20px',
 					fontWeight: 400,
-					fontSize: '18px',
-					lineHeight: '25px',
+					fontSize: '16px',
+					lineHeight: '20px',
 				}
 			},
 		},
@@ -69,7 +83,7 @@ const theme = createTheme({
 				},
 				sizeMedium: {
 					width: '50px',
-					height: '45px',
+					height: '50px',
 					padding: '16px',
 					background: '#000',
 					color: '#fff',
@@ -86,6 +100,10 @@ const theme = createTheme({
 					fontSize: '16px',
 					lineHeight: '22px',
 					color: '#000',
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						fontSize: '14px',
+						lineHeight: '18px',
+					},
 				},
 			}
 		}
