@@ -8,7 +8,7 @@ import {
 	AccordionSummary,
 	AccordionDetails,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {ExpandMore} from '@mui/icons-material';
 
 function Footer() {
 	const matches = useMediaQuery('(min-width:969px)');
@@ -129,7 +129,7 @@ function Footer() {
 					<div style={{ marginBottom: '20px'}}>
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '30px', justifyContent: 'start' }} />}
+								expandIcon={<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'start' }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
@@ -172,7 +172,7 @@ function Footer() {
 					<div style={{ marginBottom: '20px' }}>
 					<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
+								expandIcon={<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
@@ -225,7 +225,7 @@ function Footer() {
 					<div style={{ marginBottom: '20px' }}>
 					<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
+								expandIcon={<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
