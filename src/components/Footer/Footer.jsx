@@ -15,7 +15,7 @@ function Footer() {
 
 	if (matches === true) {
 		return (
-			<Container sx={{ bgcolor: 'black', paddingBottom: '122px' }}>
+			<Container sx={{ bgcolor: 'black', paddingBottom: '82px', paddingTop: '20px' }}>
 				<Grid container spacing={2} sx={{ justifyContent: 'space-between', padding: '0px 137px' }}>
 					<div style={{ marginBottom: '20px' }}>
 						<Typography variant="h4" sx={{ fontSize: 24, mb: '39px', color: '#fff' }}>
@@ -129,11 +129,11 @@ function Footer() {
 					<div style={{ marginBottom: '20px'}}>
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '30px', justifyContent: 'start' }} />}
+								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'start' }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
-								<Typography sx={{ fontSize: '20px' }}>FOLLOW US</Typography>
+								<Typography sx={{ fontSize: '15px' }}>FOLLOW US</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography sx={{ marginBottom: '10px' }}>
@@ -172,11 +172,11 @@ function Footer() {
 					<div style={{ marginBottom: '20px' }}>
 					<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
+								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
-								<Typography sx={{ fontSize: '20px', }}>HELP</Typography>
+								<Typography sx={{ fontSize: '15px', }}>HELP</Typography>
 							</AccordionSummary>
 							<AccordionDetails sx={{ justifyContent: 'end' }}>
 								<Typography sx={{ marginBottom: '10px' }}>
@@ -225,11 +225,11 @@ function Footer() {
 					<div style={{ marginBottom: '20px' }}>
 					<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
+								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
-								<Typography sx={{ fontSize: '20px', padding: '0px' }}>COMPANY</Typography>
+								<Typography sx={{ fontSize: '15px', padding: '0px' }}>COMPANY</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography sx={{ marginBottom: '10px' }}>
