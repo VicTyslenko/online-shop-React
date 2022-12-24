@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
-const themeWithBreakpoints = createTheme({})
+const themeWithBreakpoints = createTheme({});
 
 const theme = createTheme(themeWithBreakpoints, {
 	typography: {
@@ -64,7 +64,7 @@ const theme = createTheme(themeWithBreakpoints, {
 					'&:hover': {
 						background: '#565254',
 						boxShadow: 'none',
-					}
+					},
 				},
 				sizeMedium: {
 					width: '263px',
@@ -73,7 +73,7 @@ const theme = createTheme(themeWithBreakpoints, {
 					fontWeight: 400,
 					fontSize: '16px',
 					lineHeight: '20px',
-				}
+				},
 			},
 		},
 		MuiIconButton: {
@@ -89,9 +89,9 @@ const theme = createTheme(themeWithBreakpoints, {
 					color: '#fff',
 					'&:hover': {
 						background: '#565254',
-					}
-				}
-			}
+					},
+				},
+			},
 		},
 		MuiListItemText: {
 			styleOverrides: {
@@ -105,9 +105,9 @@ const theme = createTheme(themeWithBreakpoints, {
 						lineHeight: '18px',
 					},
 				},
-			}
-		}
-	  },
+			},
+		},
+	},
 });
 
 export default theme;

@@ -1,7 +1,7 @@
 // import styled from "styled-components";
-import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import CloseIcon from '@mui/icons-material/Close';
 
 export const StyledBigImage = styled('img')`
@@ -50,7 +50,7 @@ export const StyledMobileImage = styled('img')`
 	min-height: 294px;
 	object-fit: cover;
 
-	${props => props.theme.breakpoints.up("sm")} {
+	${(props) => props.theme.breakpoints.up('sm')} {
 		max-height: 603px;
 		max-width: 400px;
 	}
