@@ -1,12 +1,15 @@
 import {
-	Box, Button,
+	Box,
+	Button,
 	IconButton,
 	Typography,
 	ListItemText
 } from "@mui/material";
 import PropTypes from 'prop-types';
 
-import FavoriteIcon from "./FavoriteIcon";
+// todo: handleFavorite and toggle favorite icons
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import {
 	ActionsWrapper,
 	ProductInfoHeader,
@@ -50,6 +53,7 @@ function ProductInfo ({ title, articul, price, colors, sizes, productDetails, pr
 					</ListItemButtonStyled>
 					))}
 				</ListStyled>
+				{/* todo: SizeGuide link and information */}
 				<Typography variant='caption'>Size guide</Typography>
 			</SizeList>
 			<ActionsWrapper >
@@ -60,8 +64,8 @@ function ProductInfo ({ title, articul, price, colors, sizes, productDetails, pr
 				>
 					Add to busket
 				</Button>
-				<IconButton>
-					<FavoriteIcon/>
+				<IconButton onClick={console.log}>
+					<FavoriteBorderIcon/>
 				</IconButton>
 			</ActionsWrapper>
 			<Box>

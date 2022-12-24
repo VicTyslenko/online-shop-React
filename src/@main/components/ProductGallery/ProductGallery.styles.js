@@ -2,6 +2,7 @@
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import CloseIcon from '@mui/icons-material/Close';
 
 export const StyledBigImage = styled('img')`
 	width: 100%;
@@ -52,5 +53,44 @@ export const StyledMobileImage = styled('img')`
 	${props => props.theme.breakpoints.up("sm")} {
 		max-height: 603px;
 		max-width: 400px;
+	}
+`;
+
+export const StyledOverlaySwiper = styled(Swiper)`
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	box-shadow: 24;
+
+	& .swiper-button-prev {
+		color: #fff;
+	}
+
+	& .swiper-button-prev:hover {
+		color: #000;
+	}
+
+	& .swiper-button-next {
+		color: #fff;
+	}
+
+	& .swiper-button-next:hover {
+		color: #000;
+	}
+`;
+
+export const StyledOverlaySwiperSlide = styled(SwiperSlide)`
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+`;
+
+export const StyledCloseIcon = styled(CloseIcon)`
+	cursor: pointer;
+	color: #fff;
+
+	& :hover {
+		color: #000;
 	}
 `;
