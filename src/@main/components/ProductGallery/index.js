@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import PropTypes from 'prop-types';
 import Modal from '@mui/material/Modal';
@@ -16,6 +16,7 @@ import {
 	StyledOverlaySwiper,
 	StyledOverlaySwiperSlide,
 	StyledCloseIcon,
+	StyledOverlayImage
 } from './ProductGallery.styles';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,12 +25,16 @@ import 'swiper/css/navigation';
 function ProductGallery({ images }) {
 	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
-	const [open, setOpen] = React.useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+	const [open, setOpen] = useState(false);
+	const [currentIndex, setCurrentIndex] = useState(0);
 
-	const [firstSwiper, setFirstSwiper] = useState(null);
-  	const [secondSwiper, setSecondSwiper] = useState(null);
+	const handleOpen = (index) => {
+		setCurrentIndex(index);
+		setOpen(true);
+	};
+	const handleClose = () => {
+		setOpen(false);
+	};
 
 	return (
 		<>
@@ -39,11 +44,9 @@ function ProductGallery({ images }) {
 					pagination={{
 						clickable: true,
 					}}
-					modules={[Pagination, Controller]}
-					onSwiper={setFirstSwiper}
-					controller={{ control: secondSwiper }}>
-					{images.map(({ id, url, alt }) => (
-						<StyledSwiperSlide onClick={handleOpen} key={id}>
+					modules={[Pagination, Controller]}>
+					{images.map(({ id, url, alt }, index) => (
+						<StyledSwiperSlide onClick={() => handleOpen(index)} key={id}>
 							<StyledMobileImage src={url} alt={alt} />
 						</StyledSwiperSlide>
 					))}
@@ -52,9 +55,9 @@ function ProductGallery({ images }) {
 				<StyledGallery>
 					{images.map(({ id, url, alt }, index) =>
 						index < 2 ? (
-							<StyledBigImage onClick={handleOpen} key={id} src={url} alt={alt} />
+							<StyledBigImage onClick={() => handleOpen(index)} key={id} src={url} alt={alt} />
 						) : (
-							<StyledSmallImage onClick={handleOpen} key={id} src={url} alt={alt} />
+							<StyledSmallImage onClick={() => handleOpen(index)} key={id} src={url} alt={alt} />
 						),
 					)}
 				</StyledGallery>
@@ -67,14 +70,13 @@ function ProductGallery({ images }) {
 				<StyledOverlaySwiper
 					navigation
 					modules={[Navigation, Controller]}
-					onSwiper={setSecondSwiper}
-					controller={{ control: firstSwiper }}>
-						{images.map(({ id, url, alt }) => (
-							<StyledOverlaySwiperSlide key={id}>
-								<StyledMobileImage src={url} alt={alt} />
-								<StyledCloseIcon onClick={handleClose} />
-							</StyledOverlaySwiperSlide>
-						))}
+					initialSlide={currentIndex}>
+					{images.map(({ id, url, alt }) => (
+						<StyledOverlaySwiperSlide key={id}>
+							<StyledOverlayImage src={url} alt={alt} />
+							<StyledCloseIcon fontSize='large' onClick={handleClose} />
+						</StyledOverlaySwiperSlide>
+					))}
 				</StyledOverlaySwiper>
 			</Modal>
 		</>

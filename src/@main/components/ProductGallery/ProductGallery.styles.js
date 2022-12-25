@@ -84,13 +84,31 @@ export const StyledOverlaySwiperSlide = styled(SwiperSlide)`
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	position: relative;
 `;
 
 export const StyledCloseIcon = styled(CloseIcon)`
 	cursor: pointer;
 	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 5px;
 
 	& :hover {
 		color: #000;
+	}
+`;
+
+export const StyledOverlayImage = styled('img')`
+	width: 100%;
+	height: 100%;
+	min-width: 183px;
+	max-width: 320px;
+	min-height: 294px;
+	object-fit: cover;
+
+	${(props) => props.theme.breakpoints.up('sm')} {
+		max-height: 630px;
+		max-width: 500px;
 	}
 `;
