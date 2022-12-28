@@ -47,6 +47,13 @@ const theme = createTheme(themeWithBreakpoints, {
 				lineHeight: '16px',
 			},
 		},
+		title: {
+			fontWeight: 400,
+			fontSize: '1.5rem',
+			lineHeight: 1.334,
+			marginBottom: '0.35em',
+			textTransform: 'uppercase',
+		},
 	},
 	components: {
 		MuiButton: {
