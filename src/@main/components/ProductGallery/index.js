@@ -16,7 +16,7 @@ import {
 	StyledOverlaySwiper,
 	StyledOverlaySwiperSlide,
 	StyledCloseIcon,
-	StyledOverlayImage
+	StyledOverlayImage,
 } from './ProductGallery.styles';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -44,7 +44,8 @@ function ProductGallery({ images }) {
 					pagination={{
 						clickable: true,
 					}}
-					modules={[Pagination, Controller]}>
+					modules={[Pagination, Controller]}
+				>
 					{images.map(({ id, url, alt }, index) => (
 						<StyledSwiperSlide onClick={() => handleOpen(index)} key={id}>
 							<StyledMobileImage src={url} alt={alt} />
@@ -66,15 +67,13 @@ function ProductGallery({ images }) {
 				open={open}
 				onClose={handleClose}
 				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description">
-				<StyledOverlaySwiper
-					navigation
-					modules={[Navigation, Controller]}
-					initialSlide={currentIndex}>
+				aria-describedby="modal-modal-description"
+			>
+				<StyledOverlaySwiper navigation modules={[Navigation, Controller]} initialSlide={currentIndex}>
 					{images.map(({ id, url, alt }) => (
 						<StyledOverlaySwiperSlide key={id}>
 							<StyledOverlayImage src={url} alt={alt} />
-							<StyledCloseIcon fontSize='large' onClick={handleClose} />
+							<StyledCloseIcon fontSize="large" onClick={handleClose} />
 						</StyledOverlaySwiperSlide>
 					))}
 				</StyledOverlaySwiper>

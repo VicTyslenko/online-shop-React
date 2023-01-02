@@ -1,7 +1,8 @@
-// import { Container } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Container, Typography } from '@mui/material';
 
 import ProductCard from '../../components/ProductCard';
-import { StyledContainer } from './ProductList.styles';
+import { StyledBox, StyledBoxMobile, StyledTitle } from './ProductList.styles';
 
 const productListData = Array.from({ length: 5 }, (_, index) => ({
 	title: 'black jacket',
@@ -13,18 +14,37 @@ const productListData = Array.from({ length: 5 }, (_, index) => ({
 }));
 
 function ProductList() {
+	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
 	return (
-		<StyledContainer maxWidth="lg" display='flex'>
-			{productListData.map(({ title, price, url, alt, id }) => (
-					<ProductCard
-						key={id}
-						title={title}
-						price={price}
-						url={url}
-						alt={alt}
-					/>
-				))}
-		</StyledContainer>
+		<Container maxWidth="lg">
+			{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
+			<StyledTitle>
+				{isMobile ? (
+					// todo: Filters button with link styles {fontWeight: 400, fontSize: '14px', lineHeight: '14px', color: '#3F3D3D',}
+					<Typography variant="title" textTransform="capitalize">
+						Filters
+					</Typography>
+				) : (
+					<Typography variant="title" textTransform="capitalize">
+						Jackets
+					</Typography>
+				)}
+			</StyledTitle>
+			{isMobile ? (
+				<StyledBoxMobile>
+					{productListData.map(({ title, price, url, alt, id }) => (
+						<ProductCard key={id} title={title} price={price} url={url} alt={alt} id={id} />
+					))}
+				</StyledBoxMobile>
+			) : (
+				<StyledBox>
+					{productListData.map(({ title, price, url, alt, id }) => (
+						<ProductCard key={id} title={title} price={price} url={url} alt={alt} id={id} />
+					))}
+				</StyledBox>
+			)}
+		</Container>
 	);
 }
 

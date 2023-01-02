@@ -53,6 +53,10 @@ const theme = createTheme(themeWithBreakpoints, {
 			lineHeight: 1.334,
 			marginBottom: '0.35em',
 			textTransform: 'uppercase',
+			[themeWithBreakpoints.breakpoints.down('sm')]: {
+				fontSize: '12px',
+				lineHeight: '16px',
+			},
 		},
 	},
 	components: {
@@ -110,6 +114,15 @@ const theme = createTheme(themeWithBreakpoints, {
 					[themeWithBreakpoints.breakpoints.down('sm')]: {
 						fontSize: '14px',
 						lineHeight: '18px',
+					},
+				},
+			},
+		},
+		MuiCardContent: {
+			styleOverrides: {
+				root: {
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						padding: '8px',
 					},
 				},
 			},
