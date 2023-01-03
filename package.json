@@ -3,6 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@emotion/styled": "^11.10.5",
+		"@mui/icons-material": "^5.11.0",
 		"@mui/material": "^5.10.17",
 		"@mui/styled-engine-sc": "^5.10.16",
 		"@reduxjs/toolkit": "^1.9.1",
@@ -22,6 +24,7 @@
 		"redux": "^4.2.0",
 		"redux-persist": "^6.0.0",
 		"redux-thunk": "^2.4.1",
+		"sass": "^1.57.1",
 		"styled-components": "^5.3.6",
 		"swiper": "^8.4.5",
 		"web-vitals": "^2.1.4",
