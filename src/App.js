@@ -5,7 +5,6 @@ import Footer from './components/Footer/Footer';
 function App() {
 	return (
 		<>
-			<div>Hello</div>
 			<AppRoutes />
 			<Footer />
 		</>
