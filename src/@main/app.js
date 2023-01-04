@@ -1,12 +1,7 @@
-import Categories from './components/Categories/Categories';
+import MainRoutes from './router';
 
 function Main() {
-	return (
-		<>
-			<div>Main page</div>
-			<Categories />
-		</>
-	);
+	return <MainRoutes />;
 }
 
 export default Main;
