@@ -21,7 +21,7 @@ function AppRoutes() {
 					}
 				/>
 				<Route
-					path="profile"
+					path="/profile/*"
 					element={
 						<React.Suspense fallback={<>...</>}>
 							<Profile />
