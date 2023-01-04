@@ -1,15 +1,12 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 
-import {Box, Grid} from '@mui/material';
-import {GridItem, ButtonItem, Title} from "./StyledEditing"
-
+import { Box, Grid } from '@mui/material';
+import { GridItem, ButtonItem, Title } from './StyledEditing';
 
 const Editing = () => {
-
 	useEffect(() => {
-		window.scrollTo(0,0)
-	}, [])
-
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<>
@@ -17,19 +14,29 @@ const Editing = () => {
 				<Title>Theme Settings</Title>
 				<Grid container spacing={1} rowSpacing={8}>
 					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Upload Logotype</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Upload Logotype
+						</ButtonItem>
 					</GridItem>
 					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Favicon</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Favicon
+						</ButtonItem>
 					</GridItem>
 					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Choose Main Colour</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Choose Main Colour
+						</ButtonItem>
 					</GridItem>
 					<GridItem item xs={12} md={6}>
-						<ButtonItem variant="outlined" color="inherit">Heading Font</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Heading Font
+						</ButtonItem>
 					</GridItem>
 					<GridItem item xs={12} md={6}>
-						<ButtonItem variant="outlined" color="inherit">Body Font</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Body Font
+						</ButtonItem>
 					</GridItem>
 				</Grid>
 			</Box>
@@ -37,13 +44,19 @@ const Editing = () => {
 				<Title>SEO</Title>
 				<Grid container spacing={1} rowSpacing={8}>
 					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Title</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Title
+						</ButtonItem>
 					</GridItem>
 					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Description</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Description
+						</ButtonItem>
 					</GridItem>
 					<GridItem item xs={12} md={4}>
-						<ButtonItem variant="outlined" color="inherit">Keywords</ButtonItem>
+						<ButtonItem variant="outlined" color="inherit">
+							Keywords
+						</ButtonItem>
 					</GridItem>
 				</Grid>
 			</Box>

@@ -1,23 +1,35 @@
 import React from 'react';
-import {IoCloseSharp} from "react-icons/io5"
-import {ButtonModalsWrap, ButtonItem, ModalWrapWindow, ModalContent, Header, MainContent, CloseIcon} from "./StyledModal"
+import { IoCloseSharp } from 'react-icons/io5';
+import {
+	ButtonModalsWrap,
+	ButtonItem,
+	ModalWrapWindow,
+	ModalContent,
+	Header,
+	MainContent,
+	CloseIcon,
+} from './StyledModal';
 
-const Modal = ({title, closeModal, children, onClick}) => {
-
+const Modal = ({ title, closeModal, children, onClick }) => {
 	return (
 		<ModalWrapWindow onClick={closeModal}>
 			<ModalContent onClick={(e) => e.stopPropagation()}>
 				<Header>
 					{title}
 					<CloseIcon>
-						<IoCloseSharp fontSize={28} onClick={closeModal}/>
+						<IoCloseSharp fontSize={28} onClick={closeModal} />
 					</CloseIcon>
 				</Header>
-				<MainContent>
-					{children}
-				</MainContent>
+				<MainContent>{children}</MainContent>
 				<ButtonModalsWrap>
-					<ButtonItem variant="contained" color="success" onClick={() => {onClick(); closeModal()}}>
+					<ButtonItem
+						variant="contained"
+						color="success"
+						onClick={() => {
+							onClick();
+							closeModal();
+						}}
+					>
 						Ok
 					</ButtonItem>
 					<ButtonItem variant="outlined" color="error" onClick={closeModal}>
@@ -26,8 +38,7 @@ const Modal = ({title, closeModal, children, onClick}) => {
 				</ButtonModalsWrap>
 			</ModalContent>
 		</ModalWrapWindow>
-);
+	);
 };
-
 
 export default Modal;
