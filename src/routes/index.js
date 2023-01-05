@@ -13,7 +13,7 @@ function AppRoutes() {
 		<Routes>
 			<Route path="/" element={<MainLayout />}>
 				<Route
-					index
+					path="/*"
 					element={
 						<React.Suspense fallback={<>...</>}>
 							<Main />
