@@ -68,7 +68,9 @@
 		"eslint-plugin-promise": "^6.1.1",
 		"eslint-plugin-react": "^7.31.11",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"nodemon": "^2.0.20",
 		"prettier": "^2.8.1",
 		"redux-devtools-extension": "^2.13.9"
-	}
+	},
+	"proxy": "http://localhost:3000"
 }
