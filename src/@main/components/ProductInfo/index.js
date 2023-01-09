@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 import { Box, Button, IconButton, Typography, ListItemText } from '@mui/material';
 import PropTypes from 'prop-types';
 
-// todo: handleFavorite and toggle favorite icons
+// todo: handleFavorite and toggle favorite icons or fill this color (#E01515)
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 import {

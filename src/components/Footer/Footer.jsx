@@ -124,12 +124,14 @@ function Footer() {
 	}
 	if (matches === false) {
 		return (
-			<Container sx={{ bgcolor: 'black'}}>
+			<Container sx={{ bgcolor: 'black' }}>
 				<Grid container spacing={1} sx={{ justifyContent: 'space-between', padding: '0px 16px' }}>
-					<div style={{ marginBottom: '20px'}}>
+					<div style={{ marginBottom: '20px' }}>
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'start' }} />}
+								expandIcon={
+									<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'start' }} />
+								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
@@ -170,13 +172,15 @@ function Footer() {
 						</Accordion>
 					</div>
 					<div style={{ marginBottom: '20px' }}>
-					<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
+						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />}
+								expandIcon={
+									<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />
+								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
-								<Typography sx={{ fontSize: '15px', }}>HELP</Typography>
+								<Typography sx={{ fontSize: '15px' }}>HELP</Typography>
 							</AccordionSummary>
 							<AccordionDetails sx={{ justifyContent: 'end' }}>
 								<Typography sx={{ marginBottom: '10px' }}>
@@ -223,9 +227,11 @@ function Footer() {
 						</Accordion>
 					</div>
 					<div style={{ marginBottom: '20px' }}>
-					<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
+						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />}
+								expandIcon={
+									<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />
+								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
