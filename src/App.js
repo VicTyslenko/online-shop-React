@@ -3,12 +3,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import AppRoutes from './routes';
 import theme from './theme';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<div>Hello</div>
 			<AppRoutes />
+			<Footer />
 		</ThemeProvider>
 	);
 }
