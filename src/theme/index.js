@@ -14,6 +14,16 @@ const theme = createTheme(themeWithBreakpoints, {
 				lineHeight: '30px',
 			},
 		},
+		h4: {
+			fontWeight: 700,
+			fontSize: '18px',
+			lineHeight: '18px',
+			textTransform: 'uppercase',
+			[themeWithBreakpoints.breakpoints.down('sm')]: {
+				fontSize: '12px',
+				lineHeight: '12px',
+			},
+		},
 		overline: {
 			fontWeight: 400,
 			fontSize: '14px',

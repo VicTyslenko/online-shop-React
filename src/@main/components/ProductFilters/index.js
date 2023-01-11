@@ -1,54 +1,84 @@
 /* eslint-disable no-console */
 // хлібні крихти приклад: https://codesandbox.io/s/breadcrumbs-ut49q?file=/src/Breadcrumbs.jsx
 import React from 'react';
-import { Button, Box, Collapse, List, ListItemButton, ListItemText } from '@mui/material';
+import { Box, Collapse, List, ListItemButton, ListItemText, Typography, Slider } from '@mui/material';
+
+import { ListItemIconColor, ColorIcon } from './ProductFilters.styles';
 
 function ProductFilters() {
-	const [open, setOpen] = React.useState(true);
+	const [open, setOpen] = React.useState(false);
+	const [value, setValue] = React.useState([0, 2500]);
 
 	const handleClick = () => {
 		setOpen(!open);
 	};
 
+	const handleChange = (event, newValue) => {
+	  setValue(newValue);
+	};
+
 	return (
-		<>
-			<Button variant="text" onClick={console.log}>
-				Woman
-			</Button>
-			<Box>
+		<Box sx={{ maxWidth: 350, minWidth: 150, p: 6, background: 'black', color: 'white' }}>
+			<Typography variant="h4">Woman</Typography>
+			<Box sx={{ color: 'white' }}>
+				<ListItemButton>
+					<ListItemText primary="View all" />
+				</ListItemButton>
 				<ListItemButton onClick={handleClick}>
-					<ListItemText primary="Inbox" />
+					<ListItemText primary="New arrivals" />
 				</ListItemButton>
 				<Collapse in={open} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-					<ListItemButton sx={{ pl: 4 }}>
-						<ListItemText primary="Starred" />
-					</ListItemButton>
+						<ListItemButton sx={{ pl: 4 }}>
+							<ListItemText primary="Dresses" />
+						</ListItemButton>
+						<ListItemButton sx={{ pl: 4 }}>
+							<ListItemText primary="Coats" />
+						</ListItemButton>
+						<ListItemButton sx={{ pl: 4 }}>
+							<ListItemText primary="Jackets" />
+						</ListItemButton>
 					</List>
 				</Collapse>
-				<Button variant="text" onClick={console.log}>
-					View all
-				</Button>
-				<Button variant="text" onClick={console.log}>
-					New arrivals
-				</Button>
-				<Button variant="text" onClick={console.log}>
-					Jackets
-				</Button>
-				<Button variant="text" onClick={console.log}>
-					Coats
-				</Button>
-				<Button variant="text" onClick={console.log}>
-					Dresses
-				</Button>
+				<ListItemButton>
+					<ListItemText primary="Jeans" />
+				</ListItemButton>
+				<ListItemButton>
+					<ListItemText primary="T-shirts" />
+				</ListItemButton>
 			</Box>
-			<Button variant="text" onClick={console.log}>
-				Colors
-			</Button>
-			<Button variant="text" onClick={console.log}>
-				Price
-			</Button>
-		</>
+			<Typography variant="h4">Colors</Typography>
+			<List>
+				<ListItemButton>
+					<ListItemIconColor>
+						<ColorIcon />
+					</ListItemIconColor>
+					<ListItemText primary="black" />
+				</ListItemButton>
+				<ListItemButton>
+					<ListItemIconColor>
+						<ColorIcon />
+					</ListItemIconColor>
+					<ListItemText primary="brown" />
+				</ListItemButton>
+				<ListItemButton>
+					<ListItemIconColor>
+						<ColorIcon />
+					</ListItemIconColor>
+					<ListItemText primary="red" />
+				</ListItemButton>
+			</List>
+			<Typography variant="h4">Price</Typography>
+			<Box sx={{ width: 190, pl: 2 }}>
+				<Slider
+					getAriaLabel={() => 'Temperature range'}
+					value={value}
+					onChange={handleChange}
+					valueLabelDisplay="auto"
+					// getAriaValueText={valuetext}
+				/>
+			</Box>
+		</Box>
 	);
 }
 
