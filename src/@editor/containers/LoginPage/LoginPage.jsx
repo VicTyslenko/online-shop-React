@@ -1,10 +1,9 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
 import Input from '../../components/Input';
-// import Button from '../../components/Button';
 import LoginButton from '../../components/Button/Button';
 import { LoginPageWrapp, FormWrapper } from './StyledLoginPage';
-// import { BsFillPersonFill, BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
+
 import { AiTwotoneLock } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';
 import './LoginPage.scss';

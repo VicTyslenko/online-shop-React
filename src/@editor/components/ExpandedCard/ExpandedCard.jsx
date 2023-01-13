@@ -1,8 +1,8 @@
 import React from 'react'
 import { ExpandedCardWrapper } from './StyledExpandedCard'
-import { Chart } from 'apexcharts'
+// import { Chart } from 'apexcharts'
 // import { motion } from 'framer-motion'
-import { UilTimes } from '@iconscout/react-unicons'
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 const ExpandedCard = ({ param, setExpanded }) => {
     //from documentation:
     // const data = {
@@ -29,7 +29,7 @@ const ExpandedCard = ({ param, setExpanded }) => {
     // }
     return (
         <ExpandedCardWrapper backGround={param.color.backGround}>
-            <UilTimes onClick={setExpanded} className='close-icon' />
+            < CancelOutlinedIcon onClick={setExpanded} className='close-icon' />
             <span>{param.title}</span>
             <div className="chart-container">
                 {/* <Chart series={param.series} type='area'

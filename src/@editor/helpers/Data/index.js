@@ -1,17 +1,23 @@
 // Sidebar imports
-import {
-  UilEstate,
-  UilClipboardAlt,
-  UilUsersAlt,
-  UilPackage,
-  UilChart,
-  UilSignOutAlt,
-} from "@iconscout/react-unicons";
-
+// import {
+//   UilEstate,
+//   UilClipboardAlt,
+//   UilUsersAlt,
+//   UilPackage,
+//   UilChart,
+//   UilSignOutAlt,
+// } from "@iconscout/react-unicons";
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
+import PestControlRodentOutlinedIcon from '@mui/icons-material/PestControlRodentOutlined';
 
 // Management Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
+// import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
+
+// import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 // Recent Card Imports
 import img1 from "../images_updates/img1.png";
@@ -22,19 +28,19 @@ import img3 from "../images_updates/img3.png";
 // Sidebar Data
 export const SidebarData = [
   {
-    icon: UilEstate,
+    icon: HomeOutlinedIcon,
     heading: "Dashboard",
   },
   {
-    icon: UilClipboardAlt,
+    icon: ListAltOutlinedIcon,
     heading: "Orders",
   },
   {
-    icon: UilUsersAlt,
+    icon: PeopleAltOutlinedIcon,
     heading: "Customers",
   },
   {
-    icon: UilPackage,
+    icon: InventoryOutlinedIcon,
     heading: 'Products'
   },
 ];
@@ -50,7 +56,7 @@ export const CardsData = [
     },
     barValue: 70,
     value: "25,970",
-    png: UilUsdSquare,
+    png: AssessmentOutlinedIcon,
     series: [
       {
         name: "Sales",
@@ -68,7 +74,7 @@ export const CardsData = [
     },
     barValue: 80,
     value: "14,270",
-    png: UilMoneyWithdrawal,
+    png: PestControlRodentOutlinedIcon,
     series: [
       {
         name: "Revenue",
@@ -86,7 +92,7 @@ export const CardsData = [
     },
     barValue: 60,
     value: "4,270",
-    png: UilClipboardAlt,
+    png: PestControlRodentOutlinedIcon,
     series: [
       {
         name: "Expenses",

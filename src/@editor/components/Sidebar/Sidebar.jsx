@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 // import { AiTwotoneHome } from 'react-icons/ai'
 import { SidebarData } from '../../helpers/Data'
-import { UilSignOutAlt } from '@iconscout/react-unicons'
+// import { UilSignOutAlt } from '@iconscout/react-unicons'
+import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import { Menu, SidebarItem, SidebarWrapp, Logo, MenuItem } from './StyledSideBar';
 // import * as Unicons from '@iconscout/react-unicons';
 // import Logo from '../img/logo_sidebar';
@@ -34,9 +35,9 @@ const Sidebar = () => {
                         </SidebarItem>
                     )
                 })}
-				<Management/>
+                <Management />
                 <MenuItem>
-                    <UilSignOutAlt />
+                    <ListAltOutlinedIcon />
                 </MenuItem>
             </Menu>
         </SidebarWrapp>
