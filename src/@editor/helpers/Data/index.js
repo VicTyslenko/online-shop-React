@@ -7,12 +7,14 @@
 //   UilChart,
 //   UilSignOutAlt,
 // } from "@iconscout/react-unicons";
+import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
-import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
-import PestControlRodentOutlinedIcon from '@mui/icons-material/PestControlRodentOutlined';
+
+import CardMembershipOutlinedIcon from '@mui/icons-material/CardMembershipOutlined';
+
 
 // Management Cards imports
 // import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
@@ -56,7 +58,7 @@ export const CardsData = [
     },
     barValue: 70,
     value: "25,970",
-    png: AssessmentOutlinedIcon,
+    png: MonetizationOnOutlinedIcon,
     series: [
       {
         name: "Sales",
@@ -74,7 +76,7 @@ export const CardsData = [
     },
     barValue: 80,
     value: "14,270",
-    png: PestControlRodentOutlinedIcon,
+    png: CardMembershipOutlinedIcon,
     series: [
       {
         name: "Revenue",
@@ -92,7 +94,7 @@ export const CardsData = [
     },
     barValue: 60,
     value: "4,270",
-    png: PestControlRodentOutlinedIcon,
+    png: ListAltOutlinedIcon,
     series: [
       {
         name: "Expenses",

@@ -1,13 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
-// import { AiTwotoneHome } from 'react-icons/ai'
 import { SidebarData } from '../../helpers/Data';
-// import { UilSignOutAlt } from '@iconscout/react-unicons';
-import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 
+import  ArrowCircleRightOutlinedIcon  from '@mui/icons-material/ArrowCircleRightOutlined';
 import { Menu, SidebarItem, SidebarWrapp, Logo, MenuItem } from './StyledSideBar';
-// import * as Unicons from '@iconscout/react-unicons';
-// import Logo from '../img/logo_sidebar';
+
 
 import Management from './components/Management';
 
@@ -30,14 +27,15 @@ const Sidebar = () => {
 								setSelected(index);
 							}}
 						>
-							<item.icon fontSize={24} />
+							<item.icon fontSize='40px' />
 							<span>{item.heading}</span>
 						</SidebarItem>
 					);
 				})}
 				<Management />
 				<MenuItem>
-					<ListAltOutlinedIcon />
+					{/* <ListAltOutlinedIcon /> */}
+					<ArrowCircleRightOutlinedIcon />
 				</MenuItem>
 			</Menu>
 		</SidebarWrapp>
