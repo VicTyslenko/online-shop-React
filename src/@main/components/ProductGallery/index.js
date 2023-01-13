@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+// eslint-disable import /no-unresolved
 import { useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import PropTypes from 'prop-types';

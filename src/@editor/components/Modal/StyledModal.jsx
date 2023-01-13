@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {Button} from "@mui/material";
+import styled from 'styled-components';
+import { Button } from '@mui/material';
 
 export const ModalWrapWindow = styled.div`
 	min-height: 100vh;
@@ -7,7 +7,7 @@ export const ModalWrapWindow = styled.div`
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0, 0, 0, 0.6);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -17,10 +17,14 @@ export const ModalWrapWindow = styled.div`
 	animation: ani 0.8s forwards;
 
 	@keyframes ani {
-		0% {opacity: 0;}
-		100% {opacity: 1;}
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
-`
+`;
 
 export const ModalContent = styled.div`
 	margin: 40px 0 40px 0;
@@ -33,7 +37,7 @@ export const ModalContent = styled.div`
 	transform: scale(1);
 	transition: 0.5s;
 	box-shadow: 0 0 12px #000000;
-`
+`;
 
 export const Header = styled.header`
 	text-align: left;
@@ -47,7 +51,7 @@ export const Header = styled.header`
 	display: flex;
 	align-items: center;
 	color: #181818;
-`
+`;
 
 export const MainContent = styled.div`
 	color: #000;
@@ -55,7 +59,7 @@ export const MainContent = styled.div`
 	line-height: 1.3;
 	padding: 14px 26px;
 	letter-spacing: 1px;
-`
+`;
 
 export const CloseIcon = styled.span`
 	position: absolute;
@@ -64,16 +68,13 @@ export const CloseIcon = styled.span`
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
-`
+`;
 
 export const ButtonModalsWrap = styled.div`
 	display: flex;
 	justify-content: space-around;
 	padding: 12px;
 	border-top: 1px solid #d7d5d5;
-`
+`;
 
-export const ButtonItem = styled(Button)`
-
-`
-
+export const ButtonItem = styled(Button)``;
