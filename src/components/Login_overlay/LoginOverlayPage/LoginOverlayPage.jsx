@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, LoginWrapper, HeadWrapp, Description, InputsWrapp, RadioWrapp, StyledButton, ButtonWrapp } from './StyledLoginOverlayPage'
+import { Formik, Form } from 'formik';
+import { validationSchema } from '../validation';
 import Radio from '@mui/material/Radio';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
@@ -29,31 +31,40 @@ const LoginOverlayPage = () => {
   });
   return (
     <Container>
-      <LoginWrapper>
-        <HeadWrapp>
-          <div className="login-wrapp">
-            <p className='login'>Login</p>
-            <hr />
-          </div>
-          <p>Registration</p>
-        </HeadWrapp>
-        <Description>Please enter your account details to log in</Description>
-        <InputsWrapp>
-          <CssTextField variant='standard' label='E-mail' fullWidth />
-          <CssTextField variant='standard' label='Password' fullWidth />
-        </InputsWrapp>
-        <RadioWrapp>
-          <Radio sx={{
-            '& .MuiSvgIcon-root:not(.MuiSvgIcon-root ~ .MuiSvgIcon-root)':
-            {
-              color: 'white',
-            },
+      <Formik
+        initialValues={{
+          email: '',
+          password: ''
 
-          }} />
-          <p>Keep me signed in</p>
-        </RadioWrapp>
+        }}
+        validationSchema={validationSchema}
+      >
+        <LoginWrapper>
+          <HeadWrapp>
+            <div className="login-wrapp">
+              <p className='login'>Login</p>
+              <hr />
+            </div>
+            <p>Registration</p>
+          </HeadWrapp>
+          <Description>Please enter your account details to log in</Description>
+          <Form>
+            <InputsWrapp>
+              <CssTextField variant='standard' label='E-mail' fullWidth />
+              <CssTextField variant='standard' label='Password' fullWidth />
+            </InputsWrapp>
+            <RadioWrapp>
+              <Radio sx={{
+                '& .MuiSvgIcon-root:not(.MuiSvgIcon-root ~ .MuiSvgIcon-root)':
+                {
+                  color: 'white',
+                },
 
-        {/* <TextField
+              }} />
+              <p>Keep me signed in</p>
+            </RadioWrapp>
+
+            {/* <TextField
           fullWidth
           variant='standard'
           label="E-mail"
@@ -68,12 +79,14 @@ const LoginOverlayPage = () => {
           }} */}
 
 
-        {/* <TextField fullWidth label="Password" variant="standard"  /> */}
-        <ButtonWrapp>
-          <StyledButton>LOG IN</StyledButton>
+            {/* <TextField fullWidth label="Password" variant="standard"  /> */}
+            <ButtonWrapp>
+              <StyledButton>LOG IN</StyledButton>
 
-        </ButtonWrapp>
-      </LoginWrapper>
+            </ButtonWrapp>
+          </Form>
+        </LoginWrapper>
+      </Formik>
     </Container>
   )
 }
