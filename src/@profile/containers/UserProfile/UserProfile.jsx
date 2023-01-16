@@ -7,7 +7,7 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const UserProfile = () => {
     return (
-        <Container maxWidth='xl' sx={{ mt: '150px' }}>
+        <Container maxWidth='xl' sx={{ mt: '150px',mb:'100px' }}>
             <Typography variant='h3' sx={{ mb: '141px' }}>Welcome, SUZANNE EATON</Typography>
             <Grid container spacing={2}>
                 <Grid item xs={6}>

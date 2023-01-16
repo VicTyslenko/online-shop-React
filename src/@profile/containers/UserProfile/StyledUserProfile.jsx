@@ -22,13 +22,15 @@ height:fit-content ;
     text-align:left ;
 }
 & .title{
-    /* font-weight: 700; */
+    font-weight: 700;
 font-size: 24px;
 line-height: 24px;
+font-family: 'Josefin Sans';
 }
 & .description{
     font-weight: 400;
 font-size: 18px;
 line-height: 25px;
+font-family: 'Open Sans';
 }
 `
