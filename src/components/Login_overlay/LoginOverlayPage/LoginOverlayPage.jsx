@@ -81,7 +81,7 @@ const LoginOverlayPage = () => {
 
             {/* <TextField fullWidth label="Password" variant="standard"  /> */}
             <ButtonWrapp>
-              <StyledButton>LOG IN</StyledButton>
+              <StyledButton>Log in</StyledButton>
 
             </ButtonWrapp>
           </Form>
