@@ -18,14 +18,16 @@ display: flex;
 justify-content:space-evenly ;
 align-items:center ;
 margin-bottom:53px ;
-& p{
+& .login{
     font-weight: 400;
 font-size: 18px;
 line-height: 18px;
+font-family: 'Josefin Sans';
 color: #E5E5E5;
 margin:0 ;
-font-family: 'Josefin Sans';
 }
+
+
 & .login-wrapp{
     display: flex;
     flex-direction:column ;

@@ -39,7 +39,7 @@ const UserRegistration = () => {
       >
         <LoginWrapper>
           <HeadWrapp>
-            <p>Login</p>
+            <p className='login'>Login</p>
             <div className="login-wrapp">
               <p className='login'>Registration</p>
               <hr />
