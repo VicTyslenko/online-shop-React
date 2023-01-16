@@ -1,7 +1,7 @@
-import MainRoutes from "./router";
+import MainRoutes from './router';
 
 function Main() {
-	return (<MainRoutes/>);
+	return <MainRoutes />;
 }
 
 export default Main;
