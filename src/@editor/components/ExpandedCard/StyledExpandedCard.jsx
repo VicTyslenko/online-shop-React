@@ -23,6 +23,7 @@ padding:1rem ;
     font-size:26px ;
     font-weight:bold ;
     text-shadow:0 0 15px white ;
+   
 }
 & span:nth-of-type(2){
 color:white ;

@@ -13,7 +13,6 @@ const Sidebar = () => {
 	return (
 		<SidebarWrapp>
 			<Logo>
-				{/* <img src={Logo} alt="" /> */}
 				<h2 className="logo-title">Shops</h2>
 			</Logo>
 			<Menu>
@@ -27,14 +26,13 @@ const Sidebar = () => {
 								setSelected(index);
 							}}
 						>
-							<item.icon fontSize='40px' />
+							<item.icon />
 							<span>{item.heading}</span>
 						</SidebarItem>
 					);
 				})}
 				<Management />
 				<MenuItem>
-					{/* <ListAltOutlinedIcon /> */}
 					<ArrowCircleRightOutlinedIcon />
 				</MenuItem>
 			</Menu>

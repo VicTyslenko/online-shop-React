@@ -2,6 +2,7 @@ import React from 'react'
 import { ExpandedCardWrapper } from './StyledExpandedCard'
 // import { Chart } from 'apexcharts'
 // import { motion } from 'framer-motion'
+// import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined ';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 const ExpandedCard = ({ param, setExpanded }) => {
     //from documentation:
