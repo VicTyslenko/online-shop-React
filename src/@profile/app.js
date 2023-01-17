@@ -3,11 +3,9 @@ import AddressBook from './containers/AddressBook/AddressBook';
 
 function Profile() {
 	return (
-		<div>
-			<Routes>
-				<Route path="/address" element={<AddressBook />} />
-			</Routes>
-		</div>
+		<Routes>
+			<Route path="/address" element={<AddressBook />} />
+		</Routes>
 	);
 }
 
