@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import UserProfile from "./containers/UserProfile/UserProfile";
+
 function Profile() {
 	return <div>
 		<Routes>
