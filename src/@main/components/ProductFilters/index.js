@@ -14,7 +14,7 @@ function ProductFilters() {
 	};
 
 	const handleChange = (event, newValue) => {
-	  setValue(newValue);
+		setValue(newValue);
 	};
 
 	return (

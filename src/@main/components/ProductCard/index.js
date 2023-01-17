@@ -17,7 +17,7 @@ function ProductCard({ url, alt, title, price, id }) {
 		<Card sx={{ maxWidth: 370 }}>
 			<CardActionArea onClick={handlerOpenCard}>
 				<CardMedia component="img" image={url} alt={alt} id={id} />
-				<CardContent >
+				<CardContent>
 					<Typography gutterBottom variant="title" component="div">
 						{title}
 					</Typography>
