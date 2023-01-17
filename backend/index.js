@@ -43,8 +43,8 @@ app.all('*', (request, response) => {
 
 const start = async () => {
 	try {
-		// mongodb+srv://admin:admin@cluster0.vbo48m0.mongodb.net/?retryWrites=true&w=majority
-		const url = `mongodb+srv://igorDan:RgdBB5gjNNE1dYS2@cluster0.mteijke.mongodb.net/nodejsAPP`
+		const url = `mongodb+srv://admin:admin@onlinemagazine.3spckjc.mongodb.net/?retryWrites=true&w=majority`
+		// const url = `mongodb+srv://igorDan:RgdBB5gjNNE1dYS2@cluster0.mteijke.mongodb.net/nodejsAPP`
 
 		mongoose.connect(url, {
 			useNewUrlParser: true,
