@@ -21,11 +21,7 @@ function AppRoutes() {
 					}
 				/>
 				<Route
-<<<<<<< HEAD
 					path="profile/*"
-=======
-					path="/profile/*"
->>>>>>> 46d45142ffebf4f50139081c1bb61577aadcaa6c
 					element={
 						<React.Suspense fallback={<>...</>}>
 							<Profile />
@@ -34,11 +30,7 @@ function AppRoutes() {
 				/>
 			</Route>
 			<Route
-<<<<<<< HEAD
 				path="editor/*"
-=======
-				path="/editor/*"
->>>>>>> 46d45142ffebf4f50139081c1bb61577aadcaa6c
 				element={
 					<React.Suspense fallback={<>...</>}>
 						<Editor />
