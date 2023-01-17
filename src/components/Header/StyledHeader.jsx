@@ -44,21 +44,26 @@ export const BoxTechnical = styled(Box)`
 	display: flex;
 `;
 
-export const TechnicalItem = styled(Link)`
-	text-decoration: none;
-	/* font-family: 'Josefin Sans'; */
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 16px;
-	color: #e2dfdf;
-	display: inline-block;
-
-	&:hover {
-		border-bottom: 1px solid #ffffff;
-	}
+export const ButtonGroup = styled.div`
+	display: flex;
+	align-items: center;
+	color: #c4c4c4;
+	cursor: pointer;
 
 	&:not(:last-child) {
-		margin-right: 22px;
+		margin-right: 25px;
+	}
+`;
+
+export const ButtonItem = styled(Link)`
+	text-decoration: none;
+	/* font-family: 'Josefin Sans'; */
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #c4c4c4;
+
+	&:hover {
+		border-bottom: 1px solid #c4c4c4;
 	}
 `;
