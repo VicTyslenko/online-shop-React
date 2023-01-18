@@ -18,8 +18,11 @@ import {
 	StyledCloseIcon,
 	StyledOverlayImage,
 } from './ProductGallery.styles';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/navigation';
 
 function ProductGallery({ images }) {
