@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { MdOutlineManageAccounts } from 'react-icons/md';
 
-import { LinkItem, ButtonItem, ListIcon, ManagementWrap, ListWrapManagement } from './StyledManagement';
 import { Collapse, List } from '@mui/material';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { LinkItem, ButtonItem, ListIcon, ManagementWrap, ListWrapManagement } from './StyledManagement';
 
 export default function Management() {
 	const [open, setOpen] = React.useState(false);
@@ -17,7 +17,7 @@ export default function Management() {
 		<ListWrapManagement sx={{ width: '100%' }} component="nav" aria-labelledby="nested-list-subheader">
 			<ManagementWrap onClick={handleClick}>
 				<ListIcon>
-					<MdOutlineManageAccounts fontSize={26} color={'#000'} />
+					<MdOutlineManageAccounts fontSize={26} color="#000" />
 				</ListIcon>
 				<ButtonItem primary="Management" />
 				{open ? <ExpandLessIcon /> : <ExpandMoreIcon />}

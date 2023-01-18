@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
 import {
@@ -10,7 +11,8 @@ import {
 	CloseIcon,
 } from './StyledModal';
 
-const Modal = ({ title, closeModal, children, onClick }) => {
+// eslint-disable-next-line react/prop-types
+function Modal({ title, closeModal, children, onClick }) {
 	return (
 		<ModalWrapWindow onClick={closeModal}>
 			<ModalContent onClick={(e) => e.stopPropagation()}>
@@ -39,6 +41,6 @@ const Modal = ({ title, closeModal, children, onClick }) => {
 			</ModalContent>
 		</ModalWrapWindow>
 	);
-};
+}
 
 export default Modal;

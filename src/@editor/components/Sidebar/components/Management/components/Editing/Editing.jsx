@@ -1,9 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
 
 import { Box, Grid } from '@mui/material';
 import { GridItem, ButtonItem, Title } from './StyledEditing';
 
-const Editing = () => {
+function Editing() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -62,6 +63,6 @@ const Editing = () => {
 			</Box>
 		</>
 	);
-};
+}
 
 export default Editing;
