@@ -1,10 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
+// eslint-disable-next-line no-unused-vars, import/no-duplicates
 import { Container, Button } from '@mui/material';
+// eslint-disable-next-line import/no-duplicates
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { ButtonAddRole, TableCellTitle, TableCellName } from './StyledRoles';
 
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-
-const Roles = () => {
+function Roles() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -39,12 +41,12 @@ const Roles = () => {
 								Date Posted
 							</TableCellName>
 						</TableRow>
-						<TableBody></TableBody>
+						<TableBody />
 					</TableHead>
 				</Table>
 			</TableContainer>
 		</Container>
 	);
-};
+}
 
 export default Roles;

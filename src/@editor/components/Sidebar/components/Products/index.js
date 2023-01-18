@@ -1,1 +1,2 @@
-export {default} from "./Products"
+// eslint-disable-next-line no-restricted-exports
+export { default } from './Products';

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Customers from '../Sidebar/components/Customers';
@@ -10,7 +11,7 @@ import Editing from '../Sidebar/components/Management/components/Editing';
 import Roles from '../Sidebar/components/Management/components/Roles';
 import Users from '../Sidebar/components/Management/components/Users';
 
-const MainDash = () => {
+function MainDash() {
 	return (
 		<ContainerWrap>
 			<Routes>
@@ -24,6 +25,6 @@ const MainDash = () => {
 			</Routes>
 		</ContainerWrap>
 	);
-};
+}
 
 export default MainDash;

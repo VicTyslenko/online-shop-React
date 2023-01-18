@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
-	background: ${props => props.backGround};
-	box-shadow: ${props => props.boxShadow};
+	background: ${(props) => props.backGround};
+	box-shadow: ${(props) => props.boxShadow};
 	display: flex;
 	flex: 1;
 	height: 7rem !important;
@@ -15,14 +15,14 @@ export const CardWrapper = styled.div`
 	&:hover {
 		box-shadow: none;
 	}
-`
+`;
 export const RadialBar = styled.div`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	gap: 1rem;
-`
+`;
 export const Detail = styled.div`
 	display: flex;
 	flex: 1;
@@ -38,5 +38,4 @@ export const Detail = styled.div`
 	& span:nth-child(3) {
 		font-size: 12px;
 	}
-
-`
+`;

@@ -11,16 +11,22 @@ import {
 	FormGroup,
 	Checkbox,
 	FormControlLabel,
+	Table,
+	TableBody,
+	TableCell,
+	TableContainer,
+	TableHead,
+	TableRow,
+	Paper,
 } from '@mui/material';
 
-import { ButtonAddRole, TableCellTitle, TableCellName, InputTitle } from './StyledUsers';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import { ButtonAddRole, TableCellTitle, TableCellName, InputTitle } from './StyledUsers';
 
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import Modal from '../../../../../Modal';
 
-const Users = () => {
+function Users() {
 	const [modalOpen, setModalOpen] = useState(false);
 
 	useEffect(() => {
@@ -74,7 +80,7 @@ const Users = () => {
 								Date Posted
 							</TableCellName>
 						</TableRow>
-						<TableBody></TableBody>
+						<TableBody />
 					</TableHead>
 				</Table>
 			</TableContainer>
@@ -143,6 +149,6 @@ const Users = () => {
 			)}
 		</Container>
 	);
-};
+}
 
 export default Users;

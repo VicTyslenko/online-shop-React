@@ -1,19 +1,20 @@
-import React from 'react'
-import UpDates from './components/Updates/UpDates'
-import { RightSideWrapp } from './StyledRightSide'
-const RightSide = () => {
-    return (
-        <RightSideWrapp>
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import UpDates from './components/Updates/UpDates';
+import { RightSideWrapp } from './StyledRightSide';
 
-            <div className="">
-                <h3>Updates</h3>
-                <UpDates />
-            </div>
-            <div className="">
-                <h3>Custumer Reviewer</h3>
-            </div>
-        </RightSideWrapp>
-    )
+function RightSide() {
+	return (
+		<RightSideWrapp>
+			<div className="">
+				<h3>Updates</h3>
+				<UpDates />
+			</div>
+			<div className="">
+				<h3>Custumer Reviewer</h3>
+			</div>
+		</RightSideWrapp>
+	);
 }
 
-export default RightSide
+export default RightSide;

@@ -1,1 +1,2 @@
-export {default} from "./ExpandedCard"
+// eslint-disable-next-line no-restricted-exports
+export { default } from './ExpandedCard';

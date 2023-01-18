@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const SidebarItem = styled(Link)`
 	height: 2.5rem;
@@ -24,7 +24,7 @@ export const SidebarItem = styled(Link)`
 		background-color: rgb(22, 88, 141);
 		margin-left: 0;
 	}
-`
+`;
 export const SidebarWrapp = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -32,23 +32,20 @@ export const SidebarWrapp = styled.div`
 	padding-top: 4rem;
 	transition: all 300ms ease;
 	padding-left: 15px;
-
-
-`
+`;
 export const Menu = styled.div`
 	margin-top: 4rem;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-`
+`;
 export const Logo = styled.div`
 	& .logo-title {
 		color: #00525a;
 	}
-`
+`;
 export const MenuItem = styled.div`
-
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-`
+`;

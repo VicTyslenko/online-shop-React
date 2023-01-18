@@ -1,11 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-const Customers = () => {
-	return (
-		<div>
-			Customers
-		</div>
-	);
-};
+function Customers() {
+	return <div>Customers</div>;
+}
 
 export default Customers;
