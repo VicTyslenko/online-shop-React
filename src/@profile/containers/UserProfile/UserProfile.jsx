@@ -1,11 +1,14 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { FlexWrapp, StyledButton } from './StyledUserProfile';
+// eslint-disable-next-line no-unused-vars
 import { Box, Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-const UserProfile = () => {
+import { FlexWrapp, StyledButton } from './StyledUserProfile';
+
+function UserProfile() {
 	return (
 		<Container maxWidth="xl" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
@@ -61,6 +64,6 @@ const UserProfile = () => {
 			</Grid>
 		</Container>
 	);
-};
+}
 
 export default UserProfile;
