@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import AddressBook from './containers/AddressBook/AddressBook';
 import LoginOverlayPage from '../components/Login_overlay/LoginOverlayPage/LoginOverlayPage';
+
 function Profile() {
 	return (
 		<div>
