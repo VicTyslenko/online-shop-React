@@ -5,7 +5,6 @@ function Profile() {
 	return (
 		<div>
 			<Routes>
-				<Route path="/address" element={<AddressBook />} />
 				<Route path='/login' element={<LoginOverlayPage />} />
 			</Routes>
 		</div>
