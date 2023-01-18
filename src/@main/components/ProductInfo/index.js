@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Box, Button, IconButton, Typography, ListItemText } from '@mui/material';
 
 import PropTypes from 'prop-types';
