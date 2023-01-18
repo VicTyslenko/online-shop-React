@@ -1,11 +1,14 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { Container, LoginWrapper, HeadWrapp, ButtonWrapp, StyledButton, InputsWrapp } from '../UserRegistration/StyledUserRegistration'
 import { Formik, Form } from 'formik';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
+import { Container, LoginWrapper, HeadWrapp, ButtonWrapp, StyledButton, InputsWrapp } from "./StyledUserRegistration"
 
-import { validationSchema } from '../Login_overlay/validation';
-const UserRegistration = () => {
+// eslint-disable-next-line import/no-unresolved
+import { validationSchema } from "./validation";
+
+function UserRegistration() {
   const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
       color: 'white',
