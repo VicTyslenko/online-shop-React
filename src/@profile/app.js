@@ -5,7 +5,7 @@ function Profile() {
 	return (
 		<div>
 			<Routes>
-				<Route path='/login' element={<LoginOverlayPage />} />
+				<Route path="/login" element={<LoginOverlayPage />} />
 			</Routes>
 		</div>
 	);
