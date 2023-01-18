@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import AddressBook from './containers/AddressBook/AddressBook';
+import UserRegistration from '../components/UserRegistration/UserRegistration';
 
 function Profile() {
 	return (
 		<Routes>
-			<Route path="/address" element={<AddressBook />} />
+			<Route path="/registration" element={<UserRegistration />} />
 		</Routes>
 	);
 }
