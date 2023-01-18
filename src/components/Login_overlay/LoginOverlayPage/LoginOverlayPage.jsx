@@ -1,12 +1,13 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { Container, LoginWrapper, HeadWrapp, Description, InputsWrapp, RadioWrapp, StyledButton, ButtonWrapp } from './StyledLoginOverlayPage'
 import { Formik, Form } from 'formik';
-import { validationSchema } from '../validation';
 import Radio from '@mui/material/Radio';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
+import { validationSchema } from '../validation';
+import { Container, LoginWrapper, HeadWrapp, Description, InputsWrapp, RadioWrapp, StyledButton, ButtonWrapp } from './StyledLoginOverlayPage'
 
-const LoginOverlayPage = () => {
+function LoginOverlayPage() {
 
   const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
