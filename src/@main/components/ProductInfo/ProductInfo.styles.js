@@ -1,5 +1,5 @@
-import { Box, List, ListItemButton, ListItemIcon } from "@mui/material";
-import styled from "styled-components";
+import { Box, List, ListItemButton, ListItemIcon } from '@mui/material';
+import styled from 'styled-components';
 
 export const ActionsWrapper = styled(Box)`
 	display: flex;

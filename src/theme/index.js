@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
 	typography: {
@@ -50,7 +50,7 @@ const theme = createTheme({
 					'&:hover': {
 						background: '#565254',
 						boxShadow: 'none',
-					}
+					},
 				},
 				sizeMedium: {
 					// width: '263px',
@@ -59,7 +59,7 @@ const theme = createTheme({
 					fontWeight: 400,
 					fontSize: '18px',
 					lineHeight: '25px',
-				}
+				},
 			},
 		},
 		MuiIconButton: {
@@ -75,9 +75,9 @@ const theme = createTheme({
 					color: '#fff',
 					'&:hover': {
 						background: '#565254',
-					}
-				}
-			}
+					},
+				},
+			},
 		},
 		MuiListItemText: {
 			styleOverrides: {
@@ -87,9 +87,9 @@ const theme = createTheme({
 					lineHeight: '22px',
 					color: '#000',
 				},
-			}
-		}
-	  },
+			},
+		},
+	},
 });
 
 export default theme;
