@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+// eslint-disable import /no-unresolved
 import { useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import PropTypes from 'prop-types';
@@ -18,8 +18,11 @@ import {
 	StyledCloseIcon,
 	StyledOverlayImage,
 } from './ProductGallery.styles';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/navigation';
 
 function ProductGallery({ images }) {
