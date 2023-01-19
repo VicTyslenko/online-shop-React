@@ -1,7 +1,11 @@
 const {Schema, model} = require('mongoose');
 
 const user = new Schema({
-    fullName: {
+    firstName: {
+        type: String,
+        require: true
+    },
+    secondName: {
         type: String,
         require: true
     },
@@ -9,9 +13,6 @@ const user = new Schema({
         type: String,
         unique: true,
         require: true
-    },
-    username: {
-        type: String,
     },
     password: {
         type: String,
@@ -22,7 +23,6 @@ const user = new Schema({
         type: String,
         require: true
     },
-
     role: {
         type: String,
         enum: ['admin', 'user'],

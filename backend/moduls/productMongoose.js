@@ -9,9 +9,9 @@ const product = new Schema({
         type: String,
         require: true
     },
-    label: {
-        status: String,
-        text: String
+    description: {
+        type: String,
+        require: true
     },
     prices: {
         retail: {
@@ -21,6 +21,22 @@ const product = new Schema({
         sale: Number,
         procent: Number,
         currency: String,
+    },
+    color: {
+        type: String,
+        require: true
+    },
+    size: {
+        type: String,
+        require: true
+    },
+    article: {
+        type: String,
+        require: true
+    }, 
+    become: {
+        type: String,
+        require: true
     }
 })
 
