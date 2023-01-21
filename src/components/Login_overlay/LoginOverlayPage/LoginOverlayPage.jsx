@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Formik, Form } from 'formik';
@@ -14,7 +16,7 @@ import {
 	RadioWrapp,
 	StyledButton,
 	ButtonWrapp,
-} from './StyledLoginOverlayPage';
+} from './StyledLoginOverlay';
 
 function LoginOverlayPage() {
 	const CssTextField = styled(TextField)({
