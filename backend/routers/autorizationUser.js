@@ -13,7 +13,7 @@ router.post('/login', async (request, response) => {
 		request.session.user = autorizationUser(users, request.body)
 		request.session.isAuthenticated = true;
 		request.session.save(err => {
-			if (err) {
+			if (err) { 
 				throw err
 			}
 			response.status(200).json({ ...user });

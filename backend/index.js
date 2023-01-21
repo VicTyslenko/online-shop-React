@@ -1,62 +1,48 @@
 const express = require('express');
-// const { request } = require('http');
 const mongoose = require('mongoose');
-const session = require('express-session');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 const app = express();
+const path = require('node:path')
 
-const manProductRouter = require('./routers/manProduct')
-const womanProductRouter = require('./routers/womanProduct')
-const accessoryRouter = require('./routers/accessory')
-const shopingbagRouter = require('./routers/shopingbag')
-const account = require('./routers/account')
-const usersApiRouter = require('./routers/autorizationUser')
-const authApiRouter = require('./routers/newUser')
+// const manProductRouter = require('./routers/manProduct')
+// const womanProductRouter = require('./routers/womanProduct')
+// const accessoryRouter = require('./routers/accessory')
+// const shopingbagRouter = require('./routers/shopingbag')
+// const account = require('./routers/account')
+// const usersApiRouter = require('./routers/autorizationUser')
+// const authApiRouter = require('./routers/newUser')
 
 app.use(cors())
-app.use(express.static('./front'))
-app.use(express.urlencoded({extended: true}))
+
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-const urlencodedParser = bodyParser.urlencoded({extended: false})
-
-app.use(session({
-	secret: 'some secret value',
-	resave: false,
-	saveUninitialized: false,
-}))
-
 const PORT = process.env.PORT || 3000
+const bd = require('./config/keys/').mongoURI
 
-app.use(manProductRouter)
-app.use(womanProductRouter)
-app.use(accessoryRouter)
-app.use(shopingbagRouter)
-app.use(account)
-app.use('/api', urlencodedParser, usersApiRouter)
-app.use('/auth', urlencodedParser, authApiRouter)
-
-app.all('*', (request, response) => {
-	response.status(404).send('resource not found')
+mongoose
+	.connect(bd, {
+	useNewUrlParser: true,
+	useFindAndModify : false,
 })
+	.then (()=> console.log('MongoDB connected...'))
+	.catch ((error) => console.log(error))
 
-const start = async () => {
-	try {
-		const url = `mongodb+srv://admin:admin@onlinemagazine.3spckjc.mongodb.net/?retryWrites=true&w=majority`
-		// const url = `mongodb+srv://igorDan:RgdBB5gjNNE1dYS2@cluster0.mteijke.mongodb.net/nodejsAPP`
+app.use(passport.initialize())
 
-		mongoose.connect(url, {
-			useNewUrlParser: true,
-		})
+// app.use(manProductRouter)
+// app.use(womanProductRouter)
+// app.use(accessoryRouter)
+// app.use(shopingbagRouter)
+// app.use(account)
+// app.use('/api', urlencodedParser, usersApiRouter)
+// app.use('/auth', urlencodedParser, authApiRouter)
 
-		app.listen(PORT, () => {
-			console.log(`Server is running on :${PORT}`);
-		})
-
-	} catch (error) {
-		console.log(error);
-	}
+if (process.env.NODE_ENV== 'production') {
+	app.use(express.static('./frontend/build'))
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+	})
 }
-
-start()
