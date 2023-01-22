@@ -15,9 +15,12 @@ export const StyledBox = styled(Box)`
 	}
 
 	${(props) => props.theme.breakpoints.down('md')} {
-		max-width: 190px;
+		max-width: 180px;
 		padding: 30px 10px 30px 20px;
 	}
+`;
+
+export const StyledBoxMobile = styled(Box)`
 `;
 
 export const ListItemIconColor = styled(ListItemIcon)`

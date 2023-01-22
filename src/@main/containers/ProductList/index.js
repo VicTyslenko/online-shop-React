@@ -1,9 +1,8 @@
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { Container, Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 import ProductCard from '../../components/ProductCard';
 import ProductFilters from '../../components/ProductFilters';
-import { StyledFilterBox, StyledBox, StyledBoxMobile, StyledTitle } from './ProductList.styles';
+import { StyledContainer, StyledBox, StyledTitle } from './ProductList.styles';
 
 const productListData = Array.from({ length: 5 }, (_, index) => ({
 	title: 'black jacket',
@@ -15,42 +14,21 @@ const productListData = Array.from({ length: 5 }, (_, index) => ({
 }));
 
 function ProductList() {
-	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-
 	return (
-		<Container maxWidth="lg" >
+		<StyledContainer maxWidth="lg" >
 			{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
-			<StyledFilterBox>
-				<ProductFilters />
-				<Box sx={{ pb: '30px' }} >
-					<StyledTitle>
-						{isMobile ? (
-							// todo: Filters button with link styles {fontWeight: 400, fontSize: '14px', lineHeight: '14px', color: '#3F3D3D',}
-							<Typography variant="title" textTransform="capitalize">
-								Filters
-							</Typography>
-						) : (
-							<Typography variant="title" textTransform="capitalize">
-								Jackets
-							</Typography>
-						)}
-					</StyledTitle>
-					{isMobile ? (
-						<StyledBoxMobile>
-							{productListData.map(({ title, price, url, alt, id }) => (
-								<ProductCard key={id} title={title} price={price} url={url} alt={alt} id={id} />
-							))}
-						</StyledBoxMobile>
-					) : (
-						<StyledBox>
-							{productListData.map(({ title, price, url, alt, id }) => (
-								<ProductCard key={id} title={title} price={price} url={url} alt={alt} id={id} />
-							))}
-						</StyledBox>
-					)}
-				</Box>
-			</StyledFilterBox>
-		</Container>
+			<ProductFilters />
+			<Box sx={{ pb: '30px' }} >
+				<StyledTitle variant="title" component="div">
+					Jackets
+				</StyledTitle>
+				<StyledBox>
+					{productListData.map(({ title, price, url, alt, id }) => (
+						<ProductCard key={id} title={title} price={price} url={url} alt={alt} id={id} />
+					))}
+				</StyledBox>
+			</Box>
+		</StyledContainer>
 	);
 }
 

@@ -10,7 +10,7 @@ const StyledBox = styled(Box)`
 		width: 230px;
 	}
 	${(props) => props.theme.breakpoints.down('md')} {
-		width: 170px;
+		width: 160px;
 	}
 `;
 
