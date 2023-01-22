@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { IoCloseSharp } from 'react-icons/io5';
+// import { IoCloseSharp } from 'react-icons/io5';
 import {
 	ButtonModalsWrap,
 	ButtonItem,
@@ -19,7 +20,7 @@ function Modal({ title, closeModal, children, onClick }) {
 				<Header>
 					{title}
 					<CloseIcon>
-						<IoCloseSharp fontSize={28} onClick={closeModal} />
+						{/* <IoCloseSharp fontSize={28} onClick={closeModal} /> */}
 					</CloseIcon>
 				</Header>
 				<MainContent>{children}</MainContent>

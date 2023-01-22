@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
+// import { CircularProgressbar } from 'react-circular-progressbar';
 import { CardWrapper, RadialBar, Detail } from './StyledCompactCard';
 import './CircularBar.scss';
 
@@ -20,7 +21,7 @@ function CompactCard({ param, setExpanded }) {
 			layoutId="expandableCard"
 		>
 			<RadialBar>
-				<CircularProgressbar className="circular" value={param.barValue} text={`${param.barValue}%`} />
+				{/* <CircularProgressbar className="circular" value={param.barValue} text={`${param.barValue}%`} /> */}
 				<span>{param.title}</span>
 			</RadialBar>
 			<Detail>
