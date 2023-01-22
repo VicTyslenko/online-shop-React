@@ -1,0 +1,13 @@
+.categoryPlank {
+    font-size: 19px;
+    padding: 18px 80px;
+    @media (max-width:969px) {
+        padding: 14px 50px;
+    }
+}
+.categoryPlankText{
+    font-size: 19px;
+    @media (max-width:969px) {
+        font-size: 12px;
+    }
+}

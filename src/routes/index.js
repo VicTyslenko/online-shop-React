@@ -13,7 +13,7 @@ function AppRoutes() {
 		<Routes>
 			<Route path="/" element={<MainLayout />}>
 				<Route
-					index
+					path="/*"
 					element={
 						<React.Suspense fallback={<>...</>}>
 							<Main />
@@ -21,7 +21,7 @@ function AppRoutes() {
 					}
 				/>
 				<Route
-					path="profile"
+					path="profile/*"
 					element={
 						<React.Suspense fallback={<>...</>}>
 							<Profile />
@@ -30,7 +30,7 @@ function AppRoutes() {
 				/>
 			</Route>
 			<Route
-				path="/editor"
+				path="editor/*"
 				element={
 					<React.Suspense fallback={<>...</>}>
 						<Editor />
