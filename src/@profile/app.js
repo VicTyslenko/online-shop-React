@@ -1,12 +1,13 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Routes, Route } from 'react-router';
-import UserProfile from './containers/UserProfile/UserProfile';
+import { Routes, Route } from 'react-router-dom';
+import LoginOverlayPage from '../components/Login_overlay/LoginOverlayPage/LoginOverlayPage';
+import UserRegistration from '../components/UserRegistration/UserRegistration';
 
 function Profile() {
 	return (
 		<div>
 			<Routes>
-				<Route path="/user_profile" element={<UserProfile />} />
+				<Route path="/login" element={<LoginOverlayPage />} />
+				<Route path="/registration" element={<UserRegistration />} />
 			</Routes>
 		</div>
 	);

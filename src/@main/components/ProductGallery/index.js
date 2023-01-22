@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
+// eslint-disable-next-line no-unused-vars
 import PropTypes from 'prop-types';
 
 import { StyledBigImage, StyledSmallImage, StyledGallery } from './ProductGallery.styles';
