@@ -25,9 +25,12 @@ export const StyledGallery = styled(Box)`
 	grid-template-columns: repeat(6, 1fr);
 	align-items: center;
 	gap: 10px;
+	margin-bottom: 20px;
 `;
 
 export const StyledSwiper = styled(Swiper)`
+	margin-bottom: 20px;
+
 	& .swiper-pagination-bullet-active {
 		background: #000;
 	}

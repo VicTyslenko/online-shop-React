@@ -35,6 +35,12 @@ const theme = createTheme(themeWithBreakpoints, {
 				lineHeight: '16px',
 			},
 		},
+		subtitle1: {
+			fontWeight: 400,
+			fontSize: '18px',
+			lineHeight: '21px',
+			color: '#fff',
+		},
 		subtitle2: {
 			fontWeight: 700,
 			fontSize: '16px',
@@ -126,6 +132,9 @@ const theme = createTheme(themeWithBreakpoints, {
 						lineHeight: '18px',
 					},
 				},
+				secondary: {
+					color: '#fff',
+				}
 			},
 		},
 		MuiCardContent: {
@@ -134,6 +143,27 @@ const theme = createTheme(themeWithBreakpoints, {
 					[themeWithBreakpoints.breakpoints.down('sm')]: {
 						padding: '8px',
 					},
+				},
+			},
+		},
+		MuiSlider: {
+			styleOverrides: {
+				root: {
+					color: '#fff',
+					width: '90%',
+				},
+				rail: {
+					background: '#847A7A',
+					borderRadius: '0px 1px 1px 0px',
+				},
+				track: {
+					height: '2px',
+				},
+				thumb: {
+					width: '4px',
+					height: '14px',
+					background: '#fff',
+					borderRadius: '1px',
 				},
 			},
 		},

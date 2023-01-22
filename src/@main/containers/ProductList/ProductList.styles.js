@@ -1,6 +1,13 @@
 import { Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
+
+export const StyledFilterBox = styled(Box)`
+	display: flex;
+	justify-content: stretch;
+	gap: 2rem;
+`;
+
 export const StyledBox = styled(Box)`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);

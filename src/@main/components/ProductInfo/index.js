@@ -60,7 +60,7 @@ function ProductInfo({ title, articul, price, colors, sizes, productDetails, pro
 					<FavoriteBorderIcon />
 				</IconButton>
 			</ActionsWrapper>
-			<Box>
+			<Box sx={{ pb: "20px" }}>
 				<Typography variant="subtitle2">Details</Typography>
 				<Typography variant="body1">{productDetails}</Typography>
 				<Typography mt={1} variant="body1">
