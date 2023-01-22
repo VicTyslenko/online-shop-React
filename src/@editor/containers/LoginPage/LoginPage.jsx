@@ -3,12 +3,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Form, Formik } from 'formik';
-
-import Input from '../../components/Input';
+import Face6Icon from '@mui/icons-material/Face6';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import LoginButton from '../../components/Button/Button';
-import { LoginPageWrapp, FormWrapper } from './StyledLoginPage';
+import { LoginPageWrapp, FormWrapper, ImageWrapp, StyledInput, PassWrapp, InputWrapper } from './StyledLoginPage';
 
-import './LoginPage.scss';
 
 function LoginPage() {
 	const formSubmit = (values) => {
@@ -25,22 +24,22 @@ function LoginPage() {
 				onSubmit={(values) => formSubmit(values)}
 			>
 				<Form>
-					<div className="img-wrapp">
+					<ImageWrapp>
 						<img className="image" src="../../../img/admin.jpg" alt="" />
-					</div>
-					<FormWrapper>
-						<div className="input-wrapper">
-							{/* <BsFillPersonFill className="login-icon" /> */}
-							{/* <FcBusinessman className="login-icon" /> */}
+					</ImageWrapp>
 
-							<Input type="text" name="login" placeholder="Login" className="login-input" />
-						</div>
-						<div className="pass-wrapp">
-							{/* <AiTwotoneLock className="lock-icon" /> */}
+					<FormWrapper>
+						<InputWrapper>
 						
-							{/* <BsFillEyeFill className="eye-icon" /> */}
-							<Input type="password" name="password" placeholder="Password" className="pass-input" />
-						</div>
+						<Face6Icon className="login-icon" />
+							<StyledInput type="text" name="login" placeholder="Login" />
+							
+						</InputWrapper>
+						<PassWrapp>
+						
+							<RemoveRedEyeIcon className="eye-icon" />
+							<StyledInput type="password" name="password" placeholder="Password" />
+						</PassWrapp>
 						<LoginButton />
 					</FormWrapper>
 				</Form>

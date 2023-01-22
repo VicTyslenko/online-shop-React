@@ -3,7 +3,7 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar';
 import MainDash from '../../components/MainDash';
 import { Wrapp, SideBarWrapp } from './StyledDashboardPage';
-import './DashboardPage.scss';
+// import './DashboardPage.scss';
 
 export function DashboardPage() {
 	return (

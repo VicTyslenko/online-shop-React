@@ -4,7 +4,6 @@
 import React from 'react';
 // import { CircularProgressbar } from 'react-circular-progressbar';
 import { CardWrapper, RadialBar, Detail } from './StyledCompactCard';
-import './CircularBar.scss';
 
 // eslint-disable-next-line react/prop-types
 function CompactCard({ param, setExpanded }) {

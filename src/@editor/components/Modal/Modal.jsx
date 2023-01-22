@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
