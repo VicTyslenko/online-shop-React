@@ -42,10 +42,10 @@ function ProductPage() {
 	return (
 		<Container maxWidth="lg">
 			<Grid container spacing={2}>
-				<Grid item xs={12} sm={7} md={8}>
+				<Grid item xs={12} md={8}>
 					<ProductGallery {...productGalleryData} />
 				</Grid>
-				<Grid item xs={12} sm={5} md={4}>
+				<Grid item xs={12} md={4}>
 					<ProductInfo {...productInfoData} />
 				</Grid>
 			</Grid>
