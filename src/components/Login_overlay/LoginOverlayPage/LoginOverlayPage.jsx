@@ -15,8 +15,7 @@ import {
 	RadioWrapp,
 	StyledButton,
 	ButtonWrapp,
-// eslint-disable-next-line import/no-unresolved
-} from './StyledLoginOverlay';
+} from './StyledLogin';
 
 function LoginOverlayPage() {
 	const CssTextField = styled(TextField)({
