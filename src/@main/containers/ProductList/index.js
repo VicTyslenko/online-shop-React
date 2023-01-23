@@ -15,10 +15,10 @@ const productListData = Array.from({ length: 5 }, (_, index) => ({
 
 function ProductList() {
 	return (
-		<StyledContainer maxWidth="lg" >
+		<StyledContainer maxWidth="lg">
 			{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
 			<ProductFilters />
-			<Box sx={{ pb: '30px' }} >
+			<Box sx={{ pb: '30px' }}>
 				<StyledTitle variant="title" component="div">
 					Jackets
 				</StyledTitle>

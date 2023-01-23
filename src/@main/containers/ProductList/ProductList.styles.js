@@ -1,7 +1,6 @@
 import { Box, Typography, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-
 export const StyledContainer = styled(Container)`
 	display: flex;
 	flex-direction: row;

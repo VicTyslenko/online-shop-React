@@ -134,7 +134,7 @@ const theme = createTheme(themeWithBreakpoints, {
 				},
 				secondary: {
 					color: '#fff',
-				}
+				},
 			},
 		},
 		MuiCardContent: {

@@ -14,7 +14,7 @@ const StyledBox = styled(Box)`
 	}
 `;
 
-function ProductFilterPrice () {
+function ProductFilterPrice() {
 	const [value, setValue] = React.useState([0, 2500]);
 
 	const handleChange = (event, newValue) => {
@@ -23,9 +23,13 @@ function ProductFilterPrice () {
 
 	return (
 		<Box>
-			<Typography variant="h4" pb={2}>Price</Typography>
+			<Typography variant="h4" pb={2}>
+				Price
+			</Typography>
 			{/* todo: price min and max make as inputs to change price range */}
-			<Typography variant="subtitle1" pb={2}>$ {value[0]} - $ {value[1]} </Typography>
+			<Typography variant="subtitle1" pb={2}>
+				$ {value[0]} - $ {value[1]}
+			</Typography>
 			<StyledBox>
 				<Slider
 					getAriaLabel={() => 'Price range'}

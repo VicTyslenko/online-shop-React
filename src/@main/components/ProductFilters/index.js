@@ -42,7 +42,7 @@ function ProductFilters() {
 						</ListItemButton>
 						<Collapse in={open} timeout="auto" unmountOnExit>
 							<List component="div" disablePadding>
-							<DividerStyled />
+								<DividerStyled />
 								<ListItemButton sx={{ pl: 4 }}>
 									<ListItemText secondary="Dresses" />
 								</ListItemButton>
@@ -88,8 +88,7 @@ function ProductFilters() {
 						<ProductFilterPrice />
 					</Box>
 				</StyledBox>
-			)
-			}
+			)}
 			<Modal
 				open={openModal}
 				onClose={handleClose}

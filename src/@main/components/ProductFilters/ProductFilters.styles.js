@@ -20,9 +20,6 @@ export const StyledBox = styled(Box)`
 	}
 `;
 
-export const StyledBoxMobile = styled(Box)`
-`;
-
 export const ListItemIconColor = styled(ListItemIcon)`
 	display: flex;
 	justify-content: center;
