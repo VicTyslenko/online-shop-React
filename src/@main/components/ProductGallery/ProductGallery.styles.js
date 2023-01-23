@@ -1,29 +1,23 @@
-// import styled from "styled-components";
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CloseIcon from '@mui/icons-material/Close';
 
-export const StyledBigImage = styled('img')`
-	width: 100%;
-	height: 100%;
-	grid-column-start: 0;
-	grid-column-end: span 3;
+export const StyledBigImage = styled.img`
+	width: 370px;
+	height: 560px;
 	object-fit: cover;
 `;
 
-export const StyledSmallImage = styled('img')`
-	width: 100%;
-	height: 100%;
-	grid-column-start: 0;
-	grid-column-end: span 2;
+export const StyledSmallImage = styled.img`
+	width: 243px;
+	height: 300px;
 	object-fit: cover;
 `;
 
 export const StyledGallery = styled(Box)`
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
 	gap: 10px;
 	margin-bottom: 20px;
 `;
