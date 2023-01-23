@@ -20,9 +20,7 @@ function Modal({ title, closeModal, children, onClick }) {
 			<ModalContent onClick={(e) => e.stopPropagation()}>
 				<Header>
 					{title}
-					<CloseIcon>
-						{/* <IoCloseSharp fontSize={28} onClick={closeModal} /> */}
-					</CloseIcon>
+					<CloseIcon>{/* <IoCloseSharp fontSize={28} onClick={closeModal} /> */}</CloseIcon>
 				</Header>
 				<MainContent>{children}</MainContent>
 				<ButtonModalsWrap>

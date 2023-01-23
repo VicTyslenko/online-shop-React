@@ -8,7 +8,6 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import LoginButton from '../../components/Button/Button';
 import { LoginPageWrapp, FormWrapper, ImageWrapp, StyledInput, PassWrapp, InputWrapper } from './StyledLoginPage';
 
-
 function LoginPage() {
 	const formSubmit = (values) => {
 		console.log(values);
@@ -30,13 +29,10 @@ function LoginPage() {
 
 					<FormWrapper>
 						<InputWrapper>
-						
-						<Face6Icon className="login-icon" />
+							<Face6Icon className="login-icon" />
 							<StyledInput type="text" name="login" placeholder="Login" />
-							
 						</InputWrapper>
 						<PassWrapp>
-						
 							<RemoveRedEyeIcon className="eye-icon" />
 							<StyledInput type="password" name="password" placeholder="Password" />
 						</PassWrapp>

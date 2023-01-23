@@ -19,7 +19,7 @@ export default function Management() {
 			<ManagementWrap onClick={handleClick}>
 				<ListIcon>
 					{/* <MdOutlineManageAccounts fontSize={26} color="#000" /> */}
-					<ManageAccountsIcon color='#000'/>
+					<ManageAccountsIcon color="#000" />
 				</ListIcon>
 				<ButtonItem primary="Management" />
 				{open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
