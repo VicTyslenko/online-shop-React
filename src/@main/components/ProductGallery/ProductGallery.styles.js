@@ -3,28 +3,30 @@ import { Box } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CloseIcon from '@mui/icons-material/Close';
 
-export const StyledBigImage = styled.img`
-	width: 370px;
-	height: 560px;
+export const StyledBigImage = styled('img')`
+	width: 100%;
+	height: 100%;
+	grid-column-start: 0;
+	grid-column-end: span 3;
 	object-fit: cover;
 `;
 
-export const StyledSmallImage = styled.img`
-	width: 243px;
-	height: 300px;
+export const StyledSmallImage = styled('img')`
+	width: 100%;
+	height: 100%;
+	grid-column-start: 0;
+	grid-column-end: span 2;
 	object-fit: cover;
 `;
 
 export const StyledGallery = styled(Box)`
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	align-items: center;
 	gap: 10px;
-	margin-bottom: 20px;
 `;
 
 export const StyledSwiper = styled(Swiper)`
-	margin-bottom: 20px;
-
 	& .swiper-pagination-bullet-active {
 		background: #000;
 	}
