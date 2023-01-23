@@ -14,7 +14,7 @@ import {
 	RadioWrapp,
 	StyledButton,
 	ButtonWrapp,
-} from './StyledLoginOverlayPage';
+} from './StyledLogin';
 
 function LoginOverlayPage() {
 	const CssTextField = styled(TextField)({
