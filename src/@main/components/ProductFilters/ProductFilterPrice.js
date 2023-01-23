@@ -1,18 +1,7 @@
 import React from 'react';
 import { Box, Slider, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
 
-const StyledBox = styled(Box)`
-	width: 260px;
-	padding-left: 0;
-
-	${(props) => props.theme.breakpoints.down('lg')} {
-		width: 230px;
-	}
-	${(props) => props.theme.breakpoints.down('md')} {
-		width: 160px;
-	}
-`;
+import { StyledFilterPriceBox } from './ProductFilters.styles';
 
 function ProductFilterPrice() {
 	const [value, setValue] = React.useState([0, 2500]);
@@ -30,7 +19,7 @@ function ProductFilterPrice() {
 			<Typography variant="subtitle1" pb={2}>
 				$ {value[0]} - $ {value[1]}
 			</Typography>
-			<StyledBox>
+			<StyledFilterPriceBox>
 				<Slider
 					getAriaLabel={() => 'Price range'}
 					value={value}
@@ -41,7 +30,7 @@ function ProductFilterPrice() {
 					max={2500}
 					// getAriaValueText={value}
 				/>
-			</StyledBox>
+			</StyledFilterPriceBox>
 		</Box>
 	);
 }

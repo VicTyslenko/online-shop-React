@@ -1,4 +1,4 @@
-import { Box, ListItemIcon, Divider } from '@mui/material';
+import { Box, ListItemIcon, Divider, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 export const StyledBox = styled(Box)`
@@ -38,4 +38,21 @@ export const DividerStyled = styled(Divider)`
 	width: 58px;
 	border-bottom: 1px solid #fff;
 	margin-left: 32px;
+`;
+
+export const StyledTypography = styled(Typography)`
+	text-transform: capitalize;
+	cursor: pointer;
+`;
+
+export const StyledFilterPriceBox = styled(Box)`
+	width: 260px;
+	padding-left: 0;
+
+	${(props) => props.theme.breakpoints.down('lg')} {
+		width: 230px;
+	}
+	${(props) => props.theme.breakpoints.down('md')} {
+		width: 160px;
+	}
 `;
