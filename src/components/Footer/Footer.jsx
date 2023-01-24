@@ -124,12 +124,14 @@ function Footer() {
 	}
 	if (matches === false) {
 		return (
-			<Container sx={{ bgcolor: 'black'}}>
+			<Container sx={{ bgcolor: 'black' }}>
 				<Grid container spacing={1} sx={{ justifyContent: 'space-between', padding: '0px 16px' }}>
 					<div style={{ marginBottom: '20px' }}>
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'start' }} />}
+								expandIcon={
+									<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'start' }} />
+								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
@@ -172,11 +174,13 @@ function Footer() {
 					<div style={{ marginBottom: '20px' }}>
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
+								expandIcon={
+									<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />
+								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
-								<Typography sx={{ fontSize: '20px', }}>HELP</Typography>
+								<Typography sx={{ fontSize: '20px' }}>HELP</Typography>
 							</AccordionSummary>
 							<AccordionDetails sx={{ justifyContent: 'end' }}>
 								<Typography sx={{ marginBottom: '10px' }}>
@@ -225,7 +229,9 @@ function Footer() {
 					<div style={{ marginBottom: '20px' }}>
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
-								expandIcon={<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />}
+								expandIcon={
+									<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />
+								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
@@ -267,7 +273,6 @@ function Footer() {
 					</div>
 				</Grid>
 			</Container>
-			
 		);
 	}
 }
