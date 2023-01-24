@@ -5,8 +5,8 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import Face6Icon from '@mui/icons-material/Face6';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import LoginButton from '../../components/Button/Button';
-import { LoginPageWrapp, FormWrapper, ImageWrapp, StyledInput, PassWrapp, InputWrapper } from './StyledLoginPage';
+import { Container } from '@mui/material';
+import { FormWrapper, ImageWrapp, StyledInput, PassWrapp, InputWrapper, StyledButton } from './StyledLoginPage';
 
 function LoginPage() {
 	const formSubmit = (values) => {
@@ -14,7 +14,16 @@ function LoginPage() {
 	};
 
 	return (
-		<LoginPageWrapp>
+		<Container
+			maxWidth="lg"
+			sx={{
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				background: 'black',
+				height: '100vh',
+			}}
+		>
 			<Formik
 				initialValues={{
 					login: '',
@@ -36,11 +45,11 @@ function LoginPage() {
 							<RemoveRedEyeIcon className="eye-icon" />
 							<StyledInput type="password" name="password" placeholder="Password" />
 						</PassWrapp>
-						<LoginButton />
+						<StyledButton>Log in</StyledButton>
 					</FormWrapper>
 				</Form>
 			</Formik>
-		</LoginPageWrapp>
+		</Container>
 	);
 }
 

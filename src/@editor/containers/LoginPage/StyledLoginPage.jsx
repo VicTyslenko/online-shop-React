@@ -1,13 +1,17 @@
 import styled from 'styled-components';
-// import { Input } from '@mui/icons-material';
+import { Button } from '@mui/material';
 import Input from '../../components/Input';
 
-export const LoginPageWrapp = styled.div`
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: black;
+
+export const StyledButton = styled(Button)`
+	&&& {
+		background-color: #5e1d00;
+		padding: 8px;
+		grid-column: span 3;
+		width: 100%;
+		color: white;
+	
+	}
 `;
 export const StyledInput = styled(Input)`
 	&&& {
