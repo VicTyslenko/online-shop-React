@@ -8,14 +8,14 @@ import {
 	AccordionSummary,
 	AccordionDetails,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { ExpandMore } from '@mui/icons-material';
 
 function Footer() {
 	const matches = useMediaQuery('(min-width:969px)');
 
 	if (matches === true) {
 		return (
-			<Container sx={{ bgcolor: 'black', paddingBottom: '82px', paddingTop: '20px' }}>
+			<Container sx={{ bgcolor: 'black', paddingBottom: '122px' }}>
 				<Grid container spacing={2} sx={{ justifyContent: 'space-between', padding: '0px 137px' }}>
 					<div style={{ marginBottom: '20px' }}>
 						<Typography variant="h4" sx={{ fontSize: 24, mb: '39px', color: '#fff' }}>
@@ -130,7 +130,7 @@ function Footer() {
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
 								expandIcon={
-									<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'start' }} />
+									<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'start' }} />
 								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
@@ -175,12 +175,12 @@ function Footer() {
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
 								expandIcon={
-									<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />
+									<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />
 								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"
 							>
-								<Typography sx={{ fontSize: '15px' }}>HELP</Typography>
+								<Typography sx={{ fontSize: '20px' }}>HELP</Typography>
 							</AccordionSummary>
 							<AccordionDetails sx={{ justifyContent: 'end' }}>
 								<Typography sx={{ marginBottom: '10px' }}>
@@ -230,7 +230,7 @@ function Footer() {
 						<Accordion sx={{ bgcolor: 'black', color: 'white' }}>
 							<AccordionSummary
 								expandIcon={
-									<ExpandMoreIcon sx={{ fill: 'white', fontSize: '25px', justifyContent: 'end' }} />
+									<ExpandMore sx={{ fill: 'white', fontSize: '30px', justifyContent: 'end' }} />
 								}
 								aria-controls="panel1a-content"
 								id="panel1a-header"

@@ -1,14 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
-import AddressBook from './containers/AddressBook/AddressBook';
-// eslint-disable-next-line no-unused-vars
+import LoginOverlayPage from '../components/Login_overlay/LoginOverlayPage/LoginOverlayPage';
+import UserRegistration from '../components/UserRegistration/UserRegistration';
+import UserProfile from './containers/UserProfile/UserProfile';
 import Menu from '../components/Menu/Menu';
 
 function Profile() {
 	return (
-		<Routes>
-			<Route path="/address" element={<AddressBook />} />
-			<Route path="/menu" element={<Menu />} />
-		</Routes>
+		<div>
+			<Routes>
+				<Route path="/login" element={<LoginOverlayPage />} />
+				<Route path="/registration" element={<UserRegistration />} />
+				<Route path="/user-profile" element={<UserProfile />} />
+				<Route path="/menu" element={<Menu />} />
+
+			</Routes>
+		</div>
 	);
 }
 
