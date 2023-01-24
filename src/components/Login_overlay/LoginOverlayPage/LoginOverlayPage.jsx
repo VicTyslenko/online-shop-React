@@ -38,6 +38,7 @@ function LoginOverlayPage() {
 			},
 		},
 	});
+
 	return (
 		<Container>
 			<Formik
@@ -78,12 +79,12 @@ function LoginOverlayPage() {
           label="E-mail"
           sx={{
             '& .MuiInput-underline:before': { borderBottomColor: 'white' },
-      
+
             "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
               border: "2px solid",
               borderColor: "yellow"
             }
-           
+
           }} */}
 
 						{/* <TextField fullWidth label="Password" variant="standard"  /> */}
