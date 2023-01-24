@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-	width: 100%;
-	background-color: black;
-	height: 100vh;
-`;
+// export const Container = styled.div`
+// 	width: 100%;
+// 	background-color: black;
+// 	height: 100vh;
+// `;
 export const MenuWrapp = styled.div`
 	max-width: 650px;
 	padding-left: 102px;

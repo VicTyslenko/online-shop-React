@@ -5,8 +5,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import AnimateHeight from 'react-animate-height';
-import { Container, MenuWrapp, FlexWrapp } from './StyledMenu';
-
+import { Container } from '@mui/material';
+import { MenuWrapp, FlexWrapp } from './StyledMenu';
 // eslint-disable-next-line no-unused-vars
 // import React from 'react'
 
@@ -15,7 +15,10 @@ function Menu() {
 	const [heightSecond, setHeightSecond] = useState(0);
 
 	return (
-		<Container>
+		<Container maxWidth='lg' sx={{
+			background:'black',
+			height:'100vh'
+		}}>
 			<MenuWrapp>
 				<h1 className="title">Categories</h1>
 				<FlexWrapp>
