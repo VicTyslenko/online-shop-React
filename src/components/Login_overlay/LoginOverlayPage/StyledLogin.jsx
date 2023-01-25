@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const LoginWrapper = styled.div`
 	min-width: 467px;
 	margin-top: 168px;
-	margin-bottom: 292px;
+	margin-bottom: 50px;
 `;
 export const HeadWrapp = styled.div`
 	display: flex;
@@ -39,13 +39,6 @@ export const HeadWrapp = styled.div`
 		border: none;
 		margin-top: 5px;
 	}
-	/* & .login::after{
-content:'' ;
-display: block;
-width: 223px;
-height: 1px;
-background: #737272;
-} */
 `;
 export const ButtonWrapp = styled.div`
 	display: flex;
@@ -53,8 +46,6 @@ export const ButtonWrapp = styled.div`
 	margin-top: 107px;
 `;
 export const StyledButton = styled(Button)`
-	/* display: flex;
-    justify-content:center ; */
 	&&& {
 		background: #e5e5e5;
 		color: #000000;
@@ -62,6 +53,7 @@ export const StyledButton = styled(Button)`
 		font-size: 18px;
 		line-height: 25px;
 		font-family: 'Open Sans';
+		width:100% ;
 	}
 `;
 

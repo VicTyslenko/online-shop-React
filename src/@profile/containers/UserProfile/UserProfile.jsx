@@ -10,7 +10,7 @@ import { FlexWrapp, StyledButton } from './StyledUserProfile';
 
 function UserProfile() {
 	return (
-		<Container maxWidth="xl" sx={{ mt: '150px', mb: '100px' }}>
+		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
 				Welcome, SUZANNE EATON
 			</Typography>

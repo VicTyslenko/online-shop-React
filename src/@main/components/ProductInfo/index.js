@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
 import { Box, Button, IconButton, Typography, ListItemText } from '@mui/material';
-
 import PropTypes from 'prop-types';
 
-import FavoriteIcon from './FavoriteIcon';
+// todo: handleFavorite and toggle favorite icons or fill this color (#E01515)
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import {
 	ActionsWrapper,
 	ProductInfoHeader,
@@ -12,11 +13,13 @@ import {
 	ListItemButtonStyled,
 	ColorIcon,
 	ListItemIconColor,
+	ColorList,
+	SizeList,
 } from './ProductInfo.styles';
 
 function ProductInfo({ title, articul, price, colors, sizes, productDetails, productDelivery }) {
 	return (
-		<Box>
+		<Box maxWidth="390px" margin="auto">
 			<ProductInfoHeader>
 				<ProductHeader>
 					<Typography variant="h3">{title}</Typography>
@@ -24,20 +27,20 @@ function ProductInfo({ title, articul, price, colors, sizes, productDetails, pro
 				</ProductHeader>
 				<Typography variant="overline">REF: {articul}</Typography>
 			</ProductInfoHeader>
-			<Box mb={1}>
+			<ColorList>
 				<Typography variant="subtitle2">Color</Typography>
 				<ListStyled>
 					{colors.map(({ id, color, colorHash }) => (
 						<ListItemButtonStyled key={id}>
 							<ListItemIconColor>
-								<ColorIcon mb={1} backgroundColor={colorHash} />
+								<ColorIcon backgroundColor={colorHash} />
 							</ListItemIconColor>
 							<ListItemText primary={color} />
 						</ListItemButtonStyled>
 					))}
 				</ListStyled>
-			</Box>
-			<Box mb={6}>
+			</ColorList>
+			<SizeList>
 				<Typography variant="subtitle2">Size</Typography>
 				<ListStyled>
 					{sizes.map((item) => (
@@ -46,20 +49,21 @@ function ProductInfo({ title, articul, price, colors, sizes, productDetails, pro
 						</ListItemButtonStyled>
 					))}
 				</ListStyled>
+				{/* todo: SizeGuide link and information */}
 				<Typography variant="caption">Size guide</Typography>
-			</Box>
+			</SizeList>
 			<ActionsWrapper>
 				<Button color="primary" variant="contained" onClick={console.log}>
 					Add to busket
 				</Button>
-				<IconButton>
-					<FavoriteIcon />
+				<IconButton onClick={console.log}>
+					<FavoriteBorderIcon />
 				</IconButton>
 			</ActionsWrapper>
-			<Box>
+			<Box sx={{ pb: '20px' }}>
 				<Typography variant="subtitle2">Details</Typography>
 				<Typography variant="body1">{productDetails}</Typography>
-				<Typography mt={2} variant="body1">
+				<Typography mt={1} variant="body1">
 					{productDelivery}
 				</Typography>
 			</Box>

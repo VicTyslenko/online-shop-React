@@ -7,7 +7,10 @@ import { SideBarWrapp } from './StyledDashboardPage';
 
 export function DashboardPage() {
 	return (
-		<Container maxWidth='lg'>
+		<Container maxWidth='lg'sx={{
+			marginBottom:'40px',
+		
+		}}>
 			<SideBarWrapp>
 				<Sidebar />
 				<MainDash />

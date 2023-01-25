@@ -12,7 +12,6 @@ function Profile() {
 				<Route path="/registration" element={<UserRegistration />} />
 				<Route path="/user-profile" element={<UserProfile />} />
 				<Route path="/menu" element={<Menu />} />
-
 			</Routes>
 		</div>
 	);

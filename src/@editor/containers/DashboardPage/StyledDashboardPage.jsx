@@ -1,12 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const Wrapp = styled.div`
-	min-height: 100vh;
-	display: flex;
-	background-color: black;
-	align-items: center;
-	justify-content: center;
-`;
+
 export const SideBarWrapp = styled.div`
 	display: grid;
 	height: 97%;
@@ -16,4 +11,5 @@ export const SideBarWrapp = styled.div`
 	grid-template-columns: 20% 80%;
 	overflow: hidden;
 	background-color: #14af88;
+	padding-bottom:10px ;
 `;
