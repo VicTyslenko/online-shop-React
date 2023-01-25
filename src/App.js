@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { ThemeProvider } from '@mui/material/styles';
 
 import AppRoutes from './routes';
@@ -12,6 +11,7 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<Header />
 			<AppRoutes />
+			<Footer />
 		</ThemeProvider>
 	);
 }

@@ -4,9 +4,9 @@ import { Formik, Form } from 'formik';
 import Radio from '@mui/material/Radio';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
+import { Container } from '@mui/system';
 import { validationSchema } from '../validation';
 import {
-	Container,
 	LoginWrapper,
 	HeadWrapp,
 	Description,
@@ -38,8 +38,14 @@ function LoginOverlayPage() {
 			},
 		},
 	});
+
 	return (
-		<Container>
+		<Container maxWidth="lg" sx={{
+			background:'black',
+			display:'flex',
+			justifyContent:'center',
+			 
+		}}>
 			<Formik
 				initialValues={{
 					email: '',
@@ -78,12 +84,12 @@ function LoginOverlayPage() {
           label="E-mail"
           sx={{
             '& .MuiInput-underline:before': { borderBottomColor: 'white' },
-      
+
             "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
               border: "2px solid",
               borderColor: "yellow"
             }
-           
+
           }} */}
 
 						{/* <TextField fullWidth label="Password" variant="standard"  /> */}
