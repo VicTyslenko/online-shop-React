@@ -10,6 +10,7 @@ function Profile() {
 				<Route path="/login" element={<LoginOverlayPage />} />
 				<Route path="/registration" element={<UserRegistration />} />
 				<Route path="/user-profile" element={<UserProfile />} />
+				{/* <Route path="/user-profile" element={<UserProfile />} /> */}
 			</Routes>
 		</div>
 	);
