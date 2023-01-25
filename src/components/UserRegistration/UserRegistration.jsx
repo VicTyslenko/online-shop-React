@@ -3,8 +3,8 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
-import { Container, LoginWrapper, HeadWrapp, ButtonWrapp, StyledButton, InputsWrapp } from './StyledUserRegistration';
-
+import { Container } from '@mui/system';
+import { LoginWrapper, HeadWrapp, ButtonWrapp, StyledButton, InputsWrapp } from './StyledUserRegistration';
 // eslint-disable-next-line import/no-unresolved
 import { validationSchema } from './validation';
 
@@ -31,7 +31,12 @@ function UserRegistration() {
 		},
 	});
 	return (
-		<Container>
+		<Container maxWidth="lg" sx={{
+			background:'black',
+			display:'flex',
+			justifyContent:'center',
+			 
+		}}>
 			<Formik
 				initialValues={{
 					email: '',
