@@ -1,9 +1,5 @@
-import Slider from "./components/Slider/Slider";
-
 function Main() {
-	return(
-		<Slider />
-		);
+	return <div>Main page</div>;
 }
 
 export default Main;
