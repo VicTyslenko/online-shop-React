@@ -39,7 +39,7 @@ function Menu() {
 						<AnimateHeight id="example-panel" duration={700} height={heightFirst}>
 							{/* <p>Bags</p> */}
 
-							<StyledLink>Bags3</StyledLink>
+							<StyledLink>Bags</StyledLink>
 							<StyledLink>Wallets</StyledLink>
 							<StyledLink>Belts</StyledLink>
 							<StyledLink>Scarves and hats</StyledLink>
@@ -56,7 +56,7 @@ function Menu() {
 							{heightSecond === 0 ? 'For man' : 'For man'}
 						</button>
 						<AnimateHeight id="example-panel" duration={700} height={heightSecond}>
-							<StyledLink>Bags3</StyledLink>
+							<StyledLink>Bags</StyledLink>
 							<StyledLink>Wallets,Card cases</StyledLink>
 							<StyledLink>Belts</StyledLink>
 							<StyledLink>Ties and Cummerbunds</StyledLink>
