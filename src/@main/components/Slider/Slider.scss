@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+.slider-container{
+    background-color: #000;
+    padding-bottom: 200px;
+}
+
+.SwiperSlideClass {
+    position: relative;
+    >img {
+        width: 100%;
+    }
+}
+.first {
+    >div {
+        font-family: 'Josefin Sans', sans-serif;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        top: 16.5%;
+        left: 61%;
+        color: #fff;
+    }
+}
+    .collection-text {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 39px;
+        margin-bottom: 28px;
+    }
+    .collection-link {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 300;
+        text-decoration: none;
+        >span {
+            text-decoration: underline;
+        }
+    }
+    .collection-link:hover{
+        text-decoration: underline;
+    }
+
+    .second{
+        >div{
+            font-family: 'Josefin Sans', sans-serif;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            top: 39.5%;
+            left: 57%;
+            color: #fff; 
+        }
+        .collection-text {
+            font-size: 38px;
+            color: #E01515;
+        }
+        .collection-link{
+            color: #3F3D3D;
+        }
+    }
+    .third{
+        >div{
+            font-family: 'Josefin Sans', sans-serif;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 49%;
+            left: 7%;
+            color: #fff; 
+        }
+        .collection-text {
+            font-size: 38px;
+            color: #E01515;
+        }
+        .collection-link{
+            color: #3F3D3D;
+        }
+    }

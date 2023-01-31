@@ -1,7 +1,5 @@
-import MainRoutes from './router';
-
 function Main() {
-	return <MainRoutes />;
+	return <div>Main page</div>;
 }
 
 export default Main;
