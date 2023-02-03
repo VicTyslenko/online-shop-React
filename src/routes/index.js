@@ -1,18 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
-import MainLayout from './layouts/MainLayout';
 import NoMatch from './NoMatch';
 
 const Main = React.lazy(() => import('../@main/app'));
 const Profile = React.lazy(() => import('../@profile/app'));
 const Editor = React.lazy(() => import('../@editor/app'));
-
 function AppRoutes() {
 	return (
 		<Routes>
-			<Route path="/" element={<MainLayout />}>
-				<Route
+			<Route
 					path="/*"
 					element={
 						<React.Suspense fallback={<>...</>}>
@@ -28,7 +24,6 @@ function AppRoutes() {
 						</React.Suspense>
 					}
 				/>
-			</Route>
 			<Route
 				path="editor/*"
 				element={
