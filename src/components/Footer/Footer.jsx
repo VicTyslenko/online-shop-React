@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import {
 	Container,
 	Grid,
 	Typography,
-	Link,
 	useMediaQuery,
 	Accordion,
 	AccordionSummary,
 	AccordionDetails,
 } from '@mui/material';
+
 import { ExpandMore } from '@mui/icons-material';
 
 function Footer() {
@@ -22,36 +23,13 @@ function Footer() {
 							HELP
 						</Typography>
 						<div style={{ display: 'flex', flexDirection: 'column', rowGap: '19px' }}>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
+							<Link to="/questions" >
 								Frequently asked questions
 							</Link>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
+							<Link to="/contact" >
 								Contact
 							</Link>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
-								How to purchase
-							</Link>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
+							<Link to="/payment" >
 								Payment
 							</Link>
 						</div>
@@ -62,26 +40,17 @@ function Footer() {
 						</Typography>
 						<div style={{ display: 'flex', flexDirection: 'column', rowGap: '19px' }}>
 							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
+								to="/"
 							>
 								Facebook
 							</Link>
 							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
+								to="/"
 							>
 								Instagram
 							</Link>
 							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
+								to="/"
 							>
 								Pinterest
 							</Link>
@@ -92,28 +61,13 @@ function Footer() {
 							COMPANY
 						</Typography>
 						<div style={{ display: 'flex', flexDirection: 'column', rowGap: '19px' }}>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
+							<Link to="/history-brand" >
 								History of the brand
 							</Link>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
+							<Link to="/policy" >
 								Policy
 							</Link>
-							<Link
-								underline="none"
-								href="https://www.google.com/webhp?authuser=1"
-								variant="h6"
-								sx={{ fontSize: 18, color: '#fff' }}
-							>
+							<Link to="/work-us" >
 								Work with Us
 							</Link>
 						</div>
@@ -140,30 +94,21 @@ function Footer() {
 							<AccordionDetails>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Facebook
 									</Link>
 								</Typography>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Instagram
 									</Link>
 								</Typography>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Pinterest
 									</Link>
@@ -185,40 +130,28 @@ function Footer() {
 							<AccordionDetails sx={{ justifyContent: 'end' }}>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Asked questions
 									</Link>
 								</Typography>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Contact
 									</Link>
 								</Typography>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										How to purchase
 									</Link>
 								</Typography>
 								<Typography>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Payment
 									</Link>
@@ -240,30 +173,21 @@ function Footer() {
 							<AccordionDetails>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										History of the brand
 									</Link>
 								</Typography>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Policy
 									</Link>
 								</Typography>
 								<Typography sx={{ marginBottom: '10px' }}>
 									<Link
-										underline="none"
-										href="https://www.google.com/webhp?authuser=1"
-										variant="h6"
-										sx={{ fontSize: 18, color: 'white' }}
+										to="/"
 									>
 										Work with Us
 									</Link>

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { CardsData } from '../../../../../../helpers/Data';
 import Card from './Card';
@@ -8,10 +7,8 @@ function Cards() {
 	return (
 		<CardsWrapper>
 			{CardsData.map((card, id) => (
-				// eslint-disable-next-line react/jsx-key
 				<ParentContainer>
 					<Card
-						// eslint-disable-next-line react/no-array-index-key
 						key={id}
 						title={card.title}
 						color={card.color}

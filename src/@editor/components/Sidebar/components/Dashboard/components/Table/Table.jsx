@@ -8,7 +8,6 @@
 // }
 
 // export default Table
-// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';

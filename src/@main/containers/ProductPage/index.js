@@ -1,7 +1,7 @@
 import { Container, Grid } from '@mui/material';
 
-import ProductInfo from '../../components/ProductInfo';
-import ProductGallery from '../../components/ProductGallery';
+import ProductInfo from './components/ProductInfo';
+import ProductGallery from './components/ProductGallery';
 
 const productInfoData = {
 	title: 'black jacket',

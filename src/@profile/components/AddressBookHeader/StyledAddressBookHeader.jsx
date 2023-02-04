@@ -12,7 +12,7 @@ export const StyledLink = styled(Link)`
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 33px;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 `;
 export const Wrapp = styled.div`
 & .title{
@@ -20,6 +20,6 @@ export const Wrapp = styled.div`
 	font-weight: 700;
 font-size: 36px;
 line-height: 36px;
-font-family: 'Josefin Sans';
+font-family: 'Josefin Sans', sans-serif;
 }
 `

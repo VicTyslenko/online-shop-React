@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line import/prefer-default-export
 export const ExpandedCardWrapper = styled.div`
 	background: ${(props) => props.backGround};
 	box-shadow: ${(props) => props.boxShadow};

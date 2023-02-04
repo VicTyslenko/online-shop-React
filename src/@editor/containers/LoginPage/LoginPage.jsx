@@ -1,6 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-console */
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Form, Formik } from 'formik';
 import Face6Icon from '@mui/icons-material/Face6';

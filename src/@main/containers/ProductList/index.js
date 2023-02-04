@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 
-import ProductCard from '../../components/ProductCard';
-import ProductFilters from '../../components/ProductFilters';
+import ProductCard from './components/ProductCard';
+import ProductFilters from './components/ProductFilters';
 import { StyledContainer, StyledBox, StyledTitle } from './ProductList.styles';
 
 const productListData = Array.from({ length: 5 }, (_, index) => ({
