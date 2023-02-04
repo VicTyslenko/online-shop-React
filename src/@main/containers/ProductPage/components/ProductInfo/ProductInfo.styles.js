@@ -49,7 +49,7 @@ export const ColorIcon = styled(Box)`
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	box-shadow: 0px 2px 4px rgba(119, 114, 114, 0.25);
+	box-shadow: 0 2px 4px rgba(119, 114, 114, 0.25);
 	margin-bottom: 0.5rem;
 `;
 

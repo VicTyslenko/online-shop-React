@@ -9,6 +9,7 @@ export const StyledBigImage = styled('img')`
 	grid-column-start: 0;
 	grid-column-end: span 3;
 	object-fit: cover;
+	cursor: pointer;
 `;
 
 export const StyledSmallImage = styled('img')`
@@ -17,6 +18,7 @@ export const StyledSmallImage = styled('img')`
 	grid-column-start: 0;
 	grid-column-end: span 2;
 	object-fit: cover;
+	cursor: pointer;
 `;
 
 export const StyledGallery = styled(Box)`
@@ -63,7 +65,7 @@ export const StyledOverlaySwiper = styled(Swiper)`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
-	//box-shadow: 24;
+	// box-shadow: 24;
 
 	& .swiper-button-prev {
 		color: #fff;
@@ -93,8 +95,9 @@ export const StyledCloseIcon = styled(CloseIcon)`
 	cursor: pointer;
 	color: #fff;
 	position: absolute;
-	top: 0;
+	top: 5px;
 	right: 5px;
+	z-index: 2;
 
 	& :hover {
 		color: #000;

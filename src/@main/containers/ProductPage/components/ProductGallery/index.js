@@ -68,15 +68,21 @@ function ProductGallery({ images }) {
 				aria-labelledby="modal-modal-title"
 				aria-describedby="modal-modal-description"
 			>
-
-				<StyledOverlaySwiper navigation modules={[Navigation, Controller]} initialSlide={currentIndex}>
+				<>
 					<StyledCloseIcon fontSize="large" onClick={handleClose} />
-					{images.map(({ id, url, alt }) => (
-						<StyledOverlaySwiperSlide key={id}>
-							<StyledOverlayImage src={url} alt={alt} />
-						</StyledOverlaySwiperSlide>
-					))}
-				</StyledOverlaySwiper>
+					<StyledOverlaySwiper
+						navigation
+						modules={[Navigation, Controller]}
+						initialSlide={currentIndex}
+					>
+						{images.map(({ id, url, alt }) => (
+							<StyledOverlaySwiperSlide key={id}>
+								{/* cross icon shouldn't move with slider */}
+								<StyledOverlayImage src={url} alt={alt} />
+							</StyledOverlaySwiperSlide>
+						))}
+					</StyledOverlaySwiper>
+				</>
 			</Modal>
 		</>
 	);
