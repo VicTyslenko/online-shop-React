@@ -17,19 +17,19 @@ router.post(
 );
 ​
 router.put(
-  "/:id",
+  "/:customId",
   passport.authenticate("jwt-admin", { session: false }),
   updateConfig
 );
 ​
 router.delete(
-  "/:id",
+  "/:customId",
   passport.authenticate("jwt-admin", { session: false }),
   deleteConfig
 );
 ​
 router.get("/", getConfigs);
 ​
-router.get("/:id", getConfigById);
+router.get("/:customId", getConfigById);
 ​
 module.exports = router;

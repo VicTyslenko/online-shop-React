@@ -16,13 +16,13 @@ router.post(
 );
 ​
 router.put(
-  "/",
+  "/:customId",
   passport.authenticate("jwt-admin", { session: false }),
   updatePartner
 );
 ​
 router.delete(
-    "/",
+    "/:customId",
     passport.authenticate("jwt-admin", { session: false }),
     deletePartner
 );

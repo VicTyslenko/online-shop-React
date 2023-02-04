@@ -8,24 +8,24 @@ const {
     getColors,
 } = require('../controllers/colors')
 
-router.get("/color", getColors);
-
 router.post(
-    "/color",
+    "/",
     passport.authenticate("jwt-admin", { session: false }),
     addColor
 );
 
 router.put(
-    "/color",
+    "/:id",
     passport.authenticate("jwt-admin", { session: false }),
     updateColor
 );
 
 router.delete(
-    "/color",
+    "/:id",
     passport.authenticate("jwt-admin", { session: false }),
     deleteColor
 );
+
+router.get("/", getColors);
 
 module.exports = router;

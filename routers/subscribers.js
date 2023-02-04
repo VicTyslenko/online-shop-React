@@ -12,24 +12,24 @@ const {
 ​
 router.post(
   "/",
-  passport.authenticate("jwt-admin", { session: false }),
+  // passport.authenticate("jwt-admin", { session: false }),
   addSubscriber
 );
 ​
 router.put(
   "/:id",
-  passport.authenticate("jwt-admin", { session: false }),
+  // passport.authenticate("jwt-admin", { session: false }),
   updateSubscriberById
 );
 
 router.put(
-    "/:email",
-    passport.authenticate("jwt-admin", { session: false }),
+    "/email/:email",
+    // passport.authenticate("jwt-admin", { session: false }),
     updateSubscriberByEmail
 )
 ​
 router.get("/", getSubscribers)
 
-router.get("/:subscriber", getSubscriber)
+router.get("/:email", getSubscriber)
 
 module.exports = router;

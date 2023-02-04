@@ -9,26 +9,26 @@ const {
     getCategory,
 } = require('../controllers/catalog')
 
-router.get("/catalog/:category", getCategory);
-
-router.get("/catalog/:categories", getCategories);
-
 router.post(
-    "/catalog",
+    "/",
     passport.authenticate("jwt-admin", { session: false }),
     addCategory
 );
 
 router.put(
-    "/catalog",
+    "/:id",
     passport.authenticate("jwt-admin", { session: false }),
     aupdateCategory
 );
 
 router.delete(
-    "/catalog/:category",
+    "/:id",
     passport.authenticate("jwt-admin", { session: false }),
     deleteCategory
 );
+
+router.get("/", getCategories);
+
+router.get("/:id", getCategory);
 
 module.exports = router;

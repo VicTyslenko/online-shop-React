@@ -10,26 +10,28 @@ const {
     getProductComments
 } = require('../controllers/comments')
 
-router.get("/comments", getComments);
-
-router.post ("/comment", addComment);
-
-router.put ("/comment", updateComment);
-
-router.delete("/comment", deleteComment);
-
-router.post(
-    "/comment",
-    passport.authenticate("jwt-admin", { session: false }),
-    addColor
+router.post (
+    "/", 
+    passport.authenticate("jwt", { session: false }), 
+    addComment
 );
 
-router.get("/comment", getCustomerComments)
-
-router.get(
-    "/comment",
-    passport.authenticate("jwt-admin", { session: false }),
-    getProductComments
+router.put (
+    "/:id",
+    passport.authenticate("jwt", { session: false }),
+    updateComment
 );
+
+router.delete(
+    "/:id",
+    passport.authenticate("jwt", { session: false }),
+    deleteComment
+  );
+
+router.get("/", getComments);
+
+router.get("/customer/:customerId", getCustomerComments)
+
+router.get("/product/:productId", getProductComments);
 
 module.exports = router;

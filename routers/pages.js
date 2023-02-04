@@ -16,17 +16,17 @@ router.post(
 );
 ​
 router.put(
-  "/",
+  "/:customId",
   passport.authenticate("jwt-admin", { session: false }),
   updatePage
 );
 ​
 router.delete(
-    "/",
+    "/:customId",
     passport.authenticate("jwt-admin", { session: false }),
     deletePage
 );
 ​
-router.get("/", getPage);
+router.get("/:customId", getPage);
 ​
 module.exports = router;

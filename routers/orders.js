@@ -12,31 +12,37 @@ const {
 } = require("../controllers/orders");
 ​
 router.post(
-  "/order",
+  "/",
   passport.authenticate("jwt", { session: false }),
   placeOrder
 );
 ​
 router.put(
-  "/order",
+  "/:id",
   passport.authenticate("jwt", { session: false }),
   updateOrder
 );
 ​
 router.delete(
-    "/order",
+    "/cancel/:id",
     passport.authenticate("jwt", { session: false }),
     cancelOrder
 );
 
 router.delete(
-  "/order",
+  "/:id",
   passport.authenticate("jwt", { session: false }),
   deleteOrder
 );
 ​
-router.get("/", getOrders);
+router.get(
+  "/",
+  passport.authenticate("jwt", { session: false }), 
+  getOrders);
 ​
-router.get("/:order", getOrder);
+router.get(
+  "/:orderNo",
+  passport.authenticate("jwt", { session: false }), 
+  getOrder);
 ​
 module.exports = router;

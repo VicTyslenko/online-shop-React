@@ -12,24 +12,24 @@ const {
 ​
 router.post(
   "/",
-  passport.authenticate("jwt", { session: false }),
+  passport.authenticate("jwt-admin", { session: false }),
   addShippingMethod
 );
 ​
 router.put(
-  "/",
-  passport.authenticate("jwt", { session: false }),
+  "/:customId",
+  passport.authenticate("jwt-admin", { session: false }),
   updateShippingMethod
 );
 
 router.delete(
-    "/",
+    "/:customId",
     passport.authenticate("jwt-admin", { session: false }),
     deleteShippingMethod
 )
 ​
 router.get("/", getShippingMethods)
 ​
-router.get("/:id", getShippingMethodById);
+router.get("/:customId", getShippingMethodById);
 
 module.exports = router;

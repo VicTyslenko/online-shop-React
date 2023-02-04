@@ -17,19 +17,19 @@ router.post(
 );
 ​
 router.put(
-  "/",
+  "/:customId",
   passport.authenticate("jwt-admin", { session: false }),
   updatePaymentMethod
 );
 ​
 router.delete(
-    "/",
+    "/:customId",
     passport.authenticate("jwt-admin", { session: false }),
     deletePaymentMethod
 );
 ​
 router.get("/", getPaymentMethods);
 
-router.get("/:id", getPaymentMethodById);
+router.get("/:customId", getPaymentMethodById);
 
 module.exports = router;

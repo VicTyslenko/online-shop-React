@@ -16,13 +16,13 @@ router.post(
 );
 ​
 router.put(
-  "/",
+  "/:id",
   passport.authenticate("jwt-admin", { session: false }),
   updateSize
 );
 
 router.delete(
-    "/",
+    "/:id",
     passport.authenticate("jwt-admin", { session: false }),
     deleteSize
 )

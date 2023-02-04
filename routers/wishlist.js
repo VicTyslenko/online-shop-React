@@ -24,13 +24,13 @@ router.put(
 );
 
 router.put(
-    "/",
+    "/:productId",
     passport.authenticate("jwt", { session: false }),
     addProductToWishlist
   );
 
 router.delete(
-    "/",
+    "/:productId",
     passport.authenticate("jwt", { session: false }),
     deleteProductFromWishlish
 )
@@ -41,6 +41,10 @@ router.delete(
     deleteWishlist
 )
 
-router.get("/", getWishlist)
+router.get(
+  "/",
+  passport.authenticate("jwt", { session: false }),
+  getWishlist
+);
 
 module.exports = router;
