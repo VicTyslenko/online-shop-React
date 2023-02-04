@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import * as React from 'react';
 // import { MdOutlineManageAccounts } from 'react-icons/md';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';

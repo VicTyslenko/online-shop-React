@@ -1,16 +1,17 @@
 import styled from 'styled-components';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-export const ContainerWrapp = styled(Container)`
-	&&& {
-		background: #000000;
-		display: flex;
-		align-items: center;
-		margin-bottom: 20px;
-		justify-content: space-around;
-	}
+export const ContainerWrapper = styled.div`
+	background: #000000;
 `;
+
+export const ContentWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	justify-content: space-around;
+`
 
 export const BoxCategory = styled(Box)``;
 

@@ -1,6 +1,3 @@
-/* eslint-disable import/no-duplicates */
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import MainWrapp from './StyledAddressBookMain';
 import { StyledButton } from './StyledAddressBookMain';
 

@@ -10,19 +10,19 @@
 │   │  ├── containers - дериктория готовых страниц {HomeLandingPage ...}
 │   │  ├── helpers
 │   │  ├── router
-│   │  └── app.js
+│   │  └── HomeLandingPage.jsx
 │   ├── @editer - это дериктория для стриниц админки магазина
 │   │  ├── components - дериктория компонентов для категории страниц
 │   │  ├── containers - дериктория готовых страниц 
 │   │  ├── helpers
 │   │  ├── router
-│   │  └── app.js
+│   │  └── HomeLandingPage.jsx
 │   ├── @profile - это дериктория для стриниц профиля пользователя
 │   │  ├── components - дериктория компонентов для категории страниц
 │   │  ├── containers - дериктория готовых страниц
 │   │  ├── helpers
 │   │  ├── router
-│   │  └── app.js
+│   │  └── HomeLandingPage.jsx
 │   ├── helpers
 │   ├── store
 │   ├── selectors

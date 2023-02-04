@@ -4,11 +4,11 @@ import { Button } from '@mui/material';
 export const StyledButton = styled(Button)`
 	&&& {
 		background-color: black;
-		font-family: 'Open Sans';
+		font-family: 'Open Sans', sans-serif;
 		font-style: normal;
 		color:white ;
-		 font-weight: 400; 
-	
+		 font-weight: 400;
+
 	}
 `;
 const MainWrapp = styled.div`

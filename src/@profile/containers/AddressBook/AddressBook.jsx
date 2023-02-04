@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-
 // import AddressBookWrapper from './StyledAddressBook';
 import { Container } from '@mui/material';
 import AddressBookHeader from '../../components/AddressBookHeader/AddressBookHeader';

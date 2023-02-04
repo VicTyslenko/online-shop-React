@@ -1,8 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
-// eslint-disable-next-line no-unused-vars, import/no-duplicates
 import { Container, Button } from '@mui/material';
-// eslint-disable-next-line import/no-duplicates
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { ButtonAddRole, TableCellTitle, TableCellName } from './StyledRoles';
 

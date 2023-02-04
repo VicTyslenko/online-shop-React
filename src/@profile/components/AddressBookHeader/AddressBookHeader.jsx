@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import { MenuList, StyledLink, Wrapp } from './StyledAddressBookHeader';
 
 function AddressBookHeader() {
