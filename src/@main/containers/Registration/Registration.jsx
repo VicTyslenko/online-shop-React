@@ -63,7 +63,7 @@ function Registration() {
 								<StyledLink to="/registration" className="login">
 									Registration
 								</StyledLink>
-								<hr />
+								<hr className='line'/>
 							</div>
 						</HeadWrapp>
 						<Form>
