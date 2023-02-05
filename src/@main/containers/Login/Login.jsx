@@ -63,7 +63,7 @@ function Login() {
 								<StyledLink to="/login" className="login">
 									Login
 								</StyledLink>
-								<hr />
+								<hr className='line' />
 							</div>
 							<StyledLink to="/registration">Registration</StyledLink>
 						</HeadWrapp>
@@ -81,7 +81,7 @@ function Login() {
 										},
 									}}
 								/>
-								<p>Keep me signed in</p>
+								<p className='box-text'>Keep me signed in</p>
 							</CheckBoxWrapp>
 
 							<ButtonWrapp>
