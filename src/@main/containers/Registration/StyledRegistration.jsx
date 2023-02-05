@@ -1,16 +1,23 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	background-color: black;
-`;
+export const ContainerWrapper = styled.div`
+background:black ;
+`
+export const StyledLink = styled(Link)`
+font-weight: 400;
+font-size: 18px;
+line-height: 18px;
+font-family: 'Josefin Sans';
+color: #E5E5E5;
+text-decoration:none ;
+`
+
 export const LoginWrapper = styled.div`
 	min-width: 467px;
-	margin-top: 168px;
-	margin-bottom: 292px;
+	margin-top: 70px;
+	margin-bottom: 162px;
 `;
 export const HeadWrapp = styled.div`
 	display: flex;
@@ -38,13 +45,7 @@ export const HeadWrapp = styled.div`
 		border: none;
 		margin-top: 5px;
 	}
-	/* & .login::after{
-content:'' ;
-display: block;
-width: 223px;
-height: 1px;
-background: #737272;
-} */
+
 `;
 export const ButtonWrapp = styled.div`
 	display: flex;
@@ -52,8 +53,7 @@ export const ButtonWrapp = styled.div`
 	margin-top: 107px;
 `;
 export const StyledButton = styled(Button)`
-	/* display: flex;
-    justify-content:center ; */
+
 	&&& {
 		background: #e5e5e5;
 		color: #000000;
@@ -78,15 +78,4 @@ export const InputsWrapp = styled.div`
 	flex-direction: column;
 	gap: 44px;
 `;
-export const RadioWrapp = styled.div`
-	margin-top: 55px;
-	margin-left: -8px;
-	display: flex;
-	gap: 15px;
-	& p {
-		color: #847a7a;
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 16px;
-	}
-`;
+
