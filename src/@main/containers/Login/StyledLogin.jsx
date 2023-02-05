@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
-
-export const Container = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	background-color: black;
-`;
+import { Link } from 'react-router-dom';
+export const ContainerWrapper = styled.div`
+background:black ;
+`
+export const StyledLink = styled(Link)`
+text-decoration:none ;
+font-weight: 400;
+font-size: 18px;
+line-height: 18px;
+font-family: 'Josefin Sans';
+color: #E5E5E5;
+`
 export const LoginWrapper = styled.div`
 	min-width: 467px;
 	margin-top: 168px;
-	margin-bottom: 50px;
+	margin-bottom: 162px;
 `;
 export const HeadWrapp = styled.div`
 	display: flex;
@@ -70,7 +75,7 @@ export const InputsWrapp = styled.div`
 	flex-direction: column;
 	gap: 44px;
 `;
-export const RadioWrapp = styled.div`
+export const CheckBoxWrapp = styled.div`
 	margin-top: 55px;
 	margin-left: -8px;
 	display: flex;
