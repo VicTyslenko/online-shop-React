@@ -10,13 +10,13 @@ const {
   deleteWishlist,
   getWishlist,
 } = require("../controllers/wishlist");
-​
+
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   createWishlist
 );
-​
+
 router.put(
   "/",
   passport.authenticate("jwt", { session: false }),
