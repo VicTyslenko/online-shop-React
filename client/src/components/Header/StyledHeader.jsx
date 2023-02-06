@@ -11,7 +11,7 @@ export const ContentWrapper = styled.div`
 	align-items: center;
 	margin-bottom: 20px;
 	justify-content: space-around;
-`
+`;
 
 export const BoxCategory = styled(Box)``;
 
@@ -66,5 +66,38 @@ export const ButtonItem = styled(Link)`
 
 	&:hover {
 		border-bottom: 1px solid #c4c4c4;
+	}
+`;
+
+export const WrappContainer = styled.div`
+	width: 340px;
+`;
+
+export const TitleShoppingBag = styled.h3`
+	text-align: center;
+`;
+
+export const ButtonWrapp = styled.div`
+	position: absolute;
+	left: 60px;
+	bottom: 33px;
+`;
+
+export const ButtonElem = styled.button`
+	font-size: 15px;
+	font-style: normal;
+	padding: 12px 30px;
+	color: #fafafa;
+	background: #160e05;
+	border: none;
+	border-radius: 30px;
+	outline: none;
+	margin: 6px;
+	cursor: pointer;
+	transition: 0.5s;
+	letter-spacing: 0.8px;
+
+	&:hover {
+		background: #434342;
 	}
 `;
