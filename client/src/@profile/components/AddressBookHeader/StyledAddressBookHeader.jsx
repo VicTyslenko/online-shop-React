@@ -13,13 +13,15 @@ export const StyledLink = styled(Link)`
 	font-size: 24px;
 	line-height: 33px;
 	font-family: 'Open Sans', sans-serif;
+
 `;
 export const Wrapp = styled.div`
-& .title{
-	margin-bottom:50px ;
-	font-weight: 700;
-font-size: 36px;
-line-height: 36px;
-font-family: 'Josefin Sans', sans-serif;
-}
-`
+	& .title {
+		margin-bottom: 50px;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 36px;
+		font-family: 'Josefin Sans', sans-serif;
+	
+	}
+`;
