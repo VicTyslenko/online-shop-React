@@ -48,9 +48,7 @@ export const RightSideWrapp = styled.div`
 	width: 362px;
 	background: #c4c4c4;
 	height: fit-content;
-	/* padding-top:40px ;
-padding-left:40px ;
-padding-bottom:40px ; */
+
 	padding: 40px 0 40px 40px;
 	& .title {
 		margin: 0 0 30px 0;
