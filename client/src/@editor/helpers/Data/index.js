@@ -1,12 +1,4 @@
-// Sidebar imports
-// import {
-//   UilEstate,
-//   UilClipboardAlt,
-//   UilUsersAlt,
-//   UilPackage,
-//   UilChart,
-//   UilSignOutAlt,
-// } from "@iconscout/react-unicons";
+
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
@@ -15,33 +7,30 @@ import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
 
 import CardMembershipOutlinedIcon from '@mui/icons-material/CardMembershipOutlined';
 
-// Management Cards imports
-// import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
 
-// import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
-// Recent Card Imports
-import img1 from '../images_updates/img1.png';
-import img2 from '../images_updates/img2.png';
-import img3 from '../images_updates/img3.png';
 
 // Sidebar Data
 export const SidebarData = [
 	{
 		icon: HomeOutlinedIcon,
-		heading: 'Dashboard',
+		heading: 'Products',
 	},
 	{
 		icon: ListAltOutlinedIcon,
-		heading: 'Orders',
+		heading: 'Shop',
 	},
 	{
 		icon: PeopleAltOutlinedIcon,
-		heading: 'Customers',
+		heading: 'Users',
 	},
 	{
 		icon: InventoryOutlinedIcon,
-		heading: 'Products',
+		heading: 'Style-shop',
+	},
+	{
+		icon: InventoryOutlinedIcon,
+		heading: 'Orders',
 	},
 ];
 
@@ -101,24 +90,3 @@ export const CardsData = [
 	},
 ];
 
-// Recent Update Card Data
-export const UpdatesData = [
-	{
-		img: img1,
-		name: 'Andrew Thomas',
-		noti: 'has ordered medium size jeans',
-		time: '25 seconds ago',
-	},
-	{
-		img: img2,
-		name: 'James Bond',
-		noti: 'has received the top hat.',
-		time: '30 minutes ago',
-	},
-	{
-		img: img3,
-		name: 'Iron Man',
-		noti: 'has ordered sun umbrella.',
-		time: '2 hours ago',
-	},
-];

@@ -1,13 +1,4 @@
-// import React from 'react'
-// const Table = () => {
-//     return (
-//         <TableWrapp>
-//             <h3>Recent Orders</h3>
-//         </TableWrapp>
-//     )
-// }
 
-// export default Table
 import * as React from 'react';
 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
@@ -27,12 +18,10 @@ const rows = [
 const makeStyles = (status) => {
 	if (status === 'Approved') {
 		return {
-			// background: "blue",
 			color: 'green',
 		};
 	}
 	return {
-		// background: 'grey',
 		color: 'red',
 	};
 };
