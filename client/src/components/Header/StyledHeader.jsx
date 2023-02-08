@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
+import AnimateHeight from 'react-animate-height';
 
 export const ContainerWrapper = styled.div`
 	background: #000000;
@@ -12,8 +13,6 @@ export const ContentWrapper = styled.div`
 	margin-bottom: 20px;
 	justify-content: space-around;
 `;
-
-export const BoxCategory = styled(Box)``;
 
 export const LinkItem = styled(Link)`
 	text-decoration: none;
@@ -58,7 +57,7 @@ export const ButtonGroup = styled.div`
 
 export const ButtonItem = styled(Link)`
 	text-decoration: none;
-	/* font-family: 'Josefin Sans'; */
+	font-family: 'Josefin Sans';
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
@@ -69,35 +68,23 @@ export const ButtonItem = styled(Link)`
 	}
 `;
 
-export const WrappContainer = styled.div`
-	width: 340px;
-`;
-
-export const TitleShoppingBag = styled.h3`
-	text-align: center;
-`;
-
-export const ButtonWrapp = styled.div`
+export const AnimateMenu = styled(AnimateHeight)`
 	position: absolute;
-	left: 60px;
-	bottom: 33px;
+	width: 100%;
+	z-index: 3;
+	background-color: #000;
 `;
 
-export const ButtonElem = styled.button`
-	font-size: 15px;
-	font-style: normal;
-	padding: 12px 30px;
-	color: #fafafa;
-	background: #160e05;
-	border: none;
-	border-radius: 30px;
-	outline: none;
-	margin: 6px;
-	cursor: pointer;
-	transition: 0.5s;
-	letter-spacing: 0.8px;
+export const ContentWrap = styled(Box)`
+	padding: 30px 42px 60px;
 
-	&:hover {
-		background: #434342;
+	& h3 {
+		color: white;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 27px;
+		font-family: 'Open Sans', sans-serif;
+		margin-bottom: 60px;
+		text-transform: uppercase;
 	}
 `;
