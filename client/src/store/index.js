@@ -2,12 +2,16 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
+import favoritesReducer from '../reducers/favoritesReducer';
+
 const persistConfig = {
 	key: 'root',
 	storage,
 };
 
-const rootReduser = combineReducers({});
+const rootReduser = combineReducers({
+	favorites: favoritesReducer,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);
 

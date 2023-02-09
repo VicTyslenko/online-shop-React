@@ -1,7 +1,8 @@
 import { Box, Button, IconButton, Typography, ListItemText } from '@mui/material';
+import { useDispatch, useSelector } from "react-redux";
 import PropTypes from 'prop-types';
+import { removeFavorite, addFavorite } from '../../../../../actions/favoriteActions';
 
-// todo: handleFavorite and toggle favorite icons or fill this color (#E01515)
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import {
@@ -17,6 +18,19 @@ import {
 } from './ProductInfo.styles';
 
 function ProductInfo({ title, articul, price, colors, sizes, productDetails, productDelivery }) {
+	const dispatch = useDispatch();
+	const isFavorite = useSelector((state) => state.favorites.includes(articul));
+
+	const handleClickFavorite = () => {
+        if(isFavorite) {
+            dispatch(removeFavorite(articul));
+			console.log('not')
+        } else {
+			dispatch(addFavorite(articul));
+			console.log('favorite')
+        }
+    };
+
 	return (
 		<Box maxWidth="390px" margin="auto">
 			<ProductInfoHeader>
@@ -55,8 +69,10 @@ function ProductInfo({ title, articul, price, colors, sizes, productDetails, pro
 				<Button color="primary" variant="contained" onClick={console.log}>
 					Add to busket
 				</Button>
-				<IconButton onClick={console.log}>
-					<FavoriteBorderIcon />
+				<IconButton
+					onClick={handleClickFavorite}
+					sx={{ color: isFavorite ? "#E01515" : "#fff"}}>
+						<FavoriteBorderIcon />
 				</IconButton>
 			</ActionsWrapper>
 			<Box sx={{ pb: '20px' }}>
