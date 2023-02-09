@@ -8,13 +8,13 @@ const {
   deleteSize,
   getSizes,
 } = require("../controllers/sizes");
-​
+
 router.post(
   "/",
   passport.authenticate("jwt-admin", { session: false }),
   addSize
 );
-​
+
 router.put(
   "/:id",
   passport.authenticate("jwt-admin", { session: false }),
@@ -26,8 +26,8 @@ router.delete(
     passport.authenticate("jwt-admin", { session: false }),
     deleteSize
 )
-​
+
 router.get("/", getSizes)
-​
+
 
 module.exports = router;

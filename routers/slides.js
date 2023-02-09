@@ -8,13 +8,13 @@ const {
   deleteSlide,
   getSlides,
 } = require("../controllers/slides");
-​
+
 router.post(
   "/",
   passport.authenticate("jwt-admin", { session: false }),
   addSlide
 );
-​
+
 router.put(
   "/:customId",
   passport.authenticate("jwt-admin", { session: false }),
@@ -26,8 +26,7 @@ router.delete(
     passport.authenticate("jwt-admin", { session: false }),
     deleteSlide
 )
-​
+
 router.get("/", getSlides)
-​
 
 module.exports = router;
