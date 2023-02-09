@@ -9,7 +9,7 @@ const productListData = Array.from({ length: 5 }, (_, index) => ({
 	price: 256,
 	articul: 456790,
 	id: index,
-	url: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
+	url: 'https://diadia.ua/image/cachewebp/catalog/2023-02/0702/27-1500x2000.webp',
 	alt: 'dress',
 }));
 
