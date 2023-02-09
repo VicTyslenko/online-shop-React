@@ -3,16 +3,16 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export const ContainerWrapper = styled.div`
-background:black ;
-`
+	background: black;
+`;
 export const StyledLink = styled(Link)`
-font-weight: 400;
-font-size: 18px;
-line-height: 18px;
-font-family: 'Josefin Sans';
-color: #E5E5E5;
-text-decoration:none ;
-`
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Josefin Sans';
+	color: #e5e5e5;
+	text-decoration: none;
+`;
 
 export const LoginWrapper = styled.div`
 	width: 467px;
@@ -38,7 +38,6 @@ export const HeadWrapp = styled.div`
 		border: none;
 		margin-top: 5px;
 	}
-
 `;
 export const ButtonWrapp = styled.div`
 	display: flex;
@@ -46,7 +45,6 @@ export const ButtonWrapp = styled.div`
 	margin-top: 107px;
 `;
 export const StyledButton = styled(Button)`
-
 	&&& {
 		background: #e5e5e5;
 		color: #000000;
@@ -70,5 +68,12 @@ export const InputsWrapp = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 44px;
+	& .label-text {
+		color: #e5e5e5;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 16px;
+		font-family: 'Open Sans';
+		text-transform: uppercase;
+	}
 `;
-

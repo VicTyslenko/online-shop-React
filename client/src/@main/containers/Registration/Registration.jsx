@@ -69,23 +69,23 @@ function Registration() {
 						<Form>
 							<InputsWrapp>
 						
-								<label className="input-wrapper">
+								<label>
 									First name
 									<p className="label-text">first name</p>
 									<CssTextField variant="standard" label="Your first name" fullWidth />
 								</label>
-								<div className="second">
-									<p className="head">second name</p>
+								<label>
+									<p className="label-text">second name</p>
 									<CssTextField variant="standard" label="Your second name" fullWidth />
-								</div>
-								<div className="email">
-									<p className="head">email address</p>
+								</label>
+								<label>
+									<p className="label-text">email address</p>
 									<CssTextField variant="standard" label="Email address" fullWidth />
-								</div>
-								<div className="password">
-									<p className="head">password</p>
+								</label>
+								<label >
+									<p className="label-text">password</p>
 									<CssTextField variant="standard" label="Password" fullWidth />
-								</div>
+								</label>
 
 								<CssTextField variant="standard" label="Confirm your password" fullWidth />
 							</InputsWrapp>
