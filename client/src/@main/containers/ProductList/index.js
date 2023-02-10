@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 
 import ProductCard from './components/ProductCard';
 import ProductFilters from './components/ProductFilters';
@@ -13,7 +14,12 @@ const productListData = Array.from({ length: 5 }, (_, index) => ({
 	alt: 'dress',
 }));
 
+// Зробити map даних з бекенду фільтрів.
+
 function ProductList() {
+	const test = useLocation();
+	console.log('asdf', test);
+
 	return (
 		<StyledContainer maxWidth="lg">
 			{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
