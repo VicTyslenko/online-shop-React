@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import {  Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { FlexWrapp, StyledButton } from './StyledUserProfile';
@@ -62,7 +63,9 @@ function Profile() {
 				<Grid item xs={6}>
 					<StyledButton to="/editor/dashboard">
 						<FlexWrapp>
-							<ArticleOutlinedIcon fontSize="large" />
+							{/* <ArticleOutlinedIcon fontSize="large" />
+							 */}
+							 <EditOutlinedIcon fontSize='large'/>
 							<div className="content">
 								<p className="title">Edit</p>
 
