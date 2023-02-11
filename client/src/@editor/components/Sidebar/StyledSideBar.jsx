@@ -7,7 +7,7 @@ export const SidebarWrapp = styled.div`
 	/* margin-top: 50px; */
 	padding:30px 0 30px 20px  ;
 	gap: 60px;
-	height:100% ;
+	/* height:100% ; */
 	background-color:black ;
 `;
 
