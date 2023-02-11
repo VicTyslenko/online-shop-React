@@ -13,6 +13,7 @@ export const StyledLink = styled(Link)`
 	font-size: 24px;
 	line-height: 33px;
 	font-family: 'Open Sans', sans-serif;
+	margin:25px
 
 `;
 export const Wrapp = styled.div`
