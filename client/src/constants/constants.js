@@ -1,3 +1,4 @@
+export const SET_GOODS = "goods/set";
 export const ADD_FAVORITE = "favorites/add";
 export const REMOVE_FAVORITE = "favorites/remove";
 export const ADD_CART = "cart/add";
