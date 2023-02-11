@@ -34,7 +34,7 @@ function Header() {
 				<ContentWrapper>
 					<div>
 						<LinkItem
-							to="/"
+							to="/store/man"
 							aria-expanded={mensList !== 0}
 							aria-controls="example-panel"
 							onClick={() => setMensList(mensList === 0 ? 'auto' : 0)}
@@ -42,7 +42,7 @@ function Header() {
 							MAN
 						</LinkItem>
 						<LinkItem
-							to="/"
+							to="/store/woman"
 							aria-expanded={womesList !== 0}
 							aria-controls="example-panel"
 							onClick={() => setWomensList(womesList === 0 ? 'auto' : 0)}
@@ -50,7 +50,7 @@ function Header() {
 							WOMEN
 						</LinkItem>
 						<LinkItem
-							to="/"
+							to="/store/accessory"
 							aria-expanded={isAccessory !== 0}
 							aria-controls="example-panel"
 							onClick={() => setIsAccessory(isAccessory === 0 ? 'auto' : 0)}
