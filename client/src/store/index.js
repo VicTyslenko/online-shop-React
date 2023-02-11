@@ -5,6 +5,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import goodsReducer from '../reducers/goodsReducer';
 import favoritesReducer from '../reducers/favoritesReducer';
 import cartReducer from '../reducers/cartReducer';
+import filtersReducer from '../reducers/filtersReducer';
 
 const persistConfig = {
 	key: 'root',
@@ -15,6 +16,7 @@ const rootReduser = combineReducers({
 	goods: goodsReducer,
 	favorites: favoritesReducer,
 	cart: cartReducer,
+	filters: filtersReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);
