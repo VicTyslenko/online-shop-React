@@ -10,18 +10,16 @@ export const Categories = styled.h3`
 	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 50px;
 	text-transform: uppercase;
-	padding-top: 30px;
-	padding-left: 44px;
 `;
 
 export const ContentAccessory = styled(Box)`
-	padding-left: 42px;
-	padding-bottom: 60px;
 	display: flex;
+	margin-left: -120px;
+`;
 
-	& div {
-		padding-right: 240px;
-	}
+export const BlockCategory = styled.div`
+	margin-left: 120px;
+	margin-right: 120px;
 `;
 
 export const Title = styled.h3`
