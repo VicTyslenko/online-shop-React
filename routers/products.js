@@ -11,7 +11,7 @@ const {
   getProductsFilterParams,
   searchProducts
 } = require("../controllers/products");
-​
+
 
 // // Configurations for multer
 // const storage = multer.diskStorage({
@@ -61,15 +61,15 @@ router.post(
   passport.authenticate("jwt-admin", { session: false }),
   addProduct
 );
-​
+
 router.put(
   "/:id",
   passport.authenticate("jwt-admin", { session: false }),
   updateProduct
 );
-​
+
 router.get("/", getProducts)
-​
+
 router.get("/:itemNo", getProductById);
 
 router.get("/filter", getProductsFilterParams);

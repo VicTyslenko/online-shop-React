@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 3000
-const bd = require('./config/keys/').mongoURI
+const bd = require('./config/keys').mongoURI
 
 mongoose
 	.connect(bd, {
@@ -63,8 +63,8 @@ app.use(subscribers)
 app.use(wishlist)
 
 if (process.env.NODE_ENV== 'production') {
-	app.use(express.static('./frontend/build'))
+	app.use(express.static('./сlient/public'))
 	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+		res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'))
 	})
 }
