@@ -5,6 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { Container } from '@mui/system';
+import MyProfile from '../MyProfile/MyProfile'
 // function LinkTab(props) {
 // 	return (
 // 		<Tab
@@ -35,10 +36,13 @@ function AddressBookHeader() {
 						<Tab className="list-item" label="Address book" value="4" />
 					</TabList>
 				</MenuList>
-				<TabPanel value="1">My profile</TabPanel>
+				<TabPanel value="1"><MyProfile/></TabPanel>
 				<TabPanel value="2">My wishlist</TabPanel>
 				<TabPanel value="3">Purchase history</TabPanel>
-				<TabPanel value="4">Address book</TabPanel>
+				{/* <TabPanel value="4">Address book</TabPanel> */}
+				{/* <TabPanel value="4">
+					<AddressBook />
+				</TabPanel> */}
 			</TabContext>
 		</Container>
 	);
