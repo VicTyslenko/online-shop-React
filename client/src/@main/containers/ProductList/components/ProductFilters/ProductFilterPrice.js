@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Slider, Typography, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 import { StyledFilterPriceBox, MobileFilterPriceBox } from './ProductFilters.styles';
 
 function ProductFilterPrice() {
@@ -24,6 +26,7 @@ function ProductFilterPrice() {
 				<Box>
 					<ListItemButton onClick={handleClick}>
 						<ListItemText primary="Price" sx={{ textTransform: 'uppercase'}} />
+						{open ? <ExpandLess /> : <ExpandMore />}
 					</ListItemButton>
 					<Collapse in={open} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>

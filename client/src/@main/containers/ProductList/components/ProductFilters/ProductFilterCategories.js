@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, ListItemButton, ListItemText, Collapse, List } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 import { DividerStyled } from './ProductFilters.styles';
 
 // const mock = [
@@ -57,6 +59,7 @@ function ProductFilterCategories() {
 			<Box>
 				<ListItemButton onClick={handleClickMobile}>
 					<ListItemText primary="Categories" sx={{ textTransform: 'uppercase'}} />
+					{openMobile ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={openMobile} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
@@ -91,6 +94,7 @@ function ProductFilterCategories() {
 				</ListItemButton>
 				<ListItemButton onClick={handleClick}>
 					<ListItemText secondary="New arrivals" />
+					{open ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={open} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>

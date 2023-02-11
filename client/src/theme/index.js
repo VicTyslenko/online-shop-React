@@ -180,14 +180,17 @@ const theme = createTheme(themeWithBreakpoints, {
 						background: '#565254',
 					},
 					'&:focus': {
-						background: '#565254',
+						background: 'rgba(86, 82, 84, 0.4)',
 					},
+					// '&:focus': {
+					// 	borderBottom: '1px solid #fff',
+					// },
 					[themeWithBreakpoints.breakpoints.down('sm')]: {
 						'&:hover': {
-							background: 'rgba(86, 82, 84, 0.04);',
+							background: 'rgba(86, 82, 84, 0.04)',
 						},
 						'&:focus': {
-							background: 'rgba(86, 82, 84, 0.04);',
+							background: 'rgba(86, 82, 84, 0.04)',
 						},
 					},
 				}
