@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const Categories = styled.h3`
+	color: white;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+`;
+
 export const StyledLink = styled(Link)`
 	&&& {
 		margin-bottom: 40px;
