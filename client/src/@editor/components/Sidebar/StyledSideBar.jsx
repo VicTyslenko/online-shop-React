@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 export const SidebarWrapp = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-top: 50px;
+	/* margin-top: 50px; */
+	padding:30px 0 30px 20px  ;
 	gap: 60px;
+	height:100% ;
+	background-color:black ;
 `;
 
 export const StyledLink = styled(Link)`

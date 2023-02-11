@@ -8,11 +8,11 @@ function EditUsers() {
 	return (
 		<ContainerWrapper>
 		<Container maxWidth="lg">
-			<Grid container spacing={2}>
-				<Grid item xs={2}>
+			<Grid container >
+				<Grid item xs={3}>
 					<Sidebar />
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={9}>
 					<RightContent>
 						<h1 className="title">Users</h1>
 					</RightContent>
