@@ -1,7 +1,24 @@
-
+import { Container } from '@mui/material';
+import React from 'react';
+import { ContainerWrapper,RightContent } from './StyledOrders';
+import Grid from '@mui/material/Grid';
+import Sidebar from '../../components/Sidebar';
 function EditOrders() {
 	return (
-		'EditOrders'
+		<ContainerWrapper>
+		<Container maxWidth="lg">
+			<Grid container spacing={2}>
+				<Grid item xs={2}>
+					<Sidebar />
+				</Grid>
+				<Grid item xs={6}>
+					<RightContent>
+						<h1 className="title">Orders</h1>
+					</RightContent>
+				</Grid>
+			</Grid>
+		</Container>
+	</ContainerWrapper>
 	)
 }
 
