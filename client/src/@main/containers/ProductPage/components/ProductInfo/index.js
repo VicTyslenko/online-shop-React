@@ -1,7 +1,9 @@
 import { Box, Button, IconButton, Typography, ListItemText } from '@mui/material';
+import { useDispatch, useSelector } from "react-redux";
 import PropTypes from 'prop-types';
+import { removeFavorite, addFavorite } from '../../../../../actions/favoriteActions';
+import { removeCart, addCart } from "../../../../../actions/cartActions";
 
-// todo: handleFavorite and toggle favorite icons or fill this color (#E01515)
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import {
@@ -17,6 +19,26 @@ import {
 } from './ProductInfo.styles';
 
 function ProductInfo({ title, articul, price, colors, sizes, productDetails, productDelivery }) {
+	const dispatch = useDispatch();
+	const isFavorite = useSelector((state) => state.favorites.includes(articul));
+	const isCart = useSelector((state) => state.cart.includes(articul));
+
+	const handleClickCart = () => {
+        if(isCart) {
+            dispatch(removeCart(articul));
+        } else {
+			dispatch(addCart(articul));
+        }
+    };
+
+	const handleClickFavorite = () => {
+        if(isFavorite) {
+            dispatch(removeFavorite(articul));
+        } else {
+			dispatch(addFavorite(articul));
+        }
+    };
+
 	return (
 		<Box maxWidth="390px" margin="auto">
 			<ProductInfoHeader>
@@ -52,11 +74,13 @@ function ProductInfo({ title, articul, price, colors, sizes, productDetails, pro
 				<Typography variant="caption">Size guide</Typography>
 			</SizeList>
 			<ActionsWrapper>
-				<Button color="primary" variant="contained" onClick={console.log}>
-					Add to busket
+				<Button color="primary" variant="contained" onClick={handleClickCart}>
+					{!isCart ? "Add to busket" : "Delete"}
 				</Button>
-				<IconButton onClick={console.log}>
-					<FavoriteBorderIcon />
+				<IconButton
+					onClick={handleClickFavorite}
+					sx={{ color: isFavorite ? "#E01515" : "#fff"}}>
+						<FavoriteBorderIcon />
 				</IconButton>
 			</ActionsWrapper>
 			<Box sx={{ pb: '20px' }}>

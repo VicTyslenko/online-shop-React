@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
@@ -17,77 +18,105 @@ import {
 	ButtonItem,
 	BoxTechnical,
 	ButtonGroup,
+	ItemButton,
 } from './StyledHeader';
 
 import { useState } from 'react';
 
 function Header() {
+	const rootEl = useRef(null);
+
 	const [isShoppingBag, setIsShoppingBag] = useState(false);
-	const [searchInput, setSearchInput] = useState(0);
-	const [mensList, setMensList] = useState(0);
-	const [womesList, setWomensList] = useState(0);
-	const [isAccessory, setIsAccessory] = useState(0);
+	const [dataMenu, setDataMenu] = useState(null);
+
+	const [searchBox, setSearchBox] = useState(false);
+	const [mensCategory, setMenCategory] = useState(false);
+	const [womenCategory, setWomenCategory] = useState(false);
+	const [accessoryCategory, setAccessoryCategory] = useState(false);
+
+	useEffect(() => {
+		const onClick = (e) =>
+			rootEl.current.contains(e.target) ||
+			setMenCategory(false) ||
+			setWomenCategory(false) ||
+			setAccessoryCategory(false) ||
+			setSearchBox(false);
+		document.addEventListener('click', onClick);
+		return () => document.removeEventListener('click', onClick);
+	}, []);
 
 	return (
-		<ContainerWrapper>
+		<ContainerWrapper ref={rootEl}>
 			<Container maxWidth="lg">
 				<ContentWrapper>
 					<div>
-						<LinkItem
-							to="/"
-							aria-expanded={mensList !== 0}
+						<ButtonItem
+							data-menu="menuMen"
+							aria-expanded={mensCategory !== 0}
 							aria-controls="example-panel"
-							onClick={() => setMensList(mensList === 0 ? 'auto' : 0)}
+							onClick={(e) => {
+								setMenCategory(!mensCategory);
+								setDataMenu(e.target.dataset.menu);
+							}}
 						>
 							MAN
-						</LinkItem>
-						<LinkItem
-							to="/"
-							aria-expanded={womesList !== 0}
+						</ButtonItem>
+						<ButtonItem
+							data-menu="menuWomen"
+							aria-expanded={womenCategory !== 0}
 							aria-controls="example-panel"
-							onClick={() => setWomensList(womesList === 0 ? 'auto' : 0)}
+							onClick={(e) => {
+								setWomenCategory(!womenCategory);
+								setDataMenu(e.target.dataset.menu);
+							}}
 						>
 							WOMEN
-						</LinkItem>
-						<LinkItem
-							to="/"
-							aria-expanded={isAccessory !== 0}
+						</ButtonItem>
+						<ButtonItem
+							data-menu="menuAccessory"
+							aria-expanded={accessoryCategory !== 0}
 							aria-controls="example-panel"
-							onClick={() => setIsAccessory(isAccessory === 0 ? 'auto' : 0)}
+							onClick={(e) => {
+								setAccessoryCategory(!accessoryCategory);
+								setDataMenu(e.target.dataset.menu);
+							}}
 						>
 							ACCESSORY
-						</LinkItem>
+						</ButtonItem>
 					</div>
 					<div>
 						<Logo to="/">Originalité</Logo>
 					</div>
 					<BoxTechnical>
 						<ButtonGroup
-							aria-expanded={searchInput !== 0}
+							data-menu="menuSearch"
+							aria-expanded={searchBox !== 0}
 							aria-controls="example-panel"
-							onClick={() => setSearchInput(searchInput === 0 ? 240 : 0)}
+							onClick={(e) => {
+								setSearchBox(!searchBox);
+								setDataMenu(e.target.dataset.menu);
+							}}
 						>
 							<SearchOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
-							<ButtonItem to="/">Search</ButtonItem>
+							<ItemButton>Search</ItemButton>
 						</ButtonGroup>
 						<ButtonGroup>
 							<PermIdentityOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
-							<ButtonItem to="/account/profile">My account</ButtonItem>
+							<LinkItem to="/account/profile">My account</LinkItem>
 						</ButtonGroup>
-						<ButtonGroup onClick={() => setIsShoppingBag(true)}>
+						<ButtonGroup onClick={() => setIsShoppingBag(!isShoppingBag)}>
 							<ShoppingBagOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
-							<ButtonItem to="/">Shopping Bag</ButtonItem>
+							<ItemButton>Shopping Bag</ItemButton>
 						</ButtonGroup>
 					</BoxTechnical>
 				</ContentWrapper>
 
-				<ManMenu mensList={mensList} closeManMenu={() => setMensList(0)} />
-				<WomanMenu womesList={womesList} />
-				<Accessory isAccessory={isAccessory} />
+				<ManMenu active={mensCategory && dataMenu === 'menuMen' ? 'auto' : 0} />
+				<WomanMenu active={womenCategory && dataMenu === 'menuWomen' ? 'auto' : 0} />
+				<Accessory active={accessoryCategory && dataMenu === 'menuAccessory' ? 'auto' : 0} />
+				<Search active={searchBox && dataMenu === 'menuSearch' ? 240 : 0} />
 
-				<Search searchInput={searchInput} />
-
-				<ShoppingBag isShoppingBag={isShoppingBag} closeShoppingBag={() => setIsShoppingBag(false)} />
+				<ShoppingBag isShoppingBag={isShoppingBag} closeShoppingBag={() => setIsShoppingBag(!isShoppingBag)} />
 			</Container>
 		</ContainerWrapper>
 	);

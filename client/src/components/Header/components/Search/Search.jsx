@@ -1,12 +1,14 @@
 import { TextField } from '@mui/material';
 
-import { SearchWrappAnimate } from './StyledSearch';
+import { SearchWrappAnimate , PaperStyles} from './StyledSearch';
 
-function Search({ searchInput }) {
+function Search({ active }) {
 	return (
-		<SearchWrappAnimate id="example-panel" duration={700} height={searchInput}>
-			<TextField sx={{ width: 500 }} id="standard-basic" label="Search for item" variant="standard" />
-		</SearchWrappAnimate>
+		<PaperStyles elevation={4}>
+			<SearchWrappAnimate id="example-panel" duration={700} height={active}>
+				<TextField sx={{ width: 500 }} id="standard-basic" label="Search for item" variant="standard" />
+			</SearchWrappAnimate>
+		</PaperStyles>
 	);
 }
 
