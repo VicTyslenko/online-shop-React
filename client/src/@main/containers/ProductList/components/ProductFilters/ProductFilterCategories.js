@@ -115,6 +115,6 @@ function ProductFilterCategories() {
 			</Box>)}
 		</>
 	);
-}
+};
 
 export default ProductFilterCategories;

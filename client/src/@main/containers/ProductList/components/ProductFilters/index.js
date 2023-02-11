@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Box, Typography, Modal } from '@mui/material';
+// import PropTypes from 'prop-types';
+import { Box, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import ProductFilterColors from './ProductFilterColors';
@@ -34,22 +34,22 @@ function ProductFilters() {
 			)}
 		</>
 	);
-}
-
-ProductFilters.propTypes = {
-	title: PropTypes.string.isRequired,
-	articul: PropTypes.number.isRequired,
-	price: PropTypes.number.isRequired,
-	colors: PropTypes.arrayOf(
-		PropTypes.shape({
-			id: PropTypes.number.isRequired,
-			color: PropTypes.string.isRequired,
-			colorHash: PropTypes.string.isRequired,
-		}),
-	).isRequired,
-	sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-	productDetails: PropTypes.string.isRequired,
-	productDelivery: PropTypes.string.isRequired,
 };
+
+// ProductFilters.propTypes = {
+// 	title: PropTypes.string.isRequired,
+// 	articul: PropTypes.number.isRequired,
+// 	price: PropTypes.number.isRequired,
+// 	colors: PropTypes.arrayOf(
+// 		PropTypes.shape({
+// 			id: PropTypes.number.isRequired,
+// 			color: PropTypes.string.isRequired,
+// 			colorHash: PropTypes.string.isRequired,
+// 		}),
+// 	).isRequired,
+// 	sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+// 	productDetails: PropTypes.string.isRequired,
+// 	productDelivery: PropTypes.string.isRequired,
+// };
 
 export default ProductFilters;

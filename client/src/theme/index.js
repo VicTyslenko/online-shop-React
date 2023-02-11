@@ -173,6 +173,26 @@ const theme = createTheme(themeWithBreakpoints, {
 				},
 			},
 		},
+		MuiListItemButton: {
+			styleOverrides: {
+				root: {
+					'&:hover': {
+						background: '#565254',
+					},
+					'&:focus': {
+						background: '#565254',
+					},
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						'&:hover': {
+							background: 'rgba(86, 82, 84, 0.04);',
+						},
+						'&:focus': {
+							background: 'rgba(86, 82, 84, 0.04);',
+						},
+					},
+				}
+			}
+		}
 	},
 });
 

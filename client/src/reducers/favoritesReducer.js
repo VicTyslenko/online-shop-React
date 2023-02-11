@@ -4,7 +4,7 @@ import LocalStorage from "../services/localStorageService";
 const ls = new LocalStorage();
 const initialState = JSON.parse(ls.get("favorites")) || [];
 
-const favoritesReducer = (state = initialState, action) => {
+function favoritesReducer(state = initialState, action) {
     const { payload } = action;
 
     switch (action.type) {

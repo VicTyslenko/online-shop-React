@@ -2,7 +2,7 @@ import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import Toolbar from '@mui/material/Toolbar';
+// import Toolbar from '@mui/material/Toolbar';
 
 import ProductFilterCategories from './ProductFilterCategories';
 import ProductFilterColors from './ProductFilterColors';
@@ -30,7 +30,7 @@ function MobileFilter() {
 				open={open}
 				onClose={handleClose}
 				>
-				<Toolbar/>
+				{/* <Toolbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}/> */}
 				<StyledBoxTypography>
 					<StyledTypography variant='h5' >
 						Filters

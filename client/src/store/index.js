@@ -3,6 +3,7 @@ import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
 import favoritesReducer from '../reducers/favoritesReducer';
+import cartReducer from '../reducers/cartReducer';
 
 const persistConfig = {
 	key: 'root',
@@ -11,6 +12,7 @@ const persistConfig = {
 
 const rootReduser = combineReducers({
 	favorites: favoritesReducer,
+	cart: cartReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);
