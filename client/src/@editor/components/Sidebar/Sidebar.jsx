@@ -1,12 +1,23 @@
-import { SidebarWrapp } from './StyledSideBar';
-import { StyledLink } from './StyledSideBar';
+import { SidebarWrapp, StyledLink, ButtonWrap } from './StyledSideBar';
+
 function Sidebar() {
 	return (
 		<SidebarWrapp>
-			<StyledLink to="/editor/products">products</StyledLink> <StyledLink to="/editor/shop">shop</StyledLink>
-			<StyledLink to="/editor/users">users</StyledLink>
-			<StyledLink to="/editor/style-shop">style-shop</StyledLink>
-			<StyledLink to="/editor/orders">orders</StyledLink>
+			<ButtonWrap>
+				<StyledLink to="/editor/dashboard/products">products</StyledLink>
+			</ButtonWrap>
+			<ButtonWrap>
+				<StyledLink to="/editor/dashboard/shop">shop</StyledLink>
+			</ButtonWrap>
+			<ButtonWrap>
+				<StyledLink to="/editor/dashboard/users">users</StyledLink>
+			</ButtonWrap>
+			<ButtonWrap>
+				<StyledLink to="/editor/dashboard/style-shop">style-shop</StyledLink>
+			</ButtonWrap>
+			<ButtonWrap>
+				<StyledLink to="/editor/dashboard/orders">orders</StyledLink>
+			</ButtonWrap>
 		</SidebarWrapp>
 	);
 }
