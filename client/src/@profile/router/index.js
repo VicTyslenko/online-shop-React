@@ -5,6 +5,7 @@ import AddressBook from "../containers/AddressBook/";
 import MyProfile from "../containers/MyProfile/";
 import Wishlist from "../containers/Wishlist/";
 import PurchaseHistory from "../containers/PurchaseHistory/";
+import MyAccount from '../MyAccount/MyAccount';
 function ProfileRoutes() {
 	return (
 		<Routes>
@@ -13,6 +14,7 @@ function ProfileRoutes() {
 			<Route path="/profile/my-wishlist" element={<Wishlist />} />
 			<Route path="/profile/address-book" element={<AddressBook />} />
 			<Route path="/profile/purchase-history" element={<PurchaseHistory />} />
+			<Route path="/profile/myAccount" element={<MyAccount />} />
 		
 		</Routes>
 	);
