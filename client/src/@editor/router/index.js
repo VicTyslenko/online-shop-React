@@ -6,6 +6,7 @@ import EditUsers from '../components/EditUsers';
 import EditStyleShop from '../components/EditStyleShop';
 import EditOrders from '../components/EditOrders';
 import Dashboard from '../components/Dashboard';
+import Users from '../../@editor/components/Sidebar/components/Management/components/Users/Users';
 
 function EditorRoutes() {
 	return (
@@ -16,6 +17,7 @@ function EditorRoutes() {
 			<Route path="/users" element={<EditUsers />} />
 			<Route path="/style-shop" element={<EditStyleShop />} />
 			<Route path="/orders" element={<EditOrders />} />
+			<Route path="/users" element={<Users />} />
 		</Routes>
 	);
 }
