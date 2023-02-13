@@ -9,14 +9,16 @@ import Dashboard from '../components/Dashboard';
 
 function EditorRoutes() {
 	return (
-		<Routes>
-			<Route index element={<Dashboard />} />
-			<Route path="/products" element={<EditProducts />} />
-			<Route path="/shop" element={<EditShop />} />
-			<Route path="/users" element={<EditUsers />} />
-			<Route path="/style-shop" element={<EditStyleShop />} />
-			<Route path="/orders" element={<EditOrders />} />
-		</Routes>
+		<>
+			<Routes>
+				<Route index element={<Dashboard />} />
+				<Route path="/products" element={<EditProducts />} />
+				<Route path="/shop" element={<EditShop />} />
+				<Route path="/users" element={<EditUsers />} />
+				<Route path="/style-shop" element={<EditStyleShop />} />
+				<Route path="/orders" element={<EditOrders />} />
+			</Routes>
+		</>
 	);
 }
 

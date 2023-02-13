@@ -2,30 +2,28 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const SidebarWrapp = styled.div`
+	background-color: black;
 	display: flex;
 	flex-direction: column;
-	margin-top: 120px;
-	/* height:100% ; */
-	background-color: black;
-	width: 200px;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	width: 350px;
 `;
 
 export const ButtonWrap = styled.div`
-	padding-top: 16px;
-	padding-bottom: 16px;
+	padding: 20px 40px;
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #3c3c3c;
+	box-sizing: border-box;
 `;
 
 export const StyledLink = styled(Link)`
 	&&& {
 		font-weight: 400;
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 20px;
-		font-family: 'Josefin Sans';
+		font-family: 'Open Sans';
 		color: #ffffff;
 		text-decoration: none;
 		text-transform: uppercase;

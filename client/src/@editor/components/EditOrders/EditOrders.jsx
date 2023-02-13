@@ -1,13 +1,12 @@
 import { Container } from '@mui/material';
 import React from 'react';
-import { MainContent, Title } from './StyledOrders';
+import { MainContent, Header } from './StyledOrders';
 
 function EditOrders() {
 	return (
 		<Container maxWidth="lg">
-			<MainContent>
-				<Title>Orders</Title>
-			</MainContent>
+			<Header>Products</Header>
+			<MainContent></MainContent>
 		</Container>
 	);
 }
