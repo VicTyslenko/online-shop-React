@@ -9,10 +9,14 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 function EditProducts() {
 	const [categories, setCategories] = useState('');
 	const [enabled, setEnabled] = useState('');
+	const [genderState, setGenderState] = useState('');
 	const [dataPicker, setDataPicker] = React.useState(dayjs('2023-08-18'));
 
-	const handleEnabled = (event) => {
+	const enabledSelector = (event) => {
 		setEnabled(event.target.value);
+	};
+	const genderSelector = (event) => {
+		setGenderState(event.target.value);
 	};
 
 	const handleChange = (event) => {
@@ -25,9 +29,9 @@ function EditProducts() {
 
 	return (
 		<Container maxWidth="lg">
+			<Header>Products</Header>
 			<ContainerWrapp>
 				<ContentForm>
-					<Header>Products</Header>
 					<MainContent>
 						<Box component="form" sx={{ width: '100%', p: '24px' }}>
 							<FormControl size="small" fullWidth sx={{ mb: '20px' }}>
@@ -39,10 +43,25 @@ function EditProducts() {
 									fullWidth
 									value={enabled}
 									label="Enabled"
-									onChange={handleEnabled}
+									onChange={enabledSelector}
 								>
 									<MenuItem value="yes">Yes</MenuItem>
-									<MenuItem value="no">no</MenuItem>
+									<MenuItem value="no">No</MenuItem>
+								</Select>
+							</FormControl>
+							<FormControl size="small" fullWidth sx={{ mb: '20px' }}>
+								<InputLabel id="select-gender">Gender</InputLabel>
+								<Select
+									labelId="select-gender"
+									id="select-gender"
+									size="small"
+									fullWidth
+									value={genderState}
+									label="Gender"
+									onChange={genderSelector}
+								>
+									<MenuItem value="woman">Man</MenuItem>
+									<MenuItem value="woman">Woman</MenuItem>
 								</Select>
 							</FormControl>
 							<TextField

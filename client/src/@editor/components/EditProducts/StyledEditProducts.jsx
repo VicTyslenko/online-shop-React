@@ -17,10 +17,10 @@ export const ContentForm = styled.div`
 	font-style: normal;
 	background-color: #fff;
 	width: 430px;
-	border-radius: 8px;
+	border-radius: 3px;
 	transform: scale(1);
 	transition: 0.5s;
-	box-shadow: 0 0 12px #000000;
+	/* border: 1px solid #c7c6c6; */
 `;
 
 export const MainContent = styled.div`
@@ -32,18 +32,15 @@ export const Title = styled.h1`
 	color: #fff;
 `;
 
-export const Header = styled.header`
-	padding: 16px 30px;
-	position: relative;
-	letter-spacing: 1px;
-	word-spacing: 1px;
-	font-size: 22px;
+export const Header = styled.h3`
+	margin: 0;
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 	font-weight: 700;
-	border-bottom: 1px solid #d7d5d5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #181818;
+	font-size: 22px;
+	line-height: 33px;
+	text-transform: uppercase;
+	padding-top: 50px;
+	padding-left: 80px;
 `;
 
 export const ButtonWrap = styled.div`

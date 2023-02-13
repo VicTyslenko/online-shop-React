@@ -1,13 +1,12 @@
 import { Container } from '@mui/material';
 import React from 'react';
-import { MainContent, Title } from './StyledDashboard';
+import { MainContent, Header } from './StyledDashboard';
 
 function Dashboard() {
 	return (
 		<Container maxWidth="lg">
-			<MainContent>
-				<Title>Dashboard</Title>
-			</MainContent>
+			<Header>Dashboard</Header>
+			<MainContent></MainContent>
 		</Container>
 	);
 }
