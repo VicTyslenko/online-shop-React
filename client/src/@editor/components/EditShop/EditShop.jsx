@@ -5,7 +5,7 @@ import { MainContent, Header } from './StyledEditShop';
 function EditShop() {
 	return (
 		<Container maxWidth="lg">
-			<Header>Products</Header>
+			<Header>Shop</Header>
 
 			<MainContent></MainContent>
 		</Container>

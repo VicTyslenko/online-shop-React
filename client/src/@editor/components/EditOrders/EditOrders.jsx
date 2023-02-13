@@ -5,7 +5,7 @@ import { MainContent, Header } from './StyledOrders';
 function EditOrders() {
 	return (
 		<Container maxWidth="lg">
-			<Header>Products</Header>
+			<Header>Orders</Header>
 			<MainContent></MainContent>
 		</Container>
 	);

@@ -5,7 +5,7 @@ import { MainContent, Header } from './StyledUsers';
 function EditUsers() {
 	return (
 		<Container maxWidth="lg">
-			<Header>Products</Header>
+			<Header>Users</Header>
 			<MainContent></MainContent>
 		</Container>
 	);
