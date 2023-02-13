@@ -1,11 +1,7 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-export const MenuList = styled.ul`
-	display: flex;
-	justify-content: space-around;
-	gap:30px;
-	align-items: center;
+export const MenuList = styled.div`
+
 	& .list-item {
 		font-weight: 400;
 		font-size: 24px;
@@ -13,7 +9,9 @@ export const MenuList = styled.ul`
 		color: #828080;
 		font-family: 'Open Sans';
 		text-transform:capitalize ;
+		width:25% ;
 	}
+	
 `;
 export const Title = styled.h1`
 	font-weight: 700;

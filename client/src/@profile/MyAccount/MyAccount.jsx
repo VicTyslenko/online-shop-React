@@ -9,8 +9,24 @@ import MyProfile from '../containers/MyProfile';
 import Wishlist from '../containers/Wishlist';
 import PurchaseHistory from '../containers/PurchaseHistory';
 import { MenuList, Title } from './StyledMyAccount';
+// import { makeStyles } from '@mui/styles';
+
+
 function MyAccount() {
+
+	// const useStyles = makeStyles({
+	// 	tabs: {
+	// 		'& .MuiTabs-indicator': {
+	// 			backgroundColor: 'orange',
+	// 			height: 3,
+	// 		},
+	// 		'& .MuiTab-root.Mui-selected': {
+	// 			color: 'red',
+	// 		},
+	// 	},
+	// });
 	const [value, setValue] = useState('1');
+	// const classes = useStyles();
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -21,7 +37,12 @@ function MyAccount() {
 			<TabContext value={value}>
 				<MenuList>
 					<TabList onChange={handleChange}>
-						<Tab className="list-item" label="My profile" value="1" />
+						<Tab
+							// className={classes.tabs}
+							className='list-item'
+							label="My profile"
+							value="1"
+						/>
 						<Tab className="list-item" label="My wishlist" value="2" />
 						<Tab className="list-item" label="Purchase history" value="3" />
 						<Tab className="list-item" label="Address book" value="4" />
