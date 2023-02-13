@@ -40,7 +40,7 @@ const productGalleryData = {
 
 function ProductPage() {
 	return (
-		<Container maxWidth="lg">
+		<Container sx={{ marginTop: '50px', marginBottom: '50px' }} maxWidth="lg">
 			<Grid container spacing={2}>
 				<Grid item xs={12} sm={7} md={8}>
 					<ProductGallery {...productGalleryData} />

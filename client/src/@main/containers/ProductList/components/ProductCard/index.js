@@ -6,6 +6,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
+import { StyledTitle } from './ProductCard.styles';
+
 function ProductCard({ url, alt, title, price, id }) {
 	const navigate = useNavigate();
 
@@ -18,9 +20,11 @@ function ProductCard({ url, alt, title, price, id }) {
 			<CardActionArea onClick={handlerOpenCard}>
 				<CardMedia component="img" image={url} alt={alt} id={id} />
 				<CardContent>
-					<Typography gutterBottom variant="title" component="div">
-						{title}
-					</Typography>
+					<StyledTitle>
+						<Typography gutterBottom variant="title" component="div">
+							{title}
+						</Typography>
+					</StyledTitle>
 					<Typography variant="body2" color="text.secondary">
 						{price} $
 					</Typography>
