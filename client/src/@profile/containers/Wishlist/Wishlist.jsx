@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 function Wishlist() {
 
@@ -6,7 +6,7 @@ function Wishlist() {
 		<Container maxWidth='lg'sx={{
 			marginBottom:'50px'
 		}}>
-		'Wishlist'
+		<Typography variant="h4" sx={{ mb: '141px' }}>Your wishlist is empty</Typography>
 		</Container>
 	)
 }

@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container,Typography } from '@mui/material';
 
 function PurchaseHistory() {
 
@@ -6,7 +6,7 @@ function PurchaseHistory() {
 		<Container maxWidth='lg'sx={{
 			marginBottom:'50px'
 		}}>
-		'PurchaseHistory'
+			<Typography variant="h4" sx={{ mb: '141px' }}>No purchase were found </Typography>
 		</Container>
 	)
 }
