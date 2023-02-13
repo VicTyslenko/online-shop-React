@@ -23,6 +23,11 @@ const ProductSchema = new Schema(
     previousPrice: {
       type: Number
     },
+    male: {
+      type: String,
+      required: true
+    },
+
     categories: {
       type: String,
       required: true
@@ -56,7 +61,7 @@ const ProductSchema = new Schema(
     manufacturerCountry: {
       type: String
     },
-    seller: {
+    sellerseller: {
       type: String
     },
     date: {
