@@ -1,28 +1,27 @@
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import {Container, ImageListItemBar} from '@mui/material';
-import {ContainerWrapper, NewInH1} from './NewCollection.styles'
-import { Link } from 'react-router-dom';
+import {ContainerWrapper, NewInH1, NewInLink, ImageText, GridContainer, GridItem} from './NewCollection.styles'
+import {Container} from '@mui/material';
 
 const itemData = [
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016993660076063/photo-1487222477894-8943e31ef7b2.jpg',
 		title: 'NEW IN',
 		rows: 2,
-		cols: 2,
-		path: '/'
+		cols: 1,
+		path: '/',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016861933764618/three-3075752_960_720.jpg',
 		title: 'NEW COLLECTION',
-		cols: 2,
-		path: '/'
+		rows: 1,
+		cols: 1,
+		path: '/',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016977092591676/photo-1479064555552-3ef4979f8908.jpg',
 		title: 'NEW COLLECTION',
-		cols: 2,
-		path: '/'
+		rows: 1,
+		cols: 1,
+		path: '/',
 	}
 ]
 
@@ -41,35 +40,22 @@ function NewCollection() {
 		<ContainerWrapper>
 			<Container maxWidth='lg'>
 				<NewInH1>New</NewInH1>
-				<ImageList
-					sx={{width: "100%", height: '100%', columnGap: '36px', rowGap: '20px'}}
-					variant="quilted"
-					cols={4}
 
-				>
+				<GridContainer>
 					{itemData.map((item) => (
-						<ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-						<Link to={item.path}>
-							<img
-								{...srcset(item.img, 121, item.rows, item.cols)}
-								alt={item.title}
-								loading="lazy"
-								href='/'
-							/>
+						<GridItem key={item.img} column={item.cols} row={item.rows}>
+							<NewInLink to={item.path}>
+								<img
+									{...srcset(item.img, 121, item.rows, item.cols)}
+									alt={item.title}
+									loading="lazy"
+								/>
 
-
-							<ImageListItemBar
-								sx={{
-									textAlign: "center",
-									width: '40%'
-								}}
-								title={item.title}
-							/>
-							</Link>
-							
-						</ImageListItem>
+								<ImageText>{item.title}</ImageText>
+							</NewInLink>
+						</GridItem>
 					))}
-				</ImageList>
+				</GridContainer>
 			</Container>
 		</ContainerWrapper>
 	);
