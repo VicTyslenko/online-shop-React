@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Button } from '@mui/material';
 
 export const FlexWrapp = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 48px;
+padding:55px 0 50px 40px ;
 `;
 export const StyledButton = styled(Link)`
 	&&& {
@@ -16,9 +16,7 @@ export const StyledButton = styled(Link)`
 		text-decoration: none;
 		color: white;
 	}
-	& .content {
-		text-align: left;
-	}
+
 	& .title {
 		font-weight: 700;
 		font-size: 24px;

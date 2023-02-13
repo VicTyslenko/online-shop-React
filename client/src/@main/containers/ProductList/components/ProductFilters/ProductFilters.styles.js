@@ -1,4 +1,5 @@
-import { Box, ListItemIcon, Divider, Typography } from '@mui/material';
+import { Box, ListItemIcon, Divider, Typography, Button } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
 
 export const StyledBox = styled(Box)`
@@ -40,9 +41,40 @@ export const DividerStyled = styled(Divider)`
 	margin-left: 32px;
 `;
 
+export const StyledBoxTypography = styled(Box)`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 19px;
+	position: relative;
+`;
+
 export const StyledTypography = styled(Typography)`
 	text-transform: capitalize;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 14px;
 	cursor: pointer;
+`;
+
+export const StyledCrossIcon = styled(CloseIcon)`
+	cursor: pointer;
+	color: #000;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 2;
+`;
+
+export const FiltersButton = styled(Button)`
+	text-transform: capitalize;
+	cursor: pointer;
+	color: black;
+    width: 100%;
+
+	&:hover {
+		background-color: rgba(86, 82, 84, 0.04);
+	}
 `;
 
 export const StyledFilterPriceBox = styled(Box)`
@@ -55,4 +87,11 @@ export const StyledFilterPriceBox = styled(Box)`
 	${(props) => props.theme.breakpoints.down('md')} {
 		width: 160px;
 	}
+	${(props) => props.theme.breakpoints.down('sm')} {
+		width: 260px;
+	}
+`;
+
+export const MobileFilterPriceBox = styled(Box)`
+	padding: 8px 32px;
 `;
