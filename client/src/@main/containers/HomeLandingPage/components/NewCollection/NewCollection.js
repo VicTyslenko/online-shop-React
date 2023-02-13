@@ -7,21 +7,21 @@ const itemData = [
 		title: 'NEW IN',
 		rows: 2,
 		cols: 1,
-		path: '/',
+		path: '/store/new-in',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016861933764618/three-3075752_960_720.jpg',
 		title: 'NEW COLLECTION',
 		rows: 1,
 		cols: 1,
-		path: '/',
+		path: '/store/new-accessory',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016977092591676/photo-1479064555552-3ef4979f8908.jpg',
 		title: 'NEW COLLECTION',
 		rows: 1,
 		cols: 1,
-		path: '/',
+		path: '/store/new-collection',
 	}
 ]
 
