@@ -2,6 +2,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import {Container, ImageListItemBar} from '@mui/material';
 import {ContainerWrapper, NewInH1} from './NewCollection.styles'
+import { Link } from 'react-router-dom';
 
 const itemData = [
 	{
@@ -9,16 +10,19 @@ const itemData = [
 		title: 'NEW IN',
 		rows: 2,
 		cols: 2,
+		path: '/'
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016861933764618/three-3075752_960_720.jpg',
 		title: 'NEW COLLECTION',
 		cols: 2,
+		path: '/'
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016977092591676/photo-1479064555552-3ef4979f8908.jpg',
 		title: 'NEW COLLECTION',
 		cols: 2,
+		path: '/'
 	}
 ]
 
@@ -45,11 +49,12 @@ function NewCollection() {
 				>
 					{itemData.map((item) => (
 						<ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-
+						<Link to={item.path}>
 							<img
 								{...srcset(item.img, 121, item.rows, item.cols)}
 								alt={item.title}
 								loading="lazy"
+								href='/'
 							/>
 
 
@@ -60,6 +65,8 @@ function NewCollection() {
 								}}
 								title={item.title}
 							/>
+							</Link>
+							
 						</ImageListItem>
 					))}
 				</ImageList>
