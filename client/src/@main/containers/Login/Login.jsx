@@ -41,11 +41,10 @@ function Login() {
 	});
 
 	return (
-		<ContainerWrapper>
 			<Container
 				maxWidth="lg"
 				sx={{
-					background: 'black',
+					
 					display: 'flex',
 					justifyContent: 'center',
 				}}
@@ -58,15 +57,7 @@ function Login() {
 					validationSchema={validationSchema}
 				>
 					<LoginWrapper>
-						<HeadWrapp>
-							<div className="login-wrapp">
-								<StyledLink to="/login" className="login">
-									Login
-								</StyledLink>
-								<hr className='line' />
-							</div>
-							<StyledLink to="/registration">Registration</StyledLink>
-						</HeadWrapp>
+				
 						<Description>Please enter your account details to log in</Description>
 						<Form>
 							<InputsWrapp>
@@ -91,7 +82,6 @@ function Login() {
 					</LoginWrapper>
 				</Formik>
 			</Container>
-		</ContainerWrapper>
 	);
 }
 
