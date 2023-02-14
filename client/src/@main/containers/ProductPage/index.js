@@ -1,4 +1,8 @@
 import { Container, Grid } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+
+import { getProduct } from '../../../actions/productActions';
 
 import ProductInfo from './components/ProductInfo';
 import ProductGallery from './components/ProductGallery';
@@ -38,9 +42,20 @@ const productGalleryData = {
 	})),
 };
 
+// navigate(`/product/${id}`); /:itemNo
+
 function ProductPage() {
+	// const product = useSelector((state) => state.product);
+	// const dispatch = useDispatch();
+	const test = useLocation();
+	console.log('asdf', test);
+
+	// useEffect(() => {
+	// 	dispatch(getProduct());
+	// }, []);
+
 	return (
-		<Container maxWidth="lg">
+		<Container sx={{ marginTop: '50px', marginBottom: '50px' }} maxWidth="lg">
 			<Grid container spacing={2}>
 				<Grid item xs={12} sm={7} md={8}>
 					<ProductGallery {...productGalleryData} />

@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
@@ -50,39 +51,45 @@ function Header() {
 			<Container maxWidth="lg">
 				<ContentWrapper>
 					<div>
-						<ButtonItem
-							data-menu="menuMen"
-							aria-expanded={mensCategory !== 0}
-							aria-controls="example-panel"
-							onClick={(e) => {
-								setMenCategory(!mensCategory);
-								setDataMenu(e.target.dataset.menu);
-							}}
-						>
-							MAN
-						</ButtonItem>
-						<ButtonItem
-							data-menu="menuWomen"
-							aria-expanded={womenCategory !== 0}
-							aria-controls="example-panel"
-							onClick={(e) => {
-								setWomenCategory(!womenCategory);
-								setDataMenu(e.target.dataset.menu);
-							}}
-						>
-							WOMEN
-						</ButtonItem>
-						<ButtonItem
-							data-menu="menuAccessory"
-							aria-expanded={accessoryCategory !== 0}
-							aria-controls="example-panel"
-							onClick={(e) => {
-								setAccessoryCategory(!accessoryCategory);
-								setDataMenu(e.target.dataset.menu);
-							}}
-						>
-							ACCESSORY
-						</ButtonItem>
+						<Link to="/store/man">
+							<ButtonItem
+								data-menu="menuMen"
+								aria-expanded={mensCategory !== 0}
+								aria-controls="example-panel"
+								onClick={(e) => {
+									setMenCategory(!mensCategory);
+									setDataMenu(e.target.dataset.menu);
+								}}
+							>
+								MAN
+							</ButtonItem>
+						</Link>
+						<Link to="/store/woman">
+							<ButtonItem
+								data-menu="menuWomen"
+								aria-expanded={womenCategory !== 0}
+								aria-controls="example-panel"
+								onClick={(e) => {
+									setWomenCategory(!womenCategory);
+									setDataMenu(e.target.dataset.menu);
+								}}
+							>
+								WOMEN
+							</ButtonItem>
+						</Link>
+						<Link to="/store/accessories">
+							<ButtonItem
+								data-menu="menuAccessory"
+								aria-expanded={accessoryCategory !== 0}
+								aria-controls="example-panel"
+								onClick={(e) => {
+									setAccessoryCategory(!accessoryCategory);
+									setDataMenu(e.target.dataset.menu);
+								}}
+							>
+								ACCESSORY
+							</ButtonItem>
+						</Link>
 					</div>
 					<div>
 						<Logo to="/">Originalité</Logo>

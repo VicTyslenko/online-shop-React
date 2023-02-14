@@ -5,6 +5,8 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import goodsReducer from '../reducers/goodsReducer';
 import favoritesReducer from '../reducers/favoritesReducer';
 import cartReducer from '../reducers/cartReducer';
+import filtersReducer from '../reducers/filtersReducer';
+import productReducer from '../reducers/productReducer';
 
 const persistConfig = {
 	key: 'root',
@@ -13,8 +15,10 @@ const persistConfig = {
 
 const rootReduser = combineReducers({
 	goods: goodsReducer,
+	product: productReducer,
 	favorites: favoritesReducer,
 	cart: cartReducer,
+	filters: filtersReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);

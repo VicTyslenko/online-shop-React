@@ -1,10 +1,10 @@
 import { ADD_FAVORITE, REMOVE_FAVORITE } from "../constants/constants";
-import LocalStorage from "../services/localStorageService";
+// import LocalStorage from "../services/localStorageService";
 
-const ls = new LocalStorage();
-const initialState = JSON.parse(ls.get("favorites")) || [];
+// const ls = new LocalStorage();
+// const initialState = JSON.parse(ls.get("favorites")) || [];
 
-function favoritesReducer(state = initialState, action) {
+function favoritesReducer(state = [], action) {
     const { payload } = action;
 
     switch (action.type) {
