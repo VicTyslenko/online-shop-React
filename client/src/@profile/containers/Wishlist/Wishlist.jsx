@@ -1,12 +1,15 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 function Wishlist() {
 
 	return (
 		<Container maxWidth='lg'sx={{
-			marginBottom:'50px'
+			marginTop:'50px',
+			marginBottom:'50px',
+			display:'flex',
+			justifyContent:'center'
 		}}>
-		'Wishlist'
+		<Typography variant="h4" sx={{ mb: '141px' }}>Your wishlist is empty</Typography>
 		</Container>
 	)
 }
