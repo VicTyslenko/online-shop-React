@@ -6,13 +6,13 @@ import EditUsers from '../components/EditUsers';
 import EditStyleShop from '../components/EditStyleShop';
 import EditOrders from '../components/EditOrders';
 import Dashboard from '../components/Dashboard';
-import Users from '../../@editor/components/Sidebar/components/Management/components/Users/Users';
+// import Users from '../../@editor/components/Sidebar/components/Management/components/Users/Users';
 
 function EditorRoutes() {
 	return (
 		<>
 			<Routes>
-				<Route index element={<Dashboard />} />
+				<Route path ='/dashboard' element={<Dashboard />} />
 				<Route path="/products" element={<EditProducts />} />
 				<Route path="/shop" element={<EditShop />} />
 				<Route path="/users" element={<EditUsers />} />
