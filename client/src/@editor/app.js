@@ -1,9 +1,7 @@
-import EditorRoutes from './router'
+import AdminDashboard from './containers/AdminDashboard';
 
 function Editor() {
-	return (
-		<EditorRoutes />
-	);
+	return <AdminDashboard />;
 }
 
 export default Editor;
