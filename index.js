@@ -30,7 +30,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 const bd = require('./config/keys').mongoURI
 
 mongoose
@@ -38,10 +38,10 @@ mongoose
 	useNewUrlParser: true,
 	useFindAndModify : false,
 })
-	.then (()=> console.log('MongoDB connected...'))
+	.then (()=> console.log(`MongoDB connected...`))
 	.catch ((error) => console.log(error))
 
-app.use(passport.initialize())
+ app.use(passport.initialize())
 
 app.use("/api/cart", cart)
 app.use("/api/catalog", catalog)
@@ -68,3 +68,10 @@ if (process.env.NODE_ENV== 'production') {
 		res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'))
 	})
 }
+
+app.listen(5000, (err)=>{
+    if (err) {
+        return console.log(err);
+    }
+    console.log(`Server ${PORT}`);
+})
