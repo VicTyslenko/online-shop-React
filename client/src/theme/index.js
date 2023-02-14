@@ -69,6 +69,10 @@ const theme = createTheme(themeWithBreakpoints, {
 			lineHeight: 1.334,
 			marginBottom: '0.35em',
 			textTransform: 'uppercase',
+			[themeWithBreakpoints.breakpoints.down('md')]: {
+				fontSize: '20px',
+				lineHeight: '22px',
+			},
 			[themeWithBreakpoints.breakpoints.down('sm')]: {
 				fontSize: '12px',
 				lineHeight: '16px',
