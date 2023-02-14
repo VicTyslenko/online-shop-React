@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Box } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
@@ -6,20 +8,17 @@ import ProductCard from './components/ProductCard';
 import ProductFilters from './components/ProductFilters';
 import { StyledContainer, StyledBox, StyledTitle } from './ProductList.styles';
 
-const productListData = Array.from({ length: 5 }, (_, index) => ({
-	title: 'black jacket',
-	price: 256,
-	articul: 456790,
-	id: index,
-	url: 'https://diadia.ua/image/cachewebp/catalog/2023-02/0702/27-1500x2000.webp',
-	alt: 'dress',
-}));
-
-// Зробити map даних з бекенду фільтрів.
+import { getGoods } from '../../../actions/goodsActions';
 
 function ProductList() {
+	const products = useSelector((state) => state.goods);
+	const dispatch = useDispatch();
 	// const test = useLocation();
 	// console.log('asdf', test);
+
+	useEffect(() => {
+		dispatch(getGoods());
+	}, []);
 
 	return (
 		<StyledContainer maxWidth="lg">
@@ -30,8 +29,8 @@ function ProductList() {
 					Jackets
 				</StyledTitle>
 				<StyledBox>
-					{productListData.map(({ title, price, url, alt, id }) => (
-						<ProductCard key={id} title={title} price={price} url={url} alt={alt} id={id} />
+					{products.map(({ name, currentPrice, imageUrls, _id, itemNo }) => (
+						<ProductCard key={_id} title={name} price={currentPrice} url={imageUrls[0]} alt={name} id={itemNo} />
 					))}
 				</StyledBox>
 			</Box>
