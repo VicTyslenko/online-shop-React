@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import { Container, Grid } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { getProduct } from '../../../actions/productActions';
 
@@ -45,14 +46,15 @@ const productGalleryData = {
 // navigate(`/product/${id}`); /:itemNo
 
 function ProductPage() {
-	// const product = useSelector((state) => state.product);
-	// const dispatch = useDispatch();
-	const test = useLocation();
-	console.log('asdf', test);
+	const product = useSelector((state) => state.product);
+	const dispatch = useDispatch();
+	const { id } = useParams();
 
-	// useEffect(() => {
-	// 	dispatch(getProduct());
-	// }, []);
+	useEffect(() => {
+		if(id) {
+			dispatch(getProduct(id));
+		}
+	}, [id]);
 
 	return (
 		<Container sx={{ marginTop: '50px', marginBottom: '50px' }} maxWidth="lg">
@@ -61,7 +63,7 @@ function ProductPage() {
 					<ProductGallery {...productGalleryData} />
 				</Grid>
 				<Grid item xs={12} sm={5} md={4}>
-					<ProductInfo {...productInfoData} />
+					<ProductInfo {...product.data} />
 				</Grid>
 			</Grid>
 		</Container>

@@ -6,7 +6,7 @@ const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_PRODUCT:
             const { payload } = action;
-            return [...payload];
+            return {...payload};
 
         default:
             return state;

@@ -1,14 +1,13 @@
 import { SET_PRODUCT } from "../constants/constants";
-import sendRequest from "../services/index";
+import { getProductById } from "../services/api/productsApi";
 
 export const setProduct = (payload) => ({
     type: SET_PRODUCT,
     payload
 });
 
-export const getProduct = (itemNo) => async (dispatch, getState) => {
-	const state = getState();
-	const response = await sendRequest(`/products?/${itemNo}`);
-	console.log(response);
+export const getProduct = (itemNo) => async (dispatch) => {
+	const response = await getProductById(itemNo);
+
     dispatch(setProduct(response));
 };
