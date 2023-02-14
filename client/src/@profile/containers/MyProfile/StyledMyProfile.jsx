@@ -21,6 +21,12 @@ export const Title = styled.h3`
 	padding-left: 80px;
 `;
 
+export const Type = styled.h1`
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+`;
+
 export const ContentForm = styled.div`
 	margin: 20px 0 40px 0;
 	z-index: 1;
