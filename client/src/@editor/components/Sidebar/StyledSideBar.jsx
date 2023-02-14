@@ -1,51 +1,31 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const SidebarItem = styled(Link)`
-	height: 2.5rem;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	margin-left: 2rem;
-	position: relative;
-	font-size: 14px;
-	border-radius: 0.7rem;
-	transition: all 300ms ease;
-	color: #000;
-	text-decoration: none;
-
-	&:last-child {
-		position: absolute;
-		bottom: 20px;
-		width: 100%;
-	}
-
-	&.active {
-		background-color: rgb(22, 88, 141);
-		margin-left: 0;
-	}
-`;
 export const SidebarWrapp = styled.div`
+	background-color: black;
 	display: flex;
 	flex-direction: column;
-	position: relative;
-	padding-top: 4rem;
-	transition: all 300ms ease;
-	padding-left: 15px;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	width: 350px;
 `;
-export const Menu = styled.div`
-	margin-top: 4rem;
+
+export const ButtonWrap = styled.div`
+	padding: 20px 40px;
 	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-`;
-export const Logo = styled.div`
-	& .logo-title {
-		color: #00525a;
-	}
-`;
-export const MenuItem = styled.div`
-	display: flex;
+	justify-content: left;
 	align-items: center;
-	gap: 1rem;
+	box-sizing: border-box;
+`;
+
+export const StyledLink = styled(Link)`
+	&&& {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 20px;
+		font-family: 'Open Sans';
+		color: #ffffff;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
 `;
