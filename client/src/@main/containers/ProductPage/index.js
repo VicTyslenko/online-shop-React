@@ -47,8 +47,8 @@ const productGalleryData = {
 function ProductPage() {
 	// const product = useSelector((state) => state.product);
 	// const dispatch = useDispatch();
-	// const test = useLocation();
-	// console.log('asdf', test);
+	const test = useLocation();
+	console.log('asdf', test);
 
 	// useEffect(() => {
 	// 	dispatch(getProduct());
