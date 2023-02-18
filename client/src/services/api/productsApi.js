@@ -1,4 +1,4 @@
-import axiosInstance from "./axois";
+import axiosInstance from "./axios";
 
 export function getProductsList() {
 	return axiosInstance.get('/products?perPage=10&startPage=1');

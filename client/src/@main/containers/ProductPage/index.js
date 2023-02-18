@@ -3,7 +3,8 @@ import { Container, Grid } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { getProduct } from '../../../actions/productActions';
+import { getProduct } from '../../store/actions/productActions';
+import { selectProduct } from '../../store/selectors/productSelector';
 
 import ProductInfo from './components/ProductInfo';
 import ProductGallery from './components/ProductGallery';
@@ -46,7 +47,7 @@ const productGalleryData = {
 // navigate(`/product/${id}`); /:itemNo
 
 function ProductPage() {
-	const product = useSelector((state) => state.product);
+	const product = useSelector(selectProduct);
 	const dispatch = useDispatch();
 	const { id } = useParams();
 
@@ -63,7 +64,7 @@ function ProductPage() {
 					<ProductGallery {...productGalleryData} />
 				</Grid>
 				<Grid item xs={12} sm={5} md={4}>
-					<ProductInfo {...product.data} />
+					<ProductInfo {...product} />
 				</Grid>
 			</Grid>
 		</Container>
