@@ -6,11 +6,11 @@ export const ShoppingCartWrapp = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-
 `;
+export const QuantityButton = styled(Button)``;
 export const RemoveButton = styled(Button)`
-&&&{
-	position: absolute;
+	&&& {
+		position: absolute;
 		bottom: 25px;
 		right: -300px;
 		color: #847a7a;
@@ -19,11 +19,11 @@ export const RemoveButton = styled(Button)`
 		font-size: 14px;
 		line-height: 19px;
 		font-family: 'Open Sans';
-}
-`
-export const ContainerWrapper =styled.div`
-background:white ;
-`
+	}
+`;
+export const ContainerWrapper = styled.div`
+	background: white;
+`;
 export const ContentWrapp = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -110,11 +110,11 @@ export const Content = styled.div`
 	display: flex;
 	gap: 37px;
 
-&{
-	border-bottom:1px solid #C4C4C4 ;
-	/* width: 810px; */
-	margin-bottom:42px ;
-}
+	& {
+		border-bottom: 1px solid #c4c4c4;
+		/* width: 810px; */
+		margin-bottom: 42px;
+	}
 
 	& .image {
 		width: 174.67px;
@@ -141,5 +141,11 @@ export const Content = styled.div`
 		font-size: 18px;
 		line-height: 25px;
 		font-family: 'Open Sans';
+	}
+	& .qnt-btn {
+		border: none;
+		background: white;
+		cursor: pointer;
+		
 	}
 `;

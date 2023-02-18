@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from '@mui/system';
+import { useState } from 'react';
 import {
 	ShoppingCartWrapp,
 	ContainerWrapper,
@@ -9,6 +10,7 @@ import {
 	Content,
 	RightSideWrapp,
 	ContentWrapp,
+	QuantityButton,
 } from './StyledShoppingCart';
 import TextField from '@mui/material/TextField';
 const products = [
@@ -39,13 +41,27 @@ const products = [
 ];
 
 function ShoppingCart() {
+	const [quantity, setQuantity] = useState(1);
+
+	const Decrement = () => {
+		if (quantity <= 1) {
+			return;
+		}
+		setQuantity((prevCount) => prevCount - 1);
+	};
+	const Increment = () => {
+		if (quantity >= 10) {
+			return;
+		}
+		setQuantity((prevCount) => prevCount + 1);
+	};
 	return (
 		<ContainerWrapper>
 			<Container
 				maxWidth="lg"
 				sx={{
 					marginBottom: '50px',
-					marginTop:'40px'
+					marginTop: '40px',
 				}}
 			>
 				<StyledButton>Keep shopping</StyledButton>
@@ -61,7 +77,18 @@ function ShoppingCart() {
 										<li className="title">{product.name}</li>
 										<li>Color :{product.color}</li>
 										<li>Size :{product.size}</li>
-										<li>Quantity</li>
+										<li>
+											Quantity :{' '}
+											<button onClick={Decrement} className="qnt-btn">
+												{' '}
+												-{' '}
+											</button>
+											<span>{quantity}</span>
+											<button onClick={Increment} className="qnt-btn">
+												{' '}
+												+{' '}
+											</button>
+										</li>
 										<li>Price :{product.price}</li>
 										<li className="total">Total :</li>
 									</ul>
