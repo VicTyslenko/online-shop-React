@@ -8,16 +8,17 @@ import ProductCard from './components/ProductCard';
 import ProductFilters from './components/ProductFilters';
 import { StyledContainer, StyledBox, StyledTitle } from './ProductList.styles';
 
-import { getGoods } from '../../../actions/goodsActions';
+import { getProductList } from '../../store/actions/productListActions';
+import { selectProductList } from '../../store/selectors/productListSelectors';
 
 function ProductList() {
-	const products = useSelector((state) => state.goods);
+	const products = useSelector(selectProductList);
 	const dispatch = useDispatch();
 	// const test = useLocation();
 	// console.log('asdf', test);
 
 	useEffect(() => {
-		dispatch(getGoods());
+		dispatch(getProductList());
 	}, []);
 
 	return (

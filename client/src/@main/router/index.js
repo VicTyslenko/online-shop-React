@@ -18,12 +18,10 @@ function MainRoutes() {
 	return (
 		<Routes>
 			<Route path="/" element={<HomeLandingPage />} />
-			<Route path="/store/:category?/:product/" element={<ProductList />} />
-			<Route path="/product/:id/" element={<ProductPage />} />
+			<Route path="/store/:category" element={<ProductList />} />
+			<Route path="/product/:id" element={<ProductPage />} />
 			<Route path="/shopping-cart" element={<ShoppingCart />} />
-		
 			<Route path="/login-form" element={<LoginForm />} />
-
 			<Route path="/contact" element={<ContactLandingPage />} />
 			<Route path="/history-brand" element={<HistoryBrandLandingPage />} />
 			<Route path="/payment" element={<PaymentLandingPage />} />
