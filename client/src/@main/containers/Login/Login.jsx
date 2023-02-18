@@ -1,7 +1,6 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { Link } from 'react-router-dom';
-import Radio from '@mui/material/Radio';
+import Checkbox from '@mui/material/Checkbox';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import { Container } from '@mui/system';
@@ -11,9 +10,11 @@ import {
 	HeadWrapp,
 	Description,
 	InputsWrapp,
-	RadioWrapp,
+	CheckBoxWrapp,
 	StyledButton,
 	ButtonWrapp,
+	ContainerWrapper,
+	StyledLink
 } from './StyledLogin';
 
 function Login() {
@@ -40,66 +41,47 @@ function Login() {
 	});
 
 	return (
-		<Container maxWidth="lg" sx={{
-			background:'black',
-			display:'flex',
-			justifyContent:'center',
-
-		}}>
-			<Formik
-				initialValues={{
-					email: '',
-					password: '',
+			<Container
+				maxWidth="lg"
+				sx={{
+					
+					display: 'flex',
+					justifyContent: 'center',
 				}}
-				validationSchema={validationSchema}
 			>
-				<LoginWrapper>
-					<HeadWrapp>
-						<div className="login-wrapp">
-							<Link to="/login" className="login">Login</Link>
-							<hr />
-						</div>
-						<Link to="/registration">Registration</Link>
-					</HeadWrapp>
-					<Description>Please enter your account details to log in</Description>
-					<Form>
-						<InputsWrapp>
-							<CssTextField variant="standard" label="E-mail" fullWidth />
-							<CssTextField variant="standard" label="Password" fullWidth />
-						</InputsWrapp>
-						<RadioWrapp>
-							<Radio
-								sx={{
-									'& .MuiSvgIcon-root:not(.MuiSvgIcon-root ~ .MuiSvgIcon-root)': {
-										color: 'white',
-									},
-								}}
-							/>
-							<p>Keep me signed in</p>
-						</RadioWrapp>
+				<Formik
+					initialValues={{
+						email: '',
+						password: '',
+					}}
+					validationSchema={validationSchema}
+				>
+					<LoginWrapper>
+				
+						<Description>Please enter your account details to log in</Description>
+						<Form>
+							<InputsWrapp>
+								<CssTextField variant="standard" label="E-mail" fullWidth />
+								<CssTextField variant="standard" label="Password" fullWidth />
+							</InputsWrapp>
+							<CheckBoxWrapp>
+								<Checkbox
+									sx={{
+										'& .MuiSvgIcon-root:not(.MuiSvgIcon-root ~ .MuiSvgIcon-root)': {
+											color: 'white',
+										},
+									}}
+								/>
+								<p className='box-text'>Keep me signed in</p>
+							</CheckBoxWrapp>
 
-						{/* <TextField
-          fullWidth
-          variant='standard'
-          label="E-mail"
-          sx={{
-            '& .MuiInput-underline:before': { borderBottomColor: 'white' },
-
-            "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
-              border: "2px solid",
-              borderColor: "yellow"
-            }
-
-          }} */}
-
-						{/* <TextField fullWidth label="Password" variant="standard"  /> */}
-						<ButtonWrapp>
-							<StyledButton>LOG IN</StyledButton>
-						</ButtonWrapp>
-					</Form>
-				</LoginWrapper>
-			</Formik>
-		</Container>
+							<ButtonWrapp>
+								<StyledButton>LOG IN</StyledButton>
+							</ButtonWrapp>
+						</Form>
+					</LoginWrapper>
+				</Formik>
+			</Container>
 	);
 }
 

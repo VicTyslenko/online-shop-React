@@ -3,14 +3,27 @@ import { Button } from '@mui/material';
 // eslint-disable-next-line import/prefer-default-export
 export const Container = styled.div``;
 export const ShoppingCartWrapp = styled.div`
-	/* margin-top: 38px; */
 	width: 100%;
-	/* background-color: white; */
 	display: flex;
 	justify-content: space-between;
 
-	/* min-width: 1000px; */
 `;
+export const RemoveButton = styled(Button)`
+&&&{
+	position: absolute;
+		bottom: 25px;
+		right: -300px;
+		color: #847a7a;
+		align-self: flex-end;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		font-family: 'Open Sans';
+}
+`
+export const ContainerWrapper =styled.div`
+background:white ;
+`
 export const ContentWrapp = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -36,7 +49,6 @@ export const StyledButton = styled(Button)`
 		align-items: center;
 		color: white;
 		text-transform: uppercase;
-		/* margin-bottom: 26px; */
 	}
 `;
 export const LeftSideWrapp = styled.div`

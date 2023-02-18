@@ -77,7 +77,6 @@ function ProductGallery({ images }) {
 					>
 						{images.map(({ id, url, alt }) => (
 							<StyledOverlaySwiperSlide key={id}>
-								{/* cross icon shouldn't move with slider */}
 								<StyledOverlayImage src={url} alt={alt} />
 							</StyledOverlaySwiperSlide>
 						))}

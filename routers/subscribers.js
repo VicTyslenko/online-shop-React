@@ -9,13 +9,13 @@ const {
   getSubscribers,
   getSubscriber
 } = require("../controllers/subscribers");
-​
+
 router.post(
   "/",
   // passport.authenticate("jwt-admin", { session: false }),
   addSubscriber
 );
-​
+
 router.put(
   "/:id",
   // passport.authenticate("jwt-admin", { session: false }),
@@ -27,7 +27,7 @@ router.put(
     // passport.authenticate("jwt-admin", { session: false }),
     updateSubscriberByEmail
 )
-​
+
 router.get("/", getSubscribers)
 
 router.get("/:email", getSubscriber)

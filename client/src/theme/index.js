@@ -69,6 +69,10 @@ const theme = createTheme(themeWithBreakpoints, {
 			lineHeight: 1.334,
 			marginBottom: '0.35em',
 			textTransform: 'uppercase',
+			[themeWithBreakpoints.breakpoints.down('md')]: {
+				fontSize: '20px',
+				lineHeight: '22px',
+			},
 			[themeWithBreakpoints.breakpoints.down('sm')]: {
 				fontSize: '12px',
 				lineHeight: '16px',
@@ -127,10 +131,10 @@ const theme = createTheme(themeWithBreakpoints, {
 					fontSize: '16px',
 					lineHeight: '22px',
 					color: '#000',
-					[themeWithBreakpoints.breakpoints.down('sm')]: {
-						fontSize: '14px',
-						lineHeight: '18px',
-					},
+					// [themeWithBreakpoints.breakpoints.down('sm')]: {
+					// 	fontSize: '14px',
+					// 	lineHeight: '18px',
+					// },
 				},
 				secondary: {
 					color: '#fff',
@@ -151,6 +155,9 @@ const theme = createTheme(themeWithBreakpoints, {
 				root: {
 					color: '#fff',
 					width: '90%',
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						color: '#000',
+					},
 				},
 				rail: {
 					background: '#847A7A',
@@ -164,9 +171,35 @@ const theme = createTheme(themeWithBreakpoints, {
 					height: '14px',
 					background: '#fff',
 					borderRadius: '1px',
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						background: '#000',
+					},
 				},
 			},
 		},
+		MuiListItemButton: {
+			styleOverrides: {
+				root: {
+					'&:hover': {
+						background: '#565254',
+					},
+					'&:focus': {
+						background: 'rgba(86, 82, 84, 0.4)',
+					},
+					// '&:focus': {
+					// 	borderBottom: '1px solid #fff',
+					// },
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						'&:hover': {
+							background: 'rgba(86, 82, 84, 0.04)',
+						},
+						'&:focus': {
+							background: 'rgba(86, 82, 84, 0.04)',
+						},
+					},
+				}
+			}
+		}
 	},
 });
 

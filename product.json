@@ -1,0 +1,1233 @@
+[
+
+    {
+        "itemNo":"1",
+        "enabled": true,
+        "name": "Картата сорочка regular fit",
+        "currentPrice": 599,
+        "previousPrice": 1199,
+        "male": "man",
+        "categories": "Shirts",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/0/0036O-69P-010-1-515979_16.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/0/0036O-69P-003-1-507261_17.jpg",
+            "https://static.reserved.com/media/catalog/product/0/0/0036O-69P-002-1-507261_17.jpg",
+            "https://static.reserved.com/media/catalog/product/0/0/0036O-69P-001-1-507261_17.jpg"
+
+        ],
+        "quantity": 5,
+        "color": "dark turquoise",
+        "sizes": "L",
+        "productUrl": "0036O-69P",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"2",
+        "enabled": true,
+        "name": "Сорочка slim fit із візерунком",
+        "currentPrice": 599,
+        "previousPrice": 999,
+        "male": "man",
+        "categories": "Shirts",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/0/9077N-05P-001-1-572945_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/0/9077N-05P-011-1-569067_7.jpg",
+            "https://static.reserved.com/media/catalog/product/9/0/9077N-05P-002-1-572945_3.jpg",
+            "https://static.reserved.com/media/catalog/product/9/0/9077N-05P-011-1-569067_7.jpg"
+
+        ],
+        "quantity": 34,
+        "color": "pale blue",
+        "sizes": "M",
+        "productUrl": "9077N-05P",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"3",
+        "enabled": true,
+        "name": "Куртка-сорочка у клітинку",
+        "currentPrice": 699,
+        "previousPrice": 1799,
+        "male": "man",
+        "categories": "Shirts",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/7/0737O-85P-010-1-536409_7.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/7/0737O-85P-004-1-552099_2.jpg",
+            "https://static.reserved.com/media/catalog/product/0/7/0737O-85P-003-1-552099_2.jpg",
+            "https://static.reserved.com/media/catalog/product/0/7/0737O-85P-001-1-552099_2.jpg"
+
+        ],
+        "quantity": 2,
+        "color": "medium green",
+        "sizes": "S",
+        "productUrl": "0737O-85P",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"4",
+        "enabled": true,
+        "name": "Бавовняна сорочка regular fit",
+        "currentPrice": 599,
+        "previousPrice": 1199,
+        "male": "man",
+        "categories": "Shirts",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/8/0882O-50X-002-1-543309_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/8/0882O-50X-011-1-534179_4.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0882O-50X-001-1-543309_2.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0882O-50X-003-1-543309_2.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0882O-50X-010-1-534179_4.jpg"
+        ],
+        "quantity": 13,
+        "color": "light blue",
+        "sizes": "L",
+        "productUrl": "0882O-50X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"5",
+        "enabled": true,
+        "name": "Сорочка comfort fit",
+        "currentPrice": 1299,
+        "previousPrice": 1599,
+        "male": "man",
+        "categories": "Shirts",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/0/0027O-95X-003-1-499469_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/0/0027O-95X-011-1-510007_16.jpg",
+            "https://static.reserved.com/media/catalog/product/0/0/0027O-95X-002-1-499469_2.jpg",
+            "https://static.reserved.com/media/catalog/product/0/0/0027O-95X-004-1-500195_20.jpg"
+        ],
+        "quantity": 15,
+        "color": "steel blue",
+        "sizes": "M",
+        "productUrl": "0027O-95X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"6",
+        "enabled": true,
+        "name": "Пальто з каптуром",
+        "currentPrice": 1299,
+        "previousPrice": 3999,
+        "male": "man",
+        "categories": "Coats",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/1/1/1174O-MLC-003-1-553753_5.jpg", 
+            "https://static.reserved.com/media/catalog/product/1/1/1174O-MLC-011-1-560277_4.jpg",
+            "https://static.reserved.com/media/catalog/product/1/1/1174O-MLC-010-1-560277_4.jpg",
+            "https://static.reserved.com/media/catalog/product/1/1/1174O-MLC-006-1-553753_5.jpg",
+            "https://static.reserved.com/media/catalog/product/1/1/1174O-MLC-005-1-553753_5.jpg"
+        ],
+        "quantity": 3,
+        "color": "red",
+        "sizes": "XL",
+        "productUrl": "1174O-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"7",
+        "enabled": true,
+        "name": "Пальто з коміром-стійкою",
+        "currentPrice": 1299,
+        "previousPrice": 3599,
+        "male": "man",
+        "categories": "Coats",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/2/9228N-09M-004-1-560813_10.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/2/9228N-09M-011-1-562475_10.jpg",
+            "https://static.reserved.com/media/catalog/product/9/2/9228N-09M-010-1-562475_10.jpg",
+            "https://static.reserved.com/media/catalog/product/9/2/9228N-09M-003-1-560813_10.jpg"
+        ],
+        "quantity": 9,
+        "color": "light grey",
+        "sizes": "L",
+        "productUrl": "9228N-09M",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"8",
+        "enabled": true,
+        "name": "Пальто з високим вмістом вовни PREMIUM",
+        "currentPrice": 1299,
+        "previousPrice": 4499,
+        "male": "man",
+        "categories": "Coats",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/1/0195O-80X-001-1-549155_13.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/1/0195O-80X-011-1-551629_12.jpg",
+            "https://static.reserved.com/media/catalog/product/0/1/0195O-80X-010-1-551629_12.jpg",
+            "https://static.reserved.com/media/catalog/product/0/1/0195O-80X-006-1-549155_13.jpg"
+        ],
+        "quantity": 25,
+        "color": "beige",
+        "sizes": "L",
+        "productUrl": "0195O-80X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"9",
+        "enabled": true,
+        "name": "Пальто з тканини з додаванням вовни",
+        "currentPrice": 1299,
+        "previousPrice": 3599,
+        "male": "man",
+        "categories": "Coats",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/2/9226N-99M-005-1-549083_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/2/9226N-99M-012-1-554699.jpg",
+            "https://static.reserved.com/media/catalog/product/9/2/9226N-99M-011-1-554699.jpg",
+            "https://static.reserved.com/media/catalog/product/9/2/9226N-99M-010-1-554699.jpg"
+        ],
+        "quantity": 56,
+        "color": "black",
+        "sizes": "S",
+        "productUrl": "9226N-99M",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"10",
+        "enabled": true,
+        "name": "Пальто з накладними кишенями",
+        "currentPrice": 1799,
+        "previousPrice": 3299,
+        "male": "man",
+        "categories": "Coats",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/2/9215N-99X-002-1-568745_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/2/9215N-99X-012-1-561665_5.jpg",
+            "https://static.reserved.com/media/catalog/product/9/2/9215N-99X-011-1-561665_5.jpg",
+            "https://static.reserved.com/media/catalog/product/9/2/9215N-99X-004-1-568745_3.jpg"
+        ],
+        "quantity": 1,
+        "color": "black",
+        "sizes": "M",
+        "productUrl": "9215N-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"11",
+        "enabled": true,
+        "name": "Вельветова куртка на штучному хутрі",
+        "currentPrice": 1299,
+        "previousPrice": 2299,
+        "male": "man",
+        "categories": "Jackets",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/9/9904N-99X-010-1-518483_7.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/9/9904N-99X-003-1-509847_9.jpg",
+            "https://static.reserved.com/media/catalog/product/9/9/9904N-99X-001-1-509847_9.jpg",
+            "https://static.reserved.com/media/catalog/product/9/9/9904N-99X-002-1-509847_9.jpg"
+        ],
+        "quantity": "12",
+        "color": "black",
+        "sizes": "M",
+        "productUrl": "9904N-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"13",
+        "enabled": true,
+        "name": "Куртка з коміром зі штучного хутра",
+        "currentPrice": 799,
+        "previousPrice": 1999,
+        "male": "man",
+        "categories": "Jackets",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/3/0334O-90X-002-1-543375_7.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/3/0334O-90X-004-1-543375_7.jpg",
+            "https://static.reserved.com/media/catalog/product/0/3/0334O-90X-003-1-543375_7.jpg",
+            "https://static.reserved.com/media/catalog/product/0/3/0334O-90X-005-1-543375_7.jpg"
+        ],
+        "quantity": 32,
+        "color": "dark grey",
+        "sizes": "L",
+        "productUrl": "0334O-90X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"14",
+        "enabled": true,
+        "name": "Пуховик на штучному хутрі",
+        "currentPrice": 1299,
+        "previousPrice": 2599,
+        "male": "man",
+        "categories": "Jackets",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/8/9892N-01X-010-1-558705_5.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/8/9892N-01X-004-1-557233_6.jpg",
+            "https://static.reserved.com/media/catalog/product/9/8/9892N-01X-003-1-557233_6.jpg",
+            "https://static.reserved.com/media/catalog/product/9/8/9892N-01X-001-1-557233_6.jpg"
+        ],
+        "quantity": 15,
+        "color": "creamy",
+        "sizes": "M",
+        "productUrl": "9892N-01X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"15",
+        "enabled": true,
+        "name": "Пухова куртка з технічної тканини з додаванням сорони PREMIUM",
+        "currentPrice": 3299,
+        "previousPrice": 4499,
+        "male": "man",
+        "categories": "Jackets",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/1/0184O-17X-003-1-549197_14.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/1/0184O-17X-012-1-550227_14.jpg",
+            "https://static.reserved.com/media/catalog/product/0/1/0184O-17X-011-1-550227_14.jpg",
+            "https://static.reserved.com/media/catalog/product/0/1/0184O-17X-010-1-550227_14.jpg"
+        ],
+        "quantity": 15,
+        "color": "mustard",
+        "sizes": "L",
+        "productUrl": "0184O-17X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"16",
+        "enabled": true,
+        "name": "Джемпер із візерунком",
+        "currentPrice": 599,
+        "previousPrice": 1199,
+        "male": "man",
+        "categories": "Sweaters",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/4/6/4601L-MLC-002-1-568281_17.jpg", 
+            "https://static.reserved.com/media/catalog/product/4/6/4601L-MLC-010-1-565409_18.jpg",
+            "https://static.reserved.com/media/catalog/product/4/6/4601L-MLC-003-1-568281_17.jpg",
+            "https://static.reserved.com/media/catalog/product/4/6/4601L-MLC-001-1-568281_17.jpg"
+        ],
+        "quantity": 3,
+        "color": "wight",
+        "sizes": "L",
+        "productUrl": "4601L-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"17",
+        "enabled": true,
+        "name": "Джемпер з ефектом градієнту RE DESIGN",
+        "currentPrice": 799,
+        "previousPrice": 1899,
+        "male": "man",
+        "categories": "Sweaters",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/3/0/3008L-MLC-001-1-570795_17.jpg", 
+            "https://static.reserved.com/media/catalog/product/3/0/3008L-MLC-011-1-569495_17.jpg",
+            "https://static.reserved.com/media/catalog/product/3/0/3008L-MLC-003-1-570795_17.jpg",
+            "https://static.reserved.com/media/catalog/product/3/0/3008L-MLC-002-1-570795_17.jpg"
+        ],
+        "quantity": 10,
+        "color": "gray",
+        "sizes": "L",
+        "productUrl": "3008L-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"18",
+        "enabled": true,
+        "name": "Джемпер поло у смужку",
+        "currentPrice": 599,
+        "previousPrice": 1199,
+        "male": "man",
+        "categories": "Sweaters",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/1/1/1166O-MLC-010-1-519615_9.jpg", 
+            "https://static.reserved.com/media/catalog/product/1/1/1166O-MLC-004-1-510815_10.jpg",
+            "https://static.reserved.com/media/catalog/product/1/1/1166O-MLC-003-1-510815_10.jpg",
+            "https://static.reserved.com/media/catalog/product/1/1/1166O-MLC-002-1-510815_10.jpg"
+        ],
+        "quantity": 31,
+        "color": "black-wight-yallow",
+        "sizes": "XS",
+        "productUrl": "1166O-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"19",
+        "enabled": true,
+        "name": "Джемпер із високим вмістом переробленого поліестеру",
+        "currentPrice": 499,
+        "previousPrice": 1599,
+        "male": "man",
+        "categories": "Sweaters",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/8/9805N-MLC-003-1-571747_6.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/8/9805N-MLC-003-1-559375_9.jpg",
+            "https://static.reserved.com/media/catalog/product/9/8/9805N-MLC-001-1-559375_9.jpg",
+            "https://static.reserved.com/media/catalog/product/9/8/9805N-MLC-002-1-559375_9.jpg"
+        ],
+        "quantity": 22,
+        "color": "gray",
+        "sizes": "S",
+        "productUrl": "9805N-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"20",
+        "enabled": true,
+        "name": "Водолазка текстурованої вязки RE DESIGN",
+        "currentPrice": 1299,
+        "previousPrice": 1899,
+        "male": "man",
+        "categories": "Sweaters",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-002-1-570797_13.jpg", 
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-011-1-571023_13.jpg",
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-004-1-570797_13.jpg",
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-003-1-570797_13.jpg"
+        ],
+        "quantity": 41,
+        "color": "blue",
+        "sizes": "S",
+        "productUrl": "3010L-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"20",
+        "enabled": true,
+        "name": "Водолазка текстурованої вязки RE DESIGN",
+        "currentPrice": 1299,
+        "previousPrice": 1899,
+        "male": "man",
+        "categories": "Sweaters",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-002-1-570797_13.jpg", 
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-011-1-571023_13.jpg",
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-004-1-570797_13.jpg",
+            "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-003-1-570797_13.jpg"
+        ],
+        "quantity": 41,
+        "color": "blue",
+        "sizes": "S",
+        "productUrl": "3010L-MLC",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"21",
+        "enabled": true,
+        "name": "Футболка regular із принтом",
+        "currentPrice": 299,
+        "previousPrice": 599,
+        "male": "man",
+        "categories": "Tees",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/4/8/4850L-99X-001-1-563457_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/4/8/4850L-99X-011-1-561433_4.jpg",
+            "https://static.reserved.com/media/catalog/product/4/8/4850L-99X-003-1-563457_2.jpg",
+            "https://static.reserved.com/media/catalog/product/4/8/4850L-99X-002-1-563457_2.jpg"
+        ],
+        "quantity": 41,
+        "color": "black",
+        "sizes": "L",
+        "productUrl": "4850L-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"22",
+        "enabled": true,
+        "name": "Футболка regular із принтом на спині",
+        "currentPrice": 299,
+        "previousPrice": 599,
+        "male": "man",
+        "categories": "Tees",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/5/5/5592L-00X-002-1-563171_4.jpg", 
+            "https://static.reserved.com/media/catalog/product/5/5/5592L-00X-011-1-561437_6.jpg",
+            "https://static.reserved.com/media/catalog/product/5/5/5592L-00X-003-1-563171_4.jpg",
+            "https://static.reserved.com/media/catalog/product/5/5/5592L-00X-001-1-563171_4.jpg"
+        ],
+        "quantity": 13,
+        "color": "wight",
+        "sizes": "XL",
+        "productUrl": "5592L-00X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"23",
+        "enabled": true,
+        "name": "Сорочка поло regular",
+        "currentPrice": 499,
+        "previousPrice": 1199,
+        "male": "man",
+        "categories": "Tees",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/1/0137O-00X-001-1-550587_10.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/1/0137O-00X-011-1-539127_11.jpg",
+            "https://static.reserved.com/media/catalog/product/0/1/0137O-00X-010-1-539127_11.jpg",
+            "https://static.reserved.com/media/catalog/product/0/1/0137O-00X-003-1-550587_10.jpg"
+        ],
+        "quantity": 6,
+        "color": "wight",
+        "sizes": "M",
+        "productUrl": "0137O-00X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"24",
+        "enabled": true,
+        "name": "Футболка oversize",
+        "currentPrice": 199,
+        "previousPrice": 799,
+        "male": "man",
+        "categories": "Tees",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/2/0264O-32X-002-1-550609_11.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/2/0264O-32X-011-1-554671_10.jpg",
+            "https://static.reserved.com/media/catalog/product/0/2/0264O-32X-004-1-550609_11.jpg",
+            "https://static.reserved.com/media/catalog/product/0/2/0264O-32X-003-1-550609_11.jpg"
+        ],
+        "quantity": 6,
+        "color": "orange",
+        "sizes": "M",
+        "productUrl": "0264O-32X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"25",
+        "enabled": true,
+        "name": "Лонгслів polo comfort",
+        "currentPrice": 399,
+        "previousPrice": 899,
+        "male": "man",
+        "categories": "Tees",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/0/0053O-08X-002-1-559329_8.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/0/0053O-08X-011-1-528789_10.jpg",
+            "https://static.reserved.com/media/catalog/product/0/0/0053O-08X-010-1-528789_10.jpg",
+            "https://static.reserved.com/media/catalog/product/0/0/0053O-08X-003-1-559329_8.jpg"
+        ],
+        "quantity": 56,
+        "color": "beige",
+        "sizes": "L",
+        "productUrl": "0053O-08X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"26",
+        "enabled": true,
+        "name": "Джинси slim",
+        "currentPrice": 799,
+        "previousPrice": 1599,
+        "male": "man",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/4/7/4729L-55J-001-1-563163_8.jpg", 
+            "https://static.reserved.com/media/catalog/product/4/7/4729L-55J-011-1-564953_8.jpg",
+            "https://static.reserved.com/media/catalog/product/4/7/4729L-55J-010-1-564953_8.jpg",
+            "https://static.reserved.com/media/catalog/product/4/7/4729L-55J-003-1-563163_8.jpg"
+        ],
+        "quantity": 34,
+        "color": "blue",
+        "sizes": "M",
+        "productUrl": "4729L-55J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"27",
+        "enabled": true,
+        "name": "Джинси slim RE DESIGN",
+        "currentPrice": 799,
+        "previousPrice": 1899,
+        "male": "man",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/9/2996L-99X-002-1-570793_7.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/9/2996L-99X-011-1-571021_7.jpg",
+            "https://static.reserved.com/media/catalog/product/2/9/2996L-99X-004-1-570793_7.jpg",
+            "https://static.reserved.com/media/catalog/product/2/9/2996L-99X-003-1-570793_7.jpg"
+        ],
+        "quantity": 34,
+        "color": "blue",
+        "sizes": "M",
+        "productUrl": "2996L-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"28",
+        "enabled": true,
+        "name": "Джинси slim carrot",
+        "currentPrice": 799,
+        "previousPrice": 1599,
+        "male": "man",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/8/8/8866N-59J-002-1-519293_4.jpg", 
+            "https://static.reserved.com/media/catalog/product/8/8/8866N-59J-011-1-546927_9.jpg",
+            "https://static.reserved.com/media/catalog/product/8/8/8866N-59J-003-1-519293_4.jpg",
+            "https://static.reserved.com/media/catalog/product/8/8/8866N-59J-001-1-519293_4.jpg"
+        ],
+        "quantity": 26,
+        "color": "blue",
+        "sizes": "M",
+        "productUrl": "8866N-59J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"29",
+        "enabled": true,
+        "name": "Джинси slim з вареним ефектом",
+        "currentPrice": 799,
+        "previousPrice": 1399,
+        "male": "man",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/8/0850O-59J-002-1-527587_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/8/0850O-59J-011-1-533337_1.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0850O-59J-010-1-533337_1.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0850O-59J-004-1-527587_2.jpg"
+        ],
+        "quantity": 26,
+        "color": "blue",
+        "sizes": "XS",
+        "productUrl": "0850O-59J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"30",
+        "enabled": true,
+        "name": "Широкі джинси barrel leg",
+        "currentPrice": 699,
+        "previousPrice": 1599,
+        "male": "man",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/8/0851O-09J-003-1-519277_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/8/0851O-09J-011-1-533355.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0851O-09J-010-1-533355.jpg",
+            "https://static.reserved.com/media/catalog/product/0/8/0851O-09J-004-1-519277_2.jpg"
+        ],
+        "quantity": 6,
+        "color": "light grey",
+        "sizes": "S",
+        "productUrl": "0850O-59J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+
+
+    {
+        "itemNo":"31",
+        "enabled": true,
+        "name": "Трикотажна мінісукня",
+        "currentPrice": 999,
+        "previousPrice": 1399,
+        "male": "woman",
+        "categories": "Dresses",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/4/2479P-99X-001-1-556415_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/4/2479P-99X-011-1-564237_1.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2479P-99X-010-1-564237_1.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2479P-99X-003-1-556415_2.jpg"
+        ],
+        "quantity": 7,
+        "color": "black",
+        "sizes": "XS",
+        "productUrl": "2479P-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"32",
+        "enabled": true,
+        "name": "Сукня з тканини з високим вмістом віскози",
+        "currentPrice": 299,
+        "previousPrice": 1199,
+        "male": "woman",
+        "categories": "Dresses",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/4/1/4128P-55X-001-1-463441_4.jpg", 
+            "https://static.reserved.com/media/catalog/product/4/1/4128P-55X-011-1-470461_4.jpg",
+            "https://static.reserved.com/media/catalog/product/4/1/4128P-55X-010-1-470461_4.jpg",
+            "https://static.reserved.com/media/catalog/product/4/1/4128P-55X-005-1-463441_4.jpg"
+        ],
+        "quantity": 12,
+        "color": "blue",
+        "sizes": "S",
+        "productUrl": "4128P-55X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"33",
+        "enabled": true,
+        "name": "Джинсова сукня",
+        "currentPrice": 299,
+        "previousPrice": 1199,
+        "male": "woman",
+        "categories": "Dresses",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/6/9661L-05J-003-1-416953.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/6/9661L-05J-002-1-416953.jpg",
+            "https://static.reserved.com/media/catalog/product/9/6/9661L-05J-001-1-416953.jpg",
+            "https://static.reserved.com/media/catalog/product/9/6/9661L-05J-004-1-416953.jpg"
+        ],
+        "quantity": 12,
+        "color": "blue",
+        "sizes": "S",
+        "productUrl": "9661L-05J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"34",
+        "enabled": true,
+        "name": "Сукня жіноча",
+        "currentPrice": 499,
+        "previousPrice": 1199,
+        "male": "woman",
+        "categories": "Dresses",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/9/9948M-77X-001-1-439641_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/9/9948M-77X-011-1-439641_3.jpg",
+            "https://static.reserved.com/media/catalog/product/9/9/9948M-77X-010-1-439641_3.jpg",
+            "https://static.reserved.com/media/catalog/product/9/9/9948M-77X-002-1-439641_3.jpg"
+        ],
+        "quantity": 19,
+        "color": "green",
+        "sizes": "M",
+        "productUrl": "9948M-77X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"35",
+        "enabled": true,
+        "name": "Сукня жіноча",
+        "currentPrice": 1399,
+        "previousPrice": 1399,
+        "male": "woman",
+        "categories": "Dresses",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/1/4/1420T-77X-010-1-599781_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/1/4/1420T-77X-011-1-599781_2.jpg"
+        ],
+        "quantity": 19,
+        "color": "green",
+        "sizes": "M",
+        "productUrl": "1420T-77X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"36",
+        "enabled": true,
+        "name": "Джинси mom з високою посадкою",
+        "currentPrice": 499,
+        "previousPrice": 899,
+        "male": "woman",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/3/5/3582L-05J-001-1-523033_6.jpg", 
+            "https://static.reserved.com/media/catalog/product/3/5/3582L-05J-004-1-523033_6.jpg",
+            "https://static.reserved.com/media/catalog/product/3/5/3582L-05J-002-1-523033_6.jpg",
+            "https://static.reserved.com/media/catalog/product/3/5/3582L-05J-003-1-523033_6.jpg"
+        ],
+        "quantity": 13,
+        "color": "blue",
+        "sizes": "L",
+        "productUrl": "3582L-05J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"37",
+        "enabled": true,
+        "name": "Джинси slim",
+        "currentPrice": 599,
+        "previousPrice": 799,
+        "male": "woman",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/1/5/1504C-90J-001-1-523843_1.jpg", 
+            "https://static.reserved.com/media/catalog/product/1/5/1504C-90J-011-1-495271_4.jpg",
+            "https://static.reserved.com/media/catalog/product/1/5/1504C-90J-005-1-523843_1.jpg",
+            "https://static.reserved.com/media/catalog/product/1/5/1504C-90J-004-1-523843_1.jpg"
+        ],
+        "quantity": 10,
+        "color": "black",
+        "sizes": "XS",
+        "productUrl": "1504C-90J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"38",
+        "enabled": true,
+        "name": "Джинси slim push up",
+        "currentPrice": 699,
+        "previousPrice": 899,
+        "male": "woman",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/1/5/1502C-09J-001-1-526605.jpg", 
+            "https://static.reserved.com/media/catalog/product/1/5/1502C-09J-011-1-501633_3.jpg",
+            "https://static.reserved.com/media/catalog/product/1/5/1502C-09J-010-1-501633_3.jpg",
+            "https://static.reserved.com/media/catalog/product/1/5/1502C-09J-004-1-526605.jpg"
+        ],
+        "quantity": 10,
+        "color": "light grey",
+        "sizes": "S",
+        "productUrl": "1502C-09J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"39",
+        "enabled": true,
+        "name": "Джинси slim з вареним ефектом",
+        "currentPrice": 699,
+        "previousPrice": 899,
+        "male": "woman",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/5/8/5821B-55J-001-1-523831_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/5/8/5821B-55J-012-1-526677_2.jpg",
+            "https://static.reserved.com/media/catalog/product/5/8/5821B-55J-011-1-526677_2.jpg",
+            "https://static.reserved.com/media/catalog/product/5/8/5821B-55J-010-1-526677_2.jpg"
+        ],
+        "quantity": 8,
+        "color": "blue",
+        "sizes": "XS",
+        "productUrl": "5821B-55J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"40",
+        "enabled": true,
+        "name": "Джинси straight leg",
+        "currentPrice": 699,
+        "previousPrice": 1199,
+        "male": "woman",
+        "categories": "Jeans",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/9/5/9592L-50J-001-1-514749_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/9/5/9592L-50J-004-1-514749_3.jpg",
+            "https://static.reserved.com/media/catalog/product/9/5/9592L-50J-011-1-492319_5.jpg",
+            "https://static.reserved.com/media/catalog/product/9/5/9592L-50J-010-1-492319_5.jpg"
+        ],
+        "quantity": 4,
+        "color": "blue",
+        "sizes": "XS",
+        "productUrl": "9592L-50J",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"41",
+        "enabled": true,
+        "name": "Трикотажна блузка з завязкою",
+        "currentPrice": 299,
+        "previousPrice": 899,
+        "male": "woman",
+        "categories": "Knitwear",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/0/2046P-79X-001-1-550053_9.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/0/2046P-79X-011-1-552181_8.jpg",
+            "https://static.reserved.com/media/catalog/product/2/0/2046P-79X-010-1-552181_8.jpg",
+            "https://static.reserved.com/media/catalog/product/2/0/2046P-79X-003-1-550053_9.jpg"
+        ],
+        "quantity": 8,
+        "color": "green",
+        "sizes": "S",
+        "productUrl": "2046P-79X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"42",
+        "enabled": true,
+        "name": "Сукня з трикотажу із перероблених матеріалів",
+        "currentPrice": 499,
+        "previousPrice": 1199,
+        "male": "woman",
+        "categories": "Knitwear",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/4/2484P-09M-003-1-558501_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/4/2484P-09M-011-1-554287_6.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2484P-09M-010-1-554287_6.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2484P-09M-001-1-558501_3.jpg"
+        ],
+        "quantity": 8,
+        "color": "light grey",
+        "sizes": "XS",
+        "productUrl": "2484P-09M",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"43",
+        "enabled": true,
+        "name": "Трикотажна сукня з додаванням віскози",
+        "currentPrice": 499,
+        "previousPrice": 1399,
+        "male": "woman",
+        "categories": "Knitwear",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/0/5/0591Q-99X-001-1-565715_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/0/5/0591Q-99X-011-1-560769_4.jpg",
+            "https://static.reserved.com/media/catalog/product/0/5/0591Q-99X-010-1-560769_4.jpg",
+            "https://static.reserved.com/media/catalog/product/0/5/0591Q-99X-005-1-565715_2.jpg"
+        ],
+        "quantity": 9,
+        "color": "black",
+        "sizes": "M",
+        "productUrl": "0591Q-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"44",
+        "enabled": true,
+        "name": "Трикотажна сукня з домішками віскози",
+        "currentPrice": 699,
+        "previousPrice": 1399,
+        "male": "woman",
+        "categories": "Knitwear",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/3/2399P-43X-002-1-561237_3.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/3/2399P-43X-004-1-561237_3.jpg",
+            "https://static.reserved.com/media/catalog/product/2/3/2399P-43X-001-1-561237_3.jpg",
+            "https://static.reserved.com/media/catalog/product/2/3/2399P-43X-011-1-547651_8.jpg"
+        ],
+        "quantity": 11,
+        "color": "pink",
+        "sizes": "S",
+        "productUrl": "2399P-43X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"45",
+        "enabled": true,
+        "name": "Сукня з трикотажу в рубчик",
+        "currentPrice": 499,
+        "previousPrice": 1199,
+        "male": "woman",
+        "categories": "Knitwear",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/4/2423P-02X-001-1-544375_1.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/4/2423P-02X-011-1-545479_1.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2423P-02X-010-1-545479_1.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2423P-02X-003-1-544375_1.jpg"
+        ],
+        "quantity": 11,
+        "color": "nude",
+        "sizes": "S",
+        "productUrl": "2423P-02X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"46",
+        "enabled": true,
+        "name": "Штани з трикотажу в рубчик",
+        "currentPrice": 999,
+        "previousPrice": 999,
+        "male": "woman",
+        "categories": "Suits & Combined",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/4/2485T-99X-001-1-614557.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/4/2485T-99X-011-1-578885_8.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2485T-99X-010-1-578885_8.jpg",
+            "https://static.reserved.com/media/catalog/product/2/4/2485T-99X-003-1-614557.jpg"
+        ],
+        "quantity": 6,
+        "color": "black",
+        "sizes": "S",
+        "productUrl": "2485T-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"47",
+        "enabled": true,
+        "name": "Трикотажна блузка з завязкою",
+        "currentPrice": 899,
+        "previousPrice": 899,
+        "male": "woman",
+        "categories": "Suits & Combined",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/2/2290T-99X-001-1-614551_2.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/2/2290T-99X-011-1-579225_11.jpg",
+            "https://static.reserved.com/media/catalog/product/2/2/2290T-99X-010-1-579225_11.jpg",
+            "https://static.reserved.com/media/catalog/product/2/2/2290T-99X-003-1-614551_2.jpg"
+        ],
+        "quantity": 8,
+        "color": "black",
+        "sizes": "S",
+        "productUrl": "2290T-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"48",
+        "enabled": true,
+        "name": "Твідовий блейзер",
+        "currentPrice": 1399,
+        "previousPrice": 1399,
+        "male": "woman",
+        "categories": "Suits & Combined",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/1/8/1823T-99X-003-1-588211_1.jpg", 
+            "https://static.reserved.com/media/catalog/product/1/8/1823T-99X-011-1-583033_4.jpg",
+            "https://static.reserved.com/media/catalog/product/1/8/1823T-99X-002-1-588211_1.jpg",
+            "https://static.reserved.com/media/catalog/product/1/8/1823T-99X-010-1-583033_4.jpg"
+        ],
+        "quantity": 2,
+        "color": "grey",
+        "sizes": "XS",
+        "productUrl": "1823T-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    },
+
+    {
+        "itemNo":"49",
+        "enabled": true,
+        "name": "Мініспідниця",
+        "currentPrice": 699,
+        "previousPrice": 699,
+        "male": "woman",
+        "categories": "Suits & Combined",
+        "imageUrls": [
+            "https://static.reserved.com/media/catalog/product/2/1/2102T-99X-001-1-590567.jpg", 
+            "https://static.reserved.com/media/catalog/product/2/1/2102T-99X-011-1-591129_1.jpg",
+            "https://static.reserved.com/media/catalog/product/2/1/2102T-99X-010-1-591129_1.jpg",
+            "https://static.reserved.com/media/catalog/product/2/1/2102T-99X-002-1-590567.jpg"
+        ],
+        "quantity": 2,
+        "color": "grey",
+        "sizes": "XS",
+        "productUrl": "2102T-99X",
+        "brand": "Reserved",
+        "manufacturer": "Europe",
+        "manufacturerCountry": "Paris",
+        "seller": "Reserved",
+        "date": "2023-02-12T13:59:49.407Z"
+    }
+    
+]

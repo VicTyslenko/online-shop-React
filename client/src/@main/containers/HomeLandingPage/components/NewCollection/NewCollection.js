@@ -1,23 +1,27 @@
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import {Container, ImageListItemBar} from '@mui/material';
+import {ContainerWrapper, NewInH1, NewInLink, ImageText, GridContainer, GridItem} from './NewCollection.styles'
+import {Container} from '@mui/material';
 
 const itemData = [
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016993660076063/photo-1487222477894-8943e31ef7b2.jpg',
 		title: 'NEW IN',
 		rows: 2,
-		cols: 2,
+		cols: 1,
+		path: '/store/new-in',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016861933764618/three-3075752_960_720.jpg',
 		title: 'NEW COLLECTION',
-		cols: 2,
+		rows: 1,
+		cols: 1,
+		path: '/store/new-accessory',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1071016977092591676/photo-1479064555552-3ef4979f8908.jpg',
 		title: 'NEW COLLECTION',
-		cols: 2,
+		rows: 1,
+		cols: 1,
+		path: '/store/new-collection',
 	}
 ]
 
@@ -33,36 +37,27 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 function NewCollection() {
 	return (
-		<div style={{backgroundColor: 'black'}}>
+		<ContainerWrapper>
 			<Container maxWidth='lg'>
-				<ImageList
-					sx={{width: "100%", height: '100%', columnGaps: '36px', rowGaps: '20px'}}
-					variant="quilted"
-					cols={4}
+				<NewInH1>New</NewInH1>
 
-				>
+				<GridContainer>
 					{itemData.map((item) => (
-						<ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+						<GridItem key={item.img} column={item.cols} row={item.rows}>
+							<NewInLink to={item.path}>
+								<img
+									{...srcset(item.img, 121, item.rows, item.cols)}
+									alt={item.title}
+									loading="lazy"
+								/>
 
-							<img
-								{...srcset(item.img, 121, item.rows, item.cols)}
-								alt={item.title}
-								loading="lazy"
-							/>
-
-
-							<ImageListItemBar
-								sx={{
-									textAlign: "center",
-									width: '40%'
-								}}
-								title={item.title}
-							/>
-						</ImageListItem>
+								<ImageText>{item.title}</ImageText>
+							</NewInLink>
+						</GridItem>
 					))}
-				</ImageList>
+				</GridContainer>
 			</Container>
-		</div>
+		</ContainerWrapper>
 	);
 }
 

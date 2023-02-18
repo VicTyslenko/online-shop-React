@@ -30,41 +30,48 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-const PORT = process.env.PORT || 3000
-const bd = require('./config/keys/').mongoURI
+const PORT = process.env.PORT || 5000
+const bd = require('./config/keys').mongoURI
 
 mongoose
 	.connect(bd, {
 	useNewUrlParser: true,
 	useFindAndModify : false,
 })
-	.then (()=> console.log('MongoDB connected...'))
+	.then (()=> console.log(`MongoDB connected...`))
 	.catch ((error) => console.log(error))
 
-app.use(passport.initialize())
+ app.use(passport.initialize())
 
-app.use(cart)
-app.use(catalog)
-app.use(colors)
-app.use(comments)
-app.use(customers)
-app.use(filters)
-app.use(globalConfigs)
-app.use(links)
-app.use(orders)
-app.use(pages)
-app.use(partners)
-app.use(paymentMethods)
-app.use(products)
-app.use(shippingMethods)
-app.use(sizes)
-app.use(slides)
-app.use(subscribers)
-app.use(wishlist)
+app.use("/api/cart", cart)
+app.use("/api/catalog", catalog)
+app.use("/api/colors", colors)
+app.use("/api/comments", comments)
+app.use("/api/customers", customers)
+app.use("/api/filters", filters)
+app.use("/api/configs", globalConfigs)
+app.use("/api/links", links)
+app.use("/api/orders", orders)
+app.use("/api/pages", pages)
+app.use("/api/partners", partners)
+app.use("/api/payment-methods", paymentMethods)
+app.use("/api/products", products)
+app.use("/api/shipping-methods", shippingMethods)
+app.use("/api/sizes", sizes)
+app.use("/api/slides", slides)
+app.use("/api/subscribers", subscribers)
+app.use("/api/wishlist", wishlist)
 
 if (process.env.NODE_ENV== 'production') {
-	app.use(express.static('./frontend/build'))
+	app.use(express.static('./сlient/public'))
 	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+		res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'))
 	})
 }
+
+app.listen(5000, (err)=>{
+    if (err) {
+        return console.log(err);
+    }
+    console.log(`Server ${PORT}`);
+})
