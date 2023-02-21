@@ -4,6 +4,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 
 import productList from '../@main/store/slices/productListSlice';
 import product from '../@main/store/slices/productSlice';
+import auth from '../@main/store/slices/authSlice';
 
 import favoritesReducer from '../reducers/favoritesReducer';
 import cartReducer from '../reducers/cartReducer';
@@ -17,6 +18,7 @@ const persistConfig = {
 const rootReduser = combineReducers({
 	productList,
 	product,
+	auth,
 
 	favorites: favoritesReducer,
 	cart: cartReducer,
