@@ -5,7 +5,7 @@ import ProductPage from '../containers/ProductPage';
 import HomeLandingPage from '../containers/HomeLandingPage';
 import ShoppingCart from '../containers/ShoppingCart';
 import LoginForm from '../containers/LoginForm/LoginForm';
-
+import LandingPageLogin from '../containers/LandingPageLogin/LandingPageLogin '
 
 import ContactLandingPage from '../containers/ContactLandingPage';
 import HistoryBrandLandingPage from '../containers/HistoryBrandLandingPage';
@@ -22,6 +22,7 @@ function MainRoutes() {
 			<Route path="/product/:id" element={<ProductPage />} />
 			<Route path="/shopping-cart" element={<ShoppingCart />} />
 			<Route path="/login-form" element={<LoginForm />} />
+			<Route path="/login" element={<LandingPageLogin />} />
 			<Route path="/contact" element={<ContactLandingPage />} />
 			<Route path="/history-brand" element={<HistoryBrandLandingPage />} />
 			<Route path="/payment" element={<PaymentLandingPage />} />
