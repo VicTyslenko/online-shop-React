@@ -27,7 +27,6 @@ const ProductSchema = new Schema(
       type: String,
       required: true
     },
-
     categories: {
       type: String,
       required: true
@@ -43,22 +42,22 @@ const ProductSchema = new Schema(
       required: true,
       default: 0
     },
-    color: {
-      type: String
+    colors: {
+      type: Array
     },
     sizes: {
+      type: Array
+    },
+    productDetails: {
+      type: String
+    },
+    productDelivery: {
       type: String
     },
     productUrl: {
       type: String
     },
     brand: {
-      type: String
-    },
-    manufacturer: {
-      type: String
-    },
-    manufacturerCountry: {
       type: String
     },
     sellerseller: {
