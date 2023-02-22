@@ -41,7 +41,8 @@ const products = [
 ];
 
 function ShoppingCart() {
-	
+	//  shoppingData =products
+
 	const [quantity, setQuantity] = useState(1);
 
 	const Decrement = () => {
@@ -58,7 +59,7 @@ function ShoppingCart() {
 	};
 	return (
 		<ContainerWrapper>
-			{!isNotData && (
+			{!shoppingData && (
 				<Container
 					maxWidth="lg"
 					sx={{
@@ -69,7 +70,7 @@ function ShoppingCart() {
 					<StyledButton>Keep shopping</StyledButton>
 					<ShoppingCartWrapp>
 						<LeftSideWrapp>
-							{products.map((product) => (
+							{shoppingData.map((product) => (
 								<ContentWrapp>
 									<Content>
 										<div className="image-wrapp">
@@ -131,5 +132,6 @@ function ShoppingCart() {
 	);
 }
 ShoppingCart.defautProps = { shoppingData: [] };
+
 
 export default ShoppingCart;
