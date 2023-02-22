@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from '@mui/system';
 import { useState } from 'react';
+import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
 	ContainerWrapper,
@@ -10,7 +11,6 @@ import {
 	Content,
 	RightSideWrapp,
 	ContentWrapp,
-	QuantityButton,
 } from './StyledShoppingCart';
 import TextField from '@mui/material/TextField';
 const products = [
@@ -41,6 +41,7 @@ const products = [
 ];
 
 function ShoppingCart() {
+	
 	const [quantity, setQuantity] = useState(1);
 
 	const Decrement = () => {
@@ -57,62 +58,78 @@ function ShoppingCart() {
 	};
 	return (
 		<ContainerWrapper>
-			<Container
-				maxWidth="lg"
-				sx={{
-					marginBottom: '50px',
-					marginTop: '40px',
-				}}
-			>
-				<StyledButton>Keep shopping</StyledButton>
-				<ShoppingCartWrapp>
-					<LeftSideWrapp>
-						{products.map((product) => (
-							<ContentWrapp>
-								<Content>
-									<div className="image-wrapp">
-										<img className="image" src={product.image} alt="" />
-									</div>
-									<ul className="list">
-										<li className="title">{product.name}</li>
-										<li>Color :{product.color}</li>
-										<li>Size :{product.size}</li>
-										<li>
-											Quantity :{' '}
-											<button onClick={Decrement} className="qnt-btn">
-												{' '}
-												-{' '}
-											</button>
-											<span>{quantity}</span>
-											<button onClick={Increment} className="qnt-btn">
-												{' '}
-												+{' '}
-											</button>
-										</li>
-										<li>Price :{product.price}</li>
-										<li className="total">Total :</li>
-									</ul>
-								</Content>
-								<RemoveButton>Remove from basket</RemoveButton>
-							</ContentWrapp>
-						))}
-					</LeftSideWrapp>
-					<RightSideWrapp>
-						<h1 className="title">Shopping bag total</h1>
-						<p className="discount">Add a discount code</p>
-						<TextField id="standard-basic" variant="standard" />
-						<hr className="line" />
-						<p className="order">Order value :</p>
-						<p className="order">Delivery</p>
-						<p className="total">Total :</p>
-						<div className="button-wrapp">
-							<StyledButton>Checkout</StyledButton>
-						</div>
-					</RightSideWrapp>
-				</ShoppingCartWrapp>
-			</Container>
+			{!isNotData && (
+				<Container
+					maxWidth="lg"
+					sx={{
+						marginBottom: '50px',
+						marginTop: '40px',
+					}}
+				>
+					<StyledButton>Keep shopping</StyledButton>
+					<ShoppingCartWrapp>
+						<LeftSideWrapp>
+							{products.map((product) => (
+								<ContentWrapp>
+									<Content>
+										<div className="image-wrapp">
+											<img className="image" src={product.image} alt="" />
+										</div>
+										<ul className="list">
+											<li className="title">{product.name}</li>
+											<li>Color :{product.color}</li>
+											<li>Size :{product.size}</li>
+											<li>
+												Quantity :{' '}
+												<button onClick={Decrement} className="qnt-btn">
+													{' '}
+													-{' '}
+												</button>
+												<span>{quantity}</span>
+												<button onClick={Increment} className="qnt-btn">
+													{' '}
+													+{' '}
+												</button>
+											</li>
+											<li>Price :{product.price}</li>
+											<li className="total">Total :</li>
+										</ul>
+									</Content>
+									<RemoveButton>Remove from basket</RemoveButton>
+								</ContentWrapp>
+							))}
+						</LeftSideWrapp>
+						<RightSideWrapp>
+							<h1 className="title">Shopping bag total</h1>
+							<p className="discount">Add a discount code</p>
+							<TextField id="standard-basic" variant="standard" />
+							<hr className="line" />
+							<p className="order">Order value :</p>
+							<p className="order">Delivery</p>
+							<p className="total">Total :</p>
+							<div className="button-wrapp">
+								<StyledButton>Checkout</StyledButton>
+							</div>
+						</RightSideWrapp>
+					</ShoppingCartWrapp>
+				</Container>
+			)}
+
+			{isNotData && (
+				<Container
+					maxWidth="lg"
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'center',
+					}}
+				>
+					<EmptyCart />
+				</Container>
+			)}
 		</ContainerWrapper>
 	);
 }
+ShoppingCart.defautProps = { shoppingData: [] };
 
 export default ShoppingCart;
