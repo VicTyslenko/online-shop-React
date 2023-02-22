@@ -15,30 +15,30 @@ import {
 import TextField from '@mui/material/TextField';
 // if the array is empty ,EmptyCart appears
 const products = [
-	{
-		id: '1',
-		name: 'Black Jaket',
-		price: 1400,
-		image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
-		color: 'black',
-		size: 'M',
-	},
-	{
-		id: '2',
-		name: 'Evening dress',
-		price: 2400,
-		image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
-		color: 'red',
-		size: 'XL',
-	},
-	{
-		id: '3',
-		name: 'W Shoes',
-		price: 1000,
-		image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
-		color: 'yellow',
-		size: 'L',
-	},
+	// {
+	// 	id: '1',
+	// 	name: 'Black Jaket',
+	// 	price: 1400,
+	// 	image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
+	// 	color: 'black',
+	// 	size: 'M',
+	// },
+	// {
+	// 	id: '2',
+	// 	name: 'Evening dress',
+	// 	price: 2400,
+	// 	image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
+	// 	color: 'red',
+	// 	size: 'XL',
+	// },
+	// {
+	// 	id: '3',
+	// 	name: 'W Shoes',
+	// 	price: 1000,
+	// 	image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
+	// 	color: 'yellow',
+	// 	size: 'L',
+	// },
 ];
 
 function ShoppingCart(props =[]) {
