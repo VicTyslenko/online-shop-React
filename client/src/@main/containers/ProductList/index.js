@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import { Box } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
 // import PropTypes from 'prop-types';
-
 import ProductCard from './components/ProductCard';
 import ProductFilters from './components/ProductFilters';
 import { StyledContainer, StyledBox, StyledTitle } from './ProductList.styles';
