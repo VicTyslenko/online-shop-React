@@ -4,11 +4,11 @@ const passport = require("passport");
 
 // Import controllers
 const {
-  createCustomer,
-  loginCustomer,
-  getCustomer,
-  editCustomerInfo,
-  updatePassword
+	createCustomer,
+	loginCustomer,
+	getCustomer,
+	editCustomerInfo,
+	updatePassword,
 } = require("../controllers/customers");
 
 // @route   POST /customers
@@ -25,27 +25,27 @@ router.post("/login", loginCustomer);
 // @desc    Return current customer
 // @access  Private
 router.get(
-  "/customer",
-  passport.authenticate("jwt", { session: false }),
-  getCustomer
+	"/customer",
+	passport.authenticate("jwt", { session: false }),
+	getCustomer
 );
 
 // @route   PUT /customers
 // @desc    Return current customer
 // @access  Private
 router.put(
-  "/",
-  passport.authenticate("jwt", { session: false }),
-  editCustomerInfo
+	"/",
+	passport.authenticate("jwt", { session: false }),
+	editCustomerInfo
 );
 
 // @route   POST /customers/profile/update-password
 // @desc    Return current customer and success or error message
 // @access  Private
 router.put(
-  "/password",
-  passport.authenticate("jwt", { session: false }),
-  updatePassword
+	"/password",
+	passport.authenticate("jwt", { session: false }),
+	updatePassword
 );
 
 module.exports = router;
