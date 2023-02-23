@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-import { actionFetchData } from '../actions/authActions';
+import { actionFetchAuth } from '../actions/authActions';
 
 const initialState = {
 	data: null,
-	isLoading: true,
+	status: 'loading',
 };
 
 const authReducer = createSlice({
@@ -12,13 +12,17 @@ const authReducer = createSlice({
 	initialState,
 	reducers: {},
 	extraReducers: (builder) => {
-		builder.addCase(actionFetchData.pending, (state) => {
-			state.isLoading = true;
+		builder.addCase(actionFetchAuth.pending, (state) => {
+			state.status = 'loading';
 			state.data = null;
 		});
-		builder.addCase(actionFetchData.fulfilled, (state, { payload }) => {
-			state.isLoading = false;
+		builder.addCase(actionFetchAuth.fulfilled, (state, { payload }) => {
+			state.status = 'leaded';
 			state.data = payload;
+		});
+		builder.addCase(actionFetchAuth.rejected, (state) => {
+			state.status = 'error';
+			state.data = null;
 		});
 	},
 });
