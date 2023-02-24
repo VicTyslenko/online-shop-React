@@ -13,19 +13,20 @@ import { Container, Button } from '@mui/material';
 import { useFormik } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import { actionFetchAuth } from '../../../../@main/store/actions/authActions';
+import { isAuthSelector } from '../../../../@main/store/selectors/authSelector';
 
 function DropdownRegister({ active, closeFormPages }) {
 	const dispatch = useDispatch();
+	const isAuth = useSelector(isAuthSelector);
 
 	const formik = useFormik({
 		initialValues: {
-			email: 'user@user.com',
-			password: '12345678',
+			loginOrEmail: '',
+			password: '',
 		},
 		validationSchema: validationSchema,
 		onSubmit: (values) => {
 			dispatch(actionFetchAuth(values));
-			// console.log(JSON.stringify(values, null, 2));
 		},
 	});
 
@@ -40,12 +41,12 @@ function DropdownRegister({ active, closeFormPages }) {
 						<InputsWrapp>
 							<InputItem
 								variant="standard"
-								name="email"
+								name="loginOrEmail"
 								label="E-mail"
-								value={formik.values.email}
+								value={formik.values.loginOrEmail}
 								onChange={formik.handleChange}
-								error={formik.touched.email && Boolean(formik.errors.email)}
-								helperText={formik.touched.email && formik.errors.email}
+								error={formik.touched.loginOrEmail && Boolean(formik.errors.loginOrEmail)}
+								helperText={formik.touched.loginOrEmail && formik.errors.loginOrEmail}
 							/>
 							<InputItem
 								variant="standard"

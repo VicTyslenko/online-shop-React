@@ -1,5 +1,6 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
@@ -23,9 +24,11 @@ import {
 	ItemButton,
 } from './StyledHeader';
 
-import { useState } from 'react';
+import { isAuthSelector } from '../../@main/store/selectors/authSelector';
 
 function Header() {
+	const isAuth = useSelector(isAuthSelector);
+
 	const rootEl = useRef(null);
 
 	const [isShoppingBag, setIsShoppingBag] = useState(false);
@@ -48,6 +51,32 @@ function Header() {
 		document.addEventListener('click', onClick);
 		return () => document.removeEventListener('click', onClick);
 	}, []);
+
+	useEffect(() => {
+		if (isAuth) {
+			setRegistrationBox(!registrationBox);
+		}
+	}, [isAuth]);
+
+	const buttonAuthorization = !isAuth ? (
+		<ButtonGroup
+			data-menu="menuRegistration"
+			aria-expanded={registrationBox !== 0}
+			aria-controls="example-panel"
+			onClick={(e) => {
+				setRegistrationBox(!registrationBox);
+				setDataMenu(e.target.dataset.menu);
+			}}
+		>
+			<PermIdentityOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
+			<ItemButton>Sign Up / Log In</ItemButton>
+		</ButtonGroup>
+	) : (
+		<ButtonGroup>
+			<PermIdentityOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
+			<LinkItem to="/account/profile">My account</LinkItem>
+		</ButtonGroup>
+	);
 
 	return (
 		<ContainerWrapper ref={rootEl}>
@@ -110,19 +139,9 @@ function Header() {
 							<SearchOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
 							<ItemButton>Search</ItemButton>
 						</ButtonGroup>
-						<ButtonGroup
-							data-menu="menuRegistration"
-							aria-expanded={registrationBox !== 0}
-							aria-controls="example-panel"
-							onClick={(e) => {
-								setRegistrationBox(!registrationBox);
-								setDataMenu(e.target.dataset.menu);
-							}}
-						>
-							<PermIdentityOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
-							{/* <LinkItem to="/account/profile">Sign Up / Log In</LinkItem> */}
-							<ItemButton>Sign Up / Log In</ItemButton>
-						</ButtonGroup>
+
+						{buttonAuthorization}
+
 						<ButtonGroup onClick={() => setIsShoppingBag(!isShoppingBag)}>
 							<ShoppingBagOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
 							<ItemButton>Shopping Bag</ItemButton>
