@@ -30,7 +30,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 4444;
+const PORT = process.env.PORT || 5000;
 const bd = require("./config/keys").mongoURI;
 
 mongoose
@@ -69,7 +69,7 @@ if (process.env.NODE_ENV == "production") {
 	});
 }
 
-app.listen(4444, (err) => {
+app.listen(5000, (err) => {
 	if (err) {
 		return console.log(err);
 	}
