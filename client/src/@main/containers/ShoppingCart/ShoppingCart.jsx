@@ -13,35 +13,9 @@ import {
 	ContentWrapp,
 } from './StyledShoppingCart';
 import TextField from '@mui/material/TextField';
-const products = [
-	{
-		id: '1',
-		name: 'Black Jaket',
-		price: 1400,
-		image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
-		color: 'black',
-		size: 'M',
-	},
-	{
-		id: '2',
-		name: 'Evening dress',
-		price: 2400,
-		image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
-		color: 'red',
-		size: 'XL',
-	},
-	{
-		id: '3',
-		name: 'W Shoes',
-		price: 1000,
-		image: 'https://diadia.ua/image/catalog/slider/2022/IMG_9944.JPG',
-		color: 'yellow',
-		size: 'L',
-	},
-];
 
-function ShoppingCart() {
-	
+function ShoppingCart({ shoppingData }) {
+	const isNotData = shoppingData.length === 0;
 	const [quantity, setQuantity] = useState(1);
 
 	const Decrement = () => {
@@ -69,7 +43,7 @@ function ShoppingCart() {
 					<StyledButton>Keep shopping</StyledButton>
 					<ShoppingCartWrapp>
 						<LeftSideWrapp>
-							{products.map((product) => (
+							{shoppingData.map((product) => (
 								<ContentWrapp>
 									<Content>
 										<div className="image-wrapp">
@@ -130,6 +104,6 @@ function ShoppingCart() {
 		</ContainerWrapper>
 	);
 }
-ShoppingCart.defautProps = { shoppingData: [] };
+ShoppingCart.defaultProps = { shoppingData: [] };
 
 export default ShoppingCart;
