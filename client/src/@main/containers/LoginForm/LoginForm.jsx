@@ -37,12 +37,11 @@ const LoginForm = () => {
 		},
 		'& .MuiInput-underline:before': { borderBottomColor: 'white' },
 		'& .MuiOutlinedInput-root': {
-			'& fieldset': {
-				borderColor: 'red',
-			},
+		
 			'&:hover textfield': {
 				borderColor: 'white',
 			},
+		
 			'& .MuiInput-root': {
 				color: 'white',
 			},
@@ -106,7 +105,6 @@ const LoginForm = () => {
 						</Formik>
 					</TabPanel>
 					<TabPanel value="2">
-						{/* <Registration /> */}
 						<Formik
 							initialValues={{
 								email: '',
