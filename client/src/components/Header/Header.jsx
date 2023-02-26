@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
@@ -25,9 +25,12 @@ import {
 } from './StyledHeader';
 
 import { isAuthSelector } from '../../@main/store/selectors/authSelector';
+import { isRegistrationSelector } from '../../@main/store/selectors/registrationSelector';
 
 function Header() {
 	const isAuth = useSelector(isAuthSelector);
+	const isRegistration = useSelector(isRegistrationSelector);
+	const navigate = useNavigate();
 
 	const rootEl = useRef(null);
 
@@ -56,27 +59,34 @@ function Header() {
 		if (isAuth) {
 			setRegistrationBox(!registrationBox);
 		}
-	}, [isAuth]);
 
-	const buttonAuthorization = !isAuth ? (
-		<ButtonGroup
-			data-menu="menuRegistration"
-			aria-expanded={registrationBox !== 0}
-			aria-controls="example-panel"
-			onClick={(e) => {
-				setRegistrationBox(!registrationBox);
-				setDataMenu(e.target.dataset.menu);
-			}}
-		>
-			<PermIdentityOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
-			<ItemButton>Sign Up / Log In</ItemButton>
-		</ButtonGroup>
-	) : (
-		<ButtonGroup>
-			<PermIdentityOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
-			<LinkItem to="/account/profile">My account</LinkItem>
-		</ButtonGroup>
-	);
+		if (isRegistration) {
+			navigate('/');
+		}
+
+		window.scrollTo(0, 0);
+	}, [isAuth, isRegistration]);
+
+	const buttonAuthorization =
+		isAuth || isRegistration ? (
+			<ButtonGroup>
+				<PermIdentityOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
+				<LinkItem to="/account/profile">My account</LinkItem>
+			</ButtonGroup>
+		) : (
+			<ButtonGroup
+				data-menu="menuRegistration"
+				aria-expanded={registrationBox !== 0}
+				aria-controls="example-panel"
+				onClick={(e) => {
+					setRegistrationBox(!registrationBox);
+					setDataMenu(e.target.dataset.menu);
+				}}
+			>
+				<PermIdentityOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
+				<ItemButton>Sign Up / Log In</ItemButton>
+			</ButtonGroup>
+		);
 
 	return (
 		<ContainerWrapper ref={rootEl}>
@@ -106,7 +116,7 @@ function Header() {
 									setDataMenu(e.target.dataset.menu);
 								}}
 							>
-								WOMEN
+								WOMAN
 							</ButtonItem>
 						</Link>
 						<Link to="/">
