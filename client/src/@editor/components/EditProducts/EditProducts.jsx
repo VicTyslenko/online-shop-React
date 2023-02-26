@@ -60,8 +60,9 @@ function EditProducts() {
 									label="Gender"
 									onChange={genderSelector}
 								>
-									<MenuItem value="woman">Man</MenuItem>
+									<MenuItem value="man">Man</MenuItem>
 									<MenuItem value="woman">Woman</MenuItem>
+									<MenuItem value="accessory">Accessory</MenuItem>
 								</Select>
 							</FormControl>
 							<TextField
