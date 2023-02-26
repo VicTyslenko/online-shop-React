@@ -1,6 +1,8 @@
 import React from 'react';
-import { Title, PaymentWrapper, StyledButton } from './StyledPaymentPage';
-
+import { Title, PaymentWrapper, StyledButton, CardsWrapper } from './StyledPaymentPage';
+import SVG from '../SVG/SVG';
+import SVGPayPall from '../SVG/SVGPayPall';
+import SVGMaestro from '../SVG/SVGMaestro';
 import PaymentModal from '../Modal/Modal';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
@@ -33,6 +35,11 @@ const PaymentPage = () => {
 			<PaymentWrapper>
 				<Title>Please select your payment method</Title>
 				<p className="total-payment">Total payment amount</p>
+				<CardsWrapper>
+					<SVG />
+					<SVGPayPall />
+					<SVGMaestro/>
+				</CardsWrapper>
 				<div className="flex-block">
 					<span className="info">Card number</span>
 					<TextField variant="standard" />
@@ -41,6 +48,7 @@ const PaymentPage = () => {
 					<span className="info">Card holder name</span>
 					<TextField variant="standard" />
 				</div>
+
 				<div className="flex-select">
 					<span className="info"> Card Expiry Date </span>
 					<Select value={month} onChange={monthChange}>
@@ -74,6 +82,7 @@ const PaymentPage = () => {
 						<MenuItem value={'2035'}>2035</MenuItem>
 					</Select>
 				</div>
+
 				<div className="cvv">
 					<span className="info">CVC/CVV/CID </span>
 					<TextField
@@ -87,7 +96,7 @@ const PaymentPage = () => {
 					<Link>what is cvv</Link>
 				</div>
 				<StyledButton onClick={handleOpen}>Pay</StyledButton>
-				{open && <PaymentModal open={open} onClose={handleClose} />}
+				{open && <PaymentModal open={open}   />}
 			</PaymentWrapper>
 		</Container>
 	);

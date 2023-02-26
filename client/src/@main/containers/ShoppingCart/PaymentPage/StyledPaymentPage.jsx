@@ -47,3 +47,8 @@ export const StyledButton = styled(Button)`
 		margin-top: 50px;
 	}
 `;
+export const CardsWrapper = styled.div`
+	display: flex;
+	gap: 30px;
+	margin-bottom:20px ;
+`;
