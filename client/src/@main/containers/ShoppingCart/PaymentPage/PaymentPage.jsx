@@ -1,5 +1,7 @@
 import React from 'react';
 import { Title, PaymentWrapper, StyledButton } from './StyledPaymentPage';
+
+import PaymentModal from '../Modal/Modal';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
@@ -10,12 +12,16 @@ import { Container } from '@mui/system';
 const PaymentPage = () => {
 	const [month, setMonth] = useState('');
 	const [year, setYear] = useState('');
+	const [open, setOpen] = useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
 	const monthChange = (event) => {
 		setMonth(event.target.value);
 	};
 	const yearChange = (event) => {
 		setYear(event.target.value);
 	};
+
 	return (
 		<Container
 			maxWidth="lg"
@@ -80,7 +86,8 @@ const PaymentPage = () => {
 
 					<Link>what is cvv</Link>
 				</div>
-				<StyledButton>Pay</StyledButton>
+				<StyledButton onClick={handleOpen}>Pay</StyledButton>
+				{open && <PaymentModal open={open} onClose={handleClose} />}
 			</PaymentWrapper>
 		</Container>
 	);
