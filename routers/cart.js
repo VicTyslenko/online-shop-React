@@ -9,7 +9,7 @@ const {
     deleteCart, 
     deleteProductFromCart, 
     getCart
-} = require('../controllers/cart')
+} = require('../controllers/cart');
 
 router.post(
     "/", 
@@ -49,7 +49,7 @@ router.delete(
 );
 
 router.get(
-    "/cart", 
+    "/", 
     passport.authenticate("jwt", {session: false}),
     getCart
 );
