@@ -19,6 +19,7 @@ export const StyledBox = styled(Box)`
 	align-items: center;
 	column-gap: 3rem;
 	row-gap: 4rem;
+	margin-bottom: 16px;
 
 	${(props) => props.theme.breakpoints.down('sm')} {
 		justify-items: center;

@@ -5,10 +5,10 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import productList from '../@main/store/slices/productListSlice';
 import product from '../@main/store/slices/productSlice';
 import auth from '../@main/store/slices/authSlice';
+import cart from '../@main/store/slices/cartSlice';
 import registration from '../@main/store/slices/registrationSlice';
+import wishlist from '../@main/store/slices/wishlistSlice';
 
-import favoritesReducer from '../reducers/favoritesReducer';
-import cartReducer from '../reducers/cartReducer';
 import filtersReducer from '../reducers/filtersReducer';
 
 const persistConfig = {
@@ -21,9 +21,9 @@ const rootReduser = combineReducers({
 	product,
 	auth,
 	registration,
+	cart,
+	wishlist,
 
-	favorites: favoritesReducer,
-	cart: cartReducer,
 	filters: filtersReducer,
 });
 

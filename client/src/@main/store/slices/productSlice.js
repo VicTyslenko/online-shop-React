@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getProduct } from '../actions/productActions';
 
 const initialState = {
-	data: {},
+	data: null,
 };
 
 export const productSlice = createSlice({
@@ -15,6 +15,6 @@ export const productSlice = createSlice({
 			state.data = { ...action.payload }
 		})
 	}
-  })
+})
 
 export default productSlice.reducer;

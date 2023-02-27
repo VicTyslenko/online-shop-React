@@ -31,6 +31,7 @@ function ProductGallery({ images }) {
 		setCurrentIndex(index);
 		setOpen(true);
 	};
+
 	const handleClose = () => {
 		setOpen(false);
 	};
@@ -45,19 +46,19 @@ function ProductGallery({ images }) {
 					}}
 					modules={[Pagination, Controller]}
 				>
-					{images.map(({ id, url, alt }, index) => (
-						<StyledSwiperSlide onClick={() => handleOpen(index)} key={id}>
-							<StyledMobileImage src={url} alt={alt} />
+					{images && images.map((url, index) => (
+						<StyledSwiperSlide onClick={() => handleOpen(index)} key={index}>
+							<StyledMobileImage src={url} />
 						</StyledSwiperSlide>
 					))}
 				</StyledSwiper>
 			) : (
 				<StyledGallery>
-					{images.map(({ id, url, alt }, index) =>
+					{images && images.map((url, index) =>
 						index < 2 ? (
-							<StyledBigImage onClick={() => handleOpen(index)} key={id} src={url} alt={alt} />
+							<StyledBigImage onClick={() => handleOpen(index)} key={index} src={url} />
 						) : (
-							<StyledSmallImage onClick={() => handleOpen(index)} key={id} src={url} alt={alt} />
+							<StyledSmallImage onClick={() => handleOpen(index)} key={index} src={url} />
 						),
 					)}
 				</StyledGallery>
@@ -75,9 +76,9 @@ function ProductGallery({ images }) {
 						modules={[Navigation, Controller]}
 						initialSlide={currentIndex}
 					>
-						{images.map(({ id, url, alt }) => (
-							<StyledOverlaySwiperSlide key={id}>
-								<StyledOverlayImage src={url} alt={alt} />
+						{images && images.map((url, index) => (
+							<StyledOverlaySwiperSlide key={index}>
+								<StyledOverlayImage src={url} />
 							</StyledOverlaySwiperSlide>
 						))}
 					</StyledOverlaySwiper>
@@ -88,13 +89,7 @@ function ProductGallery({ images }) {
 }
 
 ProductGallery.propTypes = {
-	images: PropTypes.arrayOf(
-		PropTypes.shape({
-			id: PropTypes.number.isRequired,
-			url: PropTypes.string.isRequired,
-			alt: PropTypes.string.isRequired,
-		}),
-	).isRequired,
+	images: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ProductGallery;
