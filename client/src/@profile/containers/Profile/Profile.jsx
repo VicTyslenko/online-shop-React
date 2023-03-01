@@ -1,17 +1,23 @@
 import React from 'react';
-import {  Typography, Grid, Container } from '@mui/material';
+import { Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { FlexWrapp, StyledButton } from './StyledUserProfile';
-
+import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
+import jwt_decode from "jwt-decode";
+import { useSelector, useDispatch } from 'react-redux';
 function Profile() {
+	const dispatch = useDispatch();
+	const userProfile = useSelector(profileUserSelector);
+	const token = userProfile.token;
+	const decodedToken = jwt_decode(token);
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
-				Welcome, SUZANNE EATON
+				Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`}
 			</Typography>
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
@@ -65,7 +71,7 @@ function Profile() {
 						<FlexWrapp>
 							{/* <ArticleOutlinedIcon fontSize="large" />
 							 */}
-							 <EditOutlinedIcon fontSize='large'/>
+							<EditOutlinedIcon fontSize="large" />
 							<div className="content">
 								<p className="title">Edit</p>
 
