@@ -16,6 +16,14 @@ export const WrappAnimate = styled(AnimateHeight)`
 
 export const BoxWrapp = styled.div`
 	padding: 40px 10px;
+
+	& .error-message {
+		font-size: 14px;
+		color: #d32f2f;
+		border-bottom: 1px solid #d32f2f;
+		display: inline-block;
+		font-weight: 600;
+	}
 `;
 
 export const Header = styled.div`
@@ -46,7 +54,7 @@ export const Header = styled.div`
 `;
 
 export const InputsWrapp = styled.div`
-	margin-top: 20px;
+	margin: 20px 0;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;

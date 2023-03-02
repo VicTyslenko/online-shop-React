@@ -5,6 +5,7 @@ import { actionFetchAuth } from '../actions/authActions';
 const initialState = {
 	data: null,
 	status: 'loading',
+	error: null,
 };
 
 const authReducer = createSlice({
@@ -20,9 +21,9 @@ const authReducer = createSlice({
 			state.status = 'leaded';
 			state.data = payload;
 		});
-		builder.addCase(actionFetchAuth.rejected, (state) => {
+		builder.addCase(actionFetchAuth.rejected, (state, { payload }) => {
 			state.status = 'error';
-			state.data = null;
+			state.error = payload;
 		});
 	},
 });

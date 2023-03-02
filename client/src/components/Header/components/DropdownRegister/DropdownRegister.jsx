@@ -13,11 +13,11 @@ import { Container, Button } from '@mui/material';
 import { Formik } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import { actionFetchAuth } from '../../../../@main/store/actions/authActions';
-import { isAuthSelector } from '../../../../@main/store/selectors/authSelector';
+import { errorDataAuth } from '../../../../@main/store/selectors/authSelector';
 
 function DropdownRegister({ active, closeFormPages }) {
 	const dispatch = useDispatch();
-	const isAuth = useSelector(isAuthSelector);
+	const errorMessage = useSelector(errorDataAuth);
 
 	return (
 		<WrappAnimate id="example-panel" duration={500} height={active}>
@@ -58,8 +58,10 @@ function DropdownRegister({ active, closeFormPages }) {
 										error={props.touched.password && Boolean(props.errors.password)}
 										helperText={props.touched.password && props.errors.password}
 									/>
-									{props.errors.name && <div id="feedback">{props.errors.name}</div>}
 								</InputsWrapp>
+
+								{errorMessage && <span className="error-message">{Object.values(errorMessage)}</span>}
+
 								<ButtonBlock>
 									<Button variant="contained" color="success" type="submit">
 										Log in
