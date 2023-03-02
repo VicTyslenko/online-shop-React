@@ -19,8 +19,7 @@ import {
 	InputsWrappReg,
 	CssTextField,
 } from './StyledLoginForm';
-import { useSelector, useDispatch } from 'react-redux';
-import { isRegistrationSelector } from '../../store/selectors/registrationSelector';
+import { useDispatch } from 'react-redux';
 import { registerFetchData } from '../../store/actions/registrationActions';
 
 const LoginForm = () => {
