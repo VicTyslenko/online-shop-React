@@ -149,7 +149,7 @@ exports.getProductsFilterParams = async (req, res, next) => {
       .sort(sort);
 
     const productsQuantity = await Product.find(mongooseQuery);
-
+    
     res.json({ products, productsQuantity: productsQuantity.length });
   } catch (err) {
     res.status(400).json({
