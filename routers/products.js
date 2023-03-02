@@ -70,9 +70,9 @@ router.put(
 
 router.get("/", getProducts)
 
-router.get("/:itemNo", getProductById);
-
 router.get("/filter", getProductsFilterParams);
+
+router.get("/:itemNo", getProductById);
 
 router.get("/search", searchProducts);
 

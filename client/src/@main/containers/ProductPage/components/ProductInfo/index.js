@@ -1,11 +1,13 @@
-import { Box, Button, IconButton, Typography, ListItemText } from '@mui/material';
+import React, { useCallback, useState } from 'react';
+import { Box, Button, IconButton, Typography, ListItemText, Popover  } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
 import PropTypes from 'prop-types';
-import { removeFavorite, addFavorite } from '../../../../../actions/favoriteActions';
-import { removeCart, addCart } from "../../../../../actions/cartActions";
+import { addProductToCart, deleteProductFromCart } from '../../../../store/actions/cartActions';
+import { addProductToWishlist, deleteProductFromWishlist } from '../../../../store/actions/wishlistActions';
+// import Modal from '@mui/material/Modal';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-
+import img from './sizeguide.jpg';
 import {
 	ActionsWrapper,
 	ProductInfoHeader,
@@ -18,26 +20,58 @@ import {
 	SizeList,
 } from './ProductInfo.styles';
 
-function ProductInfo({ name, productUrl, currentPrice, color, sizes, productDetails, productDelivery }) {
+function ProductInfo({ id, name, productUrl, currentPrice, color, sizes, productDetails, productDelivery }) {
 	const dispatch = useDispatch();
-	const isFavorite = useSelector((state) => state.favorites.includes(productUrl));
-	const isCart = useSelector((state) => state.cart.includes(productUrl));
+	const isCart = useSelector((state) => state.cart.data.find(({ product }) => id === product?._id));
+	const isWishlist = useSelector((state) => state.wishlist.data.find((el) => id === el._id));
 
-	const handleClickCart = () => {
+    const [selectedSizeIndex, setSelectedSizeIndex] = React.useState(1);
+    const [selectedColorIndex, setSelectedColorIndex] = React.useState(1);
+	// const [open, setOpen] = useState(false);
+
+  	const handleListSizeClick = (event, index) => {
+    	setSelectedSizeIndex(index);
+  	};
+
+	const handleListColorClick = (event, index) => {
+    	setSelectedColorIndex(index);
+  	};
+
+	// const handleOpen = (index) => {
+	// 	setOpen(true);
+	// };
+
+	// const handleClose = () => {
+	// 	setOpen(false);
+	// };
+	const [anchorEl, setAnchorEl] = React.useState(null);
+
+	const handleClick = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
+
+	const open = Boolean(anchorEl);
+	const anchor = open ? 'simple-popover' : undefined;
+
+	const handleClickCart = useCallback(() => {
         if(isCart) {
-            dispatch(removeCart(productUrl));
+            dispatch(deleteProductFromCart(id));
         } else {
-			dispatch(addCart(productUrl));
-        }
-    };
+			dispatch(addProductToCart(id));
+		}
+    }, [id, isCart, dispatch]);
 
-	const handleClickFavorite = () => {
-        if(isFavorite) {
-            dispatch(removeFavorite(productUrl));
+	const handleClickWishlist = useCallback(() => {
+        if(isWishlist) {
+            dispatch(deleteProductFromWishlist(id));
         } else {
-			dispatch(addFavorite(productUrl));
+			dispatch(addProductToWishlist(id));
         }
-    };
+    }, [id, isWishlist, dispatch]);
 
 	return (
 		<Box maxWidth="390px" margin="auto">
@@ -51,44 +85,55 @@ function ProductInfo({ name, productUrl, currentPrice, color, sizes, productDeta
 			<ColorList>
 				<Typography variant="subtitle2">Color</Typography>
 				<ListStyled>
-					{/* {colors.map(({ id, color, colorHash }) => (
-						<ListItemButtonStyled key={id}>
+					{color.map(({ color, hash }, index) => (
+						<ListItemButtonStyled
+							key={index}
+							selected={selectedColorIndex === index}
+							onClick={(event) =>  handleListColorClick(event, index)}
+						>
 							<ListItemIconColor>
-								<ColorIcon backgroundColor={colorHash} />
+								<ColorIcon backgroundColor={hash} />
 							</ListItemIconColor>
 							<ListItemText primary={color} />
 						</ListItemButtonStyled>
-					))} */}
-					<ListItemButtonStyled >
-						<ListItemIconColor>
-							<ColorIcon backgroundColor={color} />
-						</ListItemIconColor>
-						<ListItemText primary={color} />
-					</ListItemButtonStyled>
+					))}
 				</ListStyled>
 			</ColorList>
 			<SizeList>
 				<Typography variant="subtitle2">Size</Typography>
 				<ListStyled>
-					{/* {size.map((item) => (
-						<ListItemButtonStyled key={item}>
+					{sizes.map((item) => (
+						<ListItemButtonStyled
+							key={item}
+							selected={selectedSizeIndex === item}
+							onClick={(event) => handleListSizeClick(event, item)}
+						>
 							<ListItemText primary={item} />
 						</ListItemButtonStyled>
-					))} */}
-					<ListItemButtonStyled>
-						<ListItemText primary={sizes} />
-					</ListItemButtonStyled>
+					))}
 				</ListStyled>
-				{/* todo: SizeGuide link and information */}
-				<Typography variant="caption">Size guide</Typography>
+				{/* <Typography variant="caption" onClick={handleOpen} sx={{cursor: 'pointer'}}>Size guide</Typography> */}
+				<Typography variant="caption" onClick={handleClick} sx={{cursor: 'pointer'}} aria-describedby={anchor}>Size guide</Typography>
+				<Popover
+					anchor={anchor}
+					open={open}
+					anchorEl={anchorEl}
+					onClose={handleClose}
+					anchorOrigin={{
+					vertical: 'bottom',
+					horizontal: 'center',
+					}}
+				>
+						<img src={img} />
+				</Popover>
 			</SizeList>
 			<ActionsWrapper>
 				<Button color="primary" variant="contained" onClick={handleClickCart}>
-					{!isCart ? "Add to busket" : "Delete"}
+					{isCart ? "Delete" : "Add to cart"}
 				</Button>
 				<IconButton
-					onClick={handleClickFavorite}
-					sx={{ color: isFavorite ? "#E01515" : "#fff"}}>
+					onClick={handleClickWishlist}
+					sx={{ color: isWishlist ? "#E01515" : "#fff"}}>
 						<FavoriteBorderIcon />
 				</IconButton>
 			</ActionsWrapper>
@@ -99,22 +144,32 @@ function ProductInfo({ name, productUrl, currentPrice, color, sizes, productDeta
 					{productDelivery}
 				</Typography>
 			</Box>
+			{/* <Modal
+				open={open}
+				onClose={handleClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description"
+			>
+				<Box>
+					<img src={img} />
+				</Box>
+			</Modal> */}
 		</Box>
 	);
 }
 
 ProductInfo.propTypes = {
-	title: PropTypes.string.isRequired,
-	productUrl: PropTypes.number.isRequired,
-	price: PropTypes.number.isRequired,
-	colors: PropTypes.arrayOf(
+	id: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	productUrl: PropTypes.string.isRequired,
+	currentPrice: PropTypes.number.isRequired,
+	color: PropTypes.arrayOf(
 		PropTypes.shape({
-			id: PropTypes.number.isRequired,
 			color: PropTypes.string.isRequired,
-			colorHash: PropTypes.string.isRequired,
+			hash: PropTypes.string.isRequired,
 		}),
 	).isRequired,
-	sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+	sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
 	productDetails: PropTypes.string.isRequired,
 	productDelivery: PropTypes.string.isRequired,
 };

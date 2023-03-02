@@ -9,7 +9,7 @@ export const StyledBigImage = styled('img')`
 	grid-column-start: 0;
 	grid-column-end: span 3;
 	object-fit: cover;
-	cursor: pointer;
+	cursor: zoom-in;
 `;
 
 export const StyledSmallImage = styled('img')`
@@ -18,7 +18,7 @@ export const StyledSmallImage = styled('img')`
 	grid-column-start: 0;
 	grid-column-end: span 2;
 	object-fit: cover;
-	cursor: pointer;
+	cursor: zoom-in;
 `;
 
 export const StyledGallery = styled(Box)`
