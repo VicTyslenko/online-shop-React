@@ -183,21 +183,29 @@ const theme = createTheme(themeWithBreakpoints, {
 					'&:hover': {
 						background: '#565254',
 					},
-					'&:focus': {
-						background: 'rgba(86, 82, 84, 0.4)',
-					},
+					// '&:focus': {
+					// 	background: 'rgba(86, 82, 84, 0.4)',
+					// },
 					// '&:focus': {
 					// 	borderBottom: '1px solid #fff',
 					// },
+					'&.Mui-selected': {
+						background: '#565254',
+						borderBottom: '1px solid #fff',
+					},
 					[themeWithBreakpoints.breakpoints.down('sm')]: {
 						'&:hover': {
 							background: 'rgba(86, 82, 84, 0.04)',
 						},
-						'&:focus': {
+						// '&:focus': {
+						// 	background: 'rgba(86, 82, 84, 0.04)',
+						// },
+						'&.Mui-selected': {
 							background: 'rgba(86, 82, 84, 0.04)',
+							borderBottom: '1px solid #000',
 						},
 					},
-				}
+				},
 			}
 		}
 	},

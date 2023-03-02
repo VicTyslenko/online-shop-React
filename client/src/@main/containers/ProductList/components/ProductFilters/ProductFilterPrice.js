@@ -1,17 +1,33 @@
-import React from 'react';
-import { Box, Slider, Typography, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
+import React, { useState, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import debounce from 'lodash.debounce';
+import { Box, Slider, Typography, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
+import { setFilters } from '../../../../store/slices/filterSlice';
 
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { StyledFilterPriceBox, MobileFilterPriceBox } from './ProductFilters.styles';
 
+const MIN_PRICE = 0;
+const MAX_PRICE = 2500;
+
 function ProductFilterPrice() {
-	const [value, setValue] = React.useState([0, 2500]);
-	const [open, setOpen] = React.useState(false);
+	const dispatch = useDispatch();
+
+	const [value, setValue] = useState([MIN_PRICE, MAX_PRICE]);
+	const [open, setOpen] = useState(false);
+
+	const onSetFilter = (newValue) => {
+		const [ minPrice, maxPrice ] = newValue;
+		dispatch(setFilters({ minPrice, maxPrice }))
+	}
+
+	const handleSetFilter = useCallback(debounce(onSetFilter, 1000), []);
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
+		handleSetFilter(newValue);
 	};
 
 	const handleClick = () => {
@@ -41,8 +57,8 @@ function ProductFilterPrice() {
 										onChange={handleChange}
 										valueLabelDisplay="auto"
 										valueLabelFormat={(label) => `$${label}`}
-										min={0}
-										max={2500}
+										min={MIN_PRICE}
+										max={MAX_PRICE}
 										// getAriaValueText={value}
 									/>
 								</StyledFilterPriceBox>
@@ -66,8 +82,8 @@ function ProductFilterPrice() {
 							onChange={handleChange}
 							valueLabelDisplay="auto"
 							valueLabelFormat={(label) => `$${label}`}
-							min={0}
-							max={2500}
+							min={MIN_PRICE}
+							max={MAX_PRICE}
 							// getAriaValueText={value}
 						/>
 					</StyledFilterPriceBox>

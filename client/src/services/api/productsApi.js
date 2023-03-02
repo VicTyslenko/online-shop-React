@@ -1,11 +1,8 @@
 import axiosInstance from "./axios";
 
-export function getProductsList(startPage, perPage) {
+export function getProductsList(params) {
 	return axiosInstance.get('/products/filter', {
-		params: {
-			startPage,
-			perPage
-		}
+		params,
 	});
 };
 
