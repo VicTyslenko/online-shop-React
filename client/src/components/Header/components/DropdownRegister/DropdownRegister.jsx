@@ -18,13 +18,12 @@ import { errorDataAuth } from '../../../../@main/store/selectors/authSelector';
 function DropdownRegister({ active, closeFormPages }) {
 	const dispatch = useDispatch();
 	const errorMessage = useSelector(errorDataAuth);
-
 	return (
 		<WrappAnimate id="example-panel" duration={500} height={active}>
 			<Container maxWidth="lg">
 				<BoxWrapp>
 					<Header>
-						<span>Enter your details</span>
+						<span className='details'>Enter your details</span>
 					</Header>
 					<Formik
 						initialValues={{

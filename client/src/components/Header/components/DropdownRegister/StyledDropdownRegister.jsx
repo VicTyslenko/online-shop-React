@@ -42,7 +42,7 @@ export const Header = styled.div`
 		background-color: #949c9e;
 	}
 
-	& span {
+	& .details {
 		display: inline-block;
 		padding: 0 20px;
 		color: #949c9e;

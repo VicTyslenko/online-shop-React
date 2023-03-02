@@ -19,12 +19,12 @@ import {
 	InputsWrappReg,
 	CssTextField,
 } from './StyledLoginForm';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { registerFetchData } from '../../store/actions/registrationActions';
-
+import { errorDataRegister } from '../../store/selectors/registrationSelector';
 const LoginForm = () => {
 	const dispatch = useDispatch();
-
+	const error = useSelector(errorDataRegister);
 	const [value, setValue] = useState('1');
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -178,6 +178,9 @@ const LoginForm = () => {
 												}
 											/>
 										</InputsWrappReg>
+										<div className="flex-error">
+											{error && <span className="message">{Object.values(error)}</span>}
+										</div>
 										<ButtonWrappReg>
 											<StyledButtonReg type="submit">Register</StyledButtonReg>
 										</ButtonWrappReg>

@@ -5,6 +5,7 @@ import { registerFetchData } from '../actions/registrationActions';
 const initialState = {
 	data: null,
 	status: 'loading',
+	error: null,
 };
 
 const registrationReducer = createSlice({
@@ -20,9 +21,9 @@ const registrationReducer = createSlice({
 			state.status = 'leaded';
 			state.data = payload;
 		});
-		builder.addCase(registerFetchData.rejected, (state) => {
+		builder.addCase(registerFetchData.rejected, (state, { payload }) => {
 			state.status = 'error';
-			state.data = null;
+			state.error = payload;
 		});
 	},
 });
