@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
 export const ContainerWrapper = styled.div`
 	background: black;
@@ -24,6 +24,32 @@ export const HeadWrapp = styled.div`
 		margin-left: 50px;
 	}
 `;
+
+export const CssTextField = styled(TextField)({
+	input: {
+		color: 'white',
+	},
+	width: '100%',
+	'& label.Mui-focused': {
+		color: 'white',
+	},
+
+	'& .MuiInput-underline:after': {
+		borderBottomColor: 'white',
+	},
+	'& .MuiInput-underline:before': { borderBottomColor: 'white' },
+	'& .MuiOutlinedInput-root': {
+		'& fieldset': {
+			borderColor: 'red',
+		},
+		'&:hover textfield': {
+			borderColor: 'white',
+		},
+		'& .MuiInput-root': {
+			color: 'white',
+		},
+	},
+});
 
 export const LoginWrapper = styled.div`
 	width: 467px;
@@ -110,7 +136,7 @@ export const InputsWrappReg = styled.div`
 	margin-top: 71px;
 	display: flex;
 	flex-direction: column;
-	gap: 44px;
+	gap: 34px;
 	& .label-text {
 		color: #e5e5e5;
 		font-weight: 700;

@@ -4,9 +4,8 @@ import { getProductsList as fetchProductList } from '../../../services/api/produ
 
 export const getProductList = createAsyncThunk(
 	'productList/getProductList',
-	async () => {
-		const { data } = await fetchProductList();
+	async ({startPage, perPage}) => {
+		const { data } = await fetchProductList(startPage, perPage);
 
-		return data;
-	}
-);
+	return data;
+});

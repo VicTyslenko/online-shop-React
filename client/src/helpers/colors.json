@@ -1,0 +1,79 @@
+[
+    {
+      "color":"white",
+      "hash":"#FFFFFF"
+  
+     },
+     {
+      "color":"black",
+      "hash":"#000000"
+  
+     },
+     {
+      "color":"grey",
+      "hash":"#808080"
+  
+     },
+    {
+      "color":"purple",
+      "hash":"#800080"
+  
+     },
+     {
+      "color":"red",
+      "hash":"#FF0000"
+  
+     },
+     {
+      "color":"blue",
+      "hash":"#0000FF"
+  
+     },
+    {
+      "color":"silver",
+      "hash":"#C0C0C0"
+  
+     },
+     {
+      "color":"maroon",
+      "hash":"#800000"
+  
+     },
+     {
+      "color":"yellow",
+      "hash":"#FFFF00"
+  
+     },
+    {
+      "color":"dark green",
+      "hash":"#006400"
+  
+     },
+     {
+      "color":"dark grey",
+      "hash":"#a9a9a9"
+  
+     },
+     {
+      "color":"dark orange",
+      "hash":"#ff8c00"
+  
+     },
+     {
+      "color":"deep sky blue",
+      "hash":"#00bfff"
+  
+     },
+     {
+      "color":"green",
+      "hash":"#008000"
+  
+     },
+     {
+      "color":"light pink",
+      "hash":"#ffb6c1"
+  
+     }
+  
+  
+  ]

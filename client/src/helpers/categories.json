@@ -1,0 +1,48 @@
+[
+    {
+        "Man": [
+    "jeans",
+    "coat",
+    "jacket",
+    "shoes",
+    "trousers",
+    "T-shirts",
+    "denim jackets",
+    "shorts",
+    "polo shirts"
+
+       
+           ]
+    },
+    {
+        "Woman": [
+    "jeans",
+    "skirt",
+    "mini dresses",
+    "cargos",
+    "jumpsuits",
+    "trainers",
+    "T-shirts",
+    "denim jackets",
+    "shorts"
+
+       
+           ]
+    },
+    {
+        "Accessory": [
+    "bags",
+    "earings",
+    "belts",
+    "clutches",
+    "purses",
+    "scarfs",
+    "watches",
+    "sunglasses"
+
+       
+           ]
+    }
+
+        
+]

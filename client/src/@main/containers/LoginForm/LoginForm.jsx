@@ -1,15 +1,8 @@
-// import React from 'react'
 import { useState } from 'react';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TextField from '@mui/material/TextField';
-import { validationSchema } from './validation';
-import { styled } from '@mui/material/styles';
+import { TabList, TabPanel, TabContext } from '@mui/lab';
+import { Tab, Checkbox } from '@mui/material';
+import { validationRegisterSchema } from './validation';
 import { Formik, Form } from 'formik';
-import Checkbox from '@mui/material/Checkbox';
-
 import { Container } from '@mui/system';
 import {
 	ContainerWrapper,
@@ -24,29 +17,14 @@ import {
 	ButtonWrappReg,
 	StyledButtonReg,
 	InputsWrappReg,
+	CssTextField,
 } from './StyledLoginForm';
+import { useSelector, useDispatch } from 'react-redux';
+import { isRegistrationSelector } from '../../store/selectors/registrationSelector';
+import { registerFetchData } from '../../store/actions/registrationActions';
 
 const LoginForm = () => {
-	const CssTextField = styled(TextField)({
-		'& label.Mui-focused': {
-			color: 'white',
-		},
-
-		'& .MuiInput-underline:after': {
-			borderBottomColor: 'white',
-		},
-		'& .MuiInput-underline:before': { borderBottomColor: 'white' },
-		'& .MuiOutlinedInput-root': {
-		
-			'&:hover textfield': {
-				borderColor: 'white',
-			},
-		
-			'& .MuiInput-root': {
-				color: 'white',
-			},
-		},
-	});
+	const dispatch = useDispatch();
 
 	const [value, setValue] = useState('1');
 	const handleChange = (event, newValue) => {
@@ -77,7 +55,7 @@ const LoginForm = () => {
 								email: '',
 								password: '',
 							}}
-							validationSchema={validationSchema}
+							// validationSchema={validationSchema}
 						>
 							<LoginWrapper>
 								<Description>Please enter your account details to log in</Description>
@@ -104,42 +82,109 @@ const LoginForm = () => {
 							</LoginWrapper>
 						</Formik>
 					</TabPanel>
+
 					<TabPanel value="2">
 						<Formik
 							initialValues={{
+								firstName: '',
+								lastName: '',
+								login: '',
 								email: '',
 								password: '',
+								confirmPassword: '',
 							}}
-							validationSchema={validationSchema}
+							validationSchema={validationRegisterSchema}
+							onSubmit={async (values) => {
+								const data = await dispatch(registerFetchData(values));
+							}}
 						>
-							<LoginWrapperReg>
-								<Form>
-									<InputsWrappReg>
-										<label>
-											First name
-											<p className="label-text">first name</p>
-											<CssTextField variant="standard" label="Your first name" fullWidth />
-										</label>
-										<label>
-											<p className="label-text">second name</p>
-											<CssTextField variant="standard" label="Your second name" fullWidth />
-										</label>
-										<label>
-											<p className="label-text">email address</p>
-											<CssTextField variant="standard" label="Email address" fullWidth />
-										</label>
-										<label>
-											<p className="label-text">password</p>
-											<CssTextField variant="standard" label="Password" fullWidth />
-										</label>
-
-										<CssTextField variant="standard" label="Confirm your password" fullWidth />
-									</InputsWrappReg>
-								</Form>
-								<ButtonWrappReg>
-									<StyledButtonReg>Register</StyledButtonReg>
-								</ButtonWrappReg>
-							</LoginWrapperReg>
+							{(props) => (
+								<LoginWrapperReg>
+									<form onSubmit={props.handleSubmit}>
+										<InputsWrappReg>
+											<label>
+												<p className="label-text">login</p>
+												<CssTextField
+													variant="standard"
+													label="Login"
+													name="login"
+													value={props.values.login}
+													onChange={props.handleChange}
+													error={props.touched.login && Boolean(props.errors.login)}
+													helperText={props.touched.login && props.errors.login}
+												/>
+											</label>
+											<label>
+												<p className="label-text">first name</p>
+												<CssTextField
+													variant="standard"
+													label="Your first name"
+													name="firstName"
+													value={props.values.firstName}
+													onChange={props.handleChange}
+													error={props.touched.firstName && Boolean(props.errors.firstName)}
+													helperText={props.touched.firstName && props.errors.firstName}
+												/>
+											</label>
+											<label>
+												<p className="label-text">Last name</p>
+												<CssTextField
+													variant="standard"
+													label="Your last name"
+													name="lastName"
+													value={props.values.lastName}
+													onChange={props.handleChange}
+													error={props.touched.lastName && Boolean(props.errors.lastName)}
+													helperText={props.touched.lastName && props.errors.lastName}
+												/>
+											</label>
+											<label>
+												<p className="label-text">email address</p>
+												<CssTextField
+													variant="standard"
+													label="Email address"
+													name="email"
+													value={props.values.email}
+													onChange={props.handleChange}
+													error={props.touched.email && Boolean(props.errors.email)}
+													helperText={props.touched.email && props.errors.email}
+												/>
+											</label>
+											<label>
+												<p className="label-text">password</p>
+												<CssTextField
+													variant="standard"
+													label="Password"
+													name="password"
+													type="password"
+													value={props.values.password}
+													onChange={props.handleChange}
+													error={props.touched.password && Boolean(props.errors.password)}
+													helperText={props.touched.password && props.errors.password}
+												/>
+											</label>
+											<CssTextField
+												variant="standard"
+												label="Confirm your password"
+												name="confirmPassword"
+												type="password"
+												value={props.values.confirmPassword}
+												onChange={props.handleChange}
+												error={
+													props.touched.confirmPassword &&
+													Boolean(props.errors.confirmPassword)
+												}
+												helperText={
+													props.touched.confirmPassword && props.errors.confirmPassword
+												}
+											/>
+										</InputsWrappReg>
+										<ButtonWrappReg>
+											<StyledButtonReg type="submit">Register</StyledButtonReg>
+										</ButtonWrappReg>
+									</form>
+								</LoginWrapperReg>
+							)}
 						</Formik>
 					</TabPanel>
 				</TabContext>

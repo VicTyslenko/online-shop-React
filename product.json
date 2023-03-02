@@ -16,14 +16,21 @@
 
         ],
         "quantity": 5,
-        "color": "dark turquoise",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0036O-69P",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+        "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -42,14 +49,21 @@
 
         ],
         "quantity": 34,
-        "color": "pale blue",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "pale blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9077N-05P",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+        "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -68,14 +82,21 @@
 
         ],
         "quantity": 2,
-        "color": "medium green",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "green",
+                "hash": "#6d9d5c"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0737O-85P",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -94,14 +115,21 @@
             "https://static.reserved.com/media/catalog/product/0/8/0882O-50X-010-1-534179_4.jpg"
         ],
         "quantity": 13,
-        "color": "light blue",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0882O-50X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -119,14 +147,21 @@
             "https://static.reserved.com/media/catalog/product/0/0/0027O-95X-004-1-500195_20.jpg"
         ],
         "quantity": 15,
-        "color": "steel blue",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0027O-95X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -145,14 +180,21 @@
             "https://static.reserved.com/media/catalog/product/1/1/1174O-MLC-005-1-553753_5.jpg"
         ],
         "quantity": 3,
-        "color": "red",
-        "sizes": "XL",
+        "colors":[
+            {
+                "color": "red",
+                "hash": "#bd0909"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "1174O-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -170,14 +212,21 @@
             "https://static.reserved.com/media/catalog/product/9/2/9228N-09M-003-1-560813_10.jpg"
         ],
         "quantity": 9,
-        "color": "light grey",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "green",
+                "hash": "#6d9d5c"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9228N-09M",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -195,14 +244,21 @@
             "https://static.reserved.com/media/catalog/product/0/1/0195O-80X-006-1-549155_13.jpg"
         ],
         "quantity": 25,
-        "color": "beige",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "beige",
+                "hash": "#FFC0CB"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0195O-80X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -220,14 +276,21 @@
             "https://static.reserved.com/media/catalog/product/9/2/9226N-99M-010-1-554699.jpg"
         ],
         "quantity": 56,
-        "color": "black",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9226N-99M",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -245,14 +308,21 @@
             "https://static.reserved.com/media/catalog/product/9/2/9215N-99X-004-1-568745_3.jpg"
         ],
         "quantity": 1,
-        "color": "black",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9215N-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -270,14 +340,21 @@
             "https://static.reserved.com/media/catalog/product/9/9/9904N-99X-002-1-509847_9.jpg"
         ],
         "quantity": "12",
-        "color": "black",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9904N-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -295,14 +372,21 @@
             "https://static.reserved.com/media/catalog/product/0/3/0334O-90X-005-1-543375_7.jpg"
         ],
         "quantity": 32,
-        "color": "dark grey",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#5B5B5B"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0334O-90X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -320,14 +404,21 @@
             "https://static.reserved.com/media/catalog/product/9/8/9892N-01X-001-1-557233_6.jpg"
         ],
         "quantity": 15,
-        "color": "creamy",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "beige",
+                "hash": "#daccad"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9892N-01X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -345,14 +436,21 @@
             "https://static.reserved.com/media/catalog/product/0/1/0184O-17X-010-1-550227_14.jpg"
         ],
         "quantity": 15,
-        "color": "mustard",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "mustard",
+                "hash": "#BF9000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0184O-17X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -370,14 +468,21 @@
             "https://static.reserved.com/media/catalog/product/4/6/4601L-MLC-001-1-568281_17.jpg"
         ],
         "quantity": 3,
-        "color": "wight",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "white",
+                "hash": "#fff"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "4601L-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -395,14 +500,21 @@
             "https://static.reserved.com/media/catalog/product/3/0/3008L-MLC-002-1-570795_17.jpg"
         ],
         "quantity": 10,
-        "color": "gray",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#5B5B5B"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "3008L-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -420,14 +532,29 @@
             "https://static.reserved.com/media/catalog/product/1/1/1166O-MLC-002-1-510815_10.jpg"
         ],
         "quantity": 31,
-        "color": "black-wight-yallow",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            },
+            {
+                "color": "white",
+                "hash": "#fff"
+            },
+            {
+                "color": "yellow",
+                "hash": "#FFFF00"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "1166O-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -445,14 +572,21 @@
             "https://static.reserved.com/media/catalog/product/9/8/9805N-MLC-002-1-559375_9.jpg"
         ],
         "quantity": 22,
-        "color": "gray",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#5B5B5B"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9805N-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -470,14 +604,21 @@
             "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-003-1-570797_13.jpg"
         ],
         "quantity": 41,
-        "color": "blue",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "3010L-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -495,14 +636,21 @@
             "https://static.reserved.com/media/catalog/product/3/0/3010L-MLC-003-1-570797_13.jpg"
         ],
         "quantity": 41,
-        "color": "blue",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "3010L-MLC",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -520,14 +668,21 @@
             "https://static.reserved.com/media/catalog/product/4/8/4850L-99X-002-1-563457_2.jpg"
         ],
         "quantity": 41,
-        "color": "black",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "4850L-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -545,14 +700,21 @@
             "https://static.reserved.com/media/catalog/product/5/5/5592L-00X-001-1-563171_4.jpg"
         ],
         "quantity": 13,
-        "color": "wight",
-        "sizes": "XL",
+        "colors": [
+            {
+                "color": "white",
+                "hash": "#fff"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "5592L-00X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -570,14 +732,21 @@
             "https://static.reserved.com/media/catalog/product/0/1/0137O-00X-003-1-550587_10.jpg"
         ],
         "quantity": 6,
-        "color": "wight",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "white",
+                "hash": "#fff"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0137O-00X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -595,14 +764,21 @@
             "https://static.reserved.com/media/catalog/product/0/2/0264O-32X-003-1-550609_11.jpg"
         ],
         "quantity": 6,
-        "color": "orange",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "orange",
+                "hash": "#FFA500"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0264O-32X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -620,14 +796,21 @@
             "https://static.reserved.com/media/catalog/product/0/0/0053O-08X-003-1-559329_8.jpg"
         ],
         "quantity": 56,
-        "color": "beige",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "beige",
+                "hash": "#daccad"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0053O-08X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -645,14 +828,21 @@
             "https://static.reserved.com/media/catalog/product/4/7/4729L-55J-003-1-563163_8.jpg"
         ],
         "quantity": 34,
-        "color": "blue",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "4729L-55J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -670,14 +860,21 @@
             "https://static.reserved.com/media/catalog/product/2/9/2996L-99X-003-1-570793_7.jpg"
         ],
         "quantity": 34,
-        "color": "blue",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2996L-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -695,14 +892,21 @@
             "https://static.reserved.com/media/catalog/product/8/8/8866N-59J-001-1-519293_4.jpg"
         ],
         "quantity": 26,
-        "color": "blue",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "8866N-59J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -720,14 +924,21 @@
             "https://static.reserved.com/media/catalog/product/0/8/0850O-59J-004-1-527587_2.jpg"
         ],
         "quantity": 26,
-        "color": "blue",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0850O-59J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -745,14 +956,21 @@
             "https://static.reserved.com/media/catalog/product/0/8/0851O-09J-004-1-519277_2.jpg"
         ],
         "quantity": 6,
-        "color": "light grey",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0850O-59J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
 
@@ -772,14 +990,21 @@
             "https://static.reserved.com/media/catalog/product/2/4/2479P-99X-003-1-556415_2.jpg"
         ],
         "quantity": 7,
-        "color": "black",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2479P-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -797,14 +1022,21 @@
             "https://static.reserved.com/media/catalog/product/4/1/4128P-55X-005-1-463441_4.jpg"
         ],
         "quantity": 12,
-        "color": "blue",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "4128P-55X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -822,14 +1054,21 @@
             "https://static.reserved.com/media/catalog/product/9/6/9661L-05J-004-1-416953.jpg"
         ],
         "quantity": 12,
-        "color": "blue",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9661L-05J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -847,14 +1086,21 @@
             "https://static.reserved.com/media/catalog/product/9/9/9948M-77X-002-1-439641_3.jpg"
         ],
         "quantity": 19,
-        "color": "green",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "green",
+                "hash": "#6d9d5c"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9948M-77X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -870,14 +1116,21 @@
             "https://static.reserved.com/media/catalog/product/1/4/1420T-77X-011-1-599781_2.jpg"
         ],
         "quantity": 19,
-        "color": "green",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "green",
+                "hash": "#6d9d5c"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "1420T-77X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -895,14 +1148,21 @@
             "https://static.reserved.com/media/catalog/product/3/5/3582L-05J-003-1-523033_6.jpg"
         ],
         "quantity": 13,
-        "color": "blue",
-        "sizes": "L",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "3582L-05J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -920,14 +1180,21 @@
             "https://static.reserved.com/media/catalog/product/1/5/1504C-90J-004-1-523843_1.jpg"
         ],
         "quantity": 10,
-        "color": "black",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "1504C-90J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -945,14 +1212,21 @@
             "https://static.reserved.com/media/catalog/product/1/5/1502C-09J-004-1-526605.jpg"
         ],
         "quantity": 10,
-        "color": "light grey",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "1502C-09J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -970,14 +1244,21 @@
             "https://static.reserved.com/media/catalog/product/5/8/5821B-55J-010-1-526677_2.jpg"
         ],
         "quantity": 8,
-        "color": "blue",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "5821B-55J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -995,14 +1276,21 @@
             "https://static.reserved.com/media/catalog/product/9/5/9592L-50J-010-1-492319_5.jpg"
         ],
         "quantity": 4,
-        "color": "blue",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "blue",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "9592L-50J",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1020,14 +1308,21 @@
             "https://static.reserved.com/media/catalog/product/2/0/2046P-79X-003-1-550053_9.jpg"
         ],
         "quantity": 8,
-        "color": "green",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "green",
+                "hash": "#6d9d5c"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2046P-79X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1045,14 +1340,21 @@
             "https://static.reserved.com/media/catalog/product/2/4/2484P-09M-001-1-558501_3.jpg"
         ],
         "quantity": 8,
-        "color": "light grey",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2484P-09M",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1070,14 +1372,21 @@
             "https://static.reserved.com/media/catalog/product/0/5/0591Q-99X-005-1-565715_2.jpg"
         ],
         "quantity": 9,
-        "color": "black",
-        "sizes": "M",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "0591Q-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1095,14 +1404,21 @@
             "https://static.reserved.com/media/catalog/product/2/3/2399P-43X-011-1-547651_8.jpg"
         ],
         "quantity": 11,
-        "color": "pink",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "pink",
+                "hash": "#FFC0CB"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2399P-43X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1120,14 +1436,21 @@
             "https://static.reserved.com/media/catalog/product/2/4/2423P-02X-003-1-544375_1.jpg"
         ],
         "quantity": 11,
-        "color": "nude",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "beige",
+                "hash": "#daccad"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2423P-02X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1145,14 +1468,21 @@
             "https://static.reserved.com/media/catalog/product/2/4/2485T-99X-003-1-614557.jpg"
         ],
         "quantity": 6,
-        "color": "black",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2485T-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1170,14 +1500,21 @@
             "https://static.reserved.com/media/catalog/product/2/2/2290T-99X-003-1-614551_2.jpg"
         ],
         "quantity": 8,
-        "color": "black",
-        "sizes": "S",
+        "colors": [
+            {
+                "color": "black",
+                "hash": "#000"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2290T-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1195,14 +1532,21 @@
             "https://static.reserved.com/media/catalog/product/1/8/1823T-99X-010-1-583033_4.jpg"
         ],
         "quantity": 2,
-        "color": "grey",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "1823T-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     },
 
     {
@@ -1220,14 +1564,21 @@
             "https://static.reserved.com/media/catalog/product/2/1/2102T-99X-002-1-590567.jpg"
         ],
         "quantity": 2,
-        "color": "grey",
-        "sizes": "XS",
+        "colors": [
+            {
+                "color": "grey",
+                "hash": "#333366"
+            }
+        ],
+        "sizes": ["XS", "S", "M", "L"],
         "productUrl": "2102T-99X",
         "brand": "Reserved",
         "manufacturer": "Europe",
         "manufacturerCountry": "Paris",
         "seller": "Reserved",
-        "date": "2023-02-12T13:59:49.407Z"
+        "date": "2023-02-12T13:59:49.407Z",
+                "productDetails": "Mouton coat made of 100% sheepskin leather. Straight cut, collar with adjustable hood, front zip fastening, long sleeves and an adjustable hem. The back length for size M is 61,9 cm.",
+        "productDelivery": "FREE STANDARD SHIPPING ON ORDERS OVER £100"
     }
     
 ]

@@ -4,6 +4,7 @@ import { getProductList } from '../actions/productListActions';
 
 const initialState = {
 	data: [],
+	count: 0,
 };
 
 export const productListSlice = createSlice({
@@ -12,9 +13,12 @@ export const productListSlice = createSlice({
 	reducers: {},
 	extraReducers: (builder) => {
 		builder.addCase(getProductList.fulfilled, (state, action) => {
-			state.data = [...action.payload]
+			const { products, productsQuantity } = action.payload;
+
+			state.data = products;
+			state.count = productsQuantity;
 		})
 	}
-  })
+})
 
 export default productListSlice.reducer;

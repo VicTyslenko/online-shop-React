@@ -6,6 +6,7 @@ export const getProduct = createAsyncThunk(
 	'product/getProductById',
 	async (itemNo) => {
 		const { data } = await fetchProductById(itemNo);
+
 		return data;
 	}
 );

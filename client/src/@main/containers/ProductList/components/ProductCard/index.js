@@ -39,7 +39,7 @@ ProductCard.propTypes = {
 	price: PropTypes.number.isRequired,
 	alt: PropTypes.string.isRequired,
 	url: PropTypes.string.isRequired,
-	id: PropTypes.number.isRequired,
+	id: PropTypes.string.isRequired,
 };
 
 export default ProductCard;

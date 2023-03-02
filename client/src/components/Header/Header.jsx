@@ -1,5 +1,6 @@
-import { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
@@ -10,6 +11,7 @@ import ShoppingBag from './components/ShoppingBag';
 import ManMenu from './components/ManMenu';
 import WomanMenu from './components/WomenMenu';
 import Accessory from './components/Accessory';
+import DropdownRegister from './components/DropdownRegister';
 
 import {
 	LinkItem,
@@ -22,9 +24,14 @@ import {
 	ItemButton,
 } from './StyledHeader';
 
-import { useState } from 'react';
+import { isAuthSelector } from '../../@main/store/selectors/authSelector';
+import { isRegistrationSelector } from '../../@main/store/selectors/registrationSelector';
 
 function Header() {
+	const isAuth = useSelector(isAuthSelector);
+	const isRegistration = useSelector(isRegistrationSelector);
+	const navigate = useNavigate();
+
 	const rootEl = useRef(null);
 
 	const [isShoppingBag, setIsShoppingBag] = useState(false);
@@ -34,6 +41,7 @@ function Header() {
 	const [mensCategory, setMenCategory] = useState(false);
 	const [womenCategory, setWomenCategory] = useState(false);
 	const [accessoryCategory, setAccessoryCategory] = useState(false);
+	const [registrationBox, setRegistrationBox] = useState(false);
 
 	useEffect(() => {
 		const onClick = (e) =>
@@ -41,17 +49,51 @@ function Header() {
 			setMenCategory(false) ||
 			setWomenCategory(false) ||
 			setAccessoryCategory(false) ||
-			setSearchBox(false);
+			setSearchBox(false) ||
+			setRegistrationBox(false);
 		document.addEventListener('click', onClick);
 		return () => document.removeEventListener('click', onClick);
 	}, []);
+
+	useEffect(() => {
+		if (isAuth) {
+			setRegistrationBox(!registrationBox);
+		}
+
+		if (isRegistration) {
+			navigate('/');
+		}
+
+		window.scrollTo(0, 0);
+	}, [isAuth, isRegistration]);
+
+	const buttonAuthorization =
+		isAuth || isRegistration ? (
+			<ButtonGroup>
+				<PermIdentityOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
+				<LinkItem to="/account/profile">My account</LinkItem>
+			</ButtonGroup>
+		) : (
+			<ButtonGroup
+				data-menu="menuRegistration"
+				aria-expanded={registrationBox !== 0}
+				aria-controls="example-panel"
+				onClick={(e) => {
+					setRegistrationBox(!registrationBox);
+					setDataMenu(e.target.dataset.menu);
+				}}
+			>
+				<PermIdentityOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
+				<ItemButton>Sign Up / Log In</ItemButton>
+			</ButtonGroup>
+		);
 
 	return (
 		<ContainerWrapper ref={rootEl}>
 			<Container maxWidth="lg">
 				<ContentWrapper>
 					<div>
-						<Link to="/store/man">
+						<Link to="/">
 							<ButtonItem
 								data-menu="menuMen"
 								aria-expanded={mensCategory !== 0}
@@ -64,7 +106,7 @@ function Header() {
 								MAN
 							</ButtonItem>
 						</Link>
-						<Link to="/store/woman">
+						<Link to="/">
 							<ButtonItem
 								data-menu="menuWomen"
 								aria-expanded={womenCategory !== 0}
@@ -74,10 +116,10 @@ function Header() {
 									setDataMenu(e.target.dataset.menu);
 								}}
 							>
-								WOMEN
+								WOMAN
 							</ButtonItem>
 						</Link>
-						<Link to="/store/accessories">
+						<Link to="/">
 							<ButtonItem
 								data-menu="menuAccessory"
 								aria-expanded={accessoryCategory !== 0}
@@ -104,25 +146,27 @@ function Header() {
 								setDataMenu(e.target.dataset.menu);
 							}}
 						>
-							<SearchOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
+							<SearchOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
 							<ItemButton>Search</ItemButton>
 						</ButtonGroup>
-						<ButtonGroup>
-							<PermIdentityOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
-							<LinkItem to="/account/profile">My account</LinkItem>
-						</ButtonGroup>
+
+						{buttonAuthorization}
+
 						<ButtonGroup onClick={() => setIsShoppingBag(!isShoppingBag)}>
-							<ShoppingBagOutlinedIcon sx={{ mr: 0.8 }} fontSize="medium" />
+							<ShoppingBagOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
 							<ItemButton>Shopping Bag</ItemButton>
 						</ButtonGroup>
 					</BoxTechnical>
+					<DropdownRegister
+						active={registrationBox && dataMenu === 'menuRegistration' ? 'auto' : 0}
+						closeFormPages={() => setRegistrationBox(!registrationBox)}
+					/>
 				</ContentWrapper>
 
 				<ManMenu active={mensCategory && dataMenu === 'menuMen' ? 'auto' : 0} />
 				<WomanMenu active={womenCategory && dataMenu === 'menuWomen' ? 'auto' : 0} />
 				<Accessory active={accessoryCategory && dataMenu === 'menuAccessory' ? 'auto' : 0} />
 				<Search active={searchBox && dataMenu === 'menuSearch' ? 240 : 0} />
-
 				<ShoppingBag isShoppingBag={isShoppingBag} closeShoppingBag={() => setIsShoppingBag(!isShoppingBag)} />
 			</Container>
 		</ContainerWrapper>

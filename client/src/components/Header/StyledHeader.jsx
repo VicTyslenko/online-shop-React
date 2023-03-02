@@ -9,6 +9,7 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -54,7 +55,7 @@ export const ButtonGroup = styled.div`
 	}
 
 	&:not(:last-child) {
-		margin-right: 25px;
+		margin-right: 14px;
 	}
 `;
 
