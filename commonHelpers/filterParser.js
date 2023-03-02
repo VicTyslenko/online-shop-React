@@ -10,8 +10,15 @@ module.exports = function filterParser(filtersQueryString) {
     };
   }
 
+  if (filtersQueryString.colors) {
+    mongooseQuery["colors.color"] = {
+      $in: filtersQueryString.colors
+    }
+  }
+
   return Object.keys(filtersQueryString).reduce(
     (mongooseQuery, filterParam) => {
+      if (filterParam === "colors") return mongooseQuery;
       if (filtersQueryString[filterParam].includes(",")) {
         mongooseQuery[filterParam] = {
           $in: filtersQueryString[filterParam]

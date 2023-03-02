@@ -7,10 +7,10 @@ const ColorSchema = new Schema(
       type: String,
       required: true
     },
-    cssValue: {
+    color: {
       type: String
     },
-    cssStyles: {
+    hash: {
       type: String
     },
     date: {

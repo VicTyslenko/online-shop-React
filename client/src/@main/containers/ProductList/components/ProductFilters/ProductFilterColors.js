@@ -1,13 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Box, Typography, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { getColors } from '../../../../store/actions/colorsActions';
+import { setFilters } from '../../../../store/slices/filterSlice';
+import { selectFilterColors } from '../../../../store/selectors/filterSelector';
+import { selectColors } from '../../../../store/selectors/colorsSelector';
 
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { ListItemIconColor, ColorIcon } from './ProductFilters.styles';
 
 function ProductFilterColors() {
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = useState(false);
+
+	const colorsList = useSelector(selectColors);
+	const filterColors = useSelector(selectFilterColors);
+
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getColors())
+	}, [dispatch]);
+
+	const handleSetFilter = useCallback((color) => {
+		if(filterColors.includes(color)) {
+			dispatch(setFilters({
+				colors: filterColors.filter((el) => el !== color)
+			}))
+		} else {
+			dispatch(setFilters({
+				colors: [...filterColors, color]
+			}))
+		}
+	}, [dispatch, filterColors]);
 
 	const handleClick = () => {
 		setOpen(!open);
@@ -18,58 +44,46 @@ function ProductFilterColors() {
 	return (
 		<>
 			{isMobile ? (
-				<Box>
+				<>
 					<ListItemButton onClick={handleClick}>
 						<ListItemText primary="Colors" sx={{ textTransform: 'uppercase'}} />
 						{open ? <ExpandLess /> : <ExpandMore />}
 					</ListItemButton>
 					<Collapse in={open} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
-							<ListItemButton>
-								<ListItemIconColor>
-									<ColorIcon />
+						{colorsList && colorsList.map(({ _id: id, color, hash: backgroundColor}) => (
+							<ListItemButton
+								key={id}
+								onClick={() => handleSetFilter(color)}
+								selected={filterColors.includes(color)}
+							>
+								<ListItemIconColor >
+									<ColorIcon sx={{ backgroundColor: {backgroundColor} }} />
 								</ListItemIconColor>
-								<ListItemText primary="black" />
+								<ListItemText primary={color} />
 							</ListItemButton>
-							<ListItemButton>
-								<ListItemIconColor>
-									<ColorIcon />
-								</ListItemIconColor>
-								<ListItemText primary="brown" />
-							</ListItemButton>
-							<ListItemButton>
-								<ListItemIconColor>
-									<ColorIcon />
-								</ListItemIconColor>
-								<ListItemText primary="red" />
-							</ListItemButton>
+						))}
 						</List>
 					</Collapse>
-				</Box>
+				</>
 			) : (
-				<Box>
+				<>
 					<Typography variant="h4">Colors</Typography>
 					<List>
-						<ListItemButton>
-							<ListItemIconColor>
-								<ColorIcon />
-							</ListItemIconColor>
-							<ListItemText secondary="black" />
-						</ListItemButton>
-						<ListItemButton>
-							<ListItemIconColor>
-								<ColorIcon />
-							</ListItemIconColor>
-							<ListItemText secondary="brown" />
-						</ListItemButton>
-						<ListItemButton>
-							<ListItemIconColor>
-								<ColorIcon />
-							</ListItemIconColor>
-							<ListItemText secondary="red" />
-						</ListItemButton>
+						{colorsList && colorsList.map(({ _id: id, color, hash: backgroundColor}) => (
+							<ListItemButton
+								key={id}
+								onClick={() => handleSetFilter(color)}
+								selected={filterColors.includes(color)}
+							>
+								<ListItemIconColor >
+									<ColorIcon sx={{ backgroundColor: {backgroundColor} }} />
+								</ListItemIconColor>
+								<ListItemText secondary={color} />
+							</ListItemButton>
+						))}
 					</List>
-				</Box>
+				</>
 			)}
 		</>
 	);

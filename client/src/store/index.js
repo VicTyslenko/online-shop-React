@@ -8,12 +8,13 @@ import auth from '../@main/store/slices/authSlice';
 import cart from '../@main/store/slices/cartSlice';
 import registration from '../@main/store/slices/registrationSlice';
 import wishlist from '../@main/store/slices/wishlistSlice';
-
-import filtersReducer from '../reducers/filtersReducer';
+import filters from '../@main/store/slices/filterSlice';
+import colors from '../@main/store/slices/colorsSlice';
 
 const persistConfig = {
 	key: 'root',
 	storage,
+	blacklist: ["filters"]
 };
 
 const rootReduser = combineReducers({
@@ -23,8 +24,8 @@ const rootReduser = combineReducers({
 	registration,
 	cart,
 	wishlist,
-
-	filters: filtersReducer,
+	filters,
+	colors,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);
