@@ -9,7 +9,6 @@ export const registerFetchData = createAsyncThunk('register/actionFetchData', as
 		return data;
 	} catch (err) {
 		
-		console.log(rejectWithValue(err.response.data));
 		return rejectWithValue(err.response.data);
 	}
 });
