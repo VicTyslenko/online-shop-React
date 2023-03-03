@@ -1,6 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import ProductFilterColors from './ProductFilterColors';
@@ -20,14 +20,13 @@ function ProductFilters() {
 				<MobileFilter />
 			) : (
 				<StyledBox>
-					<Typography variant="h4">Woman</Typography>
-					<Box sx={{ color: 'white' }} mb={8}>
+					<Box sx={{ color: 'white' }} mb={4}>
 						<ProductFilterCategories />
 					</Box>
-					<Box mb={8}>
+					<Box mb={4}>
 						<ProductFilterColors />
 					</Box>
-					<Box mb={8}>
+					<Box mb={4}>
 						<ProductFilterPrice />
 					</Box>
 				</StyledBox>

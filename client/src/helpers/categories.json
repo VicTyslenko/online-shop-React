@@ -1,4 +1,61 @@
 [
+	{
+		"name": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "jeans",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "coat",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "shirts",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "shirts",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "shirts",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "shirts",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "sunglasses",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "belt",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "bag",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
     {
         "Man": [
     "jeans",
@@ -11,7 +68,7 @@
     "shorts",
     "polo shirts"
 
-       
+
            ]
     },
     {
@@ -26,7 +83,7 @@
     "denim jackets",
     "shorts"
 
-       
+
            ]
     },
     {
@@ -40,9 +97,9 @@
     "watches",
     "sunglasses"
 
-       
+
            ]
     }
 
-        
+
 ]
