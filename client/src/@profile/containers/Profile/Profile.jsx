@@ -6,7 +6,7 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { FlexWrapp, StyledButton } from './StyledUserProfile';
+import { FlexWrapp, StyledLink } from './StyledUserProfile';
 import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
 import jwt_decode from "jwt-decode";
 import { useSelector, useDispatch } from 'react-redux';
@@ -34,7 +34,7 @@ function Profile() {
 			</Typography>
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
-					<StyledButton to="my-profile">
+					<StyledLink to="myAccount">
 						<FlexWrapp>
 							<PersonOutlineIcon fontSize="large" />
 							<div className="content">
@@ -42,10 +42,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="purchase-history">
+					<StyledLink to="myAccount">
 						<FlexWrapp>
 							<ShoppingBasketOutlinedIcon fontSize="large" />
 							<div className="content">
@@ -53,10 +53,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="my-wishlist">
+					<StyledLink to="myAccount">
 						<FlexWrapp>
 							<FavoriteBorderIcon fontSize="large" />
 							<div className="content">
@@ -65,10 +65,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="address-book">
+					<StyledLink to="myAccount">
 						<FlexWrapp>
 							<ArticleOutlinedIcon fontSize="large" />
 							<div className="content">
@@ -77,10 +77,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="/editor/dashboard">
+					<StyledLink to="/editor/dashboard">
 						<FlexWrapp>
 							{/* <ArticleOutlinedIcon fontSize="large" />
 							 */}
@@ -91,10 +91,10 @@ function Profile() {
 								<p className="description">Edit</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="/" onClick={() => clearData()}>
+					<StyledLink to="/" onClick={() => clearData()}>
 						<FlexWrapp>
 							{/* <ArticleOutlinedIcon fontSize="large" />
 							 */}
@@ -105,7 +105,7 @@ function Profile() {
 								<p className="description">Sign out</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 			</Grid>
 		</Container>
