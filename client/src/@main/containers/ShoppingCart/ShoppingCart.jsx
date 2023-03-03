@@ -16,12 +16,11 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
-function ShoppingCart() {
+function ShoppingCart({ shoppingData }) {
 	const dispatch = useDispatch();
 	const data = useSelector(cartSelector);
 	console.log(data);
-	// data === shoppingData.length === 0;
-	
+	const isNotData = shoppingData.length === 0;
 	const [quantity, setQuantity] = useState(1);
 
 	const Decrement = () => {
@@ -38,7 +37,7 @@ function ShoppingCart() {
 	};
 	return (
 		<ContainerWrapper>
-			{!data && (
+			{!isNotData && (
 				<Container
 					maxWidth="lg"
 					sx={{
@@ -49,7 +48,7 @@ function ShoppingCart() {
 					<StyledButton>Keep shopping</StyledButton>
 					<ShoppingCartWrapp>
 						<LeftSideWrapp>
-							{data.map((product) => (
+							{shoppingData.map((product) => (
 								<ContentWrapp>
 									<Content>
 										<div className="image-wrapp">
@@ -110,6 +109,6 @@ function ShoppingCart() {
 		</ContainerWrapper>
 	);
 }
-// ShoppingCart.defaultProps = { shoppingData: [] };
+ShoppingCart.defaultProps = { shoppingData: [] };
 
 export default ShoppingCart;
