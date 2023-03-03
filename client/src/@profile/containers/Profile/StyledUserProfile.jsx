@@ -7,7 +7,7 @@ export const FlexWrapp = styled.div`
 	gap: 48px;
 padding:55px 0 50px 40px ;
 `;
-export const StyledButton = styled(Link)`
+export const StyledLink = styled(Link)`
 	&&& {
 		display: block;
 		width: 100%;
