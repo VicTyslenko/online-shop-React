@@ -4,8 +4,16 @@ import { getProductsList as fetchProductList } from '../../../services/api/produ
 
 export const getProductList = createAsyncThunk(
 	'productList/getProductList',
-	async ({startPage, perPage}) => {
-		const { data } = await fetchProductList(startPage, perPage);
+	async ({startPage, perPage, minPrice, maxPrice, colors}) => {
+
+		const { data } = await fetchProductList({
+			startPage,
+			perPage,
+			minPrice,
+			maxPrice,
+			colors
+			// ...(maxPrice ? {maxPrice} : {}) - check if value exist
+		});
 
 	return data;
 });

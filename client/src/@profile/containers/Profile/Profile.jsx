@@ -5,15 +5,27 @@ import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlin
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledButton } from './StyledUserProfile';
 import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
 import jwt_decode from "jwt-decode";
 import { useSelector, useDispatch } from 'react-redux';
+
+
+import { clearDataAuth } from '../../../@main/store/slices/authSlice';
+import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
+
 function Profile() {
 	const dispatch = useDispatch();
+
+	const clearData = () => {
+		dispatch(clearDataAuth());
+		dispatch(clearDataRegister());
+	};
 	const userProfile = useSelector(profileUserSelector);
 	const token = userProfile.token;
 	const decodedToken = jwt_decode(token);
+
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
@@ -76,6 +88,20 @@ function Profile() {
 								<p className="title">Edit</p>
 
 								<p className="description">Edit</p>
+							</div>
+						</FlexWrapp>
+					</StyledButton>
+				</Grid>
+				<Grid item xs={6}>
+					<StyledButton to="/" onClick={() => clearData()}>
+						<FlexWrapp>
+							{/* <ArticleOutlinedIcon fontSize="large" />
+							 */}
+							<ExitToAppIcon fontSize="large" />
+							<div className="content">
+								<p className="title">Sign out</p>
+
+								<p className="description">Sign out</p>
 							</div>
 						</FlexWrapp>
 					</StyledButton>

@@ -5,12 +5,17 @@ import { registerFetchData } from '../actions/registrationActions';
 const initialState = {
 	data: null,
 	status: 'loading',
+	error: null,
 };
 
 const registrationReducer = createSlice({
 	name: 'registration',
 	initialState,
-	reducers: {},
+	reducers: {
+		clearDataRegister(state) {
+			state.data = null;
+		},
+	},
 	extraReducers: (builder) => {
 		builder.addCase(registerFetchData.pending, (state) => {
 			state.status = 'loading';
@@ -20,11 +25,12 @@ const registrationReducer = createSlice({
 			state.status = 'leaded';
 			state.data = payload;
 		});
-		builder.addCase(registerFetchData.rejected, (state) => {
+		builder.addCase(registerFetchData.rejected, (state, { payload }) => {
 			state.status = 'error';
-			state.data = null;
+			state.error = payload;
 		});
 	},
 });
 
+export const { clearDataRegister } = registrationReducer.actions;
 export default registrationReducer.reducer;
