@@ -5,6 +5,7 @@ import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlin
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledButton } from './StyledUserProfile';
 import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
 import jwt_decode from "jwt-decode";
@@ -76,6 +77,20 @@ function Profile() {
 								<p className="title">Edit</p>
 
 								<p className="description">Edit</p>
+							</div>
+						</FlexWrapp>
+					</StyledButton>
+				</Grid>
+				<Grid item xs={6}>
+					<StyledButton to="/" onClick={() => clearData()}>
+						<FlexWrapp>
+							{/* <ArticleOutlinedIcon fontSize="large" />
+							 */}
+							<ExitToAppIcon fontSize="large" />
+							<div className="content">
+								<p className="title">Sign out</p>
+
+								<p className="description">Sign out</p>
 							</div>
 						</FlexWrapp>
 					</StyledButton>
