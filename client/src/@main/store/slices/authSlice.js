@@ -11,7 +11,11 @@ const initialState = {
 const authReducer = createSlice({
 	name: 'auth',
 	initialState,
-	reducers: {},
+	reducers: {
+		clearDataAuth(state) {
+			state.data = null;
+		},
+	},
 	extraReducers: (builder) => {
 		builder.addCase(actionFetchAuth.pending, (state) => {
 			state.status = 'loading';
@@ -28,4 +32,5 @@ const authReducer = createSlice({
 	},
 });
 
+export const { clearDataAuth } = authReducer.actions;
 export default authReducer.reducer;

@@ -11,7 +11,11 @@ const initialState = {
 const registrationReducer = createSlice({
 	name: 'registration',
 	initialState,
-	reducers: {},
+	reducers: {
+		clearDataRegister(state) {
+			state.data = null;
+		},
+	},
 	extraReducers: (builder) => {
 		builder.addCase(registerFetchData.pending, (state) => {
 			state.status = 'loading';
@@ -28,4 +32,5 @@ const registrationReducer = createSlice({
 	},
 });
 
+export const { clearDataRegister } = registrationReducer.actions;
 export default registrationReducer.reducer;
