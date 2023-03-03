@@ -4,6 +4,7 @@ const initialState = {
 	minPrice: null,
 	maxPrice: null,
 	colors: [],
+	categories: null,
 }
 
 export const filterSlice = createSlice({

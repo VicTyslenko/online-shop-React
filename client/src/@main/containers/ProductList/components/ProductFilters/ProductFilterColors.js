@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Box, Typography, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
+import { Typography, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { getColors } from '../../../../store/actions/colorsActions';
 import { setFilters } from '../../../../store/slices/filterSlice';
@@ -9,10 +9,11 @@ import { selectColors } from '../../../../store/selectors/colorsSelector';
 
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { ListItemIconColor, ColorIcon } from './ProductFilters.styles';
+import { ListItemIconColor, ColorIcon, FlexBox } from './ProductFilters.styles';
 
 function ProductFilterColors() {
 	const [open, setOpen] = useState(false);
+	const [openMobile, setOpenMobile] = useState(false);
 
 	const colorsList = useSelector(selectColors);
 	const filterColors = useSelector(selectFilterColors);
@@ -39,17 +40,21 @@ function ProductFilterColors() {
 		setOpen(!open);
 	};
 
+	const handleClickMobile = () => {
+		setOpenMobile(!openMobile);
+	};
+
 	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
 	return (
 		<>
 			{isMobile ? (
 				<>
-					<ListItemButton onClick={handleClick}>
+					<ListItemButton onClick={handleClickMobile}>
 						<ListItemText primary="Colors" sx={{ textTransform: 'uppercase'}} />
-						{open ? <ExpandLess /> : <ExpandMore />}
+						{openMobile ? <ExpandLess /> : <ExpandMore />}
 					</ListItemButton>
-					<Collapse in={open} timeout="auto" unmountOnExit>
+					<Collapse in={openMobile} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
 						{colorsList && colorsList.map(({ _id: id, color, hash: backgroundColor}) => (
 							<ListItemButton
@@ -68,21 +73,28 @@ function ProductFilterColors() {
 				</>
 			) : (
 				<>
-					<Typography variant="h4">Colors</Typography>
-					<List>
-						{colorsList && colorsList.map(({ _id: id, color, hash: backgroundColor}) => (
-							<ListItemButton
-								key={id}
-								onClick={() => handleSetFilter(color)}
-								selected={filterColors.includes(color)}
-							>
-								<ListItemIconColor >
-									<ColorIcon sx={{ backgroundColor: {backgroundColor} }} />
-								</ListItemIconColor>
-								<ListItemText secondary={color} />
-							</ListItemButton>
-						))}
-					</List>
+					<FlexBox onClick={handleClick}>
+						<Typography variant="h4">
+							Colors
+						</Typography>
+						{open ? <ExpandLess /> : <ExpandMore />}
+					</FlexBox>
+					<Collapse in={open} timeout="auto" unmountOnExit>
+						<List>
+							{colorsList && colorsList.map(({ _id: id, color, hash: backgroundColor}) => (
+								<ListItemButton
+									key={id}
+									onClick={() => handleSetFilter(color)}
+									selected={filterColors.includes(color)}
+								>
+									<ListItemIconColor >
+										<ColorIcon sx={{ backgroundColor: {backgroundColor} }} />
+									</ListItemIconColor>
+									<ListItemText secondary={color} />
+								</ListItemButton>
+							))}
+						</List>
+					</Collapse>
 				</>
 			)}
 		</>

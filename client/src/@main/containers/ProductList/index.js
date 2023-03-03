@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Box, Pagination, Stack } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 // import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { getProductList } from '../../store/actions/productListActions';
 import { selectProductList, selectCount } from '../../store/selectors/productListSelectors';
-import { selectMinPrice, selectMaxPrice, selectFilterColors } from '../../store/selectors/filterSelector';
+import { selectMinPrice, selectMaxPrice, selectFilterColors, selectFilterCategories } from '../../store/selectors/filterSelector';
 
 import EmptyProductPage from './components/EmptyProductPage/EmptyProductPage';
 import ProductCard from './components/ProductCard';
@@ -17,12 +18,14 @@ const perPage = 6;
 
 function ProductList() {
 	const [startPage, setPage] = useState(1);
+	const { category } = useParams();
 
 	const products = useSelector(selectProductList);
 	const count = useSelector(selectCount);
 	const minPrice = useSelector(selectMinPrice);
 	const maxPrice = useSelector(selectMaxPrice);
 	const colors = useSelector(selectFilterColors);
+	const categories = useSelector(selectFilterCategories);
 
 	const dispatch = useDispatch();
 
@@ -35,15 +38,23 @@ function ProductList() {
 	// console.log('asdf', test);
 
 	useEffect(() => {
-		dispatch(getProductList({startPage, perPage, minPrice, maxPrice, colors}));
-	}, [startPage, dispatch, minPrice, maxPrice, colors]);
+		dispatch(getProductList({
+			startPage,
+			perPage,
+			minPrice,
+			maxPrice,
+			colors,
+			categories,
+			male: category,
+		}));
+	}, [startPage, dispatch, minPrice, maxPrice, colors, categories, category]);
 
 	return (
 		<>
-			{!isNotData && (
-				<StyledContainer maxWidth="lg">
-					{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
-					<ProductFilters />
+			<StyledContainer maxWidth="lg">
+				{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
+				<ProductFilters />
+				{!isNotData && (
 					<Box sx={{ pb: '30px' }}>
 						<StyledTitle variant="title" component="div">
 							Jackets
@@ -63,19 +74,11 @@ function ProductList() {
 							<Pagination count={Math.ceil(count/perPage)} page={startPage} onChange={handleChange} />
 						</Stack>
 					</Box>
-				</StyledContainer>
-			)}
-			{isNotData && (
-				<StyledContainer
-					maxWidth="lg"
-					sx={{
-						display: 'flex',
-						justifyContent: 'center',
-					}}
-				>
+				)}
+				{isNotData && (
 					<EmptyProductPage />
-				</StyledContainer>
-			)}
+				)}
+			</StyledContainer>
 		</>
 	);
 }
