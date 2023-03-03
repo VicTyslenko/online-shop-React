@@ -8,13 +8,10 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledLink } from './StyledUserProfile';
 import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
-import jwt_decode from "jwt-decode";
+import jwt_decode from 'jwt-decode';
 import { useSelector, useDispatch } from 'react-redux';
-
-
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
-
 function Profile() {
 	const dispatch = useDispatch();
 
@@ -45,7 +42,7 @@ function Profile() {
 					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledLink to="myAccount">
+					<StyledLink to="tab-purchase">
 						<FlexWrapp>
 							<ShoppingBasketOutlinedIcon fontSize="large" />
 							<div className="content">
@@ -56,7 +53,7 @@ function Profile() {
 					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledLink to="myAccount">
+					<StyledLink to="tab-wish">
 						<FlexWrapp>
 							<FavoriteBorderIcon fontSize="large" />
 							<div className="content">
@@ -68,7 +65,7 @@ function Profile() {
 					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledLink to="myAccount">
+					<StyledLink to="tab-address">
 						<FlexWrapp>
 							<ArticleOutlinedIcon fontSize="large" />
 							<div className="content">
