@@ -95,3 +95,11 @@ export const StyledFilterPriceBox = styled(Box)`
 export const MobileFilterPriceBox = styled(Box)`
 	padding: 8px 32px;
 `;
+
+export const FlexBox = styled(Box)`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	cursor: pointer;
+`;
