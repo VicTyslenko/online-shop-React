@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '@mui/system';
 import { useState } from 'react';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
+import { cartSelector } from '../../store/selectors/cartSelector';
 import {
 	ShoppingCartWrapp,
 	ContainerWrapper,
@@ -12,10 +13,15 @@ import {
 	RightSideWrapp,
 	ContentWrapp,
 } from './StyledShoppingCart';
+import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
-function ShoppingCart({ shoppingData }) {
-	const isNotData = shoppingData.length === 0;
+function ShoppingCart() {
+	const dispatch = useDispatch();
+	const data = useSelector(cartSelector);
+	console.log(data);
+	// data === shoppingData.length === 0;
+	
 	const [quantity, setQuantity] = useState(1);
 
 	const Decrement = () => {
@@ -32,7 +38,7 @@ function ShoppingCart({ shoppingData }) {
 	};
 	return (
 		<ContainerWrapper>
-			{!isNotData && (
+			{!data && (
 				<Container
 					maxWidth="lg"
 					sx={{
@@ -43,7 +49,7 @@ function ShoppingCart({ shoppingData }) {
 					<StyledButton>Keep shopping</StyledButton>
 					<ShoppingCartWrapp>
 						<LeftSideWrapp>
-							{shoppingData.map((product) => (
+							{data.map((product) => (
 								<ContentWrapp>
 									<Content>
 										<div className="image-wrapp">
@@ -104,6 +110,6 @@ function ShoppingCart({ shoppingData }) {
 		</ContainerWrapper>
 	);
 }
-ShoppingCart.defaultProps = { shoppingData: [] };
+// ShoppingCart.defaultProps = { shoppingData: [] };
 
 export default ShoppingCart;
