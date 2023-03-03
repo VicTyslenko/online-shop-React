@@ -6,7 +6,7 @@ const SVG = () => {
 			<svg
 				width="78"
 				height="50"
-				enable-background="new 0 0 780 500"
+				// enable-background="new 0 0 780 500"
 				version="1.1"
 				viewBox="0 0 780 500"
 				xmlns="http://www.w3.org/2000/svg"
