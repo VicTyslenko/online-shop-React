@@ -7,7 +7,11 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledButton } from './StyledUserProfile';
-import { useDispatch } from 'react-redux';
+import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
+import jwt_decode from "jwt-decode";
+import { useSelector, useDispatch } from 'react-redux';
+
+
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
 
@@ -18,11 +22,14 @@ function Profile() {
 		dispatch(clearDataAuth());
 		dispatch(clearDataRegister());
 	};
+	const userProfile = useSelector(profileUserSelector);
+	const token = userProfile.token;
+	const decodedToken = jwt_decode(token);
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
-				Welcome, SUZANNE EATON
+				Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`}
 			</Typography>
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
