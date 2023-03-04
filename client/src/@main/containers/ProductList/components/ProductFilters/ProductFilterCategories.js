@@ -24,27 +24,32 @@ function ProductFilterCategories() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getCategories())
-	}, [dispatch])
+		dispatch(getCategories());
+	}, [dispatch]);
 
-	const handleSetFilter = useCallback((value) => {
-		// if(filterCategories === value) {
-		// 	dispatch(setFilters({
-		// 		categories: null
-		// 	}))
-		// } else {
-		// 	dispatch(setFilters({
-		// 		categories: value
-		// 	}))
-		// }
-		dispatch(setFilters({
-			categories: filterCategories === value ? null : value
-		}))
-	}, [dispatch, filterCategories]);
+	const handleSetFilter = useCallback(
+		(value) => {
+			// if(filterCategories === value) {
+			// 	dispatch(setFilters({
+			// 		categories: null
+			// 	}))
+			// } else {
+			// 	dispatch(setFilters({
+			// 		categories: value
+			// 	}))
+			// }
+			dispatch(
+				setFilters({
+					categories: filterCategories === value ? null : value,
+				}),
+			);
+		},
+		[dispatch, filterCategories],
+	);
 
 	const handleCLearFilter = useCallback(() => {
-		dispatch(setFilters({categories: null}))
-	}, [dispatch, filterCategories])
+		dispatch(setFilters({ categories: null }));
+	}, [dispatch, filterCategories]);
 
 	const handleClick = () => {
 		setOpen(!open);
@@ -58,66 +63,67 @@ function ProductFilterCategories() {
 
 	return (
 		<>
-		{isMobile ? (
-			<>
-				<ListItemButton onClick={handleClickMobile}>
-					<ListItemText primary="Categories" sx={{ textTransform: 'uppercase'}} />
-					{openMobile ? <ExpandLess /> : <ExpandMore />}
-				</ListItemButton>
-				<Collapse in={openMobile} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-					<ListItemButton sx={{ pl: 4 }}>
-						<ListItemText
-							primary="View all"
-							onClick={() => handleCLearFilter()}
-							// selected={filterCategories.includes(category)}
-						/>
-						</ListItemButton>
-						{subCategories && subCategories.map(({ _id: id, name }) => (
-							<ListItemButton
-								sx={{ pl: 4 }}
-								key={id}
-								onClick={() => handleSetFilter(name)}
-								// selected={filterCategories === name}
-							>
-								<ListItemText primary={name} sx={{textTransform: 'capitalize'}}/>
+			{isMobile ? (
+				<>
+					<ListItemButton onClick={handleClickMobile}>
+						<ListItemText primary="Categories" sx={{ textTransform: 'uppercase' }} />
+						{openMobile ? <ExpandLess /> : <ExpandMore />}
+					</ListItemButton>
+					<Collapse in={openMobile} timeout="auto" unmountOnExit>
+						<List component="div" disablePadding>
+							<ListItemButton sx={{ pl: 4 }}>
+								<ListItemText
+									primary="View all"
+									onClick={() => handleCLearFilter()}
+									// selected={filterCategories.includes(category)}
+								/>
 							</ListItemButton>
-						))}
-					</List>
-				</Collapse>
-			</>
-		) : (
-			<>
-				<FlexBox onClick={handleClick}>
-					<Typography variant="h4">
-						{category}
-					</Typography>
-					{open ? <ExpandLess /> : <ExpandMore />}
-				</FlexBox>
-				<Collapse in={open} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-						<ListItemButton sx={{ pl: 4 }}>
-							<ListItemText
-								secondary="View all"
-								onClick={() => handleCLearFilter()}
-								// selected={filterCategories.includes(category)}
-							/>
-						</ListItemButton>
-						{subCategories && subCategories.map(({ _id: id, name }) => (
-							<ListItemButton
-								sx={{ pl: 4 }}
-								key={id}
-								onClick={() => handleSetFilter(name)}
-								// selected={filterCategories.includes(name)}
-							>
-								<ListItemText secondary={name} sx={{textTransform: 'capitalize'}}/>
+							{subCategories &&
+								subCategories.map(({ _id: id, name }) => (
+									<ListItemButton
+										sx={{ pl: 4 }}
+										key={id}
+										onClick={() => handleSetFilter(name)}
+										// selected={filterCategories === name}
+									>
+										<ListItemText primary={name} sx={{ textTransform: 'capitalize' }} />
+									</ListItemButton>
+								))}
+						</List>
+					</Collapse>
+				</>
+			) : (
+				<>
+					<FlexBox onClick={handleClick}>
+						<Typography variant="h4">{category}</Typography>
+						{open ? <ExpandLess /> : <ExpandMore />}
+					</FlexBox>
+					<Collapse in={open} timeout="auto" unmountOnExit>
+						<List component="div" disablePadding>
+							<ListItemButton sx={{ pl: 4 }}>
+								<ListItemText
+									secondary="View all"
+									onClick={() => handleCLearFilter()}
+									// selected={filterCategories.includes(category)}
+								/>
 							</ListItemButton>
-						))}
-					</List>
-				</Collapse>
-			</>)}
+							{subCategories &&
+								subCategories.map(({ _id: id, name }) => (
+									<ListItemButton
+										sx={{ pl: 4 }}
+										key={id}
+										onClick={() => handleSetFilter(name)}
+										// selected={filterCategories.includes(name)}
+									>
+										<ListItemText secondary={name} sx={{ textTransform: 'capitalize' }} />
+									</ListItemButton>
+								))}
+						</List>
+					</Collapse>
+				</>
+			)}
 		</>
 	);
-};
+}
 
 export default ProductFilterCategories;
