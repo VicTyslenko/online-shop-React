@@ -46,7 +46,6 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 				<CloseItemIcon
 					onClick={(e) => {
 						dispatch(deleteProductFromCart(product._id));
-						e.stopPropagation();
 					}}
 				>
 					<CloseIcon />
