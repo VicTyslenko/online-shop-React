@@ -48,6 +48,7 @@ export const ContentItem = styled.div`
 
 export const ImageWrapp = styled.div`
 	height: 80px;
+	width: 60px;
 
 	img {
 		height: 100%;
