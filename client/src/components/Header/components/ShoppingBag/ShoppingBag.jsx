@@ -27,7 +27,6 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 	const [totalPrice, setTotalPrice] = useState(0);
 	const dataProducts = useSelector((state) => state.cart.data);
 
-	console.log(dataProducts);
 
 	const productItem = dataProducts?.map(({ product, _id }) => (
 		<ContentItem key={_id}>

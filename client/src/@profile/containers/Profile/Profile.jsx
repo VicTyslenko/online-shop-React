@@ -22,7 +22,6 @@ function Profile() {
 	const userProfile = useSelector(profileUserSelector);
 	const token = userProfile.token;
 	const decodedToken = jwt_decode(token);
-	console.log(decodedToken);
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
