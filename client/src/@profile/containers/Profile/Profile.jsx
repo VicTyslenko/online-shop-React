@@ -20,13 +20,14 @@ function Profile() {
 		dispatch(clearDataRegister());
 	};
 	const userProfile = useSelector(profileUserSelector);
-	const token = userProfile.token;
-	const decodedToken = jwt_decode(token);
+	console.log(userProfile)
+	// const token = userProfile.token;
+	// const decodedToken = jwt_decode(token);
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
-				Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`}
+				{/* Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`} */}
 			</Typography>
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
