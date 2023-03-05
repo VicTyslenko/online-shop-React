@@ -22,5 +22,6 @@ export const StyledLink = styled(Link)`
 		display: block;
 		cursor: pointer;
 		text-decoration: none;
+		text-transform: capitalize;
 	}
 `;
