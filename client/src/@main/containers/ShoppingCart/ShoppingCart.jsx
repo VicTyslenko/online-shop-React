@@ -4,7 +4,8 @@ import { Container } from '@mui/system';
 import { cartSelector } from '../../store/selectors/cartSelector';
 import {useSelector,useDispatch} from 'react-redux'
 import {isAuthSelector} from '../../store/selectors/authSelector'
-import {addProductToCart} from '../../store/actions/cartActions'
+// import {addProductToCart} from '../../store/actions/cartActions'
+import {deleteProductFromCart} from "../../store/actions/cartActions"
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
@@ -18,26 +19,11 @@ import {
 } from './StyledShoppingCart';
 import TextField from '@mui/material/TextField';
 
-function ShoppingCart({ shoppingData }) {
-	const data = useSelector(cartSelector);
-	const dispatch =useDispatch
-	// const isNotData = shoppingData.length === 0;
-	// const [quantity, setQuantity] = useState(1);
-
-	// const Decrement = () => {
-	// 	if (quantity <= 1) {
-	// 		return;
-	// 	}
-	// 	setQuantity((prevCount) => prevCount - 1);
-	// };
-	// const Increment = () => {
-	// 	if (quantity >= 10) {
-	// 		return;
-	// 	}
-	// 	setQuantity((prevCount) => prevCount + 1);
-	// };
+function ShoppingCart() {
+	const cart = useSelector(cartSelector);
+	const dispatch =useDispatch();
 	return (
-		<ContainerWrapper>
+		<ContainerWrapper >
 			{ isAuthSelector (
 				<Container
 					maxWidth="lg"
@@ -51,31 +37,31 @@ function ShoppingCart({ shoppingData }) {
 					<ShoppingCartWrapp>
 						<LeftSideWrapp>
 								<ContentWrapp>
-									<Content>
+									<Content key={_id}>
 										<div className="image-wrapp">
 											<img className="image" src={imageUrls} alt="" />
 										</div>
 										<ul className="list">
-											<li className="title">{product.name}</li>
+											<li className="title">{name}</li>
 											<li>Color :{colors}</li>
 											<li>Size :{sizes}</li>
-											<li>
+											{/* <li>
 												Quantity :{' '}
-												<button onClick={Decrement} className="qnt-btn">
+												<button onClick={()=> dispatch(incrementQuantity(id))} className="qnt-btn">
 													{' '}
 													-{' '}
 												</button>
 												<span>{quantity}</span>
-												<button onClick={Increment} className="qnt-btn">
+												<button onClick={()=> dispatch(decrementQuantity(id))} className="qnt-btn">
 													{' '}
 													+{' '}
 												</button>
-											</li>
+											</li> */}
 											<li>Price :{currentPrice}</li>
 											<li className="total">Total :</li>
 										</ul>
 									</Content>
-									<RemoveButton>Remove from basket</RemoveButton>
+									<RemoveButton onClick={()=>dispatch(deleteProductFromCart)}>Remove from basket</RemoveButton>
 								</ContentWrapp>
 						</LeftSideWrapp>
 						<RightSideWrapp>
