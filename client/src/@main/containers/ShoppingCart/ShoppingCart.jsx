@@ -1,6 +1,11 @@
 import React from 'react';
 import { Container } from '@mui/system';
-import { useState } from 'react';
+// import { useState } from 'react';
+import { cartSelector } from '../../store/selectors/cartSelector';
+import {useSelector,useDispatch} from 'react-redux'
+import {isAuthSelector} from '../../store/selectors/authSelector'
+// import {addProductToCart} from '../../store/actions/cartActions'
+import {deleteProductFromCart} from "../../store/actions/cartActions"
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import { cartSelector } from '../../store/selectors/cartSelector';
 import {
@@ -16,28 +21,12 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
-function ShoppingCart({ shoppingData }) {
-	const dispatch = useDispatch();
-	const data = useSelector(cartSelector);
-	console.log(data);
-	const isNotData = shoppingData.length === 0;
-	const [quantity, setQuantity] = useState(1);
-
-	const Decrement = () => {
-		if (quantity <= 1) {
-			return;
-		}
-		setQuantity((prevCount) => prevCount - 1);
-	};
-	const Increment = () => {
-		if (quantity >= 10) {
-			return;
-		}
-		setQuantity((prevCount) => prevCount + 1);
-	};
+function ShoppingCart() {
+	const cart = useSelector(cartSelector);
+	const dispatch =useDispatch();
 	return (
-		<ContainerWrapper>
-			{!isNotData && (
+		<ContainerWrapper >
+			{ isAuthSelector (
 				<Container
 					maxWidth="lg"
 					sx={{
@@ -45,38 +34,37 @@ function ShoppingCart({ shoppingData }) {
 						marginTop: '40px',
 					}}
 				>
-					<StyledButton>Keep shopping</StyledButton>
+				 {cart ? (cart.map(({name,sizes,colors,imageUrls,currentPrice},_id)=>(
+					// <StyledButton>Keep shopping</StyledButton>
 					<ShoppingCartWrapp>
 						<LeftSideWrapp>
-							{shoppingData.map((product) => (
 								<ContentWrapp>
-									<Content>
+									<Content key={_id}>
 										<div className="image-wrapp">
-											<img className="image" src={product.image} alt="" />
+											<img className="image" src={imageUrls} alt="" />
 										</div>
 										<ul className="list">
-											<li className="title">{product.name}</li>
-											<li>Color :{product.color}</li>
-											<li>Size :{product.size}</li>
-											<li>
+											<li className="title">{name}</li>
+											<li>Color :{colors}</li>
+											<li>Size :{sizes}</li>
+											{/* <li>
 												Quantity :{' '}
-												<button onClick={Decrement} className="qnt-btn">
+												<button onClick={()=> dispatch(incrementQuantity(id))} className="qnt-btn">
 													{' '}
 													-{' '}
 												</button>
 												<span>{quantity}</span>
-												<button onClick={Increment} className="qnt-btn">
+												<button onClick={()=> dispatch(decrementQuantity(id))} className="qnt-btn">
 													{' '}
 													+{' '}
 												</button>
-											</li>
-											<li>Price :{product.price}</li>
+											</li> */}
+											<li>Price :{currentPrice}</li>
 											<li className="total">Total :</li>
 										</ul>
 									</Content>
-									<RemoveButton>Remove from basket</RemoveButton>
+									<RemoveButton onClick={()=>dispatch(deleteProductFromCart)}>Remove from basket</RemoveButton>
 								</ContentWrapp>
-							))}
 						</LeftSideWrapp>
 						<RightSideWrapp>
 							<h1 className="title">Shopping bag total</h1>
@@ -91,24 +79,26 @@ function ShoppingCart({ shoppingData }) {
 							</div>
 						</RightSideWrapp>
 					</ShoppingCartWrapp>
+				 ))
+				 ) : <Container
+				 maxWidth="lg"
+				 sx={{
+					 display: 'flex',
+					 flexDirection: 'column',
+					 alignItems: 'center',
+				 }}
+			 >
+				 <EmptyCart />
+			 </Container>
+				
+				}
+					
 				</Container>
 			)}
 
-			{isNotData && (
-				<Container
-					maxWidth="lg"
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'center',
-					}}
-				>
-					<EmptyCart />
-				</Container>
-			)}
 		</ContainerWrapper>
 	);
 }
-ShoppingCart.defaultProps = { shoppingData: [] };
+// ShoppingCart.defaultProps = { shoppingData: [] };
 
 export default ShoppingCart;
