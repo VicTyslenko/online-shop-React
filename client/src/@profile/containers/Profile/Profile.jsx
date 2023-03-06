@@ -7,7 +7,7 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledLink } from './StyledUserProfile';
-import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
+import { isRegistrationSelector } from '../../../@main/store/selectors/registrationSelector';
 import jwt_decode from 'jwt-decode';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
@@ -19,8 +19,9 @@ function Profile() {
 		dispatch(clearDataAuth());
 		dispatch(clearDataRegister());
 	};
-	const userProfile = useSelector(profileUserSelector);
+	const userProfile = useSelector(isRegistrationSelector);
 	console.log(userProfile)
+	
 	// const token = userProfile.token;
 	// const decodedToken = jwt_decode(token);
 
