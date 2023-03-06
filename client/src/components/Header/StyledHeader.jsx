@@ -109,5 +109,6 @@ export const AnimateMenu = styled(AnimateHeight)`
 `;
 
 export const ContentWrap = styled(Box)`
-	padding: 30px 42px 60px;
+	padding: 30px 42px 10px;
+	width: 160px;
 `;
