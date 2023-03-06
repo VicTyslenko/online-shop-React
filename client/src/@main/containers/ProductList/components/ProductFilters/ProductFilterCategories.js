@@ -71,11 +71,10 @@ function ProductFilterCategories() {
 					</ListItemButton>
 					<Collapse in={openMobile} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
-							<ListItemButton sx={{ pl: 4 }}>
+							<ListItemButton sx={{ pl: 4 }} selected={filterCategories === null}>
 								<ListItemText
 									primary="View all"
 									onClick={() => handleCLearFilter()}
-									// selected={filterCategories.includes(category)}
 								/>
 							</ListItemButton>
 							{subCategories &&
@@ -84,7 +83,7 @@ function ProductFilterCategories() {
 										sx={{ pl: 4 }}
 										key={id}
 										onClick={() => handleSetFilter(name)}
-										// selected={filterCategories === name}
+										selected={filterCategories === name}
 									>
 										<ListItemText primary={name} sx={{ textTransform: 'capitalize' }} />
 									</ListItemButton>
@@ -100,11 +99,10 @@ function ProductFilterCategories() {
 					</FlexBox>
 					<Collapse in={open} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
-							<ListItemButton sx={{ pl: 4 }}>
+							<ListItemButton sx={{ pl: 4 }} selected={filterCategories === null}>
 								<ListItemText
 									secondary="View all"
 									onClick={() => handleCLearFilter()}
-									// selected={filterCategories.includes(category)}
 								/>
 							</ListItemButton>
 							{subCategories &&
@@ -113,7 +111,7 @@ function ProductFilterCategories() {
 										sx={{ pl: 4 }}
 										key={id}
 										onClick={() => handleSetFilter(name)}
-										// selected={filterCategories.includes(name)}
+										selected={filterCategories === name}
 									>
 										<ListItemText secondary={name} sx={{ textTransform: 'capitalize' }} />
 									</ListItemButton>

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Box, Pagination, Stack } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { getProductList } from '../../store/actions/productListActions';
@@ -34,8 +33,6 @@ function ProductList() {
 	};
 
 	const isNotData = products.length === 0;
-	// const test = useLocation();
-	// console.log('asdf', test);
 
 	useEffect(() => {
 		dispatch(getProductList({
@@ -52,12 +49,11 @@ function ProductList() {
 	return (
 		<>
 			<StyledContainer maxWidth="lg">
-				{/* todo: Title of category - logic from menu and хлібні крихти для повернення на попередню сторінку замість кнопки назад */}
 				<ProductFilters />
 				{!isNotData && (
 					<Box sx={{ pb: '30px' }}>
-						<StyledTitle variant="title" component="div">
-							Jackets
+						<StyledTitle variant="title" component="div" sx={{textTransform: "capitalize"}}>
+							{categories}
 						</StyledTitle>
 						<StyledBox>
 							{products && products.map(({ name, currentPrice, imageUrls, _id, itemNo }) => (

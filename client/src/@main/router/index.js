@@ -13,7 +13,8 @@ import PaymentLandingPage from '../containers/PaymentLandingPage';
 import PolicyLandingPage from '../containers/PolicyLandingPage';
 import QuestionsLandingPage from '../containers/QuestionsLandingPage';
 import WorkUsLandingPage from '../containers/WorkUsLandingPage';
-import EmptyCart from '../containers/ShoppingCart/EmptyCart/EmptyCart'
+import EmptyCart from '../containers/ShoppingCart/EmptyCart/EmptyCart';
+
 function MainRoutes() {
 	return (
 		<Routes>
