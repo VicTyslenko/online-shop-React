@@ -1,21 +1,37 @@
 import React from 'react';
-import {  Typography, Grid, Container } from '@mui/material';
+import { Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { FlexWrapp, StyledButton } from './StyledUserProfile';
-
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { FlexWrapp, StyledLink } from './StyledUserProfile';
+import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
+import jwt_decode from 'jwt-decode';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearDataAuth } from '../../../@main/store/slices/authSlice';
+import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
 function Profile() {
+	const dispatch = useDispatch();
+
+	const clearData = () => {
+		dispatch(clearDataAuth());
+		dispatch(clearDataRegister());
+	};
+	const userProfile = useSelector(profileUserSelector);
+	console.log(userProfile)
+	// const token = userProfile.token;
+	// const decodedToken = jwt_decode(token);
+
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
 			<Typography variant="h3" sx={{ mb: '141px' }}>
-				Welcome, SUZANNE EATON
+				{/* Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`} */}
 			</Typography>
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
-					<StyledButton to="my-profile">
+					<StyledLink to="myAccount">
 						<FlexWrapp>
 							<PersonOutlineIcon fontSize="large" />
 							<div className="content">
@@ -23,10 +39,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="purchase-history">
+					<StyledLink to="tab-purchase">
 						<FlexWrapp>
 							<ShoppingBasketOutlinedIcon fontSize="large" />
 							<div className="content">
@@ -34,10 +50,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="my-wishlist">
+					<StyledLink to="tab-wish">
 						<FlexWrapp>
 							<FavoriteBorderIcon fontSize="large" />
 							<div className="content">
@@ -46,10 +62,10 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="address-book">
+					<StyledLink to="tab-address">
 						<FlexWrapp>
 							<ArticleOutlinedIcon fontSize="large" />
 							<div className="content">
@@ -58,21 +74,35 @@ function Profile() {
 								<p className="description">Show and update your personal information</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
 				</Grid>
 				<Grid item xs={6}>
-					<StyledButton to="/editor/dashboard">
+					<StyledLink to="/editor/dashboard">
 						<FlexWrapp>
 							{/* <ArticleOutlinedIcon fontSize="large" />
 							 */}
-							 <EditOutlinedIcon fontSize='large'/>
+							<EditOutlinedIcon fontSize="large" />
 							<div className="content">
 								<p className="title">Edit</p>
 
 								<p className="description">Edit</p>
 							</div>
 						</FlexWrapp>
-					</StyledButton>
+					</StyledLink>
+				</Grid>
+				<Grid item xs={6}>
+					<StyledLink to="/" onClick={() => clearData()}>
+						<FlexWrapp>
+							{/* <ArticleOutlinedIcon fontSize="large" />
+							 */}
+							<ExitToAppIcon fontSize="large" />
+							<div className="content">
+								<p className="title">Sign out</p>
+
+								<p className="description">Sign out</p>
+							</div>
+						</FlexWrapp>
+					</StyledLink>
 				</Grid>
 			</Grid>
 		</Container>

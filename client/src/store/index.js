@@ -10,6 +10,7 @@ import registration from '../@main/store/slices/registrationSlice';
 import wishlist from '../@main/store/slices/wishlistSlice';
 import filters from '../@main/store/slices/filterSlice';
 import colors from '../@main/store/slices/colorsSlice';
+import categories from '../@main/store/slices/categoriesSlice';
 
 const persistConfig = {
 	key: 'root',
@@ -26,6 +27,7 @@ const rootReduser = combineReducers({
 	wishlist,
 	filters,
 	colors,
+	categories
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);

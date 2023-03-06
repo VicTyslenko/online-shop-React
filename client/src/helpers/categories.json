@@ -1,4 +1,96 @@
 [
+	{
+		"name": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "jeans",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "trousers",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "jackets",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "coats",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "shirts",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "t-shirts",
+		"parentId": "man",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "t-shirts",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "shirts",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "jeans",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "coats",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "dresses",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "jackets",
+		"parentId": "woman",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "sunglasses",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "belts",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "bags",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
+	{
+		"name": "watches",
+		"parentId": "accessories",
+		"date": "2023-02-12T13:59:49.407Z"
+	},
     {
         "Man": [
     "jeans",
@@ -11,7 +103,7 @@
     "shorts",
     "polo shirts"
 
-       
+
            ]
     },
     {
@@ -26,7 +118,7 @@
     "denim jackets",
     "shorts"
 
-       
+
            ]
     },
     {
@@ -40,9 +132,9 @@
     "watches",
     "sunglasses"
 
-       
+
            ]
     }
 
-        
+
 ]

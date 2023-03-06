@@ -106,6 +106,17 @@ export const LoginWrapperReg = styled.div`
 	width: 467px;
 	margin-top: 70px;
 	margin-bottom: 162px;
+	& .message {
+		font-size: 14px;
+		color: #d32f2f;
+		border-bottom: 1px solid #d32f2f;
+		font-weight: 600;
+		margin-top:30px ;
+	}
+	& .flex-error {
+		display: flex;
+		justify-content: center;
+	}
 `;
 
 export const ButtonWrappReg = styled.div`
