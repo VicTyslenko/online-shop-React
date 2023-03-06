@@ -21,11 +21,18 @@ export const addProductToCart = createAsyncThunk(
 		const { auth, product, cart } = getState();
 
 		if(auth.data !== null) {
-			const { data } = await fetchProductToCart(id, {
-				headers: {
-					Authorization: auth.data.token
+			const { data } = await fetchProductToCart(
+				id,
+				{
+					size: product.currentSize,
+					color: product.currentColor
+				},
+				{
+					headers: {
+						Authorization: auth.data.token
+					}
 				}
-			});
+			);
 
 			return data;
 		} else {
@@ -33,7 +40,9 @@ export const addProductToCart = createAsyncThunk(
 				...cart.data,
 				{
 					product: product.data,
-					cartQuantity: 1
+					cartQuantity: 1,
+					size: product.currentSize,
+					color: product.currentColor
 				}
 			];
 			return { products };

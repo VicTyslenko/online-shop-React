@@ -96,7 +96,7 @@ const PaymentPage = () => {
 					<Link>what is cvv</Link>
 				</div>
 				<StyledButton onClick={handleOpen}>Pay</StyledButton>
-				{open && <PaymentModal open={open}   />}
+				{/* {open && <PaymentModal open={open}   />} */}
 			</PaymentWrapper>
 		</Container>
 	);
