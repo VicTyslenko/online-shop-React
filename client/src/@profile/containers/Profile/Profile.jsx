@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import { Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
@@ -7,11 +7,13 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledLink } from './StyledUserProfile';
-import { isRegistrationSelector } from '../../../@main/store/selectors/registrationSelector';
+import {profileUserSelector} from '../../../@main/store/selectors/profileUserSelector'
 import jwt_decode from 'jwt-decode';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
+import { tokenDataSelector } from '../../../@main/store/selectors/registrationSelector';
+
 function Profile() {
 	const dispatch = useDispatch();
 
@@ -19,17 +21,23 @@ function Profile() {
 		dispatch(clearDataAuth());
 		dispatch(clearDataRegister());
 	};
-	const userProfile = useSelector(isRegistrationSelector);
-	console.log(userProfile)
-	
-	// const token = userProfile.token;
-	// const decodedToken = jwt_decode(token);
+
+	const register = useSelector(tokenDataSelector);
+
+	const isAuth = useSelector(profileUserSelector);
+
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
-			<Typography variant="h3" sx={{ mb: '141px' }}>
-				{/* Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`} */}
-			</Typography>
+			{isAuth ? (
+				<Typography variant="h3" sx={{ mb: '141px' }}>
+					Welcome, {`${jwt_decode(isAuth.token).firstName} ${jwt_decode(isAuth.token).lastName}`}
+				</Typography>
+			) : (
+				<Typography variant="h3" sx={{ mb: '141px' }}>
+					Welcome, {`${jwt_decode(register.token).firstName} ${jwt_decode(register.token).lastName}`}
+				</Typography>
+			)}
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
 					<StyledLink to="myAccount">
