@@ -21,9 +21,9 @@ const authReducer = createSlice({
 			state.status = 'loading';
 			state.data = null;
 		});
-		builder.addCase(actionFetchAuth.fulfilled, (state, { payload }) => {
+		builder.addCase(actionFetchAuth.fulfilled, (state, action) => {
 			state.status = 'leaded';
-			state.data = payload;
+			state.data = action.payload;
 		});
 		builder.addCase(actionFetchAuth.rejected, (state, { payload }) => {
 			state.status = 'error';

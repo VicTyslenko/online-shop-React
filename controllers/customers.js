@@ -63,7 +63,28 @@ exports.createCustomer = (req, res, next) => {
 					newCustomer.password = hash;
 					newCustomer
 						.save()
-						.then((customer) => res.json(customer))
+						.then((customer) => {
+							const payload = {
+								id: customer.id,
+								firstName: customer.firstName,
+								lastName: customer.lastName,
+								isAdmin: customer.isAdmin,
+							}; // Create JWT Payload
+		
+							// Sign Token
+							jwt.sign(
+								payload,
+								keys.secretOrKey,
+								{ expiresIn: 36000 },
+								(err, token) => {
+									res.json({
+										...customer,
+										// success: true,
+										token: "Bearer " + token,
+									});
+								}
+							);
+							})
 						.catch((err) =>
 							res.status(400).json({
 								message: `Error happened on server: "${err}" `,
