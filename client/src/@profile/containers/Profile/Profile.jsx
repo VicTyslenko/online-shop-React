@@ -12,6 +12,7 @@ import jwt_decode from 'jwt-decode';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
+import { isRegistrationSelector } from '../../../@main/store/selectors/registrationSelector';
 function Profile() {
 	const dispatch = useDispatch();
 
@@ -19,8 +20,10 @@ function Profile() {
 		dispatch(clearDataAuth());
 		dispatch(clearDataRegister());
 	};
+	const register = useSelector(isRegistrationSelector);
+	// console.log(register);
 	const userProfile = useSelector(profileUserSelector);
-	console.log(userProfile)
+	console.log(userProfile);
 	// const token = userProfile.token;
 	// const decodedToken = jwt_decode(token);
 
