@@ -15,7 +15,7 @@ import categories from '../@main/store/slices/categoriesSlice';
 const persistConfig = {
 	key: 'root',
 	storage,
-	blacklist: ["filters"]
+	blacklist: ["filters", "product"]
 };
 
 const rootReduser = combineReducers({

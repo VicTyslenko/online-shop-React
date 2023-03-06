@@ -104,6 +104,8 @@ exports.addProductToCart = async (req, res, next) => {
           cartData.products = [].concat({
             product: req.params.productId,
             cartQuantity: 1,
+            size: req.body.size,
+            color: req.body.color,
           });
 
           const newCart = new Cart(queryCreator(cartData));
@@ -128,6 +130,7 @@ exports.addProductToCart = async (req, res, next) => {
             (item) => item.product.toString() === req.params.productId
           );
 
+          // if product exist in cart, could be problems with props: color and size
           if (isProductExistInCart) {
             cartData.products = cart.products.map((item) => {
               if (item.product.toString() === req.params.productId) {
@@ -140,6 +143,8 @@ exports.addProductToCart = async (req, res, next) => {
             cartData.products = cart.products.concat({
               product: req.params.productId,
               cartQuantity: 1,
+              size: req.body.size,
+              color: req.body.color,
             });
           }
 

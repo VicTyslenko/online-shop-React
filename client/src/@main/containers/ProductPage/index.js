@@ -8,6 +8,7 @@ import { selectProduct } from '../../store/selectors/productSelector';
 
 import ProductInfo from './components/ProductInfo';
 import ProductGallery from './components/ProductGallery';
+import BackButton from './components/BackButton';
 
 function ProductPage() {
 	const product = useSelector(selectProduct);
@@ -20,7 +21,8 @@ function ProductPage() {
 	}, [id]);
 
 	return (
-		<Container sx={{ marginTop: '50px', marginBottom: '50px' }} maxWidth="lg">
+		<Container sx={{ marginTop: '20px', marginBottom: '50px' }} maxWidth="lg">
+			<BackButton/>
 			<Grid container spacing={2}>
 				<Grid item xs={12} sm={7} md={8}>
 					{product && <ProductGallery images={product.imageUrls} />}
@@ -31,7 +33,7 @@ function ProductPage() {
 						name={product.name}
 						productUrl={product.productUrl}
 						currentPrice={product.currentPrice}
-						color={product.colors}
+						colors={product.colors}
 						sizes={product.sizes}
 						productDetails={product.productDetails}
 						productDelivery={product.productDelivery}

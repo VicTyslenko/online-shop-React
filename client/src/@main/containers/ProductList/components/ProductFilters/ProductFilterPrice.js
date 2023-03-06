@@ -59,7 +59,6 @@ function ProductFilterPrice() {
 										valueLabelFormat={(label) => `$${label}`}
 										min={MIN_PRICE}
 										max={MAX_PRICE}
-										// getAriaValueText={value}
 									/>
 								</StyledFilterPriceBox>
 							</MobileFilterPriceBox>
@@ -71,7 +70,6 @@ function ProductFilterPrice() {
 					<Typography variant="h4" pb={2}>
 						Price
 					</Typography>
-					{/* todo: price min and max make as inputs to change price range */}
 					<Typography variant="subtitle1" pb={2}>
 						$ {value[0]} - $ {value[1]}
 					</Typography>
@@ -84,7 +82,6 @@ function ProductFilterPrice() {
 							valueLabelFormat={(label) => `$${label}`}
 							min={MIN_PRICE}
 							max={MAX_PRICE}
-							// getAriaValueText={value}
 						/>
 					</StyledFilterPriceBox>
 				</Box>
