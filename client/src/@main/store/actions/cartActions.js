@@ -18,7 +18,7 @@ export const getCart = createAsyncThunk(
 export const addProductToCart = createAsyncThunk(
 	'cart/addProductToCart',
 	async (id, { getState }) => {
-		const { auth, product } = getState();
+		const { auth, product, cart } = getState();
 
 		if(auth.data !== null) {
 			const { data } = await fetchProductToCart(id, {
@@ -29,10 +29,13 @@ export const addProductToCart = createAsyncThunk(
 
 			return data;
 		} else {
-			const products = [{
-				product: product.data,
-				cartQuantity: 1
-			}];
+			const products = [
+				...cart.data,
+				{
+					product: product.data,
+					cartQuantity: 1
+				}
+			];
 			return { products };
 		}
 });
@@ -40,7 +43,7 @@ export const addProductToCart = createAsyncThunk(
 export const deleteProductFromCart = createAsyncThunk(
 	'cart/deleteProductFromCart',
 	async (id, { getState }) => {
-		const { auth, product, cart } = getState();
+		const { auth, cart } = getState();
 
 		if(auth.data !== null) {
 			const { data } = await fetchProductFromCart(id, {

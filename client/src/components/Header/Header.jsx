@@ -93,7 +93,7 @@ function Header() {
 			<Container maxWidth="lg">
 				<ContentWrapper>
 					<div>
-						<Link to="/">
+						<Link to="#">
 							<ButtonItem
 								data-menu="menuMen"
 								aria-expanded={mensCategory !== 0}
@@ -106,7 +106,7 @@ function Header() {
 								MAN
 							</ButtonItem>
 						</Link>
-						<Link to="/">
+						<Link to="#">
 							<ButtonItem
 								data-menu="menuWomen"
 								aria-expanded={womenCategory !== 0}
@@ -119,7 +119,7 @@ function Header() {
 								WOMAN
 							</ButtonItem>
 						</Link>
-						<Link to="/">
+						<Link to="#">
 							<ButtonItem
 								data-menu="menuAccessory"
 								aria-expanded={accessoryCategory !== 0}
@@ -163,9 +163,18 @@ function Header() {
 					/>
 				</ContentWrapper>
 
-				<ManMenu active={mensCategory && dataMenu === 'menuMen' ? 'auto' : 0} />
-				<WomanMenu active={womenCategory && dataMenu === 'menuWomen' ? 'auto' : 0} />
-				<Accessory active={accessoryCategory && dataMenu === 'menuAccessory' ? 'auto' : 0} />
+				<ManMenu
+					active={mensCategory && dataMenu === 'menuMen' ? 'auto' : 0}
+					closeСategories={() => setMenCategory(false)}
+				/>
+				<WomanMenu
+					active={womenCategory && dataMenu === 'menuWomen' ? 'auto' : 0}
+					closeСategories={() => setWomenCategory(false)}
+				/>
+				<Accessory
+					active={accessoryCategory && dataMenu === 'menuAccessory' ? 'auto' : 0}
+					closeСategories={() => setAccessoryCategory(false)}
+				/>
 				<Search active={searchBox && dataMenu === 'menuSearch' ? 240 : 0} />
 				<ShoppingBag isShoppingBag={isShoppingBag} closeShoppingBag={() => setIsShoppingBag(!isShoppingBag)} />
 			</Container>
