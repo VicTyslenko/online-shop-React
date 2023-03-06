@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import { Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
@@ -12,7 +12,8 @@ import jwt_decode from 'jwt-decode';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
-import { isRegistrationSelector } from '../../../@main/store/selectors/registrationSelector';
+import { tokenDataSelector } from '../../../@main/store/selectors/registrationSelector';
+
 function Profile() {
 	const dispatch = useDispatch();
 
@@ -20,18 +21,23 @@ function Profile() {
 		dispatch(clearDataAuth());
 		dispatch(clearDataRegister());
 	};
-	const register = useSelector(isRegistrationSelector);
-	// console.log(register);
-	const userProfile = useSelector(profileUserSelector);
-	console.log(userProfile);
-	// const token = userProfile.token;
-	// const decodedToken = jwt_decode(token);
+
+	const register = useSelector(tokenDataSelector);
+
+	const isAuth = useSelector(profileUserSelector);
+
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
-			<Typography variant="h3" sx={{ mb: '141px' }}>
-				{/* Welcome, {`${decodedToken.firstName} ${decodedToken.lastName}`} */}
-			</Typography>
+			{isAuth ? (
+				<Typography variant="h3" sx={{ mb: '141px' }}>
+					Welcome, {`${jwt_decode(isAuth.token).firstName} ${jwt_decode(isAuth.token).lastName}`}
+				</Typography>
+			) : (
+				<Typography variant="h3" sx={{ mb: '141px' }}>
+					Welcome, {`${jwt_decode(register.token).firstName} ${jwt_decode(register.token).lastName}`}
+				</Typography>
+			)}
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
 					<StyledLink to="myAccount">
