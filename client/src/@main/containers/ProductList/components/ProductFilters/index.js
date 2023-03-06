@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -9,8 +8,6 @@ import ProductFilterCategories from './ProductFilterCategories';
 import MobileFilter from './MobileFilters';
 import { StyledBox } from './ProductFilters.styles';
 
-// хлібні крихти приклад: https://codesandbox.io/s/breadcrumbs-ut49q?file=/src/Breadcrumbs.jsx
-// або підключити з Mui + React Routes
 function ProductFilters() {
 	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
@@ -34,21 +31,5 @@ function ProductFilters() {
 		</>
 	);
 };
-
-// ProductFilters.propTypes = {
-// 	title: PropTypes.string.isRequired,
-// 	articul: PropTypes.number.isRequired,
-// 	price: PropTypes.number.isRequired,
-// 	colors: PropTypes.arrayOf(
-// 		PropTypes.shape({
-// 			id: PropTypes.number.isRequired,
-// 			color: PropTypes.string.isRequired,
-// 			colorHash: PropTypes.string.isRequired,
-// 		}),
-// 	).isRequired,
-// 	sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-// 	productDetails: PropTypes.string.isRequired,
-// 	productDelivery: PropTypes.string.isRequired,
-// };
 
 export default ProductFilters;

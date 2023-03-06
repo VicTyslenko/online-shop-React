@@ -1,46 +1,55 @@
-import { StyledLink, Title, ContentAccessory, Categories, BlockCategory } from './StyledAccessory';
+import { StyledLink, Categories } from './StyledAccessory';
 import { Container } from '@mui/material';
 import { AnimateMenu, ContentWrap } from '../../StyledHeader';
+import { useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectSubCategories } from '../../../../@main/store/selectors/categoriesSelector';
+import { selectFilterCategories } from '../../../../@main/store/selectors/filterSelector';
+import { getCategories } from '../../../../@main/store/actions/categoriesActions';
+import { setFilters } from '../../../../@main/store/slices/filterSlice';
 
-function Accessory({ active }) {
-	const dataWoman = [
-		{ title: 'Bags', link: '/' },
-		{ title: 'Wallets', link: '/' },
-		{ title: 'Belts', link: '/' },
-		{ title: 'Scarves and hats', link: '/' },
-		{ title: 'Sunglasses', link: '/' },
-	];
-	const dataMan = [
-		{ title: 'Bags', link: '/' },
-		{ title: 'Wallets, Card cases', link: '/' },
-		{ title: 'Belts', link: '/' },
-		{ title: 'Ties and Cummerbunds', link: '/' },
-		{ title: 'Sunglasses', link: '/' },
-	];
+function Accessory({ active, closeСategories }) {
+	const dispatch = useDispatch();
+
+	const subCategories = useSelector((state) => selectSubCategories(state, 'accessories'));
+	const filterCategories = useSelector(selectFilterCategories);
+
+	useEffect(() => {
+		dispatch(getCategories());
+	}, []);
+
+	const handleSetFilter = useCallback(
+		(value) => {
+			dispatch(
+				setFilters({
+					categories: filterCategories === value ? null : value,
+				}),
+			);
+			closeСategories();
+		},
+		[filterCategories],
+	);
+
+	const handleClearFilter = useCallback(() => {
+		dispatch(setFilters({ categories: null }));
+
+		closeСategories();
+	}, [filterCategories]);
 
 	return (
 		<AnimateMenu id="example-panel" duration={700} height={active}>
 			<Container maxWidth="lg">
 				<ContentWrap>
-					<Categories>Categories</Categories>
-					<ContentAccessory>
-						<BlockCategory>
-							<Title>For woman</Title>
-							{dataWoman.map((item) => (
-								<StyledLink key={item.title} to={item.link}>
-									{item.title}
-								</StyledLink>
-							))}
-						</BlockCategory>
-						<BlockCategory>
-							<Title>For Man</Title>
-							{dataMan.map((item) => (
-								<StyledLink key={item.title} to={item.link}>
-									{item.title}
-								</StyledLink>
-							))}
-						</BlockCategory>
-					</ContentAccessory>
+					<Categories>Accessories</Categories>
+					<StyledLink to="/store/accessories" onClick={() => handleClearFilter()}>
+						View all
+					</StyledLink>
+					{subCategories &&
+						subCategories.map(({ name, _id }) => (
+							<StyledLink key={_id} to="/store/accessories" onClick={() => handleSetFilter(name)}>
+								{name}
+							</StyledLink>
+						))}
 				</ContentWrap>
 			</Container>
 		</AnimateMenu>

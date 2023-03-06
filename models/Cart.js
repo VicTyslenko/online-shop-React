@@ -16,6 +16,12 @@ const CartSchema = new Schema(
         },
         cartQuantity: {
           type: Number
+        },
+        size: {
+          type: String
+        },
+        color: {
+          type: String
         }
       }
     ],

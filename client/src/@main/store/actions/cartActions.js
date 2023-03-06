@@ -18,26 +18,54 @@ export const getCart = createAsyncThunk(
 export const addProductToCart = createAsyncThunk(
 	'cart/addProductToCart',
 	async (id, { getState }) => {
-		const { auth } = getState();
+		const { auth, product, cart } = getState();
 
-		const { data } = await fetchProductToCart(id, {
-			headers: {
-				Authorization: auth.data?.token
-			}
-		});
-		// const { data } = await fetchProductToCart(id);
-		return data;
+		if(auth.data !== null) {
+			const { data } = await fetchProductToCart(
+				id,
+				{
+					size: product.currentSize,
+					color: product.currentColor
+				},
+				{
+					headers: {
+						Authorization: auth.data.token
+					}
+				}
+			);
+
+			return data;
+		} else {
+			const products = [
+				...cart.data,
+				{
+					product: product.data,
+					cartQuantity: 1,
+					size: product.currentSize,
+					color: product.currentColor
+				}
+			];
+			return { products };
+		}
 });
 
 export const deleteProductFromCart = createAsyncThunk(
 	'cart/deleteProductFromCart',
 	async (id, { getState }) => {
-		const { auth } = getState();
+		const { auth, cart } = getState();
 
-		const { data } = await fetchProductFromCart(id, {
-			headers: {
-				Authorization: auth.data?.token
-			}
-		});
-		return data;
+		if(auth.data !== null) {
+			const { data } = await fetchProductFromCart(id, {
+				headers: {
+					Authorization: auth.data?.token
+				}
+			});
+
+			return data;
+		} else {
+			const products = cart.data.filter(({product}) => product._id !== id);
+
+			return { products };
+		}
+
 });

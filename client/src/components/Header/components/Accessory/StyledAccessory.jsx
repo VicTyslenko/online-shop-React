@@ -12,28 +12,6 @@ export const Categories = styled.h3`
 	text-transform: uppercase;
 `;
 
-export const ContentAccessory = styled(Box)`
-	display: flex;
-	margin-left: -120px;
-`;
-
-export const BlockCategory = styled.div`
-	margin-left: 120px;
-	margin-right: 120px;
-`;
-
-export const Title = styled.h3`
-	cursor: pointer;
-	border: none;
-	color: white;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 25px;
-	border-bottom: 1px solid white;
-	margin-bottom: 60px;
-	display: inline-block;
-`;
-
 export const StyledLink = styled(Link)`
 	&&& {
 		margin-bottom: 40px;
@@ -45,5 +23,6 @@ export const StyledLink = styled(Link)`
 		display: block;
 		cursor: pointer;
 		text-decoration: none;
+		text-transform: capitalize;
 	}
 `;
