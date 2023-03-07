@@ -1,12 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/css/autoplay';
 import { Container } from '@mui/material';
 import NewCollection from './banners/NewCollection';
 import EndSale from './banners/EndSale';
 import EnjoyOff from './banners/EnjoyOff';
+
+import 'swiper/scss';
+import 'swiper/scss/pagination';
+import 'swiper/css/autoplay';
 import { ContainerWrapper } from './Slider.styles';
 
 function Slider() {
@@ -21,13 +23,19 @@ function Slider() {
 				scrollbar={{ draggable: false }}
 			>
 				<SwiperSlide >
-					<NewCollection />
+					<Link to="/store/man">
+						<NewCollection />
+					</Link>
 				</SwiperSlide>
 				<SwiperSlide >
-					<EndSale />
+					<Link to="/store/man">
+						<EndSale />
+					</Link>
 				</SwiperSlide>
 				<SwiperSlide>
-				<EnjoyOff />
+					<Link to="/store/man">
+						<EnjoyOff />
+					</Link>
 				</SwiperSlide>
 			</Swiper>
 		</Container>

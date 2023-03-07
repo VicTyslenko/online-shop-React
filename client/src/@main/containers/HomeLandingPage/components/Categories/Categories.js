@@ -1,6 +1,6 @@
 import { Container, Link, ImageListItemBar } from '@mui/material';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
+// import ImageList from '@mui/material/ImageList';
+// import ImageListItem from '@mui/material/ImageListItem';
 import {ContainerWrapper, CategoryH1, CategoryLink, ImageText, GridContainer, GridItem} from './Categories.styles.js'
 
 
@@ -9,25 +9,25 @@ const itemData = [
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1053864504418652240/photo-1512201078372-9c6b2a0d528a.jpg',
 		title: 'BAG SHOP',
 		cols: 1,
-		path: '/',
+		path: '/store/accessories',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1053864504154398740/photo-1551621955-fa07d4b1376b.jpg',
 		title: 'DRESS SHOP',
 		cols: 1,
-		path: '/',
+		path: '/store/accessories',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1055044828699828284/menswear-952835_960_720.png',
 		title: 'BELT SHOP',
 		cols: 1,
-		path: '/',
-	}, 
+		path: '/store/woman',
+	},
 	{
-		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1053864504649334785/metafields-img.jpg', 
+		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1053864504649334785/metafields-img.jpg',
 		title: 'SUNGLASSES SHOP',
 		cols: 3,
-		path: '/',
+		path: '/store/accessories',
 	}
 ]
 

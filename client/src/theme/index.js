@@ -108,7 +108,7 @@ const theme = createTheme(themeWithBreakpoints, {
 						width: '210px',
 					},
 					[themeWithBreakpoints.breakpoints.down('sm')]: {
-						width: '263px',
+						width: '235px',
 					},
 				},
 			},
