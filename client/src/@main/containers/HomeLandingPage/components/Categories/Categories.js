@@ -1,6 +1,4 @@
-import { Container, Link, ImageListItemBar } from '@mui/material';
-// import ImageList from '@mui/material/ImageList';
-// import ImageListItem from '@mui/material/ImageListItem';
+import { Container } from '@mui/material';
 import {ContainerWrapper, CategoryH1, CategoryLink, ImageText, GridContainer, GridItem} from './Categories.styles.js'
 
 

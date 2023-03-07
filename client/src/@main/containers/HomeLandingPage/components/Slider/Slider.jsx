@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link } from 'react-router-dom';
 import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Container } from '@mui/material';
 import NewCollection from './banners/NewCollection';
@@ -23,19 +22,13 @@ function Slider() {
 				scrollbar={{ draggable: false }}
 			>
 				<SwiperSlide >
-					<Link to="/store/man">
-						<NewCollection />
-					</Link>
+					<NewCollection />
 				</SwiperSlide>
 				<SwiperSlide >
-					<Link to="/store/man">
-						<EndSale />
-					</Link>
+					<EndSale />
 				</SwiperSlide>
 				<SwiperSlide>
-					<Link to="/store/man">
-						<EnjoyOff />
-					</Link>
+					<EnjoyOff />
 				</SwiperSlide>
 			</Swiper>
 		</Container>

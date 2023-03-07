@@ -40,7 +40,6 @@ function NewCollection() {
 		<ContainerWrapper>
 			<Container maxWidth='lg'>
 				<NewInH1>New</NewInH1>
-
 				<GridContainer>
 					{itemData.map((item) => (
 						<GridItem key={item.img} column={item.cols} row={item.rows}>
@@ -50,7 +49,6 @@ function NewCollection() {
 									alt={item.title}
 									loading="lazy"
 								/>
-
 								<ImageText>{item.title}</ImageText>
 							</NewInLink>
 						</GridItem>
