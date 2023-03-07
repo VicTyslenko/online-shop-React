@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Drawer, Container } from '@mui/material';
 import EmptyCart from '../../../../@main/containers/ShoppingCart/EmptyCart/EmptyCart';
+import { cartDataSelect } from '../../../../@main/store/selectors/cartSelector';
 import {
 	WrappContainer,
 	ButtonShoppingBag,
@@ -25,7 +26,8 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 	const dispatch = useDispatch();
 
 	const [totalPrice, setTotalPrice] = useState(0);
-	const dataProducts = useSelector((state) => state.cart.data);
+
+	const dataProducts = useSelector(cartDataSelect);
 
 	const productItem = dataProducts?.map(({ product, _id }) => (
 		<ContentItem key={_id}>
