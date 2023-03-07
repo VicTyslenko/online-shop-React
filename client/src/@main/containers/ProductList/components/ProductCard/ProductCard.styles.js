@@ -28,6 +28,10 @@ export const StyledTitle = styled(Typography)`
 export const StyledCardContent = styled(CardContent)`
 	height: 125px;
 	box-sizing: border-box;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 
 	${(props) => props.theme.breakpoints.down('md')} {
 		height: 104px;

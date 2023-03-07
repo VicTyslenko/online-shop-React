@@ -65,7 +65,7 @@ const theme = createTheme(themeWithBreakpoints, {
 		},
 		title: {
 			fontWeight: 400,
-			fontSize: '1.5rem',
+			fontSize: '1.25rem',
 			lineHeight: 1.334,
 			marginBottom: '0.35em',
 			textTransform: 'uppercase',
