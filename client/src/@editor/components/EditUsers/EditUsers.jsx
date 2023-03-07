@@ -1,8 +1,13 @@
 import React from 'react';
 import { Container, Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { MainContent, Header, TableCellTitle, TableCellName, TableItem } from './StyledUsers';
+import { useSelector, useDispatch } from 'react-redux';
+import { tokenDataSelector } from '../../../@main/store/selectors/registrationSelector';
 
 function EditUsers() {
+	const users = useSelector(tokenDataSelector);
+	console.log(users);
+
 	return (
 		<Container maxWidth="lg">
 			<Header>Users</Header>
