@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
 // eslint-disable-next-line import/prefer-default-export
-export const Container = styled.div``;
+
 export const ShoppingCartWrapp = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
+	display: flex; 
+	justify-content: space-between; 
 `;
-export const QuantityButton = styled(Button)``;
+
 export const RemoveButton = styled(Button)`
 	&&& {
 		position: absolute;
-		bottom: 25px;
-		right: -300px;
+		bottom: 36px;
+		right: -48px;
 		color: #847a7a;
 		align-self: flex-end;
 		font-weight: 400;
@@ -21,12 +20,8 @@ export const RemoveButton = styled(Button)`
 		font-family: 'Open Sans';
 	}
 `;
-export const ContainerWrapper = styled.div`
-	background: white;
-`;
+
 export const ContentWrapp = styled.div`
-	display: flex;
-	justify-content: space-between;
 	position: relative;
 	& .remove-from-basket {
 		position: absolute;
@@ -109,10 +104,10 @@ export const RightSideWrapp = styled.div`
 export const Content = styled.div`
 	display: flex;
 	gap: 37px;
+	padding: 0 0 2rem 0;
 
 	& {
 		border-bottom: 1px solid #c4c4c4;
-		/* width: 810px; */
 		margin-bottom: 42px;
 	}
 
