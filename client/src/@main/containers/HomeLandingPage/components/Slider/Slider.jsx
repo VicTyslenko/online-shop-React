@@ -1,12 +1,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/css/autoplay';
 import { Container } from '@mui/material';
 import NewCollection from './banners/NewCollection';
 import EndSale from './banners/EndSale';
 import EnjoyOff from './banners/EnjoyOff';
+
+import 'swiper/scss';
+import 'swiper/scss/pagination';
+import 'swiper/css/autoplay';
 import { ContainerWrapper } from './Slider.styles';
 
 function Slider() {
@@ -27,7 +28,7 @@ function Slider() {
 					<EndSale />
 				</SwiperSlide>
 				<SwiperSlide>
-				<EnjoyOff />
+					<EnjoyOff />
 				</SwiperSlide>
 			</Swiper>
 		</Container>

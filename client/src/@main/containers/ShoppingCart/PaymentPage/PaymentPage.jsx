@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { MenuItem, Box, Select, TextField } from '@mui/material';
+import { Container } from '@mui/system';
+
 import { Title, PaymentWrapper, StyledButton, CardsWrapper } from './StyledPaymentPage';
+import PaymentModal from '../Modal/Modal';
 import SVG from '../SVG/SVG';
 import SVGPayPall from '../SVG/SVGPayPall';
 import SVGMaestro from '../SVG/SVGMaestro';
-import PaymentModal from '../Modal/Modal';
-import { Link } from 'react-router-dom';
-import TextField from '@mui/material/TextField';
-import { useState } from 'react';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import { Container } from '@mui/system';
 
 const PaymentPage = () => {
 	const [month, setMonth] = useState('');
@@ -93,7 +91,8 @@ const PaymentPage = () => {
 						}}
 					/>
 
-					<Link>what is cvv</Link>
+					{/* <Link>what is cvv</Link> */}
+					<Box>what is cvv</Box>
 				</div>
 				<StyledButton onClick={handleOpen}>Pay</StyledButton>
 				{/* {open && <PaymentModal open={open}   />} */}
