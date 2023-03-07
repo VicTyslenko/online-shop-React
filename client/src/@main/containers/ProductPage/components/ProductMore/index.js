@@ -3,15 +3,12 @@ import { Box, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
 import ProductMoreCard from './ProductMoreCard';
 import { selectProductList } from '../../../../store/selectors/productListSelectors';
-import { selectFilterCategories } from '../../../../store/selectors/filterSelector';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { StyledBox } from './ProductMore.styles'
 
 function ProductMore() {
 	const products = useSelector(selectProductList);
-	// const products = useSelector(selectFilterCategories);
-	// console.log(products);
 	const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
 	return (
