@@ -9,6 +9,7 @@ import { selectProduct } from '../../store/selectors/productSelector';
 import ProductInfo from './components/ProductInfo';
 import ProductGallery from './components/ProductGallery';
 import BackButton from './components/BackButton';
+import ProductMore from './components/ProductMore';
 
 function ProductPage() {
 	const product = useSelector(selectProduct);
@@ -23,7 +24,7 @@ function ProductPage() {
 	return (
 		<Container sx={{ marginTop: '20px', marginBottom: '50px' }} maxWidth="lg">
 			<BackButton/>
-			<Grid container spacing={2}>
+			<Grid container spacing={2} mb={8}>
 				<Grid item xs={12} sm={7} md={8}>
 					{product && <ProductGallery images={product.imageUrls} />}
 				</Grid>
@@ -40,6 +41,7 @@ function ProductPage() {
 					/>}
 				</Grid>
 			</Grid>
+			<ProductMore />
 		</Container>
 	);
 }

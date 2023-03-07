@@ -6,11 +6,11 @@ const theme = createTheme(themeWithBreakpoints, {
 	typography: {
 		h3: {
 			fontWeight: 700,
-			fontSize: '24px',
+			fontSize: '20px',
 			lineHeight: '33px',
 			textTransform: 'uppercase',
 			[themeWithBreakpoints.breakpoints.down('md')]: {
-				fontSize: '24px',
+				fontSize: '20px',
 				lineHeight: '30px',
 			},
 		},
@@ -65,7 +65,7 @@ const theme = createTheme(themeWithBreakpoints, {
 		},
 		title: {
 			fontWeight: 400,
-			fontSize: '1.5rem',
+			fontSize: '1.25rem',
 			lineHeight: 1.334,
 			marginBottom: '0.35em',
 			textTransform: 'uppercase',
@@ -104,6 +104,12 @@ const theme = createTheme(themeWithBreakpoints, {
 					fontWeight: 400,
 					fontSize: '16px',
 					lineHeight: '20px',
+					[themeWithBreakpoints.breakpoints.down('md')]: {
+						width: '210px',
+					},
+					[themeWithBreakpoints.breakpoints.down('sm')]: {
+						width: '235px',
+					},
 				},
 			},
 		},
@@ -131,10 +137,6 @@ const theme = createTheme(themeWithBreakpoints, {
 					fontSize: '16px',
 					lineHeight: '22px',
 					color: '#000',
-					// [themeWithBreakpoints.breakpoints.down('sm')]: {
-					// 	fontSize: '14px',
-					// 	lineHeight: '18px',
-					// },
 				},
 				secondary: {
 					color: '#fff',
@@ -183,12 +185,6 @@ const theme = createTheme(themeWithBreakpoints, {
 					'&:hover': {
 						background: '#565254',
 					},
-					// '&:focus': {
-					// 	background: 'rgba(86, 82, 84, 0.4)',
-					// },
-					// '&:focus': {
-					// 	borderBottom: '1px solid #fff',
-					// },
 					'&.Mui-selected': {
 						background: '#565254',
 						borderBottom: '1px solid #fff',
@@ -197,9 +193,6 @@ const theme = createTheme(themeWithBreakpoints, {
 						'&:hover': {
 							background: 'rgba(86, 82, 84, 0.04)',
 						},
-						// '&:focus': {
-						// 	background: 'rgba(86, 82, 84, 0.04)',
-						// },
 						'&.Mui-selected': {
 							background: 'rgba(86, 82, 84, 0.04)',
 							borderBottom: '1px solid #000',

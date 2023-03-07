@@ -33,4 +33,4 @@ padding-bottom: 105px;
 .swiper-pagination {
     text-align: left;
 }
-`
+`;

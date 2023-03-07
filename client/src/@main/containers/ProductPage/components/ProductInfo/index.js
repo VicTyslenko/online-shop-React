@@ -21,8 +21,8 @@ function ProductInfo({
 		<Box maxWidth="390px" margin="auto">
 			<ProductInfoHeader>
 				<ProductHeader>
-					<Typography variant="h3">{name}</Typography>
-					<Typography variant="h3">{currentPrice} $</Typography>
+					<Typography variant="h3" sx={{width: '80%'}}>{name}</Typography>
+					<Typography variant="h3" sx={{width: '20%'}}>{currentPrice} $</Typography>
 				</ProductHeader>
 				<Typography variant="overline">REF: {productUrl}</Typography>
 			</ProductInfoHeader>

@@ -29,15 +29,6 @@ function ProductFilterCategories() {
 
 	const handleSetFilter = useCallback(
 		(value) => {
-			// if(filterCategories === value) {
-			// 	dispatch(setFilters({
-			// 		categories: null
-			// 	}))
-			// } else {
-			// 	dispatch(setFilters({
-			// 		categories: value
-			// 	}))
-			// }
 			dispatch(
 				setFilters({
 					categories: filterCategories === value ? null : value,

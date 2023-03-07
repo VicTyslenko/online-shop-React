@@ -2,7 +2,6 @@ import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-// import Toolbar from '@mui/material/Toolbar';
 
 import ProductFilterCategories from './ProductFilterCategories';
 import ProductFilterColors from './ProductFilterColors';
@@ -23,14 +22,12 @@ function MobileFilter() {
 
 	return (
 		<>
-			{/* THis is for header menu !!! <Toolbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}/> */}
 			<FiltersButton onClick={handleOpen}>Filters</FiltersButton>
 			<Drawer
 				anchor='top'
 				open={open}
 				onClose={handleClose}
-				>
-				{/* <Toolbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}/> */}
+			>
 				<StyledBoxTypography>
 					<StyledTypography variant='h5' >
 						Filters
@@ -38,7 +35,6 @@ function MobileFilter() {
 					<StyledCrossIcon onClick={handleClose} />
 				</StyledBoxTypography>
 				<Divider sx={{ backgroundColor: '#3F3D3D'}}/>
-				{/* Add buttons above: Reset & Apply */}
 				<List sx={{ height: '100vw' }}>
 					<ProductFilterCategories />
 					<ProductFilterColors />
