@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Container, Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { MainContent, Header, TableCellTitle, TableCellName, TableItem } from './StyledUsers';
 
 function EditUsers() {
