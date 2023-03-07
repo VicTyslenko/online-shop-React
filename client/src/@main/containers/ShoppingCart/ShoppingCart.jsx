@@ -1,10 +1,11 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { Container } from '@mui/system';
-import { useState } from 'react';
+import { cartDataSelect } from '../../store/selectors/cartSelector';
+import { isAuthSelector } from '../../store/selectors/authSelector';
+import { deleteProductFromCart } from '../../store/actions/cartActions';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
-	ContainerWrapper,
 	RemoveButton,
 	StyledButton,
 	LeftSideWrapp,
@@ -12,98 +13,83 @@ import {
 	RightSideWrapp,
 	ContentWrapp,
 } from './StyledShoppingCart';
+import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
-function ShoppingCart({ shoppingData }) {
-	const isNotData = shoppingData.length === 0;
-	const [quantity, setQuantity] = useState(1);
+function ShoppingCart() {
+	const dispatch = useDispatch();
+	const [totalPrice, setTotalPrice] = useState(0);
+	const cart = useSelector(cartDataSelect);
+	const priceItem = cart.map(({ product }) => product.currentPrice);
 
-	const Decrement = () => {
-		if (quantity <= 1) {
-			return;
-		}
-		setQuantity((prevCount) => prevCount - 1);
-	};
-	const Increment = () => {
-		if (quantity >= 10) {
-			return;
-		}
-		setQuantity((prevCount) => prevCount + 1);
-	};
+	useEffect(() => {
+		setTotalPrice(priceItem.reduce((a, b) => a + b, 0));
+	}, [cart]);
+	// const isAuth = useSelector(isAuthSelector);
+	const productItem = cart?.map(({ product, color, size }) => (
+		<ContentWrapp key={product._id}>
+			<Content>
+				<div className="image-wrapp">
+					<img className="image" src={product.imageUrls[0]} alt="" />
+				</div>
+				<ul className="list">
+					<li className="title">{product.name}</li>
+					<li className="color">Color :{color}</li>
+					<li className="size">Size : {size}</li>
+					<li className="price">Price : {product.currentPrice} $ </li>
+					<li className="total">Total :</li>
+				</ul>
+			</Content>
+			<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>Remove from basket</RemoveButton>
+		</ContentWrapp>
+	));
+	// const checkout = cart?.map(({ product }) => (
+	// 	<RightSideWrapp key={product._id}>
+	// 		<h1 className="title">Shopping bag total</h1>
+	// 		<p className="discount">Add a discount code</p>
+	// 		<TextField id="standard-basic" variant="standard" />
+	// 		<hr className="line" />
+	// 		<p className="order">Order value :</p>
+	// 		<p className="delivery">Delivery :</p>
+	// 		<p className="order order-delivery">Delivery : {product.productDelivery}</p>
+	// 		<p className="total">Total :</p>
+	// 		<div className="button-wrapp">
+	// 			<StyledButton>Checkout</StyledButton>
+	// 		</div>
+	// 	</RightSideWrapp>
+	// ));
 	return (
-		<ContainerWrapper>
-			{!isNotData && (
-				<Container
-					maxWidth="lg"
-					sx={{
-						marginBottom: '50px',
-						marginTop: '40px',
-					}}
-				>
-					<StyledButton>Keep shopping</StyledButton>
-					<ShoppingCartWrapp>
-						<LeftSideWrapp>
-							{shoppingData.map((product) => (
-								<ContentWrapp>
-									<Content>
-										<div className="image-wrapp">
-											<img className="image" src={product.image} alt="" />
-										</div>
-										<ul className="list">
-											<li className="title">{product.name}</li>
-											<li>Color :{product.color}</li>
-											<li>Size :{product.size}</li>
-											<li>
-												Quantity :{' '}
-												<button onClick={Decrement} className="qnt-btn">
-													{' '}
-													-{' '}
-												</button>
-												<span>{quantity}</span>
-												<button onClick={Increment} className="qnt-btn">
-													{' '}
-													+{' '}
-												</button>
-											</li>
-											<li>Price :{product.price}</li>
-											<li className="total">Total :</li>
-										</ul>
-									</Content>
-									<RemoveButton>Remove from basket</RemoveButton>
-								</ContentWrapp>
-							))}
-						</LeftSideWrapp>
-						<RightSideWrapp>
-							<h1 className="title">Shopping bag total</h1>
-							<p className="discount">Add a discount code</p>
-							<TextField id="standard-basic" variant="standard" />
-							<hr className="line" />
-							<p className="order">Order value :</p>
-							<p className="order">Delivery</p>
-							<p className="total">Total :</p>
-							<div className="button-wrapp">
-								<StyledButton>Checkout</StyledButton>
-							</div>
-						</RightSideWrapp>
-					</ShoppingCartWrapp>
-				</Container>
+		<Container
+			maxWidth="lg"
+			sx={{
+				marginBottom: '50px',
+				marginTop: '40px',
+			}}
+		>
+			{cart.length > 0 ? (
+				<ShoppingCartWrapp>
+					<LeftSideWrapp>{productItem}</LeftSideWrapp>
+					<RightSideWrapp>
+						<h1 className="title">Shopping bag total</h1>
+						<p className="discount">Add a discount code</p>
+						<TextField id="standard-basic" variant="standard" />
+						<hr className="line" />
+						<p className="order">Order value :</p>
+						<p className="delivery">Delivery :</p>
+						{/* <p className="order order-delivery">Delivery : {product.productDelivery}</p> */}
+						<p className="total">
+							Total price: <span className="total-price">{totalPrice} $ </span>{' '}
+						</p>
+						<div className="button-wrapp">
+							<StyledButton>Checkout</StyledButton>
+						</div>
+					</RightSideWrapp>
+				</ShoppingCartWrapp>
+			) : (
+				<EmptyCart />
 			)}
-
-			{isNotData && (
-				<Container
-					maxWidth="lg"
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'center',
-					}}
-				>
-					<EmptyCart />
-				</Container>
-			)}
-		</ContainerWrapper>
+		</Container>
 	);
 }
-ShoppingCart.defaultProps = { shoppingData: [] };
 
 export default ShoppingCart;
