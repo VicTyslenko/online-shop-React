@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { Container } from '@mui/system';
 import { cartDataSelect } from '../../store/selectors/cartSelector';
 import { isAuthSelector } from '../../store/selectors/authSelector';
@@ -18,9 +18,13 @@ import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
-
+	const [totalPrice, setTotalPrice] = useState(0);
 	const cart = useSelector(cartDataSelect);
-	console.log(cart);
+	const priceItem = cart.map(({ product }) => product.currentPrice);
+
+	useEffect(() => {
+		setTotalPrice(priceItem.reduce((a, b) => a + b, 0));
+	}, [cart]);
 	// const isAuth = useSelector(isAuthSelector);
 	const productItem = cart?.map(({ product, color, size }) => (
 		<ContentWrapp key={product._id}>
@@ -73,7 +77,9 @@ function ShoppingCart() {
 						<p className="order">Order value :</p>
 						<p className="delivery">Delivery :</p>
 						{/* <p className="order order-delivery">Delivery : {product.productDelivery}</p> */}
-						<p className="total">Total :</p>
+						<p className="total">
+							Total price: <span className="total-price">{totalPrice} $ </span>{' '}
+						</p>
 						<div className="button-wrapp">
 							<StyledButton>Checkout</StyledButton>
 						</div>

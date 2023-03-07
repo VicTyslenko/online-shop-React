@@ -85,6 +85,11 @@ export const RightSideWrapp = styled.div`
 	& .order-delivery{
 		font-size: 10px;
 	}
+	& .total-price{
+		font-size: 18px;
+		line-height: 14px;
+		margin-left:2rem ;
+	}
 	& .total {
 		font-weight: 700;
 		font-size: 14px;
@@ -92,6 +97,7 @@ export const RightSideWrapp = styled.div`
 		text-transform: uppercase;
 		font-family: 'Josefin Sans';
 		margin-bottom: 130px;
+		margin-top:3rem ;
 	}
 	& .button-wrapp {
 		display: flex;
