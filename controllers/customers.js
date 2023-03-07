@@ -70,7 +70,7 @@ exports.createCustomer = (req, res, next) => {
 								lastName: customer.lastName,
 								isAdmin: customer.isAdmin,
 							}; // Create JWT Payload
-		
+
 							// Sign Token
 							jwt.sign(
 								payload,
@@ -84,7 +84,7 @@ exports.createCustomer = (req, res, next) => {
 									});
 								}
 							);
-							})
+						})
 						.catch((err) =>
 							res.status(400).json({
 								message: `Error happened on server: "${err}" `,
@@ -158,6 +158,15 @@ exports.loginCustomer = async (req, res, next) => {
 				message: `Error happened on server: "${err}" `,
 			})
 		);
+};
+
+exports.getCustomers = async (req, res) => {
+	const customerAll = await Customer.find();
+
+	res.status(200).json({
+		success: true,
+		data: customerAll,
+	});
 };
 
 // Controller for getting current customer

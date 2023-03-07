@@ -9,6 +9,7 @@ const {
 	getCustomer,
 	editCustomerInfo,
 	updatePassword,
+	getCustomers,
 } = require("../controllers/customers");
 
 // @route   POST /customers

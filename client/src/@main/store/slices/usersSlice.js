@@ -1,34 +1,28 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { registerFetchData } from '../actions/registrationActions';
+import { usersFetchData } from '../actions/usersAction';
 
 const initialState = {
 	users: [],
 };
 
-const registrationReducer = createSlice({
+const usersSlice = createSlice({
 	name: 'users',
 	initialState,
-	reducers: {
-		clearDataRegister(state) {
-			state.data = null;
-		},
-	},
+	reducers: {},
 	extraReducers: (builder) => {
-		builder.addCase(registerFetchData.pending, (state) => {
+		builder.addCase(usersFetchData.pending, (state) => {
 			state.status = 'loading';
-			state.data = null;
+			state.users = null;
 		});
-		builder.addCase(registerFetchData.fulfilled, (state, { payload }) => {
+		builder.addCase(usersFetchData.fulfilled, (state, { payload }) => {
 			state.status = 'leaded';
-			state.data = payload;
+			state.users = payload;
 		});
-		builder.addCase(registerFetchData.rejected, (state, { payload }) => {
+		builder.addCase(usersFetchData.rejected, (state) => {
 			state.status = 'error';
-			state.error = payload;
 		});
 	},
 });
 
-export const { clearDataRegister } = registrationReducer.actions;
-export default registrationReducer.reducer;
+export default usersSlice.reducer;
