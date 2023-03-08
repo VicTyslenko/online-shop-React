@@ -1,13 +1,48 @@
-import React from 'react';
-import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { useEffect } from 'react';
+import { Container, Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { MainContent, Header, TableCellTitle, TableCellName, TableItem } from './StyledUsers';
+import { useSelector, useDispatch } from 'react-redux';
+import { usersSelector } from '../../../@main/store/selectors/usersSelector';
+import { usersFetchData } from '../../../@main/store/actions/usersAction';
 
 function EditUsers() {
+	const dispatch = useDispatch();
+
+	const { data } = useSelector(usersSelector);
+	console.log(data);
+
+	useEffect(() => {
+		dispatch(usersFetchData());
+	}, []);
+
+	const usersList = data?.map(({ firstName, email, isAdmin, date, _id }, index) => (
+		<TableRow key={_id}>
+			<TableItem align="left" colSpan={1}>
+				{index + 1}
+			</TableItem>
+			<TableItem align="left" colSpan={2}>
+				{firstName}
+			</TableItem>
+			<TableItem align="center" colSpan={2}>
+				{!isAdmin ? 'user' : 'admin'}
+			</TableItem>
+			<TableItem align="left" colSpan={4}>
+				{email}
+			</TableItem>
+			<TableItem align="left" colSpan={2}>
+				action
+			</TableItem>
+			<TableItem align="center" colSpan={2}>
+				{date.slice(0, 10)}
+			</TableItem>
+		</TableRow>
+	));
+
 	return (
 		<Container maxWidth="lg">
 			<Header>Users</Header>
 			<MainContent>
-				<TableContainer component={Paper} sx={{ mt: '40px' }}>
+				<TableContainer component={Paper} sx={{ mt: '40px', mb: '80px' }}>
 					<Table sx={{ width: '100%' }} aria-label="customized table">
 						<TableHead>
 							<TableRow>
@@ -36,26 +71,8 @@ function EditUsers() {
 									Date Posted
 								</TableCellName>
 							</TableRow>
-							<TableRow>
-								<TableItem align="left" colSpan={1}>
-									1
-								</TableItem>
-								<TableItem align="left" colSpan={2}>
-									Mark
-								</TableItem>
-								<TableItem align="center" colSpan={2}>
-									Admin
-								</TableItem>
-								<TableItem align="left" colSpan={4}>
-									admin@gmail.com
-								</TableItem>
-								<TableItem align="left" colSpan={2}>
-									Action
-								</TableItem>
-								<TableItem align="center" colSpan={2}>
-									25.06.2022
-								</TableItem>
-							</TableRow>
+
+							{usersList}
 						</TableHead>
 					</Table>
 				</TableContainer>
