@@ -6,9 +6,19 @@ import { Link } from 'react-router-dom';
 export const ShoppingCartWrapp = styled.div`
 	display: flex;
 	justify-content: space-between;
-	/* gap: 3rem; */
+	gap: 3rem;
 `;
-
+export const StyledLink = styled(Link)`
+	width: 270px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding:1rem 0 1rem 0 ;
+`;
 export const RemoveButton = styled(Button)`
 	&&& {
 		position: absolute;
@@ -25,19 +35,7 @@ export const RemoveButton = styled(Button)`
 export const ContentWrapp = styled.div`
 	position: relative;
 `;
-export const StyledLink = styled(Link)`
-	&&& {
-		width: 270px;
-		background-color: black;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
-		text-transform: uppercase;
-		padding:1rem 0 1rem 0 ;
-		text-decoration:none ;
-	}
-`;
+
 export const LeftSideWrapp = styled.div`
 	display: flex;
 	flex-direction: column;
