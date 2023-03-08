@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TextField } from '@mui/material';
+import { TextField, Box } from '@mui/material';
 
 export const ContainerWrapp = styled.div`
 	display: flex;
@@ -21,7 +21,6 @@ export const ContentForm = styled.div`
 	border-radius: 3px;
 	transform: scale(1);
 	transition: 0.5s;
-	/* border: 1px solid #c7c6c6; */
 `;
 
 export const MainContent = styled.div`
@@ -32,10 +31,6 @@ export const MainContent = styled.div`
 		width: 100%;
 		padding: 24px;
 	}
-`;
-
-export const Title = styled.h1`
-	color: #fff;
 `;
 
 export const Header = styled.h3`
@@ -57,12 +52,23 @@ export const ButtonWrap = styled.div`
 	border-top: 1px solid #d7d5d5;
 `;
 
-export const InputTitle = styled.div`
-	letter-spacing: 0.5px;
-	word-spacing: 1px;
-	font-size: 17px;
-	font-weight: 600;
-	margin-bottom: 10px;
+export const ModalBox = styled(Box)`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	box-shadow: 24;
+	padding: 4;
+	border-radius: 6px;
+`;
+
+export const ModalContent = styled.div`
+	font-size: 26px;
+	padding: 16px 20px;
+	width: 400px;
+	text-align: center;
+	font-family: 'Josefin Sans';
 `;
 
 export const InputItem = styled(TextField)`
