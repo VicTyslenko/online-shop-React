@@ -2,14 +2,13 @@ import { useEffect } from 'react';
 import { Container, Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { MainContent, Header, TableCellTitle, TableCellName, TableItem } from './StyledUsers';
 import { useSelector, useDispatch } from 'react-redux';
-import { usersSelector } from '../../../@main/store/selectors/usersSelector';
-import { usersFetchData } from '../../../@main/store/actions/usersAction';
+import { usersSelector } from '../../store/selectors/usersSelector';
+import { usersFetchData } from '../../store/actions/usersAction';
 
 function EditUsers() {
 	const dispatch = useDispatch();
 
 	const { data } = useSelector(usersSelector);
-	console.log(data);
 
 	useEffect(() => {
 		dispatch(usersFetchData());
