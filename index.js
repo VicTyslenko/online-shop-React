@@ -41,7 +41,7 @@ mongoose
 	.then(() => console.log(`MongoDB connected...`))
 	.catch((error) => console.log(error));
 
-require('./config/passport')(passport);
+require("./config/passport")(passport);
 app.use(passport.initialize());
 
 app.use("/api/cart", cart);

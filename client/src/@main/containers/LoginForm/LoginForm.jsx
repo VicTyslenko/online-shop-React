@@ -24,8 +24,10 @@ import { registerFetchData } from '../../store/actions/registrationActions';
 import { errorDataRegister } from '../../store/selectors/registrationSelector';
 const LoginForm = () => {
 	const dispatch = useDispatch();
+
 	const error = useSelector(errorDataRegister);
 	const [value, setValue] = useState('1');
+
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
