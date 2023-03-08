@@ -26,6 +26,6 @@ export const wishlistSlice = createSlice({
 			state.data = [...products];
 		})
 	}
-})
+});
 
 export default wishlistSlice.reducer;

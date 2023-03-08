@@ -3,7 +3,7 @@ import { getColors } from "../actions/colorsActions";
 
 const initialState = {
 	data: [],
-}
+};
 
 export const colorsSlice = createSlice({
 	name: 'colors',
@@ -14,6 +14,6 @@ export const colorsSlice = createSlice({
 			state.data = action.payload;
 		})
 	}
-})
+});
 
 export default colorsSlice.reducer;

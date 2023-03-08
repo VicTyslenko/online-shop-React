@@ -5,7 +5,7 @@ const initialState = {
 	maxPrice: null,
 	colors: [],
 	categories: null,
-}
+};
 
 export const filterSlice = createSlice({
 	name: 'filters',
@@ -18,7 +18,7 @@ export const filterSlice = createSlice({
 			}
 		}
 	},
-})
+});
 
 export const { setFilters } = filterSlice.actions;
 

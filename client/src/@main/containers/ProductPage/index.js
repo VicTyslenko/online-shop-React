@@ -18,6 +18,7 @@ function ProductPage() {
 	useEffect(() => {
 		if(id) {
 			dispatch(getProduct(id));
+			window.scrollTo(0, 0);
 		}
 	}, [id]);
 
