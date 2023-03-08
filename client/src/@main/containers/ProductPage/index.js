@@ -15,6 +15,7 @@ function ProductPage() {
 	const product = useSelector(selectProduct);
 	const dispatch = useDispatch();
 	const { id } = useParams();
+
 	useEffect(() => {
 		if(id) {
 			dispatch(getProduct(id));
