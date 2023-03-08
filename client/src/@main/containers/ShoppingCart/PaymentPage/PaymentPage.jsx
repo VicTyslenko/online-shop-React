@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
 import { MenuItem, Box, Select, TextField } from '@mui/material';
 import { Container } from '@mui/system';
 
@@ -13,8 +13,12 @@ const PaymentPage = () => {
 	const [month, setMonth] = useState('');
 	const [year, setYear] = useState('');
 	const [open, setOpen] = useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+	const handleOpen = () => setOpen(!open);
+	const handleClose = () => {
+		navigate("/");
+		setOpen(!open);
+	}
+	const navigate = useNavigate();
 	const monthChange = (event) => {
 		setMonth(event.target.value);
 	};
@@ -95,7 +99,7 @@ const PaymentPage = () => {
 					<Box>what is cvv</Box>
 				</div>
 				<StyledButton onClick={handleOpen}>Pay</StyledButton>
-				{/* {open && <PaymentModal open={open}   />} */}
+				 {open && <PaymentModal open={open} close={handleClose}   />}
 			</PaymentWrapper>
 		</Container>
 	);

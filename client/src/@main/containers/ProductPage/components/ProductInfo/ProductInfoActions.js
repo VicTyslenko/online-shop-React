@@ -11,8 +11,8 @@ import { ActionsWrapper } from './ProductInfo.styles';
 
 function ProductInfoActions({ id }) {
 	const dispatch = useDispatch();
-	const isCart = useSelector((state) => state.cart.data.find(({ product }) => id === product?._id));
-	const isWishlist = useSelector((state) => state.wishlist.data.find((el) => id === el._id));
+	const isCart = useSelector((state) => state.cart.data?.find(({ product }) => id === product?._id));
+	const isWishlist = useSelector((state) => state.wishlist.data?.find((el) => id === el._id));
 	const isAuth = useSelector(isAuthSelector);
 
 	const currentSize = useSelector(selectCurrentSize);
