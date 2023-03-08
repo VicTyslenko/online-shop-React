@@ -1,6 +1,6 @@
 import {Fragment} from 'react'
 import Slider from "./components/Slider";
-import Categories from "./components/Categories";
+// import Categories from "./components/Categories";
 import NewInSection from "./components/NewCollection";
 
 function HomeLandingPage() {
@@ -9,7 +9,7 @@ function HomeLandingPage() {
 		<Fragment>
 			<Slider />
 			<NewInSection />
-			<Categories />
+			{/* <Categories /> */}
 		</Fragment>
 	)
 }

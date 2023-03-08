@@ -1,11 +1,14 @@
 import { React, useState } from 'react';
 import { Container, TextField } from '@mui/material';
-import { Title, ContentForm, StyledLink } from '../AdressDetails/StyledAddressDetails';
+
+import { Link } from 'react-router-dom';
+
+import { Title, ContentForm, StyledButton } from '../AdressDetails/StyledAddressDetails';
 import { validationDeliverySchema } from '../../validation';
 import { useDispatch, useSelector } from 'react-redux';
 import { addressFetchData } from '../../../@main/store/actions/addressActions';
 import { useUserData } from '../../hooks/useUserData';
-import { cartDataSelect } from '../../../@main/store/selectors/cartSelector'
+import { cartDataSelect } from '../../../@main/store/selectors/cartSelector';
 import { Formik } from 'formik';
 const AddressDetails = () => {
 	const dispatch = useDispatch();
@@ -29,7 +32,7 @@ const AddressDetails = () => {
 				}}
 				validationSchema={validationDeliverySchema}
 				onSubmit={async (values) => {
-					dispatch(addressFetchData({ ...values, customerId: user?.id,products }));
+					dispatch(addressFetchData({ ...values, customerId: user?.id, products }));
 				}}
 			>
 				{(props) => (
@@ -126,7 +129,10 @@ const AddressDetails = () => {
 
 							<div>
 								<div className="button-wrapp">
-									<StyledLink to={'/payment'}>Save</StyledLink>
+									<StyledButton type="submit">
+										Save
+										{/* <Link to={'/payment'}> Save</Link> */}
+									</StyledButton>
 								</div>
 							</div>
 						</form>
