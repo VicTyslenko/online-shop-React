@@ -5,6 +5,7 @@ export const SidebarWrapp = styled.div`
 	background-color: black;
 	display: flex;
 	flex-direction: column;
+
 	padding-top: 40px;
 	padding-bottom: 60px;
 	width: 350px;

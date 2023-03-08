@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TextField } from '@mui/material';
 
 export const ContainerWrapp = styled.div`
 	display: flex;
@@ -26,6 +27,11 @@ export const ContentForm = styled.div`
 export const MainContent = styled.div`
 	display: flex;
 	justify-content: center;
+
+	& .form {
+		width: 100%;
+		padding: 24px;
+	}
 `;
 
 export const Title = styled.h1`
@@ -44,9 +50,10 @@ export const Header = styled.h3`
 `;
 
 export const ButtonWrap = styled.div`
+	margin-top: 10px;
 	display: flex;
 	justify-content: space-around;
-	padding: 12px;
+	padding: 30px 0;
 	border-top: 1px solid #d7d5d5;
 `;
 
@@ -56,4 +63,18 @@ export const InputTitle = styled.div`
 	font-size: 17px;
 	font-weight: 600;
 	margin-bottom: 10px;
+`;
+
+export const InputItem = styled(TextField)`
+	&&& {
+		width: 100%;
+		color: #949c9e;
+		margin-bottom: 20px;
+	}
+`;
+
+export const AddInput = styled.div`
+	display: inline-block;
+	cursor: pointer;
+	padding-bottom: 7px;
 `;

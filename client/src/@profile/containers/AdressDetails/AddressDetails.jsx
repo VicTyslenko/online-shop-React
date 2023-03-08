@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { useNavigate  } from 'react-router-dom';
 import { Container, TextField } from '@mui/material';
 
 import { Link } from 'react-router-dom';
@@ -14,6 +15,9 @@ const AddressDetails = () => {
 	const dispatch = useDispatch();
 	const user = useUserData();
 	const products = useSelector(cartDataSelect);
+
+	const navigate = useNavigate();
+
 	return (
 		<Container
 			maxWidth="lg"
@@ -32,7 +36,8 @@ const AddressDetails = () => {
 				}}
 				validationSchema={validationDeliverySchema}
 				onSubmit={async (values) => {
-					dispatch(addressFetchData({ ...values, customerId: user?.id, products }));
+					dispatch(addressFetchData({ ...values, customerId: user?.id,products }));
+					navigate("/payment");
 				}}
 			>
 				{(props) => (
@@ -129,10 +134,7 @@ const AddressDetails = () => {
 
 							<div>
 								<div className="button-wrapp">
-									<StyledButton type="submit">
-										Save
-										{/* <Link to={'/payment'}> Save</Link> */}
-									</StyledButton>
+									<StyledLink as='button' type="submit">Save</StyledLink>
 								</div>
 							</div>
 						</form>

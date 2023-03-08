@@ -5,6 +5,8 @@ export const Title = styled.h3`
 	text-align: center;
 	padding-top: 8px;
 	font-size: 22px;
+	font-family: 'Josefin Sans';
+	text-transform: uppercase;
 `;
 
 export const WrappContainer = styled.div`
@@ -15,17 +17,18 @@ export const WrappContainer = styled.div`
 export const ButtonShoppingBag = styled(Link)`
 	font-size: 15px;
 	font-style: normal;
-	padding: 10px 30px;
+	padding: 14px 30px;
 	color: #fafafa;
 	background: #160e05;
 	border: none;
-	border-radius: 30px;
+	border-radius: 16px;
 	outline: none;
-	margin: 6px;
 	cursor: pointer;
 	transition: 0.5s;
 	letter-spacing: 0.8px;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Josefin Sans';
 
 	&:hover {
 		background: #434342;
@@ -100,4 +103,6 @@ export const FooterContent = styled.div`
 export const TotalPrice = styled.div`
 	font-size: 20px;
 	font-weight: 600;
+	text-transform: uppercase;
+	font-family: 'Josefin Sans';
 `;
