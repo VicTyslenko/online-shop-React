@@ -1,13 +1,15 @@
 import { React, useState, useEffect } from 'react';
 import { Container } from '@mui/system';
+
 import { cartDataSelect } from '../../store/selectors/cartSelector';
 import { isAuthSelector } from '../../store/selectors/authSelector';
+import { Link } from 'react-router-dom';
 import { deleteProductFromCart } from '../../store/actions/cartActions';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
 	RemoveButton,
-	StyledButton,
+	StyledLink,
 	LeftSideWrapp,
 	Content,
 	RightSideWrapp,
@@ -19,9 +21,23 @@ import TextField from '@mui/material/TextField';
 function ShoppingCart() {
 	const dispatch = useDispatch();
 	const [totalPrice, setTotalPrice] = useState(0);
+	const [quantity, setQuantity] = useState(0);
 	const cart = useSelector(cartDataSelect);
 	const priceItem = cart.map(({ product }) => product.currentPrice);
-
+	const decrease = () => {
+		if (quantity > 0) {
+			setQuantity(quantity - 1);
+		} else {
+			return;
+		}
+	};
+	const increase = () => {
+		if (quantity < 10) {
+			setQuantity(quantity + 1);
+		} else {
+			return;
+		}
+	};
 	useEffect(() => {
 		setTotalPrice(priceItem.reduce((a, b) => a + b, 0));
 	}, [cart]);
@@ -30,12 +46,24 @@ function ShoppingCart() {
 		<ContentWrapp key={product._id}>
 			<Content>
 				<div className="image-wrapp">
-					<img className="image" src={product.imageUrls[0]} alt="" />
+					<Link to={`/product/${product.itemNo}`}>
+						<img className="image" src={product.imageUrls[0]} alt="" />
+					</Link>
 				</div>
 				<ul className="list">
 					<li className="title">{product.name}</li>
-					<li className="color">Color :{color}</li>
+					<li className="color">Color : {color}</li>
 					<li className="size">Size : {size}</li>
+					<div className="btn-wrapp">
+						<button className="btn-qnt" onClick={() => decrease()}>
+							-
+						</button>
+						{quantity}
+						<button className="btn-qnt" onClick={() => increase(product.currentPrice)}>
+							+
+						</button>
+					</div>
+
 					<li className="price">Price : {product.currentPrice} $ </li>
 					<li className="total">Total :</li>
 				</ul>
@@ -81,7 +109,7 @@ function ShoppingCart() {
 							Total price: <span className="total-price">{totalPrice} $ </span>{' '}
 						</p>
 						<div className="button-wrapp">
-							<StyledButton>Checkout</StyledButton>
+							<StyledLink to={'/account/profile/address-details'}>Checkout</StyledLink>
 						</div>
 					</RightSideWrapp>
 				</ShoppingCartWrapp>

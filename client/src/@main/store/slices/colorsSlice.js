@@ -12,7 +12,6 @@ export const colorsSlice = createSlice({
 	extraReducers: (builder) => {
 		builder.addCase(getColors.fulfilled, (state, action) => {
 			state.data = action.payload;
-			// state.data = action.payload?.colors || []
 		})
 	}
 })

@@ -13,6 +13,7 @@ import colors from '../@main/store/slices/colorsSlice';
 import categories from '../@main/store/slices/categoriesSlice';
 import users from '../@main/store/slices/usersSlice';
 import newProduct from '../@main/store/slices/newProductSlice';
+import addressSlice from '../@main/store/slices/addressSlice';
 
 const persistConfig = {
 	key: 'root',
@@ -32,6 +33,7 @@ const rootReduser = combineReducers({
 	categories,
 	users,
 	newProduct,
+	addressSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);

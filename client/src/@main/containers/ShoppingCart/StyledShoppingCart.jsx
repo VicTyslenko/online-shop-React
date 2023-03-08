@@ -1,20 +1,30 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 // eslint-disable-next-line import/prefer-default-export
 
 export const ShoppingCartWrapp = styled.div`
-	display: flex; 
-	justify-content: space-between; 
-	gap:3rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 3rem;
 `;
-
+export const StyledLink = styled(Link)`
+	width: 270px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding:1rem 0 1rem 0 ;
+`;
 export const RemoveButton = styled(Button)`
 	&&& {
 		position: absolute;
 		bottom: 44px;
-		right: -48px;
+		right: -280px;
 		color: #002068;
-		align-self: flex-end;
 		font-weight: 600;
 		font-size: 14px;
 		line-height: 19px;
@@ -24,19 +34,8 @@ export const RemoveButton = styled(Button)`
 
 export const ContentWrapp = styled.div`
 	position: relative;
- 
 `;
-export const StyledButton = styled(Button)`
-	&&& {
-		width: 270px;
-		background-color: black;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
-		text-transform: uppercase;
-	}
-`;
+
 export const LeftSideWrapp = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -47,10 +46,10 @@ export const RightSideWrapp = styled.div`
 	background: #c4c4c4;
 	height: fit-content;
 	padding: 40px 0 40px 40px;
-& .delivery{
-	color: #002068;
-	font-weight: 600;
-}
+	& .delivery {
+		color: #002068;
+		font-weight: 600;
+	}
 	& .title {
 		margin: 0 0 30px 0;
 		font-weight: 700;
@@ -82,13 +81,13 @@ export const RightSideWrapp = styled.div`
 		text-transform: uppercase;
 		margin-bottom: 30px;
 	}
-	& .order-delivery{
+	& .order-delivery {
 		font-size: 10px;
 	}
-	& .total-price{
+	& .total-price {
 		font-size: 18px;
 		line-height: 14px;
-		margin-left:2rem ;
+		margin-left: 2rem;
 	}
 	& .total {
 		font-weight: 700;
@@ -97,7 +96,7 @@ export const RightSideWrapp = styled.div`
 		text-transform: uppercase;
 		font-family: 'Josefin Sans';
 		margin-bottom: 130px;
-		margin-top:3rem ;
+		margin-top: 3rem;
 	}
 	& .button-wrapp {
 		display: flex;
@@ -108,7 +107,16 @@ export const Content = styled.div`
 	display: flex;
 	gap: 37px;
 	padding: 0 0 2rem 0;
-
+	& .btn-wrapp {
+		display: flex;
+		gap:2rem;
+		
+	}
+	& .btn-qnt {
+		border: none;
+		cursor: pointer;
+	background-color:white ;
+	}
 	& {
 		border-bottom: 1px solid #c4c4c4;
 		margin-bottom: 42px;
@@ -144,6 +152,5 @@ export const Content = styled.div`
 		border: none;
 		background: white;
 		cursor: pointer;
-		
 	}
 `;

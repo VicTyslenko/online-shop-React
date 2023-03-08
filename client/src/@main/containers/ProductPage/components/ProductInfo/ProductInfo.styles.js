@@ -15,9 +15,10 @@ export const ActionsWrapper = styled(Box)`
 
 export const ProductHeader = styled(Box)`
 	display: flex;
-	align-items: center;
+    align-items: flex-start;
 	justify-content: space-between;
 	max-width: 390px;
+	box-sizing: border-box;
 `;
 
 export const ProductInfoHeader = styled(Box)`
