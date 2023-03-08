@@ -9,6 +9,7 @@ import MyAccount from '../MyAccount/MyAccount';
 import TabPurchase from '../MyAccount/TabPurchase';
 import TabWishList from '../MyAccount/TabWishList';
 import TabAddressBook from '../MyAccount/TabAddressBook';
+import AddressDetails from '../containers/AdressDetails/AddressDetails';
 function ProfileRoutes() {
 	return (
 		<Routes>
@@ -21,6 +22,7 @@ function ProfileRoutes() {
 			<Route path="/profile/tab-wish" element={<TabWishList />} />
 			<Route path="/profile/tab-address" element={<TabAddressBook />} />
 			<Route path="/profile/myAccount" element={<MyAccount />} />
+			<Route path="/profile/address-details" element={<AddressDetails />} />
 		
 		</Routes>
 	);

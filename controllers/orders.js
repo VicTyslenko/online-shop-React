@@ -17,17 +17,17 @@ exports.placeOrder = async (req, res, next) => {
     order.orderNo = String(rand());
     let cartProducts = [];
 
-    if (req.body.deliveryAddress) {
-      order.deliveryAddress = req.body.deliveryAddress;
+    if (req.body.address) {
+      order.address = req.body.address;
     }
 
-    if (req.body.shipping) {
-      order.shipping = req.body.shipping;
-    }
+    // if (req.body.shipping) {
+    //   order.shipping = req.body.shipping;
+    // }
 
-    if (req.body.paymentInfo) {
-      order.paymentInfo = req.body.paymentInfo;
-    }
+    // if (req.body.paymentInfo) {
+    //   order.paymentInfo = req.body.paymentInfo;
+    // }
 
     if (req.body.customerId) {
       order.customerId = req.body.customerId;
@@ -74,19 +74,19 @@ exports.placeOrder = async (req, res, next) => {
         return res.status(400).json(errors);
       }
 
-      if (!letterSubject) {
-        return res.status(400).json({
-          message:
-            "This operation involves sending a letter to the client. Please provide field 'letterSubject' for the letter."
-        });
-      }
+      // if (!letterSubject) {
+      //   return res.status(400).json({
+      //     message:
+      //       "This operation involves sending a letter to the client. Please provide field 'letterSubject' for the letter."
+      //   });
+      // }
 
-      if (!letterHtml) {
-        return res.status(400).json({
-          message:
-            "This operation involves sending a letter to the client. Please provide field 'letterHtml' for the letter."
-        });
-      }
+      // if (!letterHtml) {
+      //   return res.status(400).json({
+      //     message:
+      //       "This operation involves sending a letter to the client. Please provide field 'letterHtml' for the letter."
+      //   });
+      // }
 
       const newOrder = new Order(order);
 
@@ -135,8 +135,8 @@ exports.updateOrder = (req, res, next) => {
     } else {
       const order = _.cloneDeep(req.body);
 
-      if (req.body.deliveryAddress) {
-        order.deliveryAddress = req.body.deliveryAddress;
+      if (req.body.deliveryaddress) {
+        order.deliveryaddress = req.body.deliveryaddress;
       }
 
       if (req.body.shipping) {

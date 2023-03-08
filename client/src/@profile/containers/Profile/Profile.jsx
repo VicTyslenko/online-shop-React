@@ -7,12 +7,12 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledLink } from './StyledUserProfile';
-import {profileUserSelector} from '../../../@main/store/selectors/profileUserSelector'
-import jwt_decode from 'jwt-decode';
+import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
 import { tokenDataSelector } from '../../../@main/store/selectors/registrationSelector';
+import { useUserData } from '../../hooks/useUserData';
 
 function Profile() {
 	const dispatch = useDispatch();
@@ -23,21 +23,17 @@ function Profile() {
 	};
 
 	const register = useSelector(tokenDataSelector);
-
+const user =useUserData();
 	const isAuth = useSelector(profileUserSelector);
-
+	// const user = jwt_decode(isAuth ? isAuth.token : register.token);
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
-			{isAuth ? (
+			
 				<Typography variant="h3" sx={{ mb: '141px' }}>
-					Welcome, {`${jwt_decode(isAuth.token).firstName} ${jwt_decode(isAuth.token).lastName}`}
+					Welcome, {`${user?.firstName} ${user?.lastName}`}
 				</Typography>
-			) : (
-				<Typography variant="h3" sx={{ mb: '141px' }}>
-					Welcome, {`${jwt_decode(register.token).firstName} ${jwt_decode(register.token).lastName}`}
-				</Typography>
-			)}
+			
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
 					<StyledLink to="myAccount">

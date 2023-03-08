@@ -13,7 +13,7 @@ const {
 
 router.post(
   "/",
-  passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   placeOrder
 );
 
