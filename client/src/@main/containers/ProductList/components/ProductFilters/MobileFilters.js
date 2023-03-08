@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -10,7 +10,7 @@ import ProductFilterPrice from './ProductFilterPrice';
 import { StyledTypography, FiltersButton, StyledCrossIcon, StyledBoxTypography } from './ProductFilters.styles';
 
 function MobileFilter() {
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = useState(false);
 
 	const handleOpen = () => {
 		setOpen(true);

@@ -13,13 +13,13 @@ const itemData = [
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1053864504154398740/photo-1551621955-fa07d4b1376b.jpg',
 		title: 'DRESS SHOP',
 		cols: 1,
-		path: '/store/accessories',
+		path: '/store/woman',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1055044828699828284/menswear-952835_960_720.png',
 		title: 'BELT SHOP',
 		cols: 1,
-		path: '/store/woman',
+		path: '/store/accessories',
 	},
 	{
 		img: 'https://cdn.discordapp.com/attachments/1043545360498442271/1053864504649334785/metafields-img.jpg',
@@ -37,14 +37,14 @@ function srcset(image, size, rows = 1, cols = 1) {
 			size * rows
 		}&fit=crop&auto=format&dpr=2 2x`,
 	};
-}
+};
 
 function Categories() {
+
 	return (
 		<ContainerWrapper>
 			<Container maxWidth='lg'>
 			<CategoryH1>Shop by Category</CategoryH1>
-
 				<GridContainer>
 					{itemData.map((item) => (
 						<GridItem key={item.img} column={item.cols} row={item.rows}>

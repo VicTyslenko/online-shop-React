@@ -24,7 +24,7 @@ export const productSlice = createSlice({
 			state.data = { ...action.payload }
 		})
 	}
-})
+});
 
 export const { setSize, setColor} = productSlice.actions;
 

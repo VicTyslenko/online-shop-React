@@ -1,4 +1,4 @@
-import { Box, List, ListItemButton, ListItemIcon } from '@mui/material';
+import { Box, List, ListItemButton, ListItemIcon, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 export const ActionsWrapper = styled(Box)`
@@ -10,6 +10,16 @@ export const ActionsWrapper = styled(Box)`
 	${(props) => props.theme.breakpoints.down('sm')} {
 		justify-content: space-between;
 		margin-bottom: 1rem;
+	}
+`;
+
+export const StyledButton = styled(Button)`
+	${(props) => props.theme.breakpoints.down('md')} {
+		width: 210px;
+	}
+
+	${(props) => props.theme.breakpoints.down('sm')} {
+		width: 235px;
 	}
 `;
 
@@ -44,6 +54,10 @@ export const ListItemButtonStyled = styled(ListItemButton)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	&.Mui-selected {
+		border-bottom: none;
+	}
 `;
 
 export const ColorIcon = styled(Box)`

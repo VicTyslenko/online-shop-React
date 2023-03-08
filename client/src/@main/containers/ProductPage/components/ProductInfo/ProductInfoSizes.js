@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ListItemText, Typography, Popover } from "@mui/material";
 import { setSize } from "../../../../store/slices/productSlice";
@@ -15,7 +15,7 @@ function ProductInfoSizes({ sizes }) {
     	dispatch(setSize(value));
   	};
 
-	const [anchorEl, setAnchorEl] = React.useState(null);
+	const [anchorEl, setAnchorEl] = useState(null);
 
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);

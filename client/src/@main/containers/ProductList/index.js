@@ -44,6 +44,7 @@ function ProductList() {
 			categories,
 			male: category,
 		}));
+		window.scrollTo(0, 0);
 	}, [startPage, dispatch, minPrice, maxPrice, colors, categories, category]);
 
 	return (
