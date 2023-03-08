@@ -11,11 +11,14 @@ import wishlist from '../@main/store/slices/wishlistSlice';
 import filters from '../@main/store/slices/filterSlice';
 import colors from '../@main/store/slices/colorsSlice';
 import categories from '../@main/store/slices/categoriesSlice';
+import users from '../@main/store/slices/usersSlice';
+import newProduct from '../@main/store/slices/newProductSlice';
 import addressSlice from '../@main/store/slices/addressSlice';
+
 const persistConfig = {
 	key: 'root',
 	storage,
-	blacklist: ["filters", "product"]
+	blacklist: ['filters', 'product'],
 };
 
 const rootReduser = combineReducers({
@@ -28,7 +31,9 @@ const rootReduser = combineReducers({
 	filters,
 	colors,
 	categories,
-	addressSlice
+	users,
+	newProduct,
+	addressSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);

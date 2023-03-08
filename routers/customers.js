@@ -9,12 +9,15 @@ const {
 	getCustomer,
 	editCustomerInfo,
 	updatePassword,
+	getCustomers,
 } = require("../controllers/customers");
 
 // @route   POST /customers
 // @desc    Register customer
 // @access  Public
 router.post("/", createCustomer);
+
+router.get("/", getCustomers);
 
 // @route   POST /customers/login
 // @desc    Login Customer / Returning JWT Token

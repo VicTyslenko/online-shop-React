@@ -1,6 +1,5 @@
 import { Container, Box, TextField, Radio, RadioGroup, FormControlLabel, FormControl, Typography,Button, createTheme } from '@mui/material';
 import { Title, ContentForm, ContainerWrapp, Form } from './StyledMyProfile';
-
 function MyProfile() {
 	// const theme = createTheme({
 	// 	palette:{
@@ -9,6 +8,8 @@ function MyProfile() {
 	// 		}
 	// 	}
 	// })
+
+	/*Добавить даные пользователя в форму*/
 	return (
 		<Container maxWidth="lg">
 			<Title>My Account</Title>

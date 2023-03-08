@@ -29,8 +29,8 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 
 	const dataProducts = useSelector(cartDataSelect);
 
-	const productItem = dataProducts?.map(({ product, _id }) => (
-		<ContentItem key={_id}>
+	const productItem = dataProducts?.map(({ product }) => (
+		<ContentItem key={product._id}>
 			<Link to={`product/${product.itemNo}`}>
 				<ImageWrapp className="image-wrapp">
 					<img className="image" src={product.imageUrls[0]} alt="" />

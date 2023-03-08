@@ -58,7 +58,6 @@ router.post(
 
 router.post(
   "/",
-  passport.authenticate("jwt-admin", { session: false }),
   addProduct
 );
 
