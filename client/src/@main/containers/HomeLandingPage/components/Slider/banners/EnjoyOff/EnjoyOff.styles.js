@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledText = styled.h1`
-text-transform: uppercase;
-font-weight: 700;
-margin-bottom: 28px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 28px;
 	font-size: 38px;
 	color: #e01515;
 `;
 
-export const StyledLink = styled.a`
+export const StyledDiv = styled.div`
 	color: #3f3d3d;
 	font-size: 30px;
 	font-weight: 300;
