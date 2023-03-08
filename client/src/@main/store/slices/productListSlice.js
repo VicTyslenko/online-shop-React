@@ -19,6 +19,6 @@ export const productListSlice = createSlice({
 			state.count = productsQuantity;
 		})
 	}
-})
+});
 
 export default productListSlice.reducer;

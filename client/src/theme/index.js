@@ -104,12 +104,6 @@ const theme = createTheme(themeWithBreakpoints, {
 					fontWeight: 400,
 					fontSize: '16px',
 					lineHeight: '20px',
-					[themeWithBreakpoints.breakpoints.down('md')]: {
-						width: '210px',
-					},
-					[themeWithBreakpoints.breakpoints.down('sm')]: {
-						width: '235px',
-					},
 				},
 			},
 		},

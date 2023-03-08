@@ -14,7 +14,6 @@ export const getProductList = createAsyncThunk(
 			colors,
 			categories,
 			male
-			// ...(maxPrice ? {maxPrice} : {}) - check if value exist
 		});
 
 	return data;

@@ -25,7 +25,6 @@ export const addProductToWishlist = createAsyncThunk(
 				Authorization: auth.data?.token
 			}
 		});
-		// const { data } = await fetchProductToCart(id);
 		return data;
 });
 
