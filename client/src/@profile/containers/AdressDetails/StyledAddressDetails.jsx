@@ -1,20 +1,14 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
-export const StyledLink = styled(Link)`
-&&& {
-	
-	margin-top:3rem ; 
-	width: 270px;
-	background-color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding:1rem 0 1rem 0 ;
-}
+
+export const StyledButton = styled(Button)`
+	&&& {
+		margin-top: 3rem;
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		padding: 1rem 0 1rem 0;
+	}
 `;
 export const Title = styled.h1`
 	margin: 0 0 40px 0;

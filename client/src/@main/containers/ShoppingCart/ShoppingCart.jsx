@@ -1,10 +1,12 @@
 import { React, useState, useEffect } from 'react';
 import { Container } from '@mui/system';
 
-import { cartDataSelect } from '../../store/selectors/cartSelector';
+
 import { isAuthSelector } from '../../store/selectors/authSelector';
+import { cartDataSelect } from '../../store/selectors/cartSelector';
+import jwt_decode from 'jwt-decode';
 import { Link } from 'react-router-dom';
-import { deleteProductFromCart } from '../../store/actions/cartActions';
+import { deleteCart } from '../../store/actions/cartActions';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
@@ -21,6 +23,8 @@ import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
+	const userToken = useSelector(usersSelector );
+	console.log(userToken);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [quantity, setQuantity] = useState(0);
 	const cart = useSelector(cartDataSelect);
@@ -42,7 +46,6 @@ function ShoppingCart() {
 	useEffect(() => {
 		setTotalPrice(priceItem.reduce((a, b) => a + b, 0));
 	}, [cart]);
-	// const isAuth = useSelector(isAuthSelector);
 	const productItem = cart?.map(({ product, color, size }) => (
 		<ContentWrapp key={product._id}>
 			<Content>
@@ -76,21 +79,6 @@ function ShoppingCart() {
 			</Content>
 		</ContentWrapp>
 	));
-	// const checkout = cart?.map(({ product }) => (
-	// 	<RightSideWrapp key={product._id}>
-	// 		<h1 className="title">Shopping bag total</h1>
-	// 		<p className="discount">Add a discount code</p>
-	// 		<TextField id="standard-basic" variant="standard" />
-	// 		<hr className="line" />
-	// 		<p className="order">Order value :</p>
-	// 		<p className="delivery">Delivery :</p>
-	// 		<p className="order order-delivery">Delivery : {product.productDelivery}</p>
-	// 		<p className="total">Total :</p>
-	// 		<div className="button-wrapp">
-	// 			<StyledButton>Checkout</StyledButton>
-	// 		</div>
-	// 	</RightSideWrapp>
-	// ));
 	return (
 		<Container
 			maxWidth="lg"
@@ -109,7 +97,6 @@ function ShoppingCart() {
 						<hr className="line" />
 						<p className="order">Order value :</p>
 						<p className="delivery">Delivery :</p>
-						{/* <p className="order order-delivery">Delivery : {product.productDelivery}</p> */}
 						<p className="total">
 							Total price: <span className="total-price">{totalPrice} $ </span>{' '}
 						</p>

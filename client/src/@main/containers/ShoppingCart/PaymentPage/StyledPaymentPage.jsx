@@ -44,7 +44,7 @@ export const StyledButton = styled(Button)`
 	&&& {
 		background-color: black;
 		color: white;
-		margin-top: 50px;
+		margin-top:50px;
 	}
 `;
 export const CardsWrapper = styled.div`
