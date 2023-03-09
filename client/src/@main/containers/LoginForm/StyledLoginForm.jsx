@@ -5,9 +5,6 @@ export const ContainerWrapper = styled.div`
 	background: black;
 `;
 export const HeadWrapp = styled.div`
-	/* display: flex;
-	justify-content: space-between;
-	align-items: center; */
 	padding-top: 160px;
 
 	& .list-item {
@@ -135,14 +132,7 @@ export const StyledButtonReg = styled(Button)`
 	}
 `;
 
-export const DescriptionReg = styled.h2`
-	color: white;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 16px;
-	margin-top: 73px;
-	font-family: 'Josefin Sans', sans-serif;
-`;
+
 export const InputsWrappReg = styled.div`
 	margin-top: 71px;
 	display: flex;
