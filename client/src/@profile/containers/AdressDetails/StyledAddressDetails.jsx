@@ -1,13 +1,9 @@
 import styled from 'styled-components';
-import { Button } from '@mui/material';
+import { Link } from '@mui/material';
 
-export const StyledButton = styled(Button)`
+export const StyledLink = styled(Link)`
 	&&& {
-		margin-top: 3rem;
-		background-color: black;
-		color: white;
-		text-transform: uppercase;
-		padding: 1rem 0 1rem 0;
+	
 	}
 `;
 export const Title = styled.h1`

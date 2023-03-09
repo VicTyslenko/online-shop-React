@@ -15,11 +15,12 @@ function HomeLandingPage() {
 	}, [dispatch]);
 
 	return (
-		<Fragment>
+	<>
 			<Slider />
 			<NewInSection />
-			{/* <Categories /> */}
-		</Fragment>
+			<Categories />
+			</>
+		
 	);
 }
 

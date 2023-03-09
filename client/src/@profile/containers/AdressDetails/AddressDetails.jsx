@@ -4,7 +4,7 @@ import { Container, TextField } from '@mui/material';
 
 import { Link } from 'react-router-dom';
 
-import { Title, ContentForm, StyledButton } from '../AdressDetails/StyledAddressDetails';
+import { Title, ContentForm, StyledLink } from '../AdressDetails/StyledAddressDetails';
 import { validationDeliverySchema } from '../../validation';
 import { useDispatch, useSelector } from 'react-redux';
 import { addressFetchData } from '../../../@main/store/actions/addressActions';
@@ -36,8 +36,8 @@ const AddressDetails = () => {
 				}}
 				validationSchema={validationDeliverySchema}
 				onSubmit={async (values) => {
-					dispatch(addressFetchData({ ...values, customerId: user?.id,products }));
-					navigate("/payment");
+					dispatch(addressFetchData({ ...values, customerId: user?.id, products }));
+					navigate('/payment');
 				}}
 			>
 				{(props) => (
@@ -118,7 +118,13 @@ const AddressDetails = () => {
 
 							<div>
 								<div className="button-wrapp">
-									<StyledLink as='button' type="submit">Save</StyledLink>
+									<StyledLink
+								
+										as="button"
+										type="submit"
+									>
+										Save
+									</StyledLink>
 								</div>
 							</div>
 						</form>
