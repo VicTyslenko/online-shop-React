@@ -19,7 +19,7 @@ const PaymentPage = () => {
 		if (user) {
 			dispatch(deleteCart(user));
 		} else {
-			clearUnauthCart();
+			dispatch(clearUnauthCart());
 		}
 	};
 	const [month, setMonth] = useState('');

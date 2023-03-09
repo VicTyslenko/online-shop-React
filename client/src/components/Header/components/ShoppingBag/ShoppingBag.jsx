@@ -29,7 +29,7 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 
 	const dataProducts = useSelector(cartDataSelect);
 
-	const productItem = dataProducts?.map(({ product }) => (
+	const productItem = dataProducts?.map(({ product }) => product && (
 		<ContentItem key={product._id}>
 			<Link to={`product/${product.itemNo}`}>
 				<ImageWrapp className="image-wrapp">
@@ -54,7 +54,7 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 		</ContentItem>
 	));
 
-	const priceItem = dataProducts.map(({ product, cartQuantity }) => product.currentPrice * cartQuantity);
+	const priceItem = dataProducts.map(({ product, cartQuantity }) => product && (product.currentPrice * cartQuantity));
 
 	useEffect(() => {
 		setTotalPrice(priceItem.reduce((accum, item) => accum + item, 0));
