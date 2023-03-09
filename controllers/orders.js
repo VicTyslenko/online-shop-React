@@ -57,7 +57,7 @@ exports.placeOrder = async (req, res, next) => {
       order.products
     );
 
-    if (!productAvailibilityInfo.productsAvailibilityStatus) {
+    if (productAvailibilityInfo.productsAvailibilityStatus) {
       res.json({
         message: "Some of your products are unavailable for now",
         productAvailibilityInfo
