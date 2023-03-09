@@ -8,6 +8,7 @@ export const ShoppingCartWrapp = styled.div`
 	justify-content: space-between;
 	gap: 3rem;
 `;
+
 export const StyledLink = styled(Link)`
 	width: 270px;
 	background-color: black;
@@ -19,17 +20,23 @@ export const StyledLink = styled(Link)`
 	text-decoration: none;
 	padding:1rem 0 1rem 0 ;
 `;
+
 export const RemoveButton = styled(Button)`
 	&&& {
-		position: absolute;
-		bottom: 44px;
-		right: -280px;
+		width: 140px;
 		color: #002068;
 		font-weight: 600;
 		font-size: 14px;
 		line-height: 19px;
 		font-family: 'Open Sans';
 	}
+`;
+
+export const StyledDiv = styled.div`
+	display: flex;
+	justify-content: space-between;
+	min-width: 400px;
+	width: 100%;
 `;
 
 export const ContentWrapp = styled.div`
@@ -110,7 +117,7 @@ export const Content = styled.div`
 	& .btn-wrapp {
 		display: flex;
 		gap:2rem;
-		
+
 	}
 	& .btn-qnt {
 		border: none;
@@ -123,6 +130,7 @@ export const Content = styled.div`
 	}
 
 	& .image {
+		min-width: 174.67px;
 		width: 174.67px;
 		height: 253px;
 	}
