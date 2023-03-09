@@ -1,9 +1,10 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect, useCallback } from 'react';
 import { Container } from '@mui/system';
 
 import { useUserData } from '../../../@profile/hooks/useUserData';
 import { cartDataSelect } from '../../store/selectors/cartSelector';
 import { Link } from 'react-router-dom';
+import { addProductToCart, deleteProductFromCart } from '../../store/actions/cartActions';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
@@ -13,37 +14,32 @@ import {
 	Content,
 	RightSideWrapp,
 	ContentWrapp,
-	StyledDiv
+	StyledDiv,
 } from './StyledShoppingCart';
-import { deleteProductFromCart } from '../../store/actions/cartActions';
+
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
-const user = useUserData()
+	const user = useUserData();
 	const [totalPrice, setTotalPrice] = useState(0);
-	const [quantity, setQuantity] = useState(0);
 	const cart = useSelector(cartDataSelect);
-	const priceItem = cart.map(({ product }) => product.currentPrice);
-	const decrease = () => {
-		if (quantity > 0) {
-			setQuantity(quantity - 1);
-		} else {
-			return;
-		}
-	};
-	const increase = () => {
-		if (quantity < 10) {
-			setQuantity(quantity + 1);
-		} else {
-			return;
-		}
-	};
+
+	const priceItem = cart?.map(({ product, cartQuantity }) => product.currentPrice * cartQuantity);
+
 	useEffect(() => {
 		setTotalPrice(priceItem.reduce((a, b) => a + b, 0));
 	}, [cart]);
-	const productItem = cart?.map(({ product, color, size }) => (
+
+	const handleClickIncremet = useCallback(
+		(value) => {
+			dispatch(addProductToCart(value._id));
+		},
+		[dispatch],
+	);
+
+	const productItem = cart?.map(({ product, color, size, cartQuantity }) => (
 		<ContentWrapp key={product._id}>
 			<Content>
 				<div className="image-wrapp">
@@ -57,21 +53,17 @@ const user = useUserData()
 						<li className="color">Color : {color}</li>
 						<li className="size">Size : {size}</li>
 						<div className="btn-wrapp">
-							<button className="btn-qnt" onClick={() => decrease()}>
-								-
-							</button>
-							{quantity}
-							<button className="btn-qnt" onClick={() => increase(product.currentPrice)}>
+							<button className="btn-qnt">-</button>
+							{cartQuantity}
+							<button className="btn-qnt" onClick={() => handleClickIncremet(product)}>
 								+
 							</button>
 						</div>
 
 						<li className="price">Price : {product.currentPrice} $ </li>
-						<li className="total">Total :</li>
+						<li className="total">Total : {product.currentPrice * cartQuantity} $</li>
 					</ul>
-					<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>
-						Remove
-					</RemoveButton>
+					<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>Remove</RemoveButton>
 				</StyledDiv>
 			</Content>
 		</ContentWrapp>
