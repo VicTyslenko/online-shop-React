@@ -5,7 +5,7 @@ import ProductPage from '../containers/ProductPage';
 import HomeLandingPage from '../containers/HomeLandingPage';
 import ShoppingCart from '../containers/ShoppingCart';
 import LoginForm from '../containers/LoginForm/LoginForm';
-import LandingPageLogin from '../containers/LandingPageLogin/LandingPageLogin '
+import LandingPageLogin from '../containers/LandingPageLogin/LandingPageLogin'
 import PaymentPage from '../containers/ShoppingCart/PaymentPage/PaymentPage';
 import ContactLandingPage from '../containers/ContactLandingPage';
 import HistoryBrandLandingPage from '../containers/HistoryBrandLandingPage';
