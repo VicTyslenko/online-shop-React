@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { Button, IconButton, Tooltip  } from '@mui/material';
-import { useDispatch, useSelector } from "react-redux";
+import { Button, IconButton, Tooltip } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
 import { addProductToCart, deleteProductFromCart } from '../../../../store/actions/cartActions';
 import { addProductToWishlist, deleteProductFromWishlist } from '../../../../store/actions/wishlistActions';
 import { selectCurrentColor, selectCurrentSize } from '../../../../store/selectors/productSelector';
@@ -22,23 +22,23 @@ function ProductInfoActions({ id }) {
 	const [openTooltip, setOpenTooltip] = useState(false);
 
 	const handleClickCart = useCallback(() => {
-        if(isCart) {
-            dispatch(deleteProductFromCart(id));
-        } else {
+		if (isCart) {
+			dispatch(deleteProductFromCart(id));
+		} else {
 			dispatch(addProductToCart(id));
 		}
-    }, [id, isCart, dispatch]);
+	}, [id, isCart, dispatch]);
 
 	const handleClickWishlist = useCallback(() => {
-        if(isWishlist) {
-            dispatch(deleteProductFromWishlist(id));
-        } else {
+		if (isWishlist) {
+			dispatch(deleteProductFromWishlist(id));
+		} else {
 			dispatch(addProductToWishlist(id));
-        }
-    }, [id, isWishlist, dispatch]);
+		}
+	}, [id, isWishlist, dispatch]);
 
 	const handleOpenTooltip = () => {
-		if((!currentSize || !currentColor) && !isCart) {
+		if ((!currentSize || !currentColor) && !isCart) {
 			setOpenTooltip(true);
 		}
 	};
@@ -49,8 +49,13 @@ function ProductInfoActions({ id }) {
 
 	return (
 		<ActionsWrapper>
-			<Tooltip title="Choose color and size" placement="top" disableInteractive
-			open={openTooltip} onOpen={handleOpenTooltip} onClose={handleCloseTooltip}
+			<Tooltip
+				title="Choose color and size"
+				placement="top"
+				disableInteractive
+				open={openTooltip}
+				onOpen={handleOpenTooltip}
+				onClose={handleCloseTooltip}
 			>
 				<span>
 					<StyledButton
@@ -59,19 +64,17 @@ function ProductInfoActions({ id }) {
 						onClick={handleClickCart}
 						disabled={(!currentSize || !currentColor) && !isCart}
 					>
-						{isCart ? "Delete" : "Add to cart"}
+						{isCart ? 'Delete' : 'Add to cart'}
 					</StyledButton>
 				</span>
 			</Tooltip>
 			{isAuth && (
-				<IconButton
-					onClick={handleClickWishlist}
-					sx={{ color: isWishlist ? "#E01515" : "#fff"}}>
-						<FavoriteBorderIcon />
+				<IconButton onClick={handleClickWishlist} sx={{ color: isWishlist ? '#E01515' : '#fff' }}>
+					<FavoriteBorderIcon />
 				</IconButton>
 			)}
 		</ActionsWrapper>
-	)
-};
+	);
+}
 
 export default ProductInfoActions;

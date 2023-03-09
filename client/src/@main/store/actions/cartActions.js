@@ -27,6 +27,7 @@ export const addProductToCart = createAsyncThunk('cart/addProductToCart', async 
 			{
 				size: product.currentSize,
 				color: product.currentColor,
+				cartQuantity: product.cartQuantity,
 			},
 			{
 				headers: {
@@ -71,18 +72,16 @@ export const deleteCart = createAsyncThunk('cart/deleteCart', async (user, { get
 	const { auth, cart } = getState();
 
 	if (auth.data !== null) {
-		const { data } = await fetchDeleteCart({}, {
-			headers: {
-				Authorization: auth.data?.token,
+		const { data } = await fetchDeleteCart(
+			{},
+			{
+				headers: {
+					Authorization: auth.data?.token,
+				},
+				user,
 			},
-			user
-		});
+		);
 
 		return data;
 	}
-	// } else {
-	// 	const products = cart.data.filter(({product}) => product._id !== id);
-
-	// 	return { products };
-	// }
 });
