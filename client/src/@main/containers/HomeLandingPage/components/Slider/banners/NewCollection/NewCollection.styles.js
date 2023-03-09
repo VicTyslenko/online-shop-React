@@ -12,7 +12,7 @@ export const StyledDiv = styled.div`
 	font-size: 30px;
 	font-weight: 300;
 	text-decoration: none;
-	:hover {
+	&:hover {
 		text-decoration: underline;
 	}
 	>span {

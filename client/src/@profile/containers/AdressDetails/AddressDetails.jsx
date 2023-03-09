@@ -1,12 +1,15 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { Container, TextField } from '@mui/material';
+
+import { Link } from 'react-router-dom';
+
 import { Title, ContentForm, StyledLink } from '../AdressDetails/StyledAddressDetails';
 import { validationDeliverySchema } from '../../validation';
 import { useDispatch, useSelector } from 'react-redux';
 import { addressFetchData } from '../../../@main/store/actions/addressActions';
 import { useUserData } from '../../hooks/useUserData';
-import { cartDataSelect } from '../../../@main/store/selectors/cartSelector'
+import { cartDataSelect } from '../../../@main/store/selectors/cartSelector';
 import { Formik } from 'formik';
 const AddressDetails = () => {
 	const dispatch = useDispatch();
@@ -33,8 +36,8 @@ const AddressDetails = () => {
 				}}
 				validationSchema={validationDeliverySchema}
 				onSubmit={async (values) => {
-					dispatch(addressFetchData({ ...values, customerId: user?.id,products }));
-					navigate("/payment");
+					dispatch(addressFetchData({ ...values, customerId: user?.id, products }));
+					navigate('/payment');
 				}}
 			>
 				{(props) => (
@@ -98,22 +101,6 @@ const AddressDetails = () => {
 								helperText={props.touched.mobile && props.errors.mobile}
 								sx={{ mb: '6px' }}
 							/>
-
-							{/* <TextField
-									// id="standard-basic"
-									type="number"
-									fullWidth
-									label="Birthday"
-									name='birthday'
-									placeholder="dd/mm/yyyy"
-									multiline
-									variant="standard"
-									value={props.values.birthday}
-									onChange={props.handleChange}
-									error={props.touched.birthday && Boolean(props.errors.birthday)}
-									helperText={props.touched.birthday && props.errors.birthday}
-									sx={{ mb: '6px' }}
-								/> */}
 							<TextField
 								type="string"
 								fullWidth
@@ -131,7 +118,13 @@ const AddressDetails = () => {
 
 							<div>
 								<div className="button-wrapp">
-									<StyledLink as='button' type="submit">Save</StyledLink>
+									<StyledLink
+								
+										as="button"
+										type="submit"
+									>
+										Save
+									</StyledLink>
 								</div>
 							</div>
 						</form>
@@ -144,16 +137,4 @@ const AddressDetails = () => {
 
 export default AddressDetails;
 
-{
-	/* <FormControl>
-<RadioGroup
-	sx={{ borderRadius: '12px' }}
-	row
-	aria-labelledby="demo-row-radio-buttons-group-label"
-	name="row-radio-buttons-group"
->
-	<FormControlLabel value="female" control={<Radio />} label="Male" />
-	<FormControlLabel value="male" control={<Radio />} label="Female" />
-</RadioGroup>
-</FormControl> */
-}
+

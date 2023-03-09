@@ -1,6 +1,7 @@
 import { React, useState, useEffect, useCallback } from 'react';
 import { Container } from '@mui/system';
 
+import { useUserData } from '../../../@profile/hooks/useUserData';
 import { cartDataSelect } from '../../store/selectors/cartSelector';
 import { Link } from 'react-router-dom';
 import { addProductToCart, deleteProductFromCart } from '../../store/actions/cartActions';
@@ -15,12 +16,13 @@ import {
 	ContentWrapp,
 	StyledDiv,
 } from './StyledShoppingCart';
+
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
-
+	const user = useUserData();
 	const [totalPrice, setTotalPrice] = useState(0);
 	const cart = useSelector(cartDataSelect);
 
@@ -66,21 +68,6 @@ function ShoppingCart() {
 			</Content>
 		</ContentWrapp>
 	));
-	// const checkout = cart?.map(({ product }) => (
-	// 	<RightSideWrapp key={product._id}>
-	// 		<h1 className="title">Shopping bag total</h1>
-	// 		<p className="discount">Add a discount code</p>
-	// 		<TextField id="standard-basic" variant="standard" />
-	// 		<hr className="line" />
-	// 		<p className="order">Order value :</p>
-	// 		<p className="delivery">Delivery :</p>
-	// 		<p className="order order-delivery">Delivery : {product.productDelivery}</p>
-	// 		<p className="total">Total :</p>
-	// 		<div className="button-wrapp">
-	// 			<StyledButton>Checkout</StyledButton>
-	// 		</div>
-	// 	</RightSideWrapp>
-	// ));
 	return (
 		<Container
 			maxWidth="lg"
@@ -99,7 +86,6 @@ function ShoppingCart() {
 						<hr className="line" />
 						<p className="order">Order value :</p>
 						<p className="delivery">Delivery :</p>
-						{/* <p className="order order-delivery">Delivery : {product.productDelivery}</p> */}
 						<p className="total">
 							Total price: <span className="total-price">{totalPrice} $ </span>{' '}
 						</p>

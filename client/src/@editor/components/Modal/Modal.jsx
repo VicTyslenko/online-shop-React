@@ -1,5 +1,4 @@
 import React from 'react';
-// import { IoCloseSharp } from 'react-icons/io5';
 import {
 	ButtonModalsWrap,
 	ButtonItem,
@@ -14,9 +13,9 @@ function Modal({ title, closeModal, children, onClick }) {
 	return (
 		<ModalWrapWindow onClick={closeModal}>
 			<ModalContent onClick={(e) => e.stopPropagation()}>
-				<Header>
+				<Header>	
 					{title}
-					<CloseIcon>{/* <IoCloseSharp fontSize={28} onClick={closeModal} /> */}</CloseIcon>
+					<CloseIcon>{}</CloseIcon>
 				</Header>
 				<MainContent>{children}</MainContent>
 				<ButtonModalsWrap>

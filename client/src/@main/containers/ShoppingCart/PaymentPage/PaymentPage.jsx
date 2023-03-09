@@ -1,23 +1,35 @@
 import React, { useState } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { MenuItem, Box, Select, TextField } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { MenuItem, Select, TextField, Link } from '@mui/material';
 import { Container } from '@mui/system';
-
+import { deleteCart } from '../../../store/actions/cartActions';
 import { Title, PaymentWrapper, StyledButton, CardsWrapper } from './StyledPaymentPage';
 import PaymentModal from '../Modal/Modal';
 import SVG from '../SVG/SVG';
 import SVGPayPall from '../SVG/SVGPayPall';
 import SVGMaestro from '../SVG/SVGMaestro';
+import { useDispatch } from 'react-redux';
 
+import { clearUnauthCart } from '../../../store/slices/cartSlice';
+import { useUserData } from '../../../../@profile/hooks/useUserData';
 const PaymentPage = () => {
+	const dispatch = useDispatch();
+	const user = useUserData();
+	const clearCart = () => {
+		if (user) {
+			dispatch(deleteCart(user));
+		} else {
+			clearUnauthCart();
+		}
+	};
 	const [month, setMonth] = useState('');
 	const [year, setYear] = useState('');
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(!open);
 	const handleClose = () => {
-		navigate("/");
+		navigate('/');
 		setOpen(!open);
-	}
+	};
 	const navigate = useNavigate();
 	const monthChange = (event) => {
 		setMonth(event.target.value);
@@ -40,7 +52,7 @@ const PaymentPage = () => {
 				<CardsWrapper>
 					<SVG />
 					<SVGPayPall />
-					<SVGMaestro/>
+					<SVGMaestro />
 				</CardsWrapper>
 				<div className="flex-block">
 					<span className="info">Card number</span>
@@ -54,7 +66,7 @@ const PaymentPage = () => {
 				<div className="flex-select">
 					<span className="info"> Card Expiry Date </span>
 					<Select value={month} onChange={monthChange}>
-						{/* <MenuItem value={01}>01</MenuItem> */}
+						<MenuItem value={'01'}>01</MenuItem>
 						<MenuItem value={'02'}>02</MenuItem>
 						<MenuItem value={'03'}>03</MenuItem>
 						<MenuItem value={'04'}>04</MenuItem>
@@ -95,11 +107,27 @@ const PaymentPage = () => {
 						}}
 					/>
 
-					{/* <Link>what is cvv</Link> */}
-					<Box>what is cvv</Box>
+					<Link
+						sx={{
+							textDecoration: 'none',
+							color: 'black',
+							fontWeight: 'bold',
+						}}
+						href="https://help.gopay.com/en/knowledge-base/security/what-is-cvv-cvc-code-and-where-can-i-find-it-on-my-card"
+					>
+						What is cvv
+					</Link>
 				</div>
-				<StyledButton onClick={handleOpen}>Pay</StyledButton>
-				 {open && <PaymentModal open={open} close={handleClose}   />}
+				<StyledButton
+					onClick={() => {
+						handleOpen();
+						clearCart();
+					}}
+				>
+					Pay
+				</StyledButton>
+
+				{open && <PaymentModal open={open} close={handleClose} />}
 			</PaymentWrapper>
 		</Container>
 	);

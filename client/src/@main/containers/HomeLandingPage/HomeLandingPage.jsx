@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getProductList } from '../../store/actions/productListActions';
 
-import Slider from "./components/Slider";
-import Categories from "./components/Categories";
-import NewInSection from "./components/NewCollection";
+import Slider from './components/Slider';
+import Categories from './components/Categories';
+import NewInSection from './components/NewCollection';
 
 function HomeLandingPage() {
 	const dispatch = useDispatch();
@@ -15,12 +15,13 @@ function HomeLandingPage() {
 	}, [dispatch]);
 
 	return (
-		<>
+	<>
 			<Slider />
 			<NewInSection />
 			<Categories />
-		</>
-	)
-};
+			</>
+		
+	);
+}
 
 export default HomeLandingPage;
