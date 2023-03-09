@@ -23,8 +23,7 @@ import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
-	const userToken = useSelector(usersSelector );
-	console.log(userToken);
+
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [quantity, setQuantity] = useState(0);
 	const cart = useSelector(cartDataSelect);
