@@ -54,7 +54,7 @@ function ShoppingBag({ isShoppingBag, closeShoppingBag }) {
 		</ContentItem>
 	));
 
-	const priceItem = dataProducts.map(({ product }) => product.currentPrice);
+	const priceItem = dataProducts.map(({ product, cartQuantity }) => product.currentPrice * cartQuantity);
 
 	useEffect(() => {
 		setTotalPrice(priceItem.reduce((accum, item) => accum + item, 0));
