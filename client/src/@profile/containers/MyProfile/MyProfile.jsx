@@ -1,16 +1,12 @@
 import { Container, TextField, Radio, RadioGroup, FormControlLabel, FormControl, Button } from '@mui/material';
 import { Title, ContentForm, ContainerWrapp, Form } from './StyledMyProfile';
-import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
-import { tokenDataSelector } from '../../../@main/store/selectors/registrationSelector';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useUserData } from '../../hooks/useUserData';
 import { Formik } from 'formik';
 function MyProfile() {
-	const user = useUserData();
 	const dispatch = useDispatch();
-	
+	const user = useUserData();
 
-	/*Добавить даные пользователя в форму*/
 	return (
 		<Container maxWidth="lg">
 			<Title>My Account</Title>
@@ -19,11 +15,11 @@ function MyProfile() {
 					<Formik
 						initialValues={{
 							firstName: '',
-							lastName: `${user.lastName}`,
-							email: "",
+							lastName: '',
+							email: '',
 							mobile: '',
 							address: '',
-							birthday:''
+							birthday: '',
 						}}
 					>
 						{(props) => (
@@ -32,7 +28,7 @@ function MyProfile() {
 									id="standard-basic"
 									type="string"
 									fullWidth
-									name='email'
+									name="email"
 									label=""
 									placeholder={user.email}
 									onChange={props.handleChange}
@@ -44,7 +40,7 @@ function MyProfile() {
 									id="standard-basic"
 									type="string"
 									fullWidth
-									name='firstName'
+									name="firstName"
 									label=""
 									placeholder={user.firstName}
 									onChange={props.handleChange}
@@ -56,8 +52,7 @@ function MyProfile() {
 									id="standard-basic"
 									type="string"
 									fullWidth
-									name='lastName'
-								
+									name="lastName"
 									placeholder={user.lastName}
 									onChange={props.handleChange}
 									multiline
@@ -69,8 +64,7 @@ function MyProfile() {
 									id="standard-basic"
 									type="number"
 									fullWidth
-									name='mobile'
-								
+									name="mobile"
 									onChange={props.handleChange}
 									placeholder="+38"
 									multiline
@@ -92,7 +86,7 @@ function MyProfile() {
 									id="standard-basic"
 									type="number"
 									fullWidth
-									name='birthday'
+									name="birthday"
 									value={props.values.birthday}
 									onChange={props.handleChange}
 									label="Birthday"
@@ -106,13 +100,12 @@ function MyProfile() {
 					</Formik>
 
 					<Button
+						type="submit"
 						variant="contained"
 						sx={{
 							backgroundColor: 'black',
 						}}
-						onClick={() => {
-							// onClick();
-						}}
+						
 					>
 						SAVE
 					</Button>
