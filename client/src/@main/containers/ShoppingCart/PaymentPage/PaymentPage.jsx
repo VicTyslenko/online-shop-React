@@ -8,13 +8,20 @@ import PaymentModal from '../Modal/Modal';
 import SVG from '../SVG/SVG';
 import SVGPayPall from '../SVG/SVGPayPall';
 import SVGMaestro from '../SVG/SVGMaestro';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
 import { clearUnauthCart } from '../../../store/slices/cartSlice';
 import { useUserData } from '../../../../@profile/hooks/useUserData';
 const PaymentPage = () => {
 	const dispatch = useDispatch();
 	const user = useUserData();
-	console.log(user);
+	const clearCart = () => {
+		if (user) {
+			dispatch(deleteCart(user));
+		} else {
+			clearUnauthCart();
+		}
+	};
 	const [month, setMonth] = useState('');
 	const [year, setYear] = useState('');
 	const [open, setOpen] = useState(false);
@@ -114,11 +121,7 @@ const PaymentPage = () => {
 				<StyledButton
 					onClick={() => {
 						handleOpen();
-						// clearUnauthCart()
-						dispatch(deleteCart(user));
-						// {user? dispatch(deleteCart(user)):
-						// 	clearUnauthCart()}
-						// dispatch(user ? deleteCart(user) : clearUnauthCart());
+						clearCart();
 					}}
 				>
 					Pay
