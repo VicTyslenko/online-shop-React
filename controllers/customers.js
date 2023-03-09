@@ -69,6 +69,7 @@ exports.createCustomer = (req, res, next) => {
 								firstName: customer.firstName,
 								lastName: customer.lastName,
 								isAdmin: customer.isAdmin,
+								email:customer.email
 							}; // Create JWT Payload
 
 							// Sign Token
@@ -133,6 +134,7 @@ exports.loginCustomer = async (req, res, next) => {
 						firstName: customer.firstName,
 						lastName: customer.lastName,
 						isAdmin: customer.isAdmin,
+						email:customer.email
 					}; // Create JWT Payload
 
 					// Sign Token
