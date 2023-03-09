@@ -1,12 +1,9 @@
 import { React, useState, useEffect } from 'react';
 import { Container } from '@mui/system';
 
-
-import { isAuthSelector } from '../../store/selectors/authSelector';
+import { useUserData } from '../../../@profile/hooks/useUserData';
 import { cartDataSelect } from '../../store/selectors/cartSelector';
-import jwt_decode from 'jwt-decode';
 import { Link } from 'react-router-dom';
-import { deleteCart } from '../../store/actions/cartActions';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
@@ -18,12 +15,13 @@ import {
 	ContentWrapp,
 	StyledDiv
 } from './StyledShoppingCart';
+import { deleteProductFromCart } from '../../store/actions/cartActions';
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
-
+const user = useUserData()
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [quantity, setQuantity] = useState(0);
 	const cart = useSelector(cartDataSelect);
