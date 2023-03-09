@@ -14,6 +14,7 @@ import {
 	Content,
 	RightSideWrapp,
 	ContentWrapp,
+	StyledDiv
 } from './StyledShoppingCart';
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
@@ -50,25 +51,29 @@ function ShoppingCart() {
 						<img className="image" src={product.imageUrls[0]} alt="" />
 					</Link>
 				</div>
-				<ul className="list">
-					<li className="title">{product.name}</li>
-					<li className="color">Color : {color}</li>
-					<li className="size">Size : {size}</li>
-					<div className="btn-wrapp">
-						<button className="btn-qnt" onClick={() => decrease()}>
-							-
-						</button>
-						{quantity}
-						<button className="btn-qnt" onClick={() => increase(product.currentPrice)}>
-							+
-						</button>
-					</div>
+				<StyledDiv>
+					<ul className="list">
+						<li className="title">{product.name}</li>
+						<li className="color">Color : {color}</li>
+						<li className="size">Size : {size}</li>
+						<div className="btn-wrapp">
+							<button className="btn-qnt" onClick={() => decrease()}>
+								-
+							</button>
+							{quantity}
+							<button className="btn-qnt" onClick={() => increase(product.currentPrice)}>
+								+
+							</button>
+						</div>
 
-					<li className="price">Price : {product.currentPrice} $ </li>
-					<li className="total">Total :</li>
-				</ul>
+						<li className="price">Price : {product.currentPrice} $ </li>
+						<li className="total">Total :</li>
+					</ul>
+					<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>
+						Remove
+					</RemoveButton>
+				</StyledDiv>
 			</Content>
-			<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>Remove from basket</RemoveButton>
 		</ContentWrapp>
 	));
 	// const checkout = cart?.map(({ product }) => (
