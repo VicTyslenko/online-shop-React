@@ -38,6 +38,4 @@ export const cartSlice = createSlice({
 });
 export const { clearUnauthCart } = cartSlice.actions;
 
-// export const { incrementQuantity, decrementQuantity } = cartSlice.actions;
-
 export default cartSlice.reducer;
