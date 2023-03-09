@@ -65,7 +65,6 @@ export const StyledOverlaySwiper = styled(Swiper)`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
-	// box-shadow: 24;
 
 	& .swiper-button-prev {
 		color: #fff;
