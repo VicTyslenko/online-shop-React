@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import { Typography, Grid, Container } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
@@ -7,11 +7,9 @@ import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledLink } from './StyledUserProfile';
-import { profileUserSelector } from '../../../@main/store/selectors/profileUserSelector';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
-import { tokenDataSelector } from '../../../@main/store/selectors/registrationSelector';
 import { useUserData } from '../../hooks/useUserData';
 
 function Profile() {
@@ -22,18 +20,14 @@ function Profile() {
 		dispatch(clearDataRegister());
 	};
 
-	const register = useSelector(tokenDataSelector);
-const user =useUserData();
-	const isAuth = useSelector(profileUserSelector);
-	// const user = jwt_decode(isAuth ? isAuth.token : register.token);
+	const user = useUserData();
 
 	return (
 		<Container maxWidth="lg" sx={{ mt: '150px', mb: '100px' }}>
-			
-				<Typography variant="h3" sx={{ mb: '141px' }}>
-					Welcome, {`${user?.firstName} ${user?.lastName}`}
-				</Typography>
-			
+			<Typography variant="h3" sx={{ mb: '141px' }}>
+				Welcome, {`${user?.firstName} ${user?.lastName}`}
+			</Typography>
+
 			<Grid container spacing={2}>
 				<Grid item xs={6}>
 					<StyledLink to="myAccount">
@@ -81,25 +75,23 @@ const user =useUserData();
 						</FlexWrapp>
 					</StyledLink>
 				</Grid>
-				<Grid item xs={6}>
-					<StyledLink to="/editor/dashboard">
-						<FlexWrapp>
-							{/* <ArticleOutlinedIcon fontSize="large" />
-							 */}
-							<EditOutlinedIcon fontSize="large" />
-							<div className="content">
-								<p className="title">Edit</p>
+				{user.isAdmin && (
+					<Grid item xs={6}>
+						<StyledLink to="/editor/dashboard">
+							<FlexWrapp>
+								<EditOutlinedIcon fontSize="large" />
+								<div className="content">
+									<p className="title">Edit</p>
 
-								<p className="description">Edit</p>
-							</div>
-						</FlexWrapp>
-					</StyledLink>
-				</Grid>
+									<p className="description">Edit</p>
+								</div>
+							</FlexWrapp>
+						</StyledLink>
+					</Grid>
+				)}
 				<Grid item xs={6}>
 					<StyledLink to="/" onClick={() => clearData()}>
 						<FlexWrapp>
-							{/* <ArticleOutlinedIcon fontSize="large" />
-							 */}
 							<ExitToAppIcon fontSize="large" />
 							<div className="content">
 								<p className="title">Sign out</p>

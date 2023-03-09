@@ -1,10 +1,12 @@
 import { React, useState, useEffect } from 'react';
 import { Container } from '@mui/system';
 
-import { cartDataSelect } from '../../store/selectors/cartSelector';
+
 import { isAuthSelector } from '../../store/selectors/authSelector';
+import { cartDataSelect } from '../../store/selectors/cartSelector';
+import jwt_decode from 'jwt-decode';
 import { Link } from 'react-router-dom';
-import { deleteProductFromCart } from '../../store/actions/cartActions';
+import { deleteCart } from '../../store/actions/cartActions';
 import EmptyCart from '../ShoppingCart/EmptyCart/EmptyCart';
 import {
 	ShoppingCartWrapp,
@@ -14,12 +16,15 @@ import {
 	Content,
 	RightSideWrapp,
 	ContentWrapp,
+	StyledDiv
 } from './StyledShoppingCart';
 import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 
 function ShoppingCart() {
 	const dispatch = useDispatch();
+	const userToken = useSelector(usersSelector );
+	console.log(userToken);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [quantity, setQuantity] = useState(0);
 	const cart = useSelector(cartDataSelect);
@@ -41,7 +46,6 @@ function ShoppingCart() {
 	useEffect(() => {
 		setTotalPrice(priceItem.reduce((a, b) => a + b, 0));
 	}, [cart]);
-	// const isAuth = useSelector(isAuthSelector);
 	const productItem = cart?.map(({ product, color, size }) => (
 		<ContentWrapp key={product._id}>
 			<Content>
@@ -50,42 +54,31 @@ function ShoppingCart() {
 						<img className="image" src={product.imageUrls[0]} alt="" />
 					</Link>
 				</div>
-				<ul className="list">
-					<li className="title">{product.name}</li>
-					<li className="color">Color : {color}</li>
-					<li className="size">Size : {size}</li>
-					<div className="btn-wrapp">
-						<button className="btn-qnt" onClick={() => decrease()}>
-							-
-						</button>
-						{quantity}
-						<button className="btn-qnt" onClick={() => increase(product.currentPrice)}>
-							+
-						</button>
-					</div>
+				<StyledDiv>
+					<ul className="list">
+						<li className="title">{product.name}</li>
+						<li className="color">Color : {color}</li>
+						<li className="size">Size : {size}</li>
+						<div className="btn-wrapp">
+							<button className="btn-qnt" onClick={() => decrease()}>
+								-
+							</button>
+							{quantity}
+							<button className="btn-qnt" onClick={() => increase(product.currentPrice)}>
+								+
+							</button>
+						</div>
 
-					<li className="price">Price : {product.currentPrice} $ </li>
-					<li className="total">Total :</li>
-				</ul>
+						<li className="price">Price : {product.currentPrice} $ </li>
+						<li className="total">Total :</li>
+					</ul>
+					<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>
+						Remove
+					</RemoveButton>
+				</StyledDiv>
 			</Content>
-			<RemoveButton onClick={() => dispatch(deleteProductFromCart(product._id))}>Remove from basket</RemoveButton>
 		</ContentWrapp>
 	));
-	// const checkout = cart?.map(({ product }) => (
-	// 	<RightSideWrapp key={product._id}>
-	// 		<h1 className="title">Shopping bag total</h1>
-	// 		<p className="discount">Add a discount code</p>
-	// 		<TextField id="standard-basic" variant="standard" />
-	// 		<hr className="line" />
-	// 		<p className="order">Order value :</p>
-	// 		<p className="delivery">Delivery :</p>
-	// 		<p className="order order-delivery">Delivery : {product.productDelivery}</p>
-	// 		<p className="total">Total :</p>
-	// 		<div className="button-wrapp">
-	// 			<StyledButton>Checkout</StyledButton>
-	// 		</div>
-	// 	</RightSideWrapp>
-	// ));
 	return (
 		<Container
 			maxWidth="lg"
@@ -104,7 +97,6 @@ function ShoppingCart() {
 						<hr className="line" />
 						<p className="order">Order value :</p>
 						<p className="delivery">Delivery :</p>
-						{/* <p className="order order-delivery">Delivery : {product.productDelivery}</p> */}
 						<p className="total">
 							Total price: <span className="total-price">{totalPrice} $ </span>{' '}
 						</p>

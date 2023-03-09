@@ -5,14 +5,16 @@ import { addProductToCart, deleteProductFromCart } from '../../../../store/actio
 import { addProductToWishlist, deleteProductFromWishlist } from '../../../../store/actions/wishlistActions';
 import { selectCurrentColor, selectCurrentSize } from '../../../../store/selectors/productSelector';
 import { isAuthSelector } from '../../../../store/selectors/authSelector';
+import { selectIsCart } from '../../../../store/selectors/cartSelector';
+import { selectIsWishlist } from '../../../../store/selectors/wishSelector';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { ActionsWrapper } from './ProductInfo.styles';
+import { ActionsWrapper, StyledButton } from './ProductInfo.styles';
 
 function ProductInfoActions({ id }) {
 	const dispatch = useDispatch();
-	const isCart = useSelector((state) => state.cart.data?.find(({ product }) => id === product?._id));
-	const isWishlist = useSelector((state) => state.wishlist.data?.find((el) => id === el._id));
+	const isCart = useSelector((state) => selectIsCart(state, id));
+	const isWishlist = useSelector((state) => selectIsWishlist(state, id));
 	const isAuth = useSelector(isAuthSelector);
 
 	const currentSize = useSelector(selectCurrentSize);
@@ -51,14 +53,14 @@ function ProductInfoActions({ id }) {
 			open={openTooltip} onOpen={handleOpenTooltip} onClose={handleCloseTooltip}
 			>
 				<span>
-					<Button
+					<StyledButton
 						color="primary"
 						variant="contained"
 						onClick={handleClickCart}
 						disabled={(!currentSize || !currentColor) && !isCart}
 					>
 						{isCart ? "Delete" : "Add to cart"}
-					</Button>
+					</StyledButton>
 				</span>
 			</Tooltip>
 			{isAuth && (

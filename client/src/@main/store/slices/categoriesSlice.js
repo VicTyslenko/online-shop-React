@@ -14,6 +14,6 @@ export const categoriesSlice = createSlice({
 			state.data = action.payload;
 		})
 	}
-})
+});
 
 export default categoriesSlice.reducer;

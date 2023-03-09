@@ -1,5 +1,4 @@
-import { useState, Fragment } from 'react';
-import dayjs from 'dayjs';
+import { useState, Fragment, useEffect } from 'react';
 import {
 	MainContent,
 	ContentForm,
@@ -8,23 +7,46 @@ import {
 	ButtonWrap,
 	InputItem,
 	AddInput,
+	ModalBox,
+	ModalContent,
 } from './StyledEditProducts';
-import { Container, TextField, Box, Button, MenuItem, Select, InputLabel, FormControl } from '@mui/material';
-import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { Container, Button, MenuItem, Select, InputLabel, FormControl, Modal } from '@mui/material';
 import { Formik, FieldArray, Field } from 'formik';
-import { useDispatch, useSelector } from 'react-redux';
-import { postProductFetch } from '../../../@main/store/actions/newProductActions';
+import { useDispatch } from 'react-redux';
 import AddIcon from '@mui/icons-material/Add';
+import { postProductFetch } from '../../store/actions/newProductActions';
 
 function EditProducts() {
-	// const [dataPicker, setDataPicker] = useState(dayjs('2023-08-18'));
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
+
+	const [open, setOpen] = useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
 
 	return (
 		<Container maxWidth="lg">
 			<Header>Products</Header>
+
+			<Modal
+				open={open}
+				onClose={handleClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description"
+			>
+				<ModalBox>
+					<ModalContent>Product successfully added!</ModalContent>
+					<ButtonWrap>
+						<Button variant="secondary" color="success" onClick={handleClose}>
+							Ok
+						</Button>
+					</ButtonWrap>
+				</ModalBox>
+			</Modal>
+
 			<ContainerWrapp>
 				<ContentForm>
 					<Formik
@@ -45,12 +67,10 @@ function EditProducts() {
 							seller: '',
 							productDetails: '',
 							productDelivery: '',
-							data: '',
 						}}
-						// validationSchema={validationRegisterSchema}
-						onSubmit={async (values) => {
-							console.log(values);
+						onSubmit={async (values, onSubmitForm) => {
 							const data = await dispatch(postProductFetch(values));
+							onSubmitForm.resetForm();
 						}}
 					>
 						{(props) => (
@@ -61,7 +81,6 @@ function EditProducts() {
 										<Select
 											labelId="select-enabled"
 											name="enabled"
-											// id="select-enabled"
 											size="small"
 											value={props.values.enabled}
 											label="Enabled"
@@ -270,19 +289,8 @@ function EditProducts() {
 										value={props.values.productDelivery}
 										onChange={props.handleChange}
 									/>
-
-									{/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-										<MobileDatePicker
-											label="Date"
-											size="small"
-											inputFormat="MM/DD/YYYY"
-											value={dataPicker}
-											onChange={handleDataPicker}
-											renderInput={(params) => <TextField {...params} />}
-										/>
-									</LocalizationProvider> */}
 									<ButtonWrap>
-										<Button variant="contained" color="success" type="submit">
+										<Button variant="contained" color="success" type="submit" onClick={handleOpen}>
 											Ok
 										</Button>
 									</ButtonWrap>
