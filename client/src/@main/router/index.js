@@ -14,6 +14,7 @@ import PolicyLandingPage from '../containers/PolicyLandingPage';
 import QuestionsLandingPage from '../containers/QuestionsLandingPage';
 import WorkUsLandingPage from '../containers/WorkUsLandingPage';
 import EmptyCart from '../containers/ShoppingCart/EmptyCart/EmptyCart';
+import SearchResultPage from '../containers/SearchResultPage';
 
 function MainRoutes() {
 	return (
@@ -32,6 +33,7 @@ function MainRoutes() {
 			<Route path="/policy" element={<PolicyLandingPage />} />
 			<Route path="/questions" element={<QuestionsLandingPage />} />
 			<Route path="/work-us" element={<WorkUsLandingPage />} />
+			<Route path="/search/:searchId" element={<SearchResultPage />} />
 		</Routes>
 	);
 }
