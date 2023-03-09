@@ -6,7 +6,7 @@ import EditUsers from '../components/EditUsers';
 import EditStyleShop from '../components/EditStyleShop';
 import EditOrders from '../components/EditOrders';
 import Dashboard from '../components/Dashboard';
-// import Users from '../../@editor/components/Sidebar/components/Management/components/Users/Users';
+
 
 function EditorRoutes() {
 	return (

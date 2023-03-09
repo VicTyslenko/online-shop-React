@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const RightContent = styled.div`
-	display: flex;
-	justify-content: center;
-`;
 
 export const Header = styled.h3`
 	margin: 0;
