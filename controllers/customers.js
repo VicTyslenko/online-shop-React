@@ -80,7 +80,7 @@ exports.createCustomer = (req, res, next) => {
 								(err, token) => {
 									res.json({
 										...customer,
-										// success: true,
+										success: true,
 										token: "Bearer " + token,
 									});
 								}

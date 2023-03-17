@@ -93,8 +93,9 @@ const LoginForm = () => {
 			confirmPassword: '',
 		}}
 		validationSchema={validationRegisterSchema}
-		onSubmit={async (values) => {
-			const data = await dispatch(registerFetchData(values));
+		onSubmit={(values) => {
+			console.log(values);
+			 dispatch(registerFetchData(values));
 		}}
 	>
 		{(props) => (
