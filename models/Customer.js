@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bcrypt = require("bcryptjs");
-const { isNumber } = require("lodash");
+// const { isNumber } = require("lodash");
 
 const CustomerSchema = new Schema(
   {
@@ -31,7 +31,7 @@ const CustomerSchema = new Schema(
       required: true
     },
     telephone: {
-      type:Number
+      type:String
     },
     birthdate: {
       type: String

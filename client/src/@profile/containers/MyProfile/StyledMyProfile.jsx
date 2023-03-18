@@ -12,6 +12,9 @@ export const ContainerWrapp = styled.div`
 export const FormWrapper = styled.div`
 max-width:700px ;
 text-align:center ;
+& .error{
+	color:red ;
+}
 
 `
 export const CssTextField = styled(TextField)`

@@ -14,7 +14,7 @@ const style = {
 	p: 4,
 };
 
-const PaymentModal = ({ open, close }) => {
+const PaymentModal = ({ open, close, children }) => {
 	return (
 		<div>
 			<Modal open={open} onClose={close}>
@@ -31,7 +31,7 @@ const PaymentModal = ({ open, close }) => {
 							fontSize: '24px',
 						}}
 					>
-						Thank you for chosing our shop!
+						{children}
 					</Typography>
 				</Box>
 			</Modal>

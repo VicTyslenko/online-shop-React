@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { editInfoFetchData } from '../actions/registrationActions';
+import { editInfoFetchData } from '../actions/editCustomerInfoAction';
 
 const initialState = {
 	data: null,
@@ -18,9 +18,8 @@ const editInfoReducer = createSlice({
 			state.data = null;
 		});
 		builder.addCase(editInfoFetchData.fulfilled, (state, { payload }) => {
-			state.status = 'leaded';
-			state.data = payload;
-            console.log(payload);
+			state.status = 'loaded';
+			state.data = { ...state.data, ...payload };
 		});
 		builder.addCase(editInfoFetchData.rejected, (state, { payload }) => {
 			state.status = 'error';
@@ -28,6 +27,5 @@ const editInfoReducer = createSlice({
 		});
 	},
 });
-
 
 export default editInfoReducer.reducer;

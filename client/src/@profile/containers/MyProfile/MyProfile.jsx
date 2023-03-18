@@ -1,32 +1,44 @@
 import { Container, Radio, RadioGroup, FormControlLabel, FormControl, Button } from '@mui/material';
 import { Title, ContainerWrapp, FormWrapper, CssTextField } from './StyledMyProfile';
-import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useUserData } from '../../hooks/useUserData';
 import { Formik } from 'formik';
+import { editInfoSelector, errorDataUpdatedInfo } from '../../../@main/store/selectors/editInfoSelector';
+import PaymentModal from '../../../@main/containers/ShoppingCart/Modal/Modal';
 import { editInfoFetchData } from '../../../@main/store/actions/editCustomerInfoAction';
 function MyProfile() {
+	const [open, setOpen] = useState(false);
+	const modalOpen = () => {
+		setOpen(true);
+	};
+	const modalClose = () => {
+		setOpen(false);
+	};
+	const error = useSelector(errorDataUpdatedInfo);
+
+	// const errorMessage = error.telephone;
 	const dispatch = useDispatch();
 	const user = useUserData();
-
+	const upDatedUser = useSelector(editInfoSelector);
 	return (
 		<Container maxWidth="lg">
 			<ContainerWrapp>
 				<FormWrapper>
-					<Title>My Account</Title>
+					<Title> Edit My Account</Title>
 					<Formik
 						initialValues={{
-							firstName: `${user.firstName}`,
-							lastName: `${user.lastName}`,
-							email: `${user.email}`,
-							telephone: '',
-							address: '',
-							birthdate: '',
-							gender: '',
+							firstName: upDatedUser ? `${upDatedUser.firstName}` : `${user.firstName}`,
+							lastName: upDatedUser ? `${upDatedUser.lastName}` : `${user.lastName}`,
+							email: upDatedUser ? `${upDatedUser.email}` : `${user.email}`,
+							telephone: upDatedUser ? `${upDatedUser.telephone}` : '',
+							address: upDatedUser ? `${upDatedUser.address}` : '',
+							birthdate: upDatedUser ? `${upDatedUser.birthdate}` : '',
+							gender: upDatedUser ? `${upDatedUser.gender}` : '',
 						}}
 						onSubmit={(values) => {
-							{
-								user && dispatch(editInfoFetchData(values));
-							}
+							// console.log('onSubmit', values);
+							dispatch(editInfoFetchData(values));
 						}}
 					>
 						{(props) => (
@@ -78,6 +90,7 @@ function MyProfile() {
 									variant="standard"
 									sx={{ mb: '6px' }}
 								/>
+								{/* {error && <div className="error">{error.telephone}</div>} */}
 								<CssTextField
 									id="standard-basic"
 									type="number"
@@ -97,7 +110,7 @@ function MyProfile() {
 									name="address"
 									value={props.values.address}
 									onChange={props.handleChange}
-									label="Delivery address"
+									label="Address"
 									multiline
 									variant="standard"
 								/>
@@ -125,9 +138,21 @@ function MyProfile() {
 										sx={{
 											backgroundColor: 'black',
 										}}
+										onClick={() => {
+											// {
+											// 	error ? modalOpen() : modalClose();
+											// }
+											modalOpen();
+										}}
 									>
 										SAVE
 									</Button>
+
+									{open && (
+										<PaymentModal open={open} close={modalClose}>
+											Information has been saved
+										</PaymentModal>
+									)}
 								</div>
 							</form>
 						)}

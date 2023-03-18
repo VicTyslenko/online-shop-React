@@ -7,6 +7,7 @@ import product from '../@main/store/slices/productSlice';
 import auth from '../@main/store/slices/authSlice';
 import cart from '../@main/store/slices/cartSlice';
 import registration from '../@main/store/slices/registrationSlice';
+import editInfo from '../@main/store/slices/editCustomerInfoSlice';
 import wishlist from '../@main/store/slices/wishlistSlice';
 import filters from '../@main/store/slices/filterSlice';
 import colors from '../@main/store/slices/colorsSlice';
@@ -34,6 +35,7 @@ const rootReduser = combineReducers({
 	users,
 	newProduct,
 	addressSlice,
+	editInfo,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReduser);

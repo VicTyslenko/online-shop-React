@@ -127,7 +127,11 @@ const PaymentPage = () => {
 					Pay
 				</StyledButton>
 
-				{open && <PaymentModal open={open} close={handleClose} />}
+				{open && (
+					<PaymentModal open={open} close={handleClose}>
+						Thank you for chosing our shop!
+					</PaymentModal>
+				)}
 			</PaymentWrapper>
 		</Container>
 	);
