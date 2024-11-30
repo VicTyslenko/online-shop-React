@@ -7,7 +7,8 @@
     "setup": "npm i --unsafe-perm",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -38,4 +39,3 @@
     "validator": "^13.9.0"
   }
 }
-
