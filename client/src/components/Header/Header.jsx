@@ -84,7 +84,7 @@ function Header() {
 				}}
 			>
 				<PermIdentityOutlinedIcon sx={{ mr: 0.4 }} fontSize="medium" />
-				<ItemButton>Sign Up / Log In</ItemButton>
+				<ItemButton>Hello Hello</ItemButton>
 			</ButtonGroup>
 		);
 
