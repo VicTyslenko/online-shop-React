@@ -34,12 +34,12 @@ const PORT = process.env.PORT || 4444;
 const bd = require("./config/keys").mongoURI;
 
 mongoose
-	.connect(bd, {
-		useNewUrlParser: true,
-		useFindAndModify: false,
-	})
-	.then(() => console.log(`MongoDB connected...`))
-	.catch((error) => console.log(error));
+  .connect(bd, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+  })
+  .then(() => console.log(`MongoDB connected...`))
+  .catch((error) => console.log(error));
 
 require("./config/passport")(passport);
 app.use(passport.initialize());
@@ -64,15 +64,20 @@ app.use("/api/subscribers", subscribers);
 app.use("/api/wishlist", wishlist);
 
 if (process.env.NODE_ENV == "production") {
-	app.use(express.static("./сlient/public"));
-	app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
-	});
+  const buildPath = path.join(__dirname, "client", "build");
+
+  app.use(express.static(buildPath));
+
+  //   app.use(express.static("./сlient/public"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
+  });
 }
 
 app.listen(4444, (err) => {
-	if (err) {
-		return console.log(err);
-	}
-	console.log(`Server ${PORT}`);
+  if (err) {
+    return console.log(err);
+  }
+  console.log(`Server ${PORT}`);
 });
