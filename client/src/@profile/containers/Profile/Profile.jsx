@@ -1,16 +1,16 @@
 import { React } from 'react';
 import { Typography, Grid, Container } from '@mui/material';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { useUserData } from '../../hooks/useUserData';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { FlexWrapp, StyledLink } from './StyledUserProfile';
 import { useDispatch } from 'react-redux';
 import { clearDataAuth } from '../../../@main/store/slices/authSlice';
 import { clearDataRegister } from '../../../@main/store/slices/registrationSlice';
-import { useUserData } from '../../hooks/useUserData';
 
 function Profile() {
 	const dispatch = useDispatch();

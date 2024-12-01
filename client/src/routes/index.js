@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import NoMatch from './NoMatch';
 
@@ -13,8 +13,8 @@ function AppRoutes() {
 			<Route
 				path="/*"
 				element={
-					<React.Suspense fallback={"...Loading"}>
-						<Main/>
+					<React.Suspense fallback={'...Loading'}>
+						<Main />
 					</React.Suspense>
 				}
 			/>
@@ -22,7 +22,7 @@ function AppRoutes() {
 				path="/account/*"
 				element={
 					<React.Suspense fallback="...Loading">
-						<Profile/>
+						<Profile />
 					</React.Suspense>
 				}
 			/>
@@ -30,11 +30,11 @@ function AppRoutes() {
 				path="/editor/*"
 				element={
 					<React.Suspense fallback="...Loading">
-						<Editor/>
+						<Editor />
 					</React.Suspense>
 				}
 			/>
-			<Route path="*" element={<NoMatch/>}/>
+			<Route path="*" element={<NoMatch />} />
 		</Routes>
 	);
 }
