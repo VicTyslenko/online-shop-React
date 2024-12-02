@@ -19,7 +19,7 @@ export const itemData = [
 		path: '/store/accessories',
 	},
 	{
-		img: 'https://www.louisvuitton.com/images/is/image/lv/M_BC_PRECOSS25_DL2_Nov28_01_DII.jpg?wid=2400',
+		img: 'https://media.ray-ban.com/cms/resource/image/1225910/portrait_ratio469x528/938/1056/f907175f7c5e4d804216523da5a306f5/0F975D2D4B2F567538BFC7FD5B62C622/rbm-plp-holiday-skyler-d.jpg',
 		title: 'SUNGLASSES SHOP',
 		cols: 3,
 		path: '/store/accessories',
