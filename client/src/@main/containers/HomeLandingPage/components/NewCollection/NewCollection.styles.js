@@ -13,11 +13,7 @@ export const NewInH1 = styled.h1`
 	margin-bottom: 35px;
 	margin-left: 70px;
 `;
-export const NewInLink = styled(Link)`
-	display: block;
-	height: 100%;
-	width: 100%;
-`;
+export const NewInLink = styled(Link)``;
 export const ImageText = styled.p`
 	display: block;
 	position: absolute;
