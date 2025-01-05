@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledText = styled.h1`
 	text-transform: uppercase;
@@ -9,7 +9,6 @@ export const StyledText = styled.h1`
 `;
 
 export const StyledDiv = styled.div`
-	color: #3f3d3d;
 	font-size: 30px;
 	font-weight: 300;
 	text-decoration: none;
@@ -22,7 +21,7 @@ export const StyledDiv = styled.div`
 `;
 
 export const StyledWrapper = styled.div`
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	position: absolute;
 	display: flex;
 	flex-direction: column;

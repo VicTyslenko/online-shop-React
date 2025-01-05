@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { getProductList } from '../../store/actions/productListActions';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
-import Slider from './components/Slider';
-import Categories from './components/Categories';
-import NewInSection from './components/NewCollection';
+import { getProductList } from "../../store/actions/productListActions";
+import Categories from "./components/Categories";
+import NewInSection from "./components/NewCollection";
+import Slider from "./components/Slider";
 
 function HomeLandingPage() {
 	const dispatch = useDispatch();
@@ -15,12 +15,11 @@ function HomeLandingPage() {
 	}, [dispatch]);
 
 	return (
-	<>
+		<>
 			<Slider />
 			<NewInSection />
 			<Categories />
-			</>
-		
+		</>
 	);
 }
 

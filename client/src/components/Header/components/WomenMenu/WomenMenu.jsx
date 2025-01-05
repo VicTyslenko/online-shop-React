@@ -1,31 +1,29 @@
-import { Categories, StyledLink } from './StyledWomenMenu';
-import { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Container } from '@mui/material';
-import { AnimateMenu, ContentWrap } from '../../StyledHeader';
-import { selectSubCategories } from '../../../../@main/store/selectors/categoriesSelector';
-import { getCategories } from '../../../../@main/store/actions/categoriesActions';
-import { setFilters } from '../../../../@main/store/slices/filterSlice';
-import { selectFilterCategories } from '../../../../@main/store/selectors/filterSelector';
+import { closeModal } from "@main/store/slices/modalSlice";
+import { Container } from "@mui/material";
+import { useCategories } from "hooks/use-categories";
+import { useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-function WomanMenu({ active, closeСategories }) {
+import { selectFilterCategories } from "../../../../@main/store/selectors/filterSelector";
+import { setFilters } from "../../../../@main/store/slices/filterSlice";
+import { AnimateMenu, ContentWrap } from "../../StyledHeader";
+import { Categories, StyledLink } from "./StyledWomenMenu";
+
+function WomanMenu({ active }) {
 	const dispatch = useDispatch();
 
-	const subCategories = useSelector((state) => selectSubCategories(state, 'woman'));
+	const { filteredCategories: womanCategories } = useCategories("woman");
+
 	const filterCategories = useSelector(selectFilterCategories);
 
-	useEffect(() => {
-		dispatch(getCategories());
-	}, []);
-
 	const handleSetFilter = useCallback(
-		(value) => {
+		value => {
 			dispatch(
 				setFilters({
 					categories: filterCategories === value ? null : value,
 				}),
 			);
-			closeСategories();
+			dispatch(closeModal());
 		},
 		[filterCategories],
 	);
@@ -33,7 +31,7 @@ function WomanMenu({ active, closeСategories }) {
 	const handleClearFilter = useCallback(() => {
 		dispatch(setFilters({ categories: null }));
 
-		closeСategories();
+		dispatch(closeModal());
 	}, [filterCategories]);
 
 	return (
@@ -44,8 +42,8 @@ function WomanMenu({ active, closeСategories }) {
 					<StyledLink to="/store/woman" onClick={() => handleClearFilter()}>
 						View all
 					</StyledLink>
-					{subCategories &&
-						subCategories.map(({ name, _id }) => (
+					{womanCategories &&
+						womanCategories.map(({ name, _id }) => (
 							<StyledLink key={_id} to="/store/woman" onClick={() => handleSetFilter(name)}>
 								{name}
 							</StyledLink>
@@ -57,7 +55,3 @@ function WomanMenu({ active, closeСategories }) {
 }
 
 export default WomanMenu;
-
-WomanMenu.defaultProps = {
-	height: 0,
-};

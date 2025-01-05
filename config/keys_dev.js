@@ -1,5 +1,6 @@
+require("dotenv").config();
+
 module.exports = {
-  mongoURI:
-    `mongodb+srv://admin:admin@onlinemagazine.3spckjc.mongodb.net/dataBD`,
-  secretOrKey: "random very very secret string",
+  mongoURI: process.env.MONGO_URI,
+  secretOrKey: process.env.SECRET_OR_KEY,
 };

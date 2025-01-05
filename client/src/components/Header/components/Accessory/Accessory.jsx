@@ -1,39 +1,33 @@
-import { StyledLink, Categories } from './StyledAccessory';
-import { Container } from '@mui/material';
-import { AnimateMenu, ContentWrap } from '../../StyledHeader';
-import { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectSubCategories } from '../../../../@main/store/selectors/categoriesSelector';
-import { selectFilterCategories } from '../../../../@main/store/selectors/filterSelector';
-import { getCategories } from '../../../../@main/store/actions/categoriesActions';
-import { setFilters } from '../../../../@main/store/slices/filterSlice';
+import { closeModal } from "@main/store/slices/modalSlice";
+import { Container } from "@mui/material";
+import { useCategories } from "hooks/use-categories";
+import { useCallback, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-function Accessory({ active, closeСategories }) {
+import { setFilters } from "../../../../@main/store/slices/filterSlice";
+import { AnimateMenu, ContentWrap } from "../../StyledHeader";
+import { Categories, StyledLink } from "./StyledAccessory";
+
+function Accessory({ active }) {
 	const dispatch = useDispatch();
 
-	const subCategories = useSelector((state) => selectSubCategories(state, 'accessories'));
-	const filterCategories = useSelector(selectFilterCategories);
+	const { filteredCategories: accessoriesCategories } = useCategories("accessories");
 
-	useEffect(() => {
-		dispatch(getCategories());
+	const filterCategories = useSelector(state => state.filters.categories);
+
+	const handleSetFilter = useCallback(value => {
+		dispatch(
+			setFilters({
+				categories: value,
+			}),
+		);
+		dispatch(closeModal());
 	}, []);
-
-	const handleSetFilter = useCallback(
-		(value) => {
-			dispatch(
-				setFilters({
-					categories: filterCategories === value ? null : value,
-				}),
-			);
-			closeСategories();
-		},
-		[filterCategories],
-	);
 
 	const handleClearFilter = useCallback(() => {
 		dispatch(setFilters({ categories: null }));
 
-		closeСategories();
+		dispatch(closeModal());
 	}, [filterCategories]);
 
 	return (
@@ -44,8 +38,8 @@ function Accessory({ active, closeСategories }) {
 					<StyledLink to="/store/accessories" onClick={() => handleClearFilter()}>
 						View all
 					</StyledLink>
-					{subCategories &&
-						subCategories.map(({ name, _id }) => (
+					{accessoriesCategories &&
+						accessoriesCategories.map(({ name, _id }) => (
 							<StyledLink key={_id} to="/store/accessories" onClick={() => handleSetFilter(name)}>
 								{name}
 							</StyledLink>
@@ -57,7 +51,3 @@ function Accessory({ active, closeСategories }) {
 }
 
 export default Accessory;
-
-Accessory.defaultProps = {
-	height: 0,
-};

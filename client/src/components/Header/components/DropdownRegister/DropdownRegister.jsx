@@ -1,23 +1,32 @@
+import { clearErrorAuth } from "@main/store/slices/authSlice";
+import { closeModal } from "@main/store/slices/modalSlice";
+import { Button, Container } from "@mui/material";
+import { Formik } from "formik";
+import { useEffect } from "react";
+import toast from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+
+import { actionFetchAuth } from "../../../../@main/store/actions/authActions";
+import { errorDataAuth } from "../../../../@main/store/selectors/authSelector";
 import {
-	WrappAnimate,
 	BoxWrapp,
-	Header,
-	InputItem,
 	ButtonBlock,
 	FormPages,
-	LinkItem,
+	Header,
+	InputItem,
 	InputsWrapp,
-} from './StyledDropdownRegister';
-import { validationSchema } from './validation';
-import { Container, Button } from '@mui/material';
-import { Formik } from 'formik';
-import { useSelector, useDispatch } from 'react-redux';
-import { actionFetchAuth } from '../../../../@main/store/actions/authActions';
-import { errorDataAuth } from '../../../../@main/store/selectors/authSelector';
+	LinkItem,
+	WrappAnimate,
+} from "./StyledDropdownRegister";
+import { validationSchema } from "./validation";
 
-function DropdownRegister({ active, closeFormPages }) {
+function DropdownRegister({ active }) {
 	const dispatch = useDispatch();
-	const errorMessage = useSelector(errorDataAuth);
+	let errorMessage = useSelector(errorDataAuth);
+
+	useEffect(() => {
+		dispatch(clearErrorAuth());
+	}, [active, dispatch]);
 
 	return (
 		<WrappAnimate id="example-panel" duration={500} height={active}>
@@ -28,52 +37,63 @@ function DropdownRegister({ active, closeFormPages }) {
 					</Header>
 					<Formik
 						initialValues={{
-							loginOrEmail: '',
-							password: '',
+							loginOrEmail: "",
+							password: "",
 						}}
 						validationSchema={validationSchema}
-						onSubmit={async (values) => {
+						onSubmit={async (values, { resetForm }) => {
 							const data = await dispatch(actionFetchAuth(values));
+
+							if (!data.error) {
+								toast.success("Login successful!");
+								dispatch(closeModal());
+								dispatch(clearErrorAuth());
+								resetForm();
+							}
 						}}
 					>
-						{(props) => (
-							<form onSubmit={props.handleSubmit}>
-								<InputsWrapp>
-									<InputItem
-										variant="standard"
-										name="loginOrEmail"
-										label="E-mail"
-										value={props.values.loginOrEmail}
-										onChange={props.handleChange}
-										error={props.touched.loginOrEmail && Boolean(props.errors.loginOrEmail)}
-										helperText={props.touched.loginOrEmail && props.errors.loginOrEmail}
-									/>
-									<InputItem
-										variant="standard"
-										name="password"
-										label="Password"
-										type="password"
-										value={props.values.password}
-										onChange={props.handleChange}
-										error={props.touched.password && Boolean(props.errors.password)}
-										helperText={props.touched.password && props.errors.password}
-									/>
-								</InputsWrapp>
+						{props => {
+							return (
+								<form onSubmit={props.handleSubmit}>
+									<InputsWrapp>
+										<InputItem
+											variant="standard"
+											name="loginOrEmail"
+											label="E-mail"
+											value={props.values.loginOrEmail}
+											onChange={props.handleChange}
+											error={props.touched.loginOrEmail && Boolean(props.errors.loginOrEmail)}
+											helperText={props.touched.loginOrEmail && props.errors.loginOrEmail}
+										/>
+										<InputItem
+											variant="standard"
+											name="password"
+											label="Password"
+											type="password"
+											value={props.values.password}
+											onChange={props.handleChange}
+											error={props.touched.password && Boolean(props.errors.password)}
+											helperText={props.touched.password && props.errors.password}
+										/>
+									</InputsWrapp>
 
-								{errorMessage && <span className="error-message">{Object.values(errorMessage)}</span>}
+									{errorMessage && !Object.keys(props.errors).length && (
+										<span className="error-message">{Object.values(errorMessage)}</span>
+									)}
 
-								<ButtonBlock>
-									<Button variant="contained" color="success" type="submit">
-										Log in
-									</Button>
-								</ButtonBlock>
-							</form>
-						)}
+									<ButtonBlock>
+										<Button variant="contained" color="success" type="submit">
+											Log in
+										</Button>
+									</ButtonBlock>
+								</form>
+							);
+						}}
 					</Formik>
 
 					<FormPages>
 						Not registered yet ?
-						<LinkItem to="/login-form" onClick={() => closeFormPages()}>
+						<LinkItem to="/login-form" onClick={() => dispatch(closeModal())}>
 							Sing Up
 						</LinkItem>
 					</FormPages>

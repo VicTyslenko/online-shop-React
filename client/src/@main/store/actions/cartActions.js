@@ -1,13 +1,14 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import {
 	getCart as fetchCart,
-	addProductToCart as fetchProductToCart,
-	deleteProductFromCart as fetchProductFromCart,
+	decreaseQuantity as fetchDecreaseQuantity,
 	deleteCart as fetchDeleteCart,
-} from '../../../services/api/cartApi';
+	deleteProductFromCart as fetchProductFromCart,
+	addProductToCart as fetchProductToCart,
+} from "../../../services/api/cartApi";
 
-export const getCart = createAsyncThunk('cart/getCart', async (_, { getState }) => {
+export const getCart = createAsyncThunk("cart/getCart", async (_, { getState }) => {
 	const { auth } = getState();
 
 	const { data } = await fetchCart({
@@ -18,7 +19,7 @@ export const getCart = createAsyncThunk('cart/getCart', async (_, { getState }) 
 	return data;
 });
 
-export const addProductToCart = createAsyncThunk('cart/addProductToCart', async (id, { getState }) => {
+export const addProductToCart = createAsyncThunk("cart/addProductToCart", async (id, { getState }) => {
 	const { auth, product, cart } = getState();
 
 	if (auth.data !== null) {
@@ -35,23 +36,49 @@ export const addProductToCart = createAsyncThunk('cart/addProductToCart', async 
 				},
 			},
 		);
-
 		return data;
 	} else {
-		const products = [
-			...cart.data,
-			{
-				product: product.data,
-				cartQuantity: 1,
-				size: product.currentSize,
-				color: product.currentColor,
-			},
-		];
+		const products = cart.data.find(item => item.product._id === id)
+			? cart.data.map(item => (item.product._id === id ? { ...item, cartQuantity: item.cartQuantity + 1 } : item))
+			: [
+					...cart.data,
+					{
+						product: product.data,
+						cartQuantity: 1,
+						size: product.currentSize,
+						color: product.currentColor,
+					},
+			  ];
+
 		return { products };
 	}
 });
 
-export const deleteProductFromCart = createAsyncThunk('cart/deleteProductFromCart', async (id, { getState }) => {
+export const decrementItemInCart = createAsyncThunk("cart/decreaseQuantity", async (id, { getState }) => {
+	const { auth, cart } = getState();
+
+	const productInCart = cart.data.find(item => item.product._id === id);
+
+	if (productInCart && productInCart.cartQuantity > 1) {
+		if (auth.data !== null) {
+			const { data } = await fetchDecreaseQuantity(id, {
+				headers: {
+					Authorization: auth.data.token,
+				},
+			});
+			return data;
+		} else {
+			const updatedProducts = cart.data.map(item =>
+				item.product._id === id ? { ...item, cartQuantity: item.cartQuantity - 1 } : item,
+			);
+			return { products: updatedProducts };
+		}
+	} else {
+		return { products: cart.data };
+	}
+});
+
+export const deleteProductFromCart = createAsyncThunk("cart/deleteProductFromCart", async (id, { getState }) => {
 	const { auth, cart } = getState();
 
 	if (auth.data !== null) {
@@ -68,8 +95,9 @@ export const deleteProductFromCart = createAsyncThunk('cart/deleteProductFromCar
 		return { products };
 	}
 });
-export const deleteCart = createAsyncThunk('cart/deleteCart', async (user, { getState }) => {
-	const { auth, cart } = getState();
+
+export const deleteCart = createAsyncThunk("cart/deleteCart", async (_, { getState }) => {
+	const { auth } = getState();
 
 	if (auth.data !== null) {
 		const { data } = await fetchDeleteCart(
@@ -78,10 +106,8 @@ export const deleteCart = createAsyncThunk('cart/deleteCart', async (user, { get
 				headers: {
 					Authorization: auth.data?.token,
 				},
-				user,
 			},
 		);
-
 		return data;
 	}
 });

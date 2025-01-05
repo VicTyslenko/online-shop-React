@@ -31,10 +31,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 4444;
-const bd = require("./config/keys").mongoURI;
+const db = require("./config/keys").mongoURI;
 
 mongoose
-  .connect(bd, {
+  .connect(db, {
     useNewUrlParser: true,
     useFindAndModify: false,
   })
@@ -64,14 +64,10 @@ app.use("/api/subscribers", subscribers);
 app.use("/api/wishlist", wishlist);
 
 if (process.env.NODE_ENV == "production") {
-  const buildPath = path.join(__dirname, "client", "build");
-
-  app.use(express.static(buildPath));
-
-  //   app.use(express.static("./сlient/public"));
+  app.use(express.static(path.join(__dirname, "client", "build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
